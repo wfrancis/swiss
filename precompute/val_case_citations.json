@@ -1,0 +1,3276 @@
+{
+  "val_001": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 137 IV 122",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3",
+            "E. 5.1"
+          ],
+          "relevance": "Leitentscheid zur Kollusionsgefahr nach Art. 221 Abs. 1 lit. b StPO; verlangt konkrete, ernsthafte Anhaltspunkte für Verdunkelungshandlungen und eine einzelfallbezogene Würdigung des Verfahrensstands."
+        },
+        {
+          "case": "BGE 132 I 21",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Grundsatzentscheid zu Haftgründen, Verhältnismässigkeit und Beschleunigungsgebot bei strafprozessualer Haft; häufig zitiert zu Art. 31 BV und Art. 5 EMRK."
+        },
+        {
+          "case": "BGE 143 IV 160",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Leitentscheid zur Wiederholungsgefahr nach Art. 221 Abs. 1 lit. c StPO; relevant, wenn die Staatsanwaltschaft zusätzlich Rückfallgefahr geltend macht."
+        },
+        {
+          "case": "BGE 146 IV 136",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.1"
+          ],
+          "relevance": "Präzisierung der Anforderungen an die Wiederholungsgefahr und deren restriktive Handhabung; wichtig für die subsidiäre Prüfung von Art. 221 Abs. 1 lit. c StPO."
+        },
+        {
+          "case": "BGE 145 IV 503",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.1"
+          ],
+          "relevance": "Zur Haftprüfung, zur Intensität der gerichtlichen Kontrolle und zur Notwendigkeit konkreter tatsächlicher Grundlagen für Haftgründe."
+        },
+        {
+          "case": "BGE 143 IV 9",
+          "erwägungen": [
+            "E. 2.5",
+            "E. 2.6",
+            "E. 2.7"
+          ],
+          "relevance": "Zur Prüfung von Ersatzmassnahmen nach Art. 237 StPO und zur Verhältnismässigkeit von Haft gegenüber milderen Mitteln."
+        },
+        {
+          "case": "BGE 142 IV 367",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.4"
+          ],
+          "relevance": "Zur strafprozessualen Haft im Lichte von Art. 212 StPO, Art. 31 BV und Art. 5 EMRK; betont die strikte Verhältnismässigkeitsprüfung."
+        },
+        {
+          "case": "BGE 140 IV 74",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.2"
+          ],
+          "relevance": "Zur Dauer der Untersuchungshaft und zur Pflicht, Haft nur solange aufrechtzuerhalten, als der Haftgrund aktuell und konkret besteht."
+        },
+        {
+          "case": "BGE 139 IV 186",
+          "erwägungen": [
+            "E. 2",
+            "E. 2.1",
+            "E. 2.2"
+          ],
+          "relevance": "Zur Auslegung der Haftgründe und zur bundesgerichtlichen Kontrolldichte bei Haftentscheiden."
+        },
+        {
+          "case": "BGE 123 I 268",
+          "erwägungen": [
+            "E. 2c",
+            "E. 2d",
+            "E. 3a"
+          ],
+          "relevance": "Klassischer Entscheid zur Kollusionsgefahr: mit fortschreitendem Verfahren sinkt das Gewicht dieses Haftgrunds; besonders relevant, wenn Zeugen bereits einvernommen wurden."
+        },
+        {
+          "case": "BGE 117 Ia 257",
+          "erwägungen": [
+            "E. 4b",
+            "E. 4c"
+          ],
+          "relevance": "Früher Leitentscheid zur Verdunkelungsgefahr und zur Notwendigkeit konkreter Hinweise auf Beeinflussung von Zeugen oder Beweismitteln."
+        },
+        {
+          "case": "BGE 115 Ia 293",
+          "erwägungen": [
+            "E. 5",
+            "E. 6"
+          ],
+          "relevance": "Zur Verhältnismässigkeit der Haftdauer und zur Bedeutung des Verfahrensstands bei der Beurteilung von Kollusionsgefahr."
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "1B_95/2021",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "Neuere Anwendung der Grundsätze zur Kollusionsgefahr; betont, dass pauschale Hinweise auf noch ausstehende Ermittlungen nicht genügen."
+        },
+        {
+          "case": "1B_217/2022",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.2"
+          ],
+          "relevance": "Zur Verlängerung von Untersuchungshaft wegen Kollusionsgefahr; relevant für die Frage, ob technische Restermittlungen eine Haftverlängerung tragen."
+        },
+        {
+          "case": "1B_164/2022",
+          "erwägungen": [
+            "E. 2.4",
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "Zur konkreten Darlegungslast der Staatsanwaltschaft bei Verdunkelungsgefahr und zur Bedeutung bereits erfolgter Zeugeneinvernahmen."
+        },
+        {
+          "case": "1B_43/2023",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5.1"
+          ],
+          "relevance": "Neuere Rechtsprechung zur Verhältnismässigkeit einer Haftverlängerung und zur Prüfung von Ersatzmassnahmen."
+        },
+        {
+          "case": "1B_210/2023",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.3",
+            "E. 5.2"
+          ],
+          "relevance": "Aktuelle Anwendung der Anforderungen an konkrete Kollusionsgefahr; nützlich bei bereits weit fortgeschrittenem Untersuchungsstand."
+        },
+        {
+          "case": "1B_149/2023",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.4",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Frage, wann noch nicht abgeschlossene Beweiserhebungen eine Fortdauer der Haft rechtfertigen."
+        },
+        {
+          "case": "1B_550/2022",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "Zur restriktiven Annahme von Wiederholungsgefahr nach Art. 221 Abs. 1 lit. c StPO; relevant als subsidiärer Haftgrund."
+        },
+        {
+          "case": "1B_308/2021",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.5",
+            "E. 3.1"
+          ],
+          "relevance": "Zur Pflicht, bei Haftverlängerungen den aktuellen Verfahrensstand und die konkret noch gefährdeten Beweise zu benennen."
+        },
+        {
+          "case": "1B_121/2020",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 3.4",
+            "E. 4.2"
+          ],
+          "relevance": "Zur Abnahme der Kollusionsgefahr nach erfolgten Einvernahmen und zur Unzulässigkeit schematischer Haftverlängerungen."
+        },
+        {
+          "case": "1B_86/2020",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.4",
+            "E. 3.2"
+          ],
+          "relevance": "Zur Verhältnismässigkeit der Haftdauer und zur Bedeutung des Beschleunigungsgebots bei noch ausstehenden Untersuchungshandlungen."
+        },
+        {
+          "case": "1B_6/2024",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5.1"
+          ],
+          "relevance": "Jüngere Entscheidung zur Haftprüfung unter Art. 221 und Art. 237 StPO; relevant für die Frage, ob mildere Massnahmen genügen."
+        },
+        {
+          "case": "1B_100/2024",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Neuere Anwendung der bundesgerichtlichen Kriterien zur konkreten Verdunkelungsgefahr und zur Dauer einer Haftverlängerung."
+        }
+      ],
+      "reasoning": "Für die gestellte Frage stehen bundesgerichtlich vor allem die Leitentscheide zur Kollusionsgefahr und zur Verhältnismässigkeit von Untersuchungshaft im Vordergrund. Zentral ist BGE 137 IV 122: Danach genügt Kollusionsgefahr nur bei konkreten, auf den Einzelfall bezogenen Anhaltspunkten; mit fortschreitendem Verfahren und bereits erfolgten Zeugeneinvernahmen nimmt dieser Haftgrund regelmässig ab. Ebenfalls wichtig sind die älteren Grundsatzentscheide BGE 123 I 268 und BGE 117 Ia 257, die genau diesen Gedanken tragen. Für die Dauer und Verlängerung der Haft sind BGE 132 I 21, BGE 142 IV 367 und BGE 140 IV 74 einschlägig, weil sie Art. 31 BV, Art. 5 EMRK, das Beschleunigungsgebot und die Pflicht zur Prüfung milderer Ersatzmassnahmen nach Art. 237 StPO betonen. Soweit die Staatsanwaltschaft zusätzlich Wiederholungsgefahr anführt, sind BGE 143 IV 160 und BGE 146 IV 136 die massgeblichen Leitentscheide. In einem Fall wie dem geschilderten wären daher besonders jene Präjudizien zitierfähig, die verlangen, dass das Haftgericht konkret bezeichnet, welche noch offenen Beweise durch Freilassung gefährdet wären, weshalb technische Restermittlungen allein meist keine erhebliche Kollusionsgefahr begründen und weshalb eine dreimonatige Verlängerung nur zulässig ist, wenn sie angesichts des Untersuchungsstands und fehlender milderer Massnahmen noch verhältnismässig erscheint."
+    },
+    "expanded": [
+      "BGE 137 IV 122 E. 4.2",
+      "BGE 137 IV 122 E. 4.3",
+      "BGE 137 IV 122 E. 5.1",
+      "BGE 132 I 21 E. 3.2",
+      "BGE 132 I 21 E. 3.3",
+      "BGE 132 I 21 E. 4.1",
+      "BGE 143 IV 160 E. 4.1",
+      "BGE 143 IV 160 E. 4.2",
+      "BGE 143 IV 160 E. 4.3",
+      "BGE 146 IV 136 E. 2.2",
+      "BGE 146 IV 136 E. 2.3",
+      "BGE 146 IV 136 E. 3.1",
+      "BGE 145 IV 503 E. 2.2",
+      "BGE 145 IV 503 E. 2.3",
+      "BGE 145 IV 503 E. 3.1",
+      "BGE 143 IV 9 E. 2.5",
+      "BGE 143 IV 9 E. 2.6",
+      "BGE 143 IV 9 E. 2.7",
+      "BGE 142 IV 367 E. 2.1",
+      "BGE 142 IV 367 E. 2.2",
+      "BGE 142 IV 367 E. 2.4",
+      "BGE 140 IV 74 E. 2.2",
+      "BGE 140 IV 74 E. 2.3",
+      "BGE 140 IV 74 E. 3.2",
+      "BGE 139 IV 186 E. 2",
+      "BGE 139 IV 186 E. 2.1",
+      "BGE 139 IV 186 E. 2.2",
+      "BGE 123 I 268 E. 2c",
+      "BGE 123 I 268 E. 2d",
+      "BGE 123 I 268 E. 3a",
+      "BGE 117 Ia 257 E. 4b",
+      "BGE 117 Ia 257 E. 4c",
+      "BGE 115 Ia 293 E. 5",
+      "BGE 115 Ia 293 E. 6",
+      "1B_95/2021 E. 3.1",
+      "1B_95/2021 E. 3.2",
+      "1B_95/2021 E. 4.1",
+      "1B_217/2022 E. 3.2",
+      "1B_217/2022 E. 3.3",
+      "1B_217/2022 E. 4.2",
+      "1B_164/2022 E. 2.4",
+      "1B_164/2022 E. 3.1",
+      "1B_164/2022 E. 3.2",
+      "1B_43/2023 E. 4.1",
+      "1B_43/2023 E. 4.2",
+      "1B_43/2023 E. 5.1",
+      "1B_210/2023 E. 4.1",
+      "1B_210/2023 E. 4.3",
+      "1B_210/2023 E. 5.2",
+      "1B_149/2023 E. 3.1",
+      "1B_149/2023 E. 3.4",
+      "1B_149/2023 E. 4.1",
+      "1B_550/2022 E. 2.3",
+      "1B_550/2022 E. 3.2",
+      "1B_550/2022 E. 3.3",
+      "1B_308/2021 E. 2.2",
+      "1B_308/2021 E. 2.5",
+      "1B_308/2021 E. 3.1",
+      "1B_121/2020 E. 3.3",
+      "1B_121/2020 E. 3.4",
+      "1B_121/2020 E. 4.2",
+      "1B_86/2020 E. 2.1",
+      "1B_86/2020 E. 2.4",
+      "1B_86/2020 E. 3.2",
+      "1B_6/2024 E. 4.1",
+      "1B_6/2024 E. 4.2",
+      "1B_6/2024 E. 5.1",
+      "1B_100/2024 E. 3.1",
+      "1B_100/2024 E. 3.3",
+      "1B_100/2024 E. 4.1"
+    ]
+  },
+  "val_002": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 130 V 343",
+          "erwägungen": [
+            "E. 3.4",
+            "E. 3.5"
+          ],
+          "relevance": "leading case on the concept of invalidity and the distinction between medical impairment and economically relevant earning incapacity under Art. 7 and 16 ATSG"
+        },
+        {
+          "case": "BGE 128 V 29",
+          "erwägungen": [
+            "E. 1",
+            "E. 4a",
+            "E. 4c"
+          ],
+          "relevance": "classic authority on the threshold for entitlement to vocational measures under Art. 17 IVG; often cited for the requirement that the impairment cause a substantial limitation in earning capacity, roughly around 20%"
+        },
+        {
+          "case": "BGE 124 V 108",
+          "erwägungen": [
+            "E. 2a",
+            "E. 2b"
+          ],
+          "relevance": "leading precedent on Umschulung/retraining under Art. 17 IVG and the requirement that the insured can no longer reasonably continue in the previous occupation or suffers a significant earning disadvantage"
+        },
+        {
+          "case": "BGE 124 V 321",
+          "erwägungen": [
+            "E. 3b",
+            "E. 3c"
+          ],
+          "relevance": "important case on the evidentiary value of medical reports and the criteria for preferring one medical opinion over another in social insurance law"
+        },
+        {
+          "case": "BGE 125 V 351",
+          "erwägungen": [
+            "E. 3a",
+            "E. 3b/aa",
+            "E. 3b/bb",
+            "E. 3b/cc"
+          ],
+          "relevance": "central authority on assessment of conflicting medical evidence; sets out criteria for probative value of specialist reports versus treating-physician certificates"
+        },
+        {
+          "case": "BGE 127 V 294",
+          "erwägungen": [
+            "E. 4c"
+          ],
+          "relevance": "often cited regarding the necessity that treatment and reintegration possibilities be sufficiently clarified before long-term invalidity consequences are assumed"
+        },
+        {
+          "case": "BGE 132 V 93",
+          "erwägungen": [
+            "E. 4",
+            "E. 6"
+          ],
+          "relevance": "leading case on the court’s review of medical assessments and the need for further clarification where the file does not permit a reliable determination of work capacity"
+        },
+        {
+          "case": "BGE 134 V 231",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.3"
+          ],
+          "relevance": "authority on the evidentiary requirements for expert medical opinions and when an administration or court must order additional expert clarification"
+        },
+        {
+          "case": "BGE 135 V 465",
+          "erwägungen": [
+            "E. 4.4",
+            "E. 4.6",
+            "E. 4.7"
+          ],
+          "relevance": "important precedent on the weight of reports from treating physicians compared with independent experts and on resolving contradictions in the medical file"
+        },
+        {
+          "case": "BGE 137 V 210",
+          "erwägungen": [
+            "E. 1.2.1",
+            "E. 2.4",
+            "E. 6"
+          ],
+          "relevance": "general leading case on expert evidence in IV proceedings and procedural requirements where medical issues are decisive"
+        },
+        {
+          "case": "BGE 141 V 281",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 3.7"
+          ],
+          "relevance": "although focused on structured assessment of work capacity, frequently cited for general principles on functional limitations and the legal evaluation of medical findings"
+        },
+        {
+          "case": "BGE 143 V 409",
+          "erwägungen": [
+            "E. 4.5.2",
+            "E. 4.5.3",
+            "E. 4.5.4"
+          ],
+          "relevance": "relevant for the legal assessment of work capacity and the need for a coherent, function-oriented medical basis"
+        },
+        {
+          "case": "BGE 143 V 418",
+          "erwägungen": [
+            "E. 6",
+            "E. 7.1"
+          ],
+          "relevance": "companion authority on evaluation of medical work-capacity assessments and consistency requirements"
+        },
+        {
+          "case": "BGE 145 V 2",
+          "erwägungen": [
+            "E. 4.3",
+            "E. 5.1"
+          ],
+          "relevance": "relevant to the relationship between treatment possibilities, rehabilitation priority, and the timing of entitlement to IV benefits"
+        },
+        {
+          "case": "BGE 148 V 49",
+          "erwägungen": [
+            "E. 6.2.1",
+            "E. 6.2.2"
+          ],
+          "relevance": "recent authority on evidentiary assessment of medical reports and the need for sufficiently detailed functional limitations"
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "9C_818/2007",
+          "erwägungen": [
+            "E. 2.2"
+          ],
+          "relevance": "frequently cited judgment confirming that entitlement to retraining under Art. 17 IVG generally presupposes an earning-capacity loss of about 20%"
+        },
+        {
+          "case": "9C_734/2008",
+          "erwägungen": [
+            "E. 3.2"
+          ],
+          "relevance": "application of the approximately 20% benchmark for vocational rehabilitation measures under Art. 17 IVG"
+        },
+        {
+          "case": "9C_36/2008",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 3"
+          ],
+          "relevance": "retraining/Umschulung case discussing when prior occupation is no longer reasonably exercisable and when adapted work must be considered"
+        },
+        {
+          "case": "9C_420/2014",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "recent application of Art. 17 IVG emphasizing that vocational measures require a sufficiently concrete and substantial earning disadvantage"
+        },
+        {
+          "case": "9C_604/2016",
+          "erwägungen": [
+            "E. 5.2",
+            "E. 5.3"
+          ],
+          "relevance": "application of the retraining criteria where the insured remained employable in adapted activities despite restrictions in the former occupation"
+        },
+        {
+          "case": "9C_397/2016",
+          "erwägungen": [
+            "E. 5.3",
+            "E. 6.1"
+          ],
+          "relevance": "useful on the distinction between inability to perform the former job and entitlement to IV measures where adapted work remains fully possible"
+        },
+        {
+          "case": "9C_163/2009",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "addresses the need for reliable medical evidence before denying or granting vocational measures and pension-related benefits"
+        },
+        {
+          "case": "8C_174/2017",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "illustrates the limited probative value of brief treating-physician attestations lacking detailed functional analysis"
+        },
+        {
+          "case": "8C_841/2016",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "recent application of BGE 125 V 351 criteria to conflicting medical reports in social insurance proceedings"
+        },
+        {
+          "case": "9C_609/2019",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "relevant on whether environmental restrictions alone establish a legally significant incapacity where adapted work remains available"
+        },
+        {
+          "case": "9C_256/2021",
+          "erwägungen": [
+            "E. 5.2",
+            "E. 6.1"
+          ],
+          "relevance": "recent IV case on the need for a concrete comparison of earning possibilities in adapted work before assuming the Art. 17 IVG threshold is met"
+        },
+        {
+          "case": "9C_526/2021",
+          "erwägungen": [
+            "E. 4.4",
+            "E. 5.1"
+          ],
+          "relevance": "application of the principle that therapeutic options and stabilization of the health condition must be sufficiently clarified"
+        },
+        {
+          "case": "8C_160/2022",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2"
+          ],
+          "relevance": "recent authority on the evidentiary insufficiency of short incapacity notes compared with detailed specialist assessments"
+        },
+        {
+          "case": "9C_344/2023",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.4"
+          ],
+          "relevance": "recent application in IV law of the requirement for a coherent medical basis on functional limitations and adapted work capacity"
+        }
+      ],
+      "reasoning": "The most likely authorities are those on three clusters of issues: first, Art. 17 IVG retraining/Umschulung, especially the jurisprudential rule that vocational measures generally require a substantial earning disadvantage of around 20% (not merely inability to continue the former job); second, the general invalidity framework under Arts. 6, 7 and 16 ATSG, which requires assessment of capacity in a reasonable adapted activity rather than only in the previous warehouse job; and third, the law on conflicting medical evidence, especially the higher probative value of detailed specialist or expert reports over brief treating-doctor certificates unless the latter contain a convincing functional analysis. On the facts described, the decisive precedents will likely be those holding that environmental restrictions and inability to perform dusty warehouse work do not by themselves establish entitlement if full or near-full capacity remains in adapted low-dust work, and those requiring further medical clarification where treatment options remain open or the file is inconsistent. The cited BGE and individual judgments are therefore the authorities most likely to be invoked for whether the approximately 20% earning-loss threshold is met and whether the existing medical record is sufficient to establish entitlement to vocational rehabilitation or other IV benefits."
+    },
+    "expanded": [
+      "BGE 130 V 343 E. 3.4",
+      "BGE 130 V 343 E. 3.5",
+      "BGE 128 V 29 E. 1",
+      "BGE 128 V 29 E. 4a",
+      "BGE 128 V 29 E. 4c",
+      "BGE 124 V 108 E. 2a",
+      "BGE 124 V 108 E. 2b",
+      "BGE 124 V 321 E. 3b",
+      "BGE 124 V 321 E. 3c",
+      "BGE 125 V 351 E. 3a",
+      "BGE 125 V 351 E. 3b/aa",
+      "BGE 125 V 351 E. 3b/bb",
+      "BGE 125 V 351 E. 3b/cc",
+      "BGE 127 V 294 E. 4c",
+      "BGE 132 V 93 E. 4",
+      "BGE 132 V 93 E. 6",
+      "BGE 134 V 231 E. 5.1",
+      "BGE 134 V 231 E. 5.2",
+      "BGE 134 V 231 E. 5.3",
+      "BGE 135 V 465 E. 4.4",
+      "BGE 135 V 465 E. 4.6",
+      "BGE 135 V 465 E. 4.7",
+      "BGE 137 V 210 E. 1.2.1",
+      "BGE 137 V 210 E. 2.4",
+      "BGE 137 V 210 E. 6",
+      "BGE 141 V 281 E. 2.1",
+      "BGE 141 V 281 E. 3.7",
+      "BGE 143 V 409 E. 4.5.2",
+      "BGE 143 V 409 E. 4.5.3",
+      "BGE 143 V 409 E. 4.5.4",
+      "BGE 143 V 418 E. 6",
+      "BGE 143 V 418 E. 7.1",
+      "BGE 145 V 2 E. 4.3",
+      "BGE 145 V 2 E. 5.1",
+      "BGE 148 V 49 E. 6.2.1",
+      "BGE 148 V 49 E. 6.2.2",
+      "9C_818/2007 E. 2.2",
+      "9C_734/2008 E. 3.2",
+      "9C_36/2008 E. 2.1",
+      "9C_36/2008 E. 3",
+      "9C_420/2014 E. 4.2",
+      "9C_420/2014 E. 4.3",
+      "9C_604/2016 E. 5.2",
+      "9C_604/2016 E. 5.3",
+      "9C_397/2016 E. 5.3",
+      "9C_397/2016 E. 6.1",
+      "9C_163/2009 E. 4.1",
+      "9C_163/2009 E. 4.2",
+      "8C_174/2017 E. 4.2",
+      "8C_174/2017 E. 4.3",
+      "8C_841/2016 E. 3.2",
+      "8C_841/2016 E. 4.1",
+      "9C_609/2019 E. 4.2",
+      "9C_609/2019 E. 4.3",
+      "9C_256/2021 E. 5.2",
+      "9C_256/2021 E. 6.1",
+      "9C_526/2021 E. 4.4",
+      "9C_526/2021 E. 5.1",
+      "8C_160/2022 E. 5.1",
+      "8C_160/2022 E. 5.2",
+      "9C_344/2023 E. 4.2",
+      "9C_344/2023 E. 4.4"
+    ]
+  },
+  "val_003": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 143 IV 330",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.3"
+          ],
+          "relevance": "Grundsatzentscheid zu den Voraussetzungen der Untersuchungshaft nach Art. 221 Abs. 1 StPO; hinreichender Tatverdacht und Haftgründe, insbesondere Fluchtgefahr."
+        },
+        {
+          "case": "BGE 143 IV 316",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "Leitentscheid zur Kollusionsgefahr; Anforderungen an konkrete Verdunkelungsindizien und deren Darlegung."
+        },
+        {
+          "case": "BGE 137 IV 122",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Klassischer Leitentscheid zu Haftprüfung, dringendem/hinreichendem Tatverdacht und Prüfungsdichte des Haftgerichts."
+        },
+        {
+          "case": "BGE 137 IV 13",
+          "erwägungen": [
+            "E. 2",
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Grundlagenentscheid zu Untersuchungshaft, Verhältnismässigkeit und Anforderungen an die Begründung von Haftentscheiden."
+        },
+        {
+          "case": "BGE 145 IV 503",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.1"
+          ],
+          "relevance": "Zur Wiederholungs-/Ausführungsgefahr im Haftrecht; relevant als Abgrenzung der Haftgründe nach Art. 221 StPO."
+        },
+        {
+          "case": "BGE 146 IV 136",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.1"
+          ],
+          "relevance": "Aktuelle Leitlinien zur Haft wegen Wiederholungsgefahr und zur restriktiven Auslegung von Haftgründen."
+        },
+        {
+          "case": "BGE 132 I 21",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Verfassungsrechtlicher Leitentscheid zu persönlicher Freiheit, Haftprüfung und Begründungsanforderungen bei Freiheitsentzug."
+        },
+        {
+          "case": "BGE 125 I 60",
+          "erwägungen": [
+            "E. 3a",
+            "E. 3d",
+            "E. 5"
+          ],
+          "relevance": "Klassischer Entscheid zu Fluchtgefahr; massgebliche Kriterien wie Auslandbezug, Straferwartung, soziale Bindungen und Verhalten."
+        },
+        {
+          "case": "BGE 123 I 31",
+          "erwägungen": [
+            "E. 3c",
+            "E. 3d",
+            "E. 4"
+          ],
+          "relevance": "Früher Leitentscheid zur Kollusionsgefahr und zur Notwendigkeit konkreter, verfahrensbezogener Verdunkelungsrisiken."
+        },
+        {
+          "case": "BGE 117 Ia 69",
+          "erwägungen": [
+            "E. 4",
+            "E. 5"
+          ],
+          "relevance": "Grundsatzrechtsprechung zur Fluchtgefahr und zur Unzulässigkeit rein abstrakter Annahmen."
+        },
+        {
+          "case": "BGE 114 Ia 281",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Klassische Rechtsprechung zur Kollusionsgefahr und zu den Anforderungen an konkrete Verdunkelungsindizien."
+        },
+        {
+          "case": "BGE 139 IV 186",
+          "erwägungen": [
+            "E. 2",
+            "E. 3.2",
+            "E. 4"
+          ],
+          "relevance": "Zur Begründungstiefe strafprozessualer Zwangsmassnahmen und zum rechtlichen Gehör im Haftkontext."
+        },
+        {
+          "case": "BGE 141 IV 249",
+          "erwägungen": [
+            "E. 1.3.1",
+            "E. 1.3.2",
+            "E. 1.3.3"
+          ],
+          "relevance": "Zum Anspruch auf rechtliches Gehör und zur genügenden Begründung gerichtlicher Entscheide, damit diese sachgerecht angefochten werden können."
+        },
+        {
+          "case": "BGE 142 II 154",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Allgemeiner Leitentscheid zum rechtlichen Gehör und zur Begründungspflicht; häufig auch im Strafprozess zitiert."
+        },
+        {
+          "case": "BGE 138 I 232",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2"
+          ],
+          "relevance": "Zur Tragweite des Anspruchs auf rechtliches Gehör und zur Frage, wann eine Begründung eine wirksame Anfechtung erlaubt."
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "1B_325/2024",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5.1"
+          ],
+          "relevance": "Jüngere Anwendung der Grundsätze zu Tatverdacht und Fluchtgefahr bei Untersuchungshaft."
+        },
+        {
+          "case": "1B_210/2023",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5.3"
+          ],
+          "relevance": "Aktuelle Rechtsprechung zur Kollusionsgefahr und zu den Anforderungen an konkrete Verdunkelungsindizien."
+        },
+        {
+          "case": "1B_95/2023",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Begründung von Fluchtgefahr bei ausländischen Beschuldigten mit schwachen Inlandsbindungen."
+        },
+        {
+          "case": "1B_582/2022",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "Zur genügenden Umschreibung des Tatverdachts im Haftverfahren; keine erschöpfende Beweiswürdigung erforderlich."
+        },
+        {
+          "case": "1B_489/2022",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "Zur Frage, wann fehlende Spuren oder entlastende Einwände den hinreichenden Tatverdacht im Haftstadium nicht beseitigen."
+        },
+        {
+          "case": "1B_438/2022",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Aktuelle Anwendung der Rechtsprechung zur Kollusionsgefahr bei mehreren Mitbeschuldigten und noch ausstehenden Einvernahmen."
+        },
+        {
+          "case": "1B_92/2022",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.4",
+            "E. 4.2"
+          ],
+          "relevance": "Zur Begründungspflicht des Haftentscheids und zum rechtlichen Gehör im Beschwerdeverfahren."
+        },
+        {
+          "case": "1B_427/2021",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 3.1"
+          ],
+          "relevance": "Zur Fluchtgefahr bei erheblicher Straferwartung, Auslandbezug und fehlender gefestigter sozialer Integration."
+        },
+        {
+          "case": "1B_330/2021",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Abgrenzung zwischen zulässiger summarischer Haftprüfung und unzulässiger Vorwegnahme der Hauptsache."
+        },
+        {
+          "case": "1B_171/2021",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5.1"
+          ],
+          "relevance": "Zur Kollusionsgefahr bei Gruppendelikten und bei noch nicht abgeschlossenen Beweiserhebungen."
+        },
+        {
+          "case": "1B_34/2021",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 3.1",
+            "E. 3.3"
+          ],
+          "relevance": "Zur Frage, welche Mindestangaben ein Haftentscheid enthalten muss, um den Anspruch auf rechtliches Gehör zu wahren."
+        },
+        {
+          "case": "1B_597/2020",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.4",
+            "E. 3.2"
+          ],
+          "relevance": "Zur Fluchtgefahr bei ausländischen Beschuldigten und zur Bedeutung einer möglichen hohen Freiheitsstrafe."
+        },
+        {
+          "case": "1B_348/2020",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "Zur Tragweite des rechtlichen Gehörs im Haftverfahren; Begründung muss sachgerechte Anfechtung ermöglichen."
+        },
+        {
+          "case": "1B_249/2020",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Kollusionsgefahr und zu den Anforderungen an konkrete Hinweise auf Einflussnahme auf Mitbeschuldigte oder Zeugen."
+        },
+        {
+          "case": "1B_94/2020",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.1"
+          ],
+          "relevance": "Zur Bedeutung von Aktenlage, Videoaufnahmen und Zeugenaussagen für den hinreichenden Tatverdacht im Haftverfahren."
+        }
+      ],
+      "reasoning": "Für die geschilderte Konstellation sind vor allem Entscheide zur Untersuchungshaft nach Art. 221 Abs. 1 StPO einschlägig: Erstens die Leitentscheide zum hinreichenden Tatverdacht, wonach das Haftgericht keine vollständige Beweiswürdigung vornimmt und entlastende Einwände wie fehlende DNA-Spuren den Tatverdacht nicht zwingend beseitigen, wenn andere belastende Indizien vorliegen. Zweitens die Rechtsprechung zu Fluchtgefahr, insbesondere bei ausländischen Beschuldigten, erheblicher Straferwartung, schwachen Bindungen zum Inland und möglicher Flucht ins Ausland. Drittens die Rechtsprechung zur Kollusionsgefahr bei mehreren Mitbeschuldigten, noch offenen Einvernahmen und der Gefahr abgestimmter Aussagen. Viertens sind die verfassungs- und konventionsrechtlichen Entscheide zum rechtlichen Gehör und zur Begründungspflicht zentral: Der Haftentscheid muss die wesentlichen tatsächlichen und rechtlichen Gründe nennen, damit der Beschuldigte ihn wirksam anfechten kann; eine detaillierte Auseinandersetzung mit jedem einzelnen Vorbringen ist aber nicht erforderlich. Diese Kombination von BGE und neueren 1B-Urteilen bildet typischerweise den zitierfähigen Präzedenzrahmen für die Beurteilung, ob die Haftverlängerung bis 1. Dezember 2024 rechtmässig war."
+    },
+    "expanded": [
+      "BGE 143 IV 330 E. 2.1",
+      "BGE 143 IV 330 E. 2.2",
+      "BGE 143 IV 330 E. 2.3",
+      "BGE 143 IV 316 E. 3.1",
+      "BGE 143 IV 316 E. 3.2",
+      "BGE 143 IV 316 E. 3.3",
+      "BGE 137 IV 122 E. 3.2",
+      "BGE 137 IV 122 E. 4.2",
+      "BGE 137 IV 122 E. 4.3",
+      "BGE 137 IV 13 E. 2",
+      "BGE 137 IV 13 E. 3",
+      "BGE 137 IV 13 E. 4",
+      "BGE 145 IV 503 E. 2.2",
+      "BGE 145 IV 503 E. 2.3",
+      "BGE 145 IV 503 E. 3.1",
+      "BGE 146 IV 136 E. 2.2",
+      "BGE 146 IV 136 E. 2.3",
+      "BGE 146 IV 136 E. 3.1",
+      "BGE 132 I 21 E. 3.2",
+      "BGE 132 I 21 E. 3.3",
+      "BGE 132 I 21 E. 4.1",
+      "BGE 125 I 60 E. 3a",
+      "BGE 125 I 60 E. 3d",
+      "BGE 125 I 60 E. 5",
+      "BGE 123 I 31 E. 3c",
+      "BGE 123 I 31 E. 3d",
+      "BGE 123 I 31 E. 4",
+      "BGE 117 Ia 69 E. 4",
+      "BGE 117 Ia 69 E. 5",
+      "BGE 114 Ia 281 E. 3",
+      "BGE 114 Ia 281 E. 4",
+      "BGE 139 IV 186 E. 2",
+      "BGE 139 IV 186 E. 3.2",
+      "BGE 139 IV 186 E. 4",
+      "BGE 141 IV 249 E. 1.3.1",
+      "BGE 141 IV 249 E. 1.3.2",
+      "BGE 141 IV 249 E. 1.3.3",
+      "BGE 142 II 154 E. 4.2",
+      "BGE 142 II 154 E. 4.3",
+      "BGE 138 I 232 E. 5.1",
+      "BGE 138 I 232 E. 5.2",
+      "1B_325/2024 E. 3.1",
+      "1B_325/2024 E. 4.1",
+      "1B_325/2024 E. 4.2",
+      "1B_325/2024 E. 5.1",
+      "1B_210/2023 E. 4.1",
+      "1B_210/2023 E. 4.2",
+      "1B_210/2023 E. 5.3",
+      "1B_95/2023 E. 3.1",
+      "1B_95/2023 E. 3.2",
+      "1B_95/2023 E. 4.1",
+      "1B_582/2022 E. 2.1",
+      "1B_582/2022 E. 3.1",
+      "1B_582/2022 E. 3.2",
+      "1B_489/2022 E. 2.3",
+      "1B_489/2022 E. 4.1",
+      "1B_489/2022 E. 4.2",
+      "1B_438/2022 E. 3.2",
+      "1B_438/2022 E. 3.3",
+      "1B_438/2022 E. 4.1",
+      "1B_92/2022 E. 3.1",
+      "1B_92/2022 E. 3.4",
+      "1B_92/2022 E. 4.2",
+      "1B_427/2021 E. 2.1",
+      "1B_427/2021 E. 2.2",
+      "1B_427/2021 E. 3.1",
+      "1B_330/2021 E. 3.1",
+      "1B_330/2021 E. 3.2",
+      "1B_330/2021 E. 4.1",
+      "1B_171/2021 E. 4.1",
+      "1B_171/2021 E. 4.2",
+      "1B_171/2021 E. 5.1",
+      "1B_34/2021 E. 2.2",
+      "1B_34/2021 E. 3.1",
+      "1B_34/2021 E. 3.3",
+      "1B_597/2020 E. 2.1",
+      "1B_597/2020 E. 2.4",
+      "1B_597/2020 E. 3.2",
+      "1B_348/2020 E. 2.3",
+      "1B_348/2020 E. 3.1",
+      "1B_348/2020 E. 3.2",
+      "1B_249/2020 E. 3.1",
+      "1B_249/2020 E. 3.3",
+      "1B_249/2020 E. 4.1",
+      "1B_94/2020 E. 2.2",
+      "1B_94/2020 E. 2.3",
+      "1B_94/2020 E. 3.1"
+    ]
+  },
+  "val_004": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 131 III 601",
+          "erwägungen": [
+            "E. 3",
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "Leading authority on the formal requirements of the eigenhändiges Testament under Art. 505 ZGB, especially the requirement that the testamentary dispositions be handwritten by the testator and the consequences of third-party additions or interventions."
+        },
+        {
+          "case": "BGE 117 II 239",
+          "erwägungen": [
+            "E. 2",
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Classic precedent on interpretation of wills and the primacy of the true testamentary intent over purely literal readings; relevant where relatives argue for reinterpretation contrary to the wording."
+        },
+        {
+          "case": "BGE 124 III 414",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Important decision on testamentary interpretation and the limits of corrective interpretation where the wording is clear; relevant to whether doubts about vocabulary justify reading in heirs not mentioned."
+        },
+        {
+          "case": "BGE 119 II 147",
+          "erwägungen": [
+            "E. 2",
+            "E. 3a",
+            "E. 3b"
+          ],
+          "relevance": "Authority on the distinction between interpretation and invalidation of testamentary dispositions; relevant where parties seek to attack a will indirectly through alleged linguistic misunderstanding."
+        },
+        {
+          "case": "BGE 90 II 449",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Older but frequently cited case on the handwritten will and strict compliance with Art. 505 ZGB, including the significance of handwriting authenticity and completeness."
+        },
+        {
+          "case": "BGE 98 II 176",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "Relevant for the law of testamentary capacity under Art. 467 ZGB and the evidentiary approach to incapacity at the time of execution."
+        },
+        {
+          "case": "BGE 124 III 5",
+          "erwägungen": [
+            "E. 1",
+            "E. 4a",
+            "E. 4b"
+          ],
+          "relevance": "Leading case on Urteilsfähigkeit in inheritance matters; confirms the presumption of capacity and the burden on the party alleging incapacity."
+        },
+        {
+          "case": "BGE 117 II 231",
+          "erwägungen": [
+            "E. 2a",
+            "E. 2b",
+            "E. 3"
+          ],
+          "relevance": "Frequently cited on proof of lack of testamentary capacity and the need for concrete evidence tied to the time of the testament."
+        },
+        {
+          "case": "BGE 134 III 452",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.3"
+          ],
+          "relevance": "General leading authority on interpretation of unilateral legal acts, including wills; relevant to whether unusual wording or legal terminology undermines the apparent meaning."
+        },
+        {
+          "case": "BGE 138 III 354",
+          "erwägungen": [
+            "E. 5.2",
+            "E. 5.3",
+            "E. 5.4"
+          ],
+          "relevance": "Authority on evidentiary assessment and the threshold for overturning factual findings in civil matters; relevant where handwriting, authorship, and language ability are disputed."
+        },
+        {
+          "case": "BGE 140 III 305",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 3.4"
+          ],
+          "relevance": "Relevant to interpretation of testamentary clauses and the court's duty to ascertain actual intent before resorting to objective construction."
+        },
+        {
+          "case": "BGE 144 III 81",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Recent authority on the interpretation of dispositions mortis causa and evidentiary use of surrounding circumstances."
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "5A_323/2013",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "Directly relevant recent inheritance case concerning an eigenhändiges Testament, handwriting/authorship issues, and whether suspected third-party participation affects validity under Art. 505 ZGB."
+        },
+        {
+          "case": "5A_666/2013",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.3",
+            "E. 5.2"
+          ],
+          "relevance": "Application of the rules on testamentary capacity and burden of proof in a dispute over validity of a will."
+        },
+        {
+          "case": "5A_748/2012",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Useful on interpretation of testamentary wording and the reluctance to depart from clear dispositive language absent convincing evidence."
+        },
+        {
+          "case": "5A_12/2009",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "Addresses proof of Urteilsunfähigkeit in inheritance litigation and confirms that mere suspicion or unusual behavior is insufficient."
+        },
+        {
+          "case": "5A_204/2007",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.3"
+          ],
+          "relevance": "Relevant to the evidentiary standard for invalidating a testament under Art. 519 ZGB."
+        },
+        {
+          "case": "5A_898/2011",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 3.4"
+          ],
+          "relevance": "Recent application concerning interpretation of wills and use of external circumstances to establish actual intent."
+        },
+        {
+          "case": "5A_492/2014",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.4",
+            "E. 5.1"
+          ],
+          "relevance": "Inheritance case discussing the distinction between formal invalidity and substantive challenges to testamentary intent."
+        },
+        {
+          "case": "5A_443/2014",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 6.1"
+          ],
+          "relevance": "Relevant to the assessment of witness statements and circumstantial evidence regarding the testator's linguistic abilities and understanding."
+        },
+        {
+          "case": "5A_39/2016",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "Useful for the proposition that testamentary capacity must be assessed concretely at the time of execution, not abstractly from age or education."
+        },
+        {
+          "case": "5A_336/2018",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 6.3"
+          ],
+          "relevance": "Recent application of principles governing interpretation of wills and the limited role of speculative alternative meanings."
+        },
+        {
+          "case": "5A_940/2019",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.3",
+            "E. 5.2"
+          ],
+          "relevance": "Relevant on formal validity of handwritten testamentary instruments and evidentiary treatment of alleged later insertions."
+        },
+        {
+          "case": "5A_763/2020",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 4.1",
+            "E. 4.4"
+          ],
+          "relevance": "Recent inheritance appeal on testamentary interpretation and the inability to rewrite a will merely because relatives consider the result improbable."
+        }
+      ],
+      "reasoning": "The core issues are: (1) formal validity of a holographic will under Art. 505 ZGB, especially whether the dispositive text must be entirely handwritten by the testator and what happens if additions by a third party are suspected; (2) testamentary capacity under Art. 467 ZGB, including the presumption of capacity and the need for concrete proof of incapacity at the time of drafting; and (3) annulment under Art. 519 ZGB versus interpretation of the will, particularly whether doubts about the testator's command of the language or use of legal vocabulary suffice to set aside or reinterpret clear dispositions. The listed BGE are the most likely authorities because Swiss courts regularly cite them for the handwritten-form requirements, the burden and standard of proof for Urteilsfähigkeit, and the principles governing interpretation of wills according to the testator's true intent. The individual 5A cases are the most likely more recent applications in inheritance disputes involving handwriting authenticity, surrounding circumstances, and challenges based on alleged misunderstanding or incapacity. Substantively, the likely doctrinal answer is that language doubts or unfamiliarity with legal terms alone do not suffice either to presume lack of testamentary capacity or to reinterpret a clear will in favor of omitted relatives; concrete evidence is required that the text was not written by the testator, that dispositive parts were inserted by a third party, or that the testator lacked judgment capacity when the will was made."
+    },
+    "expanded": [
+      "BGE 131 III 601 E. 3",
+      "BGE 131 III 601 E. 3.1",
+      "BGE 131 III 601 E. 3.2",
+      "BGE 131 III 601 E. 3.3",
+      "BGE 117 II 239 E. 2",
+      "BGE 117 II 239 E. 3",
+      "BGE 117 II 239 E. 4",
+      "BGE 124 III 414 E. 3",
+      "BGE 124 III 414 E. 4",
+      "BGE 119 II 147 E. 2",
+      "BGE 119 II 147 E. 3a",
+      "BGE 119 II 147 E. 3b",
+      "BGE 90 II 449 E. 3",
+      "BGE 90 II 449 E. 4",
+      "BGE 98 II 176 E. 2",
+      "BGE 98 II 176 E. 3",
+      "BGE 124 III 5 E. 1",
+      "BGE 124 III 5 E. 4a",
+      "BGE 124 III 5 E. 4b",
+      "BGE 117 II 231 E. 2a",
+      "BGE 117 II 231 E. 2b",
+      "BGE 117 II 231 E. 3",
+      "BGE 134 III 452 E. 2.1",
+      "BGE 134 III 452 E. 2.2",
+      "BGE 134 III 452 E. 2.3",
+      "BGE 138 III 354 E. 5.2",
+      "BGE 138 III 354 E. 5.3",
+      "BGE 138 III 354 E. 5.4",
+      "BGE 140 III 305 E. 3.3",
+      "BGE 140 III 305 E. 3.4",
+      "BGE 144 III 81 E. 4.1",
+      "BGE 144 III 81 E. 4.2",
+      "BGE 144 III 81 E. 4.3",
+      "5A_323/2013 E. 3.1",
+      "5A_323/2013 E. 3.2",
+      "5A_323/2013 E. 4.1",
+      "5A_323/2013 E. 4.2",
+      "5A_666/2013 E. 4.1",
+      "5A_666/2013 E. 4.3",
+      "5A_666/2013 E. 5.2",
+      "5A_748/2012 E. 3.2",
+      "5A_748/2012 E. 3.3",
+      "5A_748/2012 E. 4.1",
+      "5A_12/2009 E. 2.3",
+      "5A_12/2009 E. 3.1",
+      "5A_12/2009 E. 3.2",
+      "5A_204/2007 E. 5.1",
+      "5A_204/2007 E. 5.2",
+      "5A_204/2007 E. 5.3",
+      "5A_898/2011 E. 2.1",
+      "5A_898/2011 E. 2.2",
+      "5A_898/2011 E. 3.4",
+      "5A_492/2014 E. 4.2",
+      "5A_492/2014 E. 4.4",
+      "5A_492/2014 E. 5.1",
+      "5A_443/2014 E. 4.1",
+      "5A_443/2014 E. 4.2",
+      "5A_443/2014 E. 6.1",
+      "5A_39/2016 E. 3.3",
+      "5A_39/2016 E. 4.1",
+      "5A_39/2016 E. 4.2",
+      "5A_336/2018 E. 5.1",
+      "5A_336/2018 E. 5.2",
+      "5A_336/2018 E. 6.3",
+      "5A_940/2019 E. 4.1",
+      "5A_940/2019 E. 4.3",
+      "5A_940/2019 E. 5.2",
+      "5A_763/2020 E. 3.2",
+      "5A_763/2020 E. 4.1",
+      "5A_763/2020 E. 4.4"
+    ]
+  },
+  "val_005": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 131 III 553",
+          "erwägungen": [
+            "E. 1.1",
+            "E. 1.2",
+            "E. 1.3",
+            "E. 1.4",
+            "E. 3.1",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Grundsatzentscheid zum persönlichen Verkehr nach Art. 273/274 ZGB; Kindeswohl als oberster Massstab, weiter richterlicher Ermessensspielraum und Zulässigkeit von Einschränkungen bis hin zur Verweigerung bei Gefährdung des Kindes."
+        },
+        {
+          "case": "BGE 122 III 404",
+          "erwägungen": [
+            "E. 3a",
+            "E. 3b",
+            "E. 3c"
+          ],
+          "relevance": "Klassischer Leitentscheid zu Voraussetzungen und Grenzen der Einschränkung bzw. des Entzugs des Besuchsrechts nach Art. 274 Abs. 2 ZGB; verlangt konkrete Kindeswohlgefährdung und Verhältnismässigkeit."
+        },
+        {
+          "case": "BGE 120 II 229",
+          "erwägungen": [
+            "E. 3a",
+            "E. 3b",
+            "E. 4a"
+          ],
+          "relevance": "Leitentscheid zur Ausgestaltung des Besuchsrechts und zu dessen Beschränkung bei Konfliktlagen; betont abgestufte Massnahmen und Orientierung am Kindeswohl."
+        },
+        {
+          "case": "BGE 127 III 295",
+          "erwägungen": [
+            "E. 4a",
+            "E. 4b",
+            "E. 4c"
+          ],
+          "relevance": "Zur Kindeswohlprüfung und zur Frage, wann Schutzmassnahmen nach Art. 307/308 ZGB anstelle oder neben einer Einschränkung des persönlichen Verkehrs angezeigt sind."
+        },
+        {
+          "case": "BGE 130 III 585",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.3"
+          ],
+          "relevance": "Zur Offizial- und Untersuchungsmaxime in Kinderbelangen; das Gericht muss den Sachverhalt von Amtes wegen abklären und ist nicht an Parteivorbringen gebunden."
+        },
+        {
+          "case": "BGE 128 III 411",
+          "erwägungen": [
+            "E. 3.2.1",
+            "E. 3.2.2",
+            "E. 3.2.3"
+          ],
+          "relevance": "Zur Reichweite der Untersuchungsmaxime und zur Pflicht, bei kindesrechtlichen Entscheiden die tatsächlichen Grundlagen hinreichend abzuklären."
+        },
+        {
+          "case": "BGE 142 III 617",
+          "erwägungen": [
+            "E. 3.2.3",
+            "E. 3.2.5",
+            "E. 3.3"
+          ],
+          "relevance": "Zur antizipierten Beweiswürdigung und zu den Grenzen richterlicher Sachverhaltsfeststellung in familienrechtlichen Verfahren unter Untersuchungsmaxime."
+        },
+        {
+          "case": "BGE 144 III 442",
+          "erwägungen": [
+            "E. 2.6",
+            "E. 2.7",
+            "E. 2.8"
+          ],
+          "relevance": "Zur strengen Untersuchungsmaxime nach Art. 296 ZPO in Kinderbelangen; das Gericht muss entscheidwesentliche Risiken aktiv abklären."
+        },
+        {
+          "case": "BGE 144 III 349",
+          "erwägungen": [
+            "E. 4.2.1",
+            "E. 4.2.2",
+            "E. 4.2.3"
+          ],
+          "relevance": "Zur Beweiswürdigung und zur Frage, wann ein Gutachten oder Fachbericht erforderlich ist, wenn die Kindeswohlbeurteilung besondere Fachkenntnisse voraussetzt."
+        },
+        {
+          "case": "BGE 147 III 301",
+          "erwägungen": [
+            "E. 6.2",
+            "E. 6.3",
+            "E. 6.4"
+          ],
+          "relevance": "Neuere Leitlinien zur Kindeswohlprüfung, zur Rolle von Fachberichten/KESB-Abklärungen und zur Verhältnismässigkeit von Eingriffen in Betreuungs- und Kontaktregelungen."
+        },
+        {
+          "case": "BGE 5A_699/2017",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.4"
+          ],
+          "relevance": "In der amtlichen Sammlung häufig zitierter Entscheid zur Einschränkung des persönlichen Verkehrs bei Verdachtsmomenten und zur Notwendigkeit sorgfältiger Sachverhaltsabklärung."
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "5A_699/2017",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.4",
+            "E. 6.1"
+          ],
+          "relevance": "Wichtiger neuerer Entscheid zur Beschränkung des persönlichen Verkehrs bei Gefährdungsanzeichen; betont, dass einschneidende definitive Beschränkungen auf genügend abgeklärter Tatsachengrundlage beruhen müssen."
+        },
+        {
+          "case": "5A_22/2017",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.5"
+          ],
+          "relevance": "Zur Einschränkung bzw. begleiteten Ausübung des Besuchsrechts bei Kindeswohlgefährdung und zur abgestuften Wahl milderer Massnahmen."
+        },
+        {
+          "case": "5A_875/2017",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 3.4",
+            "E. 5.1"
+          ],
+          "relevance": "Zur Bedeutung von Berichten der KESB/Beistandschaft und zur Frage, wann diese für eine vorsorgliche Regelung genügen, aber für eine definitive Ordnung weitergehende Abklärungen nötig sein können."
+        },
+        {
+          "case": "5A_354/2015",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.4"
+          ],
+          "relevance": "Zur Offizial- und Untersuchungsmaxime in Kinderbelangen; das Gericht darf bei unklarer Gefährdungslage nicht auf unvollständiger Aktenlage definitiv entscheiden."
+        },
+        {
+          "case": "5A_111/2019",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3",
+            "E. 4.5"
+          ],
+          "relevance": "Neuere Anwendung zur Kontaktbeschränkung bei psychischer bzw. sozialer Risikolage; Fachberichte und konkrete Risikoanalyse sind zentral."
+        },
+        {
+          "case": "5A_728/2015",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 3.4",
+            "E. 3.5"
+          ],
+          "relevance": "Zur Zulässigkeit vorsorglicher Einschränkungen des persönlichen Verkehrs bei Verdachtslagen und zur geringeren Beweisdichte im Massnahmeverfahren."
+        },
+        {
+          "case": "5A_459/2019",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.3",
+            "E. 3.6"
+          ],
+          "relevance": "Zur Verhältnismässigkeit von Kontaktbeschränkungen und zur Pflicht, mildere Mittel wie Tagesbesuche, Begleitung oder Beistandschaft zu prüfen."
+        },
+        {
+          "case": "5A_489/2019",
+          "erwägungen": [
+            "E. 2.4",
+            "E. 4.1",
+            "E. 4.4"
+          ],
+          "relevance": "Zur Beweiswürdigung in Kinderbelangen und zur Frage, wann auf zusätzliche Abklärungen verzichtet werden darf bzw. wann dies bundesrechtswidrig ist."
+        },
+        {
+          "case": "5A_153/2019",
+          "erwägungen": [
+            "E. 3.5",
+            "E. 3.6",
+            "E. 4.2"
+          ],
+          "relevance": "Zur Rolle von Kindesanhörung, Fachberichten und Schutzmassnahmen nach Art. 307/308 ZGB bei der Ausgestaltung des persönlichen Verkehrs."
+        },
+        {
+          "case": "5A_367/2020",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3",
+            "E. 5.1"
+          ],
+          "relevance": "Neuere Praxis zur strengen Untersuchungsmaxime nach Art. 296 ZPO und zur Notwendigkeit vollständiger Abklärung bei kindeswohlrelevanten Risiken."
+        },
+        {
+          "case": "5A_192/2021",
+          "erwägungen": [
+            "E. 5.2",
+            "E. 5.4",
+            "E. 6.1"
+          ],
+          "relevance": "Zur vorsorglichen Anpassung von Kontaktregelungen bei laufenden Strafverfahren bzw. ungeklärten Vorwürfen; Schutzgedanke erlaubt vorläufige Einschränkungen."
+        },
+        {
+          "case": "5A_847/2020",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.6"
+          ],
+          "relevance": "Zur Bedeutung von Suchtproblematik und Stabilitätsprognose bei der Beurteilung des Kindeswohls und der Ausgestaltung des persönlichen Verkehrs."
+        },
+        {
+          "case": "5A_397/2022",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.4",
+            "E. 4.1"
+          ],
+          "relevance": "Jüngere Anwendung zur Frage, welche tatsächlichen Grundlagen für definitive Eingriffe in Kontaktrechte erforderlich sind."
+        },
+        {
+          "case": "5A_886/2021",
+          "erwägungen": [
+            "E. 6.2",
+            "E. 6.3",
+            "E. 6.5"
+          ],
+          "relevance": "Zur Gewichtung von Berichten der Kindes- und Erwachsenenschutzbehörden und zur Pflicht, fehlende zentrale Akten beizuziehen."
+        },
+        {
+          "case": "5A_701/2021",
+          "erwägungen": [
+            "E. 4.3",
+            "E. 4.4",
+            "E. 5.2"
+          ],
+          "relevance": "Zur Verhältnismässigkeit und zur abgestuften Kontaktregelung bei fortbestehenden Unsicherheiten über Gefährdungsrisiken."
+        }
+      ],
+      "reasoning": "Am wahrscheinlichsten zitiert werden zunächst die klassischen Leitentscheide zu Art. 273/274 ZGB: Das Besuchsrecht steht unter dem Primat des Kindeswohls; es kann eingeschränkt, begleitet ausgestaltet oder entzogen werden, wenn konkrete Gefährdungen bestehen, wobei stets Verhältnismässigkeit und mildere Mittel zu prüfen sind. Für die hier zentrale zweite Frage – ob eine definitive Beschränkung von Übernachtungen ohne vollständige straf- bzw. gutachterliche Akten zulässig ist – sind zusätzlich die Entscheide zur strengen Untersuchungsmaxime (Art. 296 ZPO; im Kindesschutz auch Art. 446/445 ZGB) massgeblich: Das Gericht muss von Amtes wegen alle entscheidwesentlichen Umstände abklären, insbesondere bei Vorwürfen mit sexuellem Bezug, Suchtproblematik und unklarer Rückfall- bzw. Gefährdungsprognose. Die bundesgerichtliche Linie unterscheidet typischerweise zwischen vorsorglichen Massnahmen und definitiven Regelungen: Für vorsorgliche Einschränkungen genügt eine glaubhaft gemachte bzw. ernsthaft mögliche Kindeswohlgefährdung; für eine definitive, längerfristige Beschränkung braucht es eine tragfähige, aktuelle Tatsachengrundlage, regelmässig unter Einbezug von Fachberichten, Beistandschaft/KESB-Abklärungen, allenfalls Gutachten oder beigezogenen Strafakten. Fehlen zentrale Unterlagen wie ein forensisch-psychiatrisches Gutachten, ist eine definitive Verschärfung eher nur zulässig, wenn andere zuverlässige Beweismittel die Gefährdung hinreichend belegen; andernfalls drängt sich eher eine vorsorgliche Tagesregelung ohne Übernachtung mit weiterer Abklärung auf."
+    },
+    "expanded": [
+      "BGE 131 III 553 E. 1.1",
+      "BGE 131 III 553 E. 1.2",
+      "BGE 131 III 553 E. 1.3",
+      "BGE 131 III 553 E. 1.4",
+      "BGE 131 III 553 E. 3.1",
+      "BGE 131 III 553 E. 4.2",
+      "BGE 131 III 553 E. 4.3",
+      "BGE 122 III 404 E. 3a",
+      "BGE 122 III 404 E. 3b",
+      "BGE 122 III 404 E. 3c",
+      "BGE 120 II 229 E. 3a",
+      "BGE 120 II 229 E. 3b",
+      "BGE 120 II 229 E. 4a",
+      "BGE 127 III 295 E. 4a",
+      "BGE 127 III 295 E. 4b",
+      "BGE 127 III 295 E. 4c",
+      "BGE 130 III 585 E. 2.1",
+      "BGE 130 III 585 E. 2.2",
+      "BGE 130 III 585 E. 2.3",
+      "BGE 128 III 411 E. 3.2.1",
+      "BGE 128 III 411 E. 3.2.2",
+      "BGE 128 III 411 E. 3.2.3",
+      "BGE 142 III 617 E. 3.2.3",
+      "BGE 142 III 617 E. 3.2.5",
+      "BGE 142 III 617 E. 3.3",
+      "BGE 144 III 442 E. 2.6",
+      "BGE 144 III 442 E. 2.7",
+      "BGE 144 III 442 E. 2.8",
+      "BGE 144 III 349 E. 4.2.1",
+      "BGE 144 III 349 E. 4.2.2",
+      "BGE 144 III 349 E. 4.2.3",
+      "BGE 147 III 301 E. 6.2",
+      "BGE 147 III 301 E. 6.3",
+      "BGE 147 III 301 E. 6.4",
+      "BGE 5A_699/2017 E. 5.1",
+      "BGE 5A_699/2017 E. 5.2",
+      "BGE 5A_699/2017 E. 5.4",
+      "5A_699/2017 E. 5.1",
+      "5A_699/2017 E. 5.2",
+      "5A_699/2017 E. 5.4",
+      "5A_699/2017 E. 6.1",
+      "5A_22/2017 E. 4.1",
+      "5A_22/2017 E. 4.2",
+      "5A_22/2017 E. 4.5",
+      "5A_875/2017 E. 3.3",
+      "5A_875/2017 E. 3.4",
+      "5A_875/2017 E. 5.1",
+      "5A_354/2015 E. 3.1",
+      "5A_354/2015 E. 3.2",
+      "5A_354/2015 E. 4.4",
+      "5A_111/2019 E. 4.2",
+      "5A_111/2019 E. 4.3",
+      "5A_111/2019 E. 4.5",
+      "5A_728/2015 E. 3.3",
+      "5A_728/2015 E. 3.4",
+      "5A_728/2015 E. 3.5",
+      "5A_459/2019 E. 3.1",
+      "5A_459/2019 E. 3.3",
+      "5A_459/2019 E. 3.6",
+      "5A_489/2019 E. 2.4",
+      "5A_489/2019 E. 4.1",
+      "5A_489/2019 E. 4.4",
+      "5A_153/2019 E. 3.5",
+      "5A_153/2019 E. 3.6",
+      "5A_153/2019 E. 4.2",
+      "5A_367/2020 E. 4.2",
+      "5A_367/2020 E. 4.3",
+      "5A_367/2020 E. 5.1",
+      "5A_192/2021 E. 5.2",
+      "5A_192/2021 E. 5.4",
+      "5A_192/2021 E. 6.1",
+      "5A_847/2020 E. 4.1",
+      "5A_847/2020 E. 4.2",
+      "5A_847/2020 E. 4.6",
+      "5A_397/2022 E. 3.2",
+      "5A_397/2022 E. 3.4",
+      "5A_397/2022 E. 4.1",
+      "5A_886/2021 E. 6.2",
+      "5A_886/2021 E. 6.3",
+      "5A_886/2021 E. 6.5",
+      "5A_701/2021 E. 4.3",
+      "5A_701/2021 E. 4.4",
+      "5A_701/2021 E. 5.2"
+    ]
+  },
+  "val_006": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 129 III 181",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "Grundsatzentscheid zur Abgrenzung zwischen vertraglicher Haftung und ausservertraglicher Haftung bei Gefälligkeitshandlungen; zentral für die Frage, ob eine unentgeltliche Hilfeleistung als Rechtsbindungswille bzw. vertragsähnliches Verhältnis zu qualifizieren ist."
+        },
+        {
+          "case": "BGE 116 II 695",
+          "erwägungen": [
+            "E. 2b",
+            "E. 3"
+          ],
+          "relevance": "Leitentscheid zur Gefälligkeit und zur Frage, wann trotz Unentgeltlichkeit ein Vertragsverhältnis angenommen werden kann; häufig zitiert bei Haftung aus unentgeltlicher Hilfeleistung."
+        },
+        {
+          "case": "BGE 137 III 539",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Allgemeine Grundsätze zur Vertragsauslegung und zum Rechtsbindungswillen; relevant für die Einordnung der unentgeltlichen Mithilfe als Auftrag/Werkvertrag/Gefälligkeit."
+        },
+        {
+          "case": "BGE 127 III 357",
+          "erwägungen": [
+            "E. 1b",
+            "E. 2"
+          ],
+          "relevance": "Zur Haftung aus Auftrag und zum Sorgfaltsmassstab nach Art. 398 OR; wichtig, falls die Tätigkeit eher als unentgeltlicher Auftrag denn als Werkvertrag qualifiziert wird."
+        },
+        {
+          "case": "BGE 115 II 62",
+          "erwägungen": [
+            "E. 3a",
+            "E. 3b"
+          ],
+          "relevance": "Grundlagenentscheid zur objektivierten Sorgfalt im Vertragsrecht und zur Bedeutung beruflicher Fachkunde; relevant für den Massstab bei einem fachkundigen Installateur."
+        },
+        {
+          "case": "BGE 130 III 182",
+          "erwägungen": [
+            "E. 5.4",
+            "E. 5.5"
+          ],
+          "relevance": "Zur objektiven Sorgfaltspflicht und zur Berücksichtigung besonderer Fachkenntnisse des Handelnden; einschlägig für die Beurteilung eines beruflich erfahrenen Heizungsinstallateurs."
+        },
+        {
+          "case": "BGE 133 III 121",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "Allgemeine Voraussetzungen von Art. 41 OR, insbesondere Widerrechtlichkeit und Verschulden; relevant, falls die Haftung deliktisch geprüft wird."
+        },
+        {
+          "case": "BGE 132 III 122",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "Zur Widerrechtlichkeit bei Sachschäden nach Art. 41 OR und zur Kausalität; einschlägig für Brandschäden an einem Gebäude."
+        },
+        {
+          "case": "BGE 119 II 127",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Zur Haftung bei Verletzung von Sicherheits- und Verhaltensnormen; relevant, wenn das Fehlen der vorgeschriebenen Bewilligung/Zertifizierung als Sorgfaltspflichtverletzung gewertet wird."
+        },
+        {
+          "case": "BGE 123 III 306",
+          "erwägungen": [
+            "E. 4a",
+            "E. 4b"
+          ],
+          "relevance": "Zur Bedeutung behördlicher Sicherheitsvorschriften und technischer Regeln für die Bestimmung des zivilrechtlichen Sorgfaltsmassstabs."
+        },
+        {
+          "case": "BGE 134 III 534",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "Zur natürlichen und adäquaten Kausalität bei schadensstiftenden technischen Fehlhandlungen; relevant für den Zusammenhang zwischen fehlender Entgasung und Brand."
+        },
+        {
+          "case": "BGE 132 III 359",
+          "erwägungen": [
+            "E. 4",
+            "E. 5.1"
+          ],
+          "relevance": "Zur Beweisführung und zum hypothetischen Kausalverlauf bei Unterlassungen; einschlägig für die Frage, ob der Brand bei korrekter Entgasung/explosionsfreier Arbeitsweise vermeidbar gewesen wäre."
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "4A_275/2013",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.3",
+            "E. 6.1",
+            "E. 6.2"
+          ],
+          "relevance": "Sehr wahrscheinlich der direkt einschlägige Entscheid zum unentgeltlichen Ausbau eines Heizöltanks durch einen nicht zertifizierten Installateur; behandelt Qualifikation als Gefälligkeit bzw. vertragsähnliches Verhältnis und den anzuwendenden Sorgfaltsmassstab."
+        },
+        {
+          "case": "4A_87/2012",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Abgrenzung Gefälligkeit/Vertrag und zur Haftung bei unentgeltlicher Tätigkeit; nützlich als jüngere Anwendung der Grundsätze aus BGE 129 III 181."
+        },
+        {
+          "case": "4A_306/2009",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Zur objektiven Sorgfalt im Werkvertrags- bzw. Auftragsrecht und zur Berücksichtigung beruflicher Fachkunde."
+        },
+        {
+          "case": "4A_52/2008",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Haftung aus unentgeltlichem Auftrag/Gefälligkeit und zur Frage, ob Art. 248 Abs. 1 OR analog herangezogen werden kann."
+        },
+        {
+          "case": "4C.276/2001",
+          "erwägungen": [
+            "E. 2b",
+            "E. 3a",
+            "E. 3b"
+          ],
+          "relevance": "Älterer, aber oft zitierter Entscheid zur Gefälligkeitshaftung und zum reduzierten bzw. angepassten Sorgfaltsmassstab bei unentgeltlichem Handeln."
+        },
+        {
+          "case": "4C.296/2006",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 3.1"
+          ],
+          "relevance": "Zur Bedeutung technischer Sicherheitsnormen und behördlicher Vorschriften für die Bestimmung der Fahrlässigkeit."
+        },
+        {
+          "case": "4A_601/2015",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.4",
+            "E. 4.2"
+          ],
+          "relevance": "Neuere Rechtsprechung zur Vertragsqualifikation und zum Vertrauensprinzip bei unentgeltlichen Leistungen unter Bekannten."
+        },
+        {
+          "case": "4A_210/2008",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "Zur Haftung des fachkundigen Unternehmers/Beauftragten bei Missachtung elementarer Sicherheitsregeln."
+        },
+        {
+          "case": "6B_158/2014",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.3"
+          ],
+          "relevance": "Strafrechtliche Fahrlässigkeitsbeurteilung bei Missachtung technischer Sicherheitsvorschriften; nicht zivilrechtlich direkt, aber hilfreich zur Konkretisierung des objektiven Sorgfaltsmassstabs."
+        },
+        {
+          "case": "6B_437/2011",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "Zur Bedeutung von Spezialbewilligungen und anerkannten Sicherheitsregeln bei der Beurteilung fahrlässigen Verhaltens."
+        }
+      ],
+      "reasoning": "Am wahrscheinlichsten ist hier ein Bundesgerichtsentscheid aus dem Bereich der Gefälligkeitshaftung bei technisch gefährlicher unentgeltlicher Hilfeleistung einschlägig, insbesondere 4A_275/2013, der nach Sachverhaltsbild sehr nahe liegt. Dogmatisch wird das Bundesgericht typischerweise zuerst die Qualifikation prüfen: Werkvertrag/Auftrag bzw. vertragsähnliches Verhältnis oder blosse Gefälligkeit. Dafür sind vor allem BGE 129 III 181 und BGE 116 II 695 massgeblich. Wird ein Vertragsverhältnis bejaht, richtet sich die Haftung nach dem vertraglichen Sorgfaltsmassstab, bei werkvertragsnaher Tätigkeit unter Einbezug von Art. 364 Abs. 1 OR bzw. bei auftragsrechtlicher Einordnung nach Art. 398 OR. Wird bloss eine Gefälligkeit angenommen, prüft das Bundesgericht regelmässig Art. 41 OR; in der Lehre und Rechtsprechung wird dabei teils Art. 248 Abs. 1 OR analog als Milderungsgedanke diskutiert, ohne dass dadurch elementare Sicherheitsanforderungen bei gefährlichen Arbeiten aufgehoben würden. Für die konkrete Sorgfaltspflichtverletzung sind Entscheide relevant, die die Bedeutung beruflicher Fachkunde, behördlicher Sicherheitsvorschriften und technischer Regeln hervorheben: fehlende Zertifizierung, Einsatz funkenbildender Werkzeuge bzw. Brenners, bloss visuelle Leerstandskontrolle und Unterlassen der vorgeschriebenen Entgasung sprechen stark für Fahrlässigkeit selbst bei grosszügigerem Massstab für Gefälligkeiten. Deshalb sind neben den Gefälligkeits-Leitentscheiden auch Präjudizien zu Art. 41 OR, zur objektiven Fachsorgfalt und zur Relevanz von Sicherheitsnormen besonders wahrscheinlich zitierfähig."
+    },
+    "expanded": [
+      "BGE 129 III 181 E. 3.1",
+      "BGE 129 III 181 E. 3.2",
+      "BGE 129 III 181 E. 3.3",
+      "BGE 116 II 695 E. 2b",
+      "BGE 116 II 695 E. 3",
+      "BGE 137 III 539 E. 4.1",
+      "BGE 137 III 539 E. 4.2",
+      "BGE 137 III 539 E. 4.3",
+      "BGE 127 III 357 E. 1b",
+      "BGE 127 III 357 E. 2",
+      "BGE 115 II 62 E. 3a",
+      "BGE 115 II 62 E. 3b",
+      "BGE 130 III 182 E. 5.4",
+      "BGE 130 III 182 E. 5.5",
+      "BGE 133 III 121 E. 3.1",
+      "BGE 133 III 121 E. 3.2",
+      "BGE 132 III 122 E. 4.1",
+      "BGE 132 III 122 E. 4.2",
+      "BGE 119 II 127 E. 3",
+      "BGE 119 II 127 E. 4",
+      "BGE 123 III 306 E. 4a",
+      "BGE 123 III 306 E. 4b",
+      "BGE 134 III 534 E. 3.2",
+      "BGE 134 III 534 E. 3.3",
+      "BGE 132 III 359 E. 4",
+      "BGE 132 III 359 E. 5.1",
+      "4A_275/2013 E. 5.1",
+      "4A_275/2013 E. 5.2",
+      "4A_275/2013 E. 5.3",
+      "4A_275/2013 E. 6.1",
+      "4A_275/2013 E. 6.2",
+      "4A_87/2012 E. 3.1",
+      "4A_87/2012 E. 3.2",
+      "4A_87/2012 E. 4.1",
+      "4A_306/2009 E. 4.1",
+      "4A_306/2009 E. 4.2",
+      "4A_306/2009 E. 4.3",
+      "4A_52/2008 E. 3.3",
+      "4A_52/2008 E. 4.1",
+      "4C.276/2001 E. 2b",
+      "4C.276/2001 E. 3a",
+      "4C.276/2001 E. 3b",
+      "4C.296/2006 E. 2.1",
+      "4C.296/2006 E. 2.2",
+      "4C.296/2006 E. 3.1",
+      "4A_601/2015 E. 3.1",
+      "4A_601/2015 E. 3.4",
+      "4A_601/2015 E. 4.2",
+      "4A_210/2008 E. 3.2",
+      "4A_210/2008 E. 4.1",
+      "6B_158/2014 E. 3.1",
+      "6B_158/2014 E. 3.3",
+      "6B_437/2011 E. 4.2",
+      "6B_437/2011 E. 4.3"
+    ]
+  },
+  "val_007": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 122 III 219",
+          "erwägungen": [
+            "E. 3",
+            "E. 3a",
+            "E. 3b"
+          ],
+          "relevance": "leading authority on Fahrniseigentumserwerb under Art. 714 ZGB and the requirement of Besitzesübertragung as mode of transfer"
+        },
+        {
+          "case": "BGE 123 III 165",
+          "erwägungen": [
+            "E. 3",
+            "E. 3a",
+            "E. 3c"
+          ],
+          "relevance": "important precedent on Besitz, Besitzesübertragung and indirect possession relevant where the object is held by a third party"
+        },
+        {
+          "case": "BGE 84 II 327",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "classic case on Schenkung, especially distinction between inter vivos gift and dispositions mortis causa / Schenkung von Todes wegen"
+        },
+        {
+          "case": "BGE 106 II 29",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "authority on interpretation of gratuitous transfers and delimitation between contractual gift and succession-related disposition"
+        },
+        {
+          "case": "BGE 129 III 239",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.3"
+          ],
+          "relevance": "leading case on burden and standard of proof in civil matters; relevant to proving authenticity and content of a missing original deed"
+        },
+        {
+          "case": "BGE 133 III 81",
+          "erwägungen": [
+            "E. 4.2.2",
+            "E. 4.2.3"
+          ],
+          "relevance": "important on proof by copies and free evaluation of evidence under Swiss civil procedure"
+        },
+        {
+          "case": "BGE 140 III 264",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 2.4"
+          ],
+          "relevance": "authority on admissibility and evidentiary weight of documentary evidence, including copies, under the principle of freie Beweiswürdigung"
+        },
+        {
+          "case": "BGE 117 II 50",
+          "erwägungen": [
+            "E. 4",
+            "E. 5"
+          ],
+          "relevance": "classic precedent on good faith acquisition of movables and the purchaser’s duty of inquiry under Art. 933/934 ZGB"
+        },
+        {
+          "case": "BGE 122 III 1",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "leading case on Gutglaubenserwerb and circumstances excluding good faith because of suspicious acquisition conditions"
+        },
+        {
+          "case": "BGE 131 III 418",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 2.4"
+          ],
+          "relevance": "important authority on professional dealers’ heightened duty of diligence when acquiring valuable movables"
+        },
+        {
+          "case": "BGE 113 II 397",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "authority on possession and the legal significance of handing over through representatives or intermediaries"
+        },
+        {
+          "case": "BGE 79 II 59",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "older but frequently cited case on Schenkungsversprechen versus executed gift and the role of delivery"
+        },
+        {
+          "case": "BGE 90 II 164",
+          "erwägungen": [
+            "E. 5",
+            "E. 6"
+          ],
+          "relevance": "relevant to acceptance of gifts and inference of acceptance from circumstances"
+        },
+        {
+          "case": "BGE 138 III 659",
+          "erwägungen": [
+            "E. 4.2.1",
+            "E. 4.2.2"
+          ],
+          "relevance": "authority on international private law methodology and proof of foreign law under IPRG, relevant for applying New York gift law"
+        },
+        {
+          "case": "BGE 119 II 84",
+          "erwägungen": [
+            "E. 2a",
+            "E. 2b",
+            "E. 3"
+          ],
+          "relevance": "important on proof of foreign law and fallback to Swiss law where foreign law cannot be sufficiently established"
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "5A_113/2018",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3",
+            "E. 5.1"
+          ],
+          "relevance": "recent application of Art. 239 OR and evidentiary issues concerning alleged gifts between closely connected persons"
+        },
+        {
+          "case": "5A_807/2012",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "useful on distinction between donation inter vivos and mortis causa in inheritance-related disputes"
+        },
+        {
+          "case": "5A_434/2010",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 3.4"
+          ],
+          "relevance": "relevant to burden of proof for authenticity and content of a lost original document where only a copy exists"
+        },
+        {
+          "case": "4A_688/2011",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.4"
+          ],
+          "relevance": "authority on freie Beweiswürdigung and the admissibility of photocopies as documentary evidence"
+        },
+        {
+          "case": "4A_247/2014",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3",
+            "E. 3.1"
+          ],
+          "relevance": "recent civil procedure case on witness evidence obtained abroad and its assessment in Swiss proceedings"
+        },
+        {
+          "case": "4A_372/2015",
+          "erwägungen": [
+            "E. 5.3",
+            "E. 5.4"
+          ],
+          "relevance": "relevant to proof and evidentiary value of foreign depositions and party statements"
+        },
+        {
+          "case": "5A_604/2014",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.3",
+            "E. 5.2"
+          ],
+          "relevance": "application of Art. 16 and 18 ZGB concerning capacity and evidentiary presumptions in civil disputes"
+        },
+        {
+          "case": "5A_699/2013",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.4"
+          ],
+          "relevance": "relevant to proving incapacity at the time of a legal act and the allocation of the burden of proof"
+        },
+        {
+          "case": "5A_21/2019",
+          "erwägungen": [
+            "E. 6.2",
+            "E. 6.3",
+            "E. 6.4"
+          ],
+          "relevance": "recent case on possession through third parties and whether effective control over a movable was sufficiently transferred"
+        },
+        {
+          "case": "5A_853/2017",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "useful on indirect possession and transfer where the object remains with a bailee or museum-like custodian"
+        },
+        {
+          "case": "5A_1005/2020",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.4"
+          ],
+          "relevance": "recent application of Art. 933 and 934 ZGB to valuable movables and the purchaser’s duty to investigate provenance"
+        },
+        {
+          "case": "5A_250/2021",
+          "erwägungen": [
+            "E. 4.3",
+            "E. 4.4",
+            "E. 5.1"
+          ],
+          "relevance": "relevant to professional purchasers and negligence defeating good faith in the art/collectibles market"
+        },
+        {
+          "case": "4A_379/2016",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "authority on proving foreign law under Art. 16 IPRG and consequences if the content of foreign law remains uncertain"
+        },
+        {
+          "case": "4A_543/2017",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.4"
+          ],
+          "relevance": "relevant to admissibility and weight of foreign witness statements and documentary exhibits"
+        }
+      ],
+      "reasoning": "The dispute combines four clusters of Swiss precedent: (1) substantive gift law under Art. 239 ff. OR, especially whether there was a completed inter vivos gift or instead a mortis-causa disposition; (2) transfer of ownership in movables under Art. 714 ZGB through possession, including indirect possession where the item is with a third party such as a museum; (3) proof issues under Swiss procedure and evidence law, especially authenticity and evidentiary value of a photocopy when the original deed is missing, and the treatment of testimony taken abroad; and (4) good-faith acquisition and restitution of entrusted/lost/stolen movables under Art. 933-936 ZGB, with heightened diligence for professional market participants. The listed BGE are the most likely anchor citations for these issues, while the individual cases are the kinds of more recent decisions typically cited for concrete applications involving proof of incapacity, foreign law, copies of documents, indirect possession, and the duty of inquiry of professional purchasers."
+    },
+    "expanded": [
+      "BGE 122 III 219 E. 3",
+      "BGE 122 III 219 E. 3a",
+      "BGE 122 III 219 E. 3b",
+      "BGE 123 III 165 E. 3",
+      "BGE 123 III 165 E. 3a",
+      "BGE 123 III 165 E. 3c",
+      "BGE 84 II 327 E. 3",
+      "BGE 84 II 327 E. 4",
+      "BGE 106 II 29 E. 2",
+      "BGE 106 II 29 E. 3",
+      "BGE 129 III 239 E. 2.1",
+      "BGE 129 III 239 E. 2.2",
+      "BGE 129 III 239 E. 2.3",
+      "BGE 133 III 81 E. 4.2.2",
+      "BGE 133 III 81 E. 4.2.3",
+      "BGE 140 III 264 E. 2.3",
+      "BGE 140 III 264 E. 2.4",
+      "BGE 117 II 50 E. 4",
+      "BGE 117 II 50 E. 5",
+      "BGE 122 III 1 E. 2",
+      "BGE 122 III 1 E. 3",
+      "BGE 131 III 418 E. 2.2",
+      "BGE 131 III 418 E. 2.3",
+      "BGE 131 III 418 E. 2.4",
+      "BGE 113 II 397 E. 2",
+      "BGE 113 II 397 E. 3",
+      "BGE 79 II 59 E. 2",
+      "BGE 79 II 59 E. 3",
+      "BGE 90 II 164 E. 5",
+      "BGE 90 II 164 E. 6",
+      "BGE 138 III 659 E. 4.2.1",
+      "BGE 138 III 659 E. 4.2.2",
+      "BGE 119 II 84 E. 2a",
+      "BGE 119 II 84 E. 2b",
+      "BGE 119 II 84 E. 3",
+      "5A_113/2018 E. 4.2",
+      "5A_113/2018 E. 4.3",
+      "5A_113/2018 E. 5.1",
+      "5A_807/2012 E. 3.2",
+      "5A_807/2012 E. 4.1",
+      "5A_807/2012 E. 4.2",
+      "5A_434/2010 E. 3.3",
+      "5A_434/2010 E. 3.4",
+      "4A_688/2011 E. 3.1",
+      "4A_688/2011 E. 3.2",
+      "4A_688/2011 E. 3.4",
+      "4A_247/2014 E. 2.2",
+      "4A_247/2014 E. 2.3",
+      "4A_247/2014 E. 3.1",
+      "4A_372/2015 E. 5.3",
+      "4A_372/2015 E. 5.4",
+      "5A_604/2014 E. 4.1",
+      "5A_604/2014 E. 4.3",
+      "5A_604/2014 E. 5.2",
+      "5A_699/2013 E. 4.2",
+      "5A_699/2013 E. 4.4",
+      "5A_21/2019 E. 6.2",
+      "5A_21/2019 E. 6.3",
+      "5A_21/2019 E. 6.4",
+      "5A_853/2017 E. 3.1",
+      "5A_853/2017 E. 3.2",
+      "5A_853/2017 E. 4.1",
+      "5A_1005/2020 E. 5.1",
+      "5A_1005/2020 E. 5.2",
+      "5A_1005/2020 E. 5.4",
+      "5A_250/2021 E. 4.3",
+      "5A_250/2021 E. 4.4",
+      "5A_250/2021 E. 5.1",
+      "4A_379/2016 E. 3.2",
+      "4A_379/2016 E. 3.3",
+      "4A_543/2017 E. 2.1",
+      "4A_543/2017 E. 2.2",
+      "4A_543/2017 E. 2.4"
+    ]
+  },
+  "val_008": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 142 IV 346",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "Leitentscheid zum Anklagegrundsatz nach Art. 9 BV und Art. 325 StPO; massgeblich für die Frage, ob eine nicht ausdrücklich angeklagte konkrete Modalität (hier die einseitige Erhöhung des Stundenansatzes) einer Verurteilung entgegensteht."
+        },
+        {
+          "case": "BGE 141 IV 132",
+          "erwägungen": [
+            "E. 3.4.1",
+            "E. 3.4.2",
+            "E. 3.4.3",
+            "E. 3.4.4"
+          ],
+          "relevance": "Grundsatzentscheid zur Umgrenzungs- und Informationsfunktion der Anklageschrift; wichtig für die Abgrenzung zwischen zulässiger rechtlicher Würdigung und unzulässiger Verurteilung wegen eines nicht angeklagten Sachverhaltselements."
+        },
+        {
+          "case": "BGE 143 IV 63",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.3"
+          ],
+          "relevance": "Zur Bindung des Gerichts an den in der Anklage umschriebenen Sachverhalt und zur Tragweite von Art. 350 StPO."
+        },
+        {
+          "case": "BGE 126 I 19",
+          "erwägungen": [
+            "E. 2a",
+            "E. 2c"
+          ],
+          "relevance": "Klassischer Leitentscheid zum verfassungsrechtlichen Anklagegrundsatz aus Art. 29 Abs. 2 BV bzw. Art. 9 BV; häufig zitiert zur Bestimmtheit der Anklage."
+        },
+        {
+          "case": "BGE 120 IV 348",
+          "erwägungen": [
+            "E. 2b",
+            "E. 2c"
+          ],
+          "relevance": "Früher Leitentscheid zur Funktion der Anklage als Begrenzung des Prozessgegenstands; relevant bei Detailabweichungen zwischen Anklage und Urteil."
+        },
+        {
+          "case": "BGE 144 IV 189",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2"
+          ],
+          "relevance": "Zur rechtlichen Umqualifikation durch das Gericht und zu den Schranken von Art. 350 StPO; relevant für die Frage, ob aus angeklagten Tatsachen eine andere Pflichtverletzungsmodalität abgeleitet werden darf."
+        },
+        {
+          "case": "BGE 129 IV 124",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "Leitentscheid zu Art. 158 StGB (ungetreue Geschäftsbesorgung): Vermögensbetreuungspflicht, Pflichtverletzung, Schaden und Vorsatz."
+        },
+        {
+          "case": "BGE 123 IV 17",
+          "erwägungen": [
+            "E. 3b",
+            "E. 3c"
+          ],
+          "relevance": "Grundlegend zu den Tatbestandsmerkmalen der ungetreuen Geschäftsbesorgung, insbesondere zur qualifizierten Vermögensfürsorgepflicht."
+        },
+        {
+          "case": "BGE 122 IV 279",
+          "erwägungen": [
+            "E. 2a",
+            "E. 2b"
+          ],
+          "relevance": "Zur Stellung von Organen und faktischen Geschäftsführern bei Art. 158 StGB; relevant für Stiftungs-/Trust-ähnliche Leitungsfunktionen."
+        },
+        {
+          "case": "BGE 120 IV 190",
+          "erwägungen": [
+            "E. 2b",
+            "E. 2c",
+            "E. 2d"
+          ],
+          "relevance": "Zur Pflichtwidrigkeit bei Interessenkonflikten und Selbstkontrahieren im Rahmen von Art. 158 StGB."
+        },
+        {
+          "case": "BGE 105 IV 307",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Klassischer Entscheid zur Vermögensschädigung und zum Missbrauch einer treuhänderischen Stellung bei Art. 158 StGB."
+        },
+        {
+          "case": "BGE 100 IV 56",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "Früher Leitentscheid zur ungetreuen Geschäftsbesorgung bei pflichtwidriger Begünstigung Dritter bzw. eigener Interessen."
+        },
+        {
+          "case": "BGE 127 IV 209",
+          "erwägungen": [
+            "E. 1b",
+            "E. 1c",
+            "E. 3"
+          ],
+          "relevance": "Leitentscheid zu Art. 314 StGB (ungetreue Amtsführung): Täterkreis, öffentliche Interessen und Verhältnis zu Art. 158 StGB."
+        },
+        {
+          "case": "BGE 114 IV 133",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "Grundlegend zu Art. 314 StGB; relevant für die Frage, wann ein Amtsträger öffentliche Vermögensinteressen pflichtwidrig schädigt."
+        },
+        {
+          "case": "BGE 101 IV 407",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "Älterer Leitentscheid zu Art. 314 StGB und zur pflichtwidrigen Wahrnehmung öffentlicher Vermögensinteressen."
+        },
+        {
+          "case": "BGE 141 IV 305",
+          "erwägungen": [
+            "E. 1.2",
+            "E. 1.3"
+          ],
+          "relevance": "Zur Bindungswirkung eines Rückweisungsentscheids (materielle Rechtskraft des bundesgerichtlichen bzw. oberen kantonalen Rückweisungsentscheids); zentral für die Frage, wie die Vorinstanz nach bereits erfolgter Rückweisung vorzugehen hat."
+        },
+        {
+          "case": "BGE 143 IV 214",
+          "erwägungen": [
+            "E. 5.2.1",
+            "E. 5.3.3"
+          ],
+          "relevance": "Zur Tragweite von Rückweisungsentscheiden und zum Verbot, im neuen Entscheid von verbindlichen Vorgaben der Rechtsmittelinstanz abzuweichen."
+        },
+        {
+          "case": "BGE 135 III 334",
+          "erwägungen": [
+            "E. 2",
+            "E. 2.1"
+          ],
+          "relevance": "Zwar zivilrechtlich, aber häufig zitierter Grundsatzentscheid zur Bindungswirkung von Rückweisungsentscheiden; auch im Strafprozess herangezogen."
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "6B_131/2023",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.4"
+          ],
+          "relevance": "Jüngere Anwendung des Anklagegrundsatzes und von Art. 325/350 StPO; relevant für die Frage, ob einzelne Ausführungsmodalitäten ausdrücklich angeklagt sein müssen."
+        },
+        {
+          "case": "6B_666/2023",
+          "erwägungen": [
+            "E. 1.3",
+            "E. 1.4"
+          ],
+          "relevance": "Neuere Rechtsprechung zur Bindung an den angeklagten Sachverhalt und zur zulässigen rechtlichen Würdigung durch das Gericht."
+        },
+        {
+          "case": "6B_994/2022",
+          "erwägungen": [
+            "E. 1.2",
+            "E. 1.3",
+            "E. 1.5"
+          ],
+          "relevance": "Aktuelle Präzisierung der Anforderungen an die Anklageschrift und an die Verteidigungsrechte bei Detailabweichungen."
+        },
+        {
+          "case": "6B_1404/2021",
+          "erwägungen": [
+            "E. 1.1",
+            "E. 1.3"
+          ],
+          "relevance": "Zur Umgrenzungsfunktion der Anklage und zur Frage, wann ein Urteil auf einen nicht angeklagten Lebenssachverhalt abstellt."
+        },
+        {
+          "case": "6B_1187/2021",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.4",
+            "E. 3.5"
+          ],
+          "relevance": "Neuere Anwendung von Art. 158 StGB bei Organen juristischer Personen; relevant für Selbstbegünstigung, Interessenkonflikte und Vermögensschaden."
+        },
+        {
+          "case": "6B_103/2021",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.3",
+            "E. 4.4"
+          ],
+          "relevance": "Zur Vermögensbetreuungspflicht und Pflichtwidrigkeit bei ungetreuer Geschäftsbesorgung im Umfeld von Vereins-/Stiftungsorganen."
+        },
+        {
+          "case": "6B_367/2020",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.6"
+          ],
+          "relevance": "Zur Schadensbestimmung bei Art. 158 StGB, insbesondere bei unnötigen Aufwendungen und Drittbegünstigungen."
+        },
+        {
+          "case": "6B_986/2020",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2"
+          ],
+          "relevance": "Zur pflichtwidrigen Vergabe von Aufträgen an nahestehende Unternehmen und zur Bereicherungs-/Schädigungsabsicht."
+        },
+        {
+          "case": "6B_52/2020",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 2.5"
+          ],
+          "relevance": "Zur Abgrenzung zwischen Art. 158 StGB und Art. 314 StGB bei Personen mit öffentlich-rechtlicher Funktion."
+        },
+        {
+          "case": "6B_689/2019",
+          "erwägungen": [
+            "E. 1.4",
+            "E. 1.5",
+            "E. 2.2"
+          ],
+          "relevance": "Zur Bindungswirkung eines Rückweisungsentscheids im Strafverfahren; wichtig für die Pflicht der unteren Instanz, die Vorgaben der oberen Instanz umzusetzen."
+        },
+        {
+          "case": "6B_824/2016",
+          "erwägungen": [
+            "E. 13.1",
+            "E. 13.2",
+            "E. 13.3"
+          ],
+          "relevance": "Zur ungetreuen Geschäftsbesorgung bei Organhandlungen, Interessenkollision und Vermögensnachteil."
+        },
+        {
+          "case": "6B_446/2014",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.4"
+          ],
+          "relevance": "Zur Schadensberechnung und zu pflichtwidrigen Dispositionen zulasten einer betreuten Vermögensmasse."
+        },
+        {
+          "case": "6B_967/2013",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.4"
+          ],
+          "relevance": "Zur Stellung von Organen und faktischen Entscheidträgern bei Art. 158 StGB."
+        },
+        {
+          "case": "6B_54/2013",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.3"
+          ],
+          "relevance": "Zur ungetreuen Amtsführung und zur Schädigung öffentlicher Vermögensinteressen durch pflichtwidrige Amtsausübung."
+        },
+        {
+          "case": "6B_492/2012",
+          "erwägungen": [
+            "E. 1.2",
+            "E. 1.4"
+          ],
+          "relevance": "Zur Konkretisierung des Anklagegrundsatzes bei Wirtschafts- und Vermögensdelikten."
+        },
+        {
+          "case": "6B_633/2011",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.3"
+          ],
+          "relevance": "Zur Frage, wann eine Anklage trotz knapper Formulierung den Prozessgegenstand hinreichend bestimmt."
+        }
+      ],
+      "reasoning": "Am wahrscheinlichsten einschlägig sind zwei Rechtsprechungslinien: Erstens die materiellstrafrechtliche Rechtsprechung zu Art. 158 StGB und Art. 314 StGB. Für den geschilderten Sachverhalt stehen Selbstbegünstigung, verdeckte Interessenkollision, pflichtwidrige Vergabe von Aufträgen an ein eigenes Unternehmen, eigenmächtige Eingehung von Mietverpflichtungen ohne Genehmigung, Begünstigung Dritter durch günstige Untervermietung sowie bilanzielle Verschiebungen mit Vermögensnachteil im Vordergrund. Dafür sind die Leitentscheide zu Vermögensbetreuungspflicht, Pflichtverletzung, Schaden und Vorsatz sowie zur ungetreuen Amtsführung bei öffentlichen Interessen zentral. Zweitens ist prozessual die Rechtsprechung zum Anklagegrundsatz (Art. 325 und 350 StPO; Art. 29 Abs. 2 und Art. 9 BV) entscheidend: Wenn die Anklage die einseitige Erhöhung des Stundenansatzes von CHF 120 auf CHF 170 nicht ausdrücklich als Tatsachenelement umschreibt, spricht die bundesgerichtliche Praxis dafür, dass eine Verurteilung gerade wegen dieser konkreten Erhöhungsmodalität unzulässig ist, sofern damit der Prozesssachverhalt erweitert würde. Zusätzlich ist die Rechtsprechung zur Bindungswirkung von Rückweisungsentscheiden massgeblich: Hat eine obere Instanz diesen Punkt bereits entschieden und zurückgewiesen, ist die untere Instanz an diese Vorgabe gebunden und darf davon grundsätzlich nicht abweichen."
+    },
+    "expanded": [
+      "BGE 142 IV 346 E. 3.1",
+      "BGE 142 IV 346 E. 3.2",
+      "BGE 142 IV 346 E. 3.3",
+      "BGE 141 IV 132 E. 3.4.1",
+      "BGE 141 IV 132 E. 3.4.2",
+      "BGE 141 IV 132 E. 3.4.3",
+      "BGE 141 IV 132 E. 3.4.4",
+      "BGE 143 IV 63 E. 2.2",
+      "BGE 143 IV 63 E. 2.3",
+      "BGE 126 I 19 E. 2a",
+      "BGE 126 I 19 E. 2c",
+      "BGE 120 IV 348 E. 2b",
+      "BGE 120 IV 348 E. 2c",
+      "BGE 144 IV 189 E. 5.1",
+      "BGE 144 IV 189 E. 5.2",
+      "BGE 129 IV 124 E. 3.1",
+      "BGE 129 IV 124 E. 3.2",
+      "BGE 123 IV 17 E. 3b",
+      "BGE 123 IV 17 E. 3c",
+      "BGE 122 IV 279 E. 2a",
+      "BGE 122 IV 279 E. 2b",
+      "BGE 120 IV 190 E. 2b",
+      "BGE 120 IV 190 E. 2c",
+      "BGE 120 IV 190 E. 2d",
+      "BGE 105 IV 307 E. 3",
+      "BGE 105 IV 307 E. 4",
+      "BGE 100 IV 56 E. 3",
+      "BGE 100 IV 56 E. 4",
+      "BGE 127 IV 209 E. 1b",
+      "BGE 127 IV 209 E. 1c",
+      "BGE 127 IV 209 E. 3",
+      "BGE 114 IV 133 E. 2",
+      "BGE 114 IV 133 E. 3",
+      "BGE 101 IV 407 E. 2",
+      "BGE 101 IV 407 E. 3",
+      "BGE 141 IV 305 E. 1.2",
+      "BGE 141 IV 305 E. 1.3",
+      "BGE 143 IV 214 E. 5.2.1",
+      "BGE 143 IV 214 E. 5.3.3",
+      "BGE 135 III 334 E. 2",
+      "BGE 135 III 334 E. 2.1",
+      "6B_131/2023 E. 2.1",
+      "6B_131/2023 E. 2.2",
+      "6B_131/2023 E. 2.4",
+      "6B_666/2023 E. 1.3",
+      "6B_666/2023 E. 1.4",
+      "6B_994/2022 E. 1.2",
+      "6B_994/2022 E. 1.3",
+      "6B_994/2022 E. 1.5",
+      "6B_1404/2021 E. 1.1",
+      "6B_1404/2021 E. 1.3",
+      "6B_1187/2021 E. 3.2",
+      "6B_1187/2021 E. 3.4",
+      "6B_1187/2021 E. 3.5",
+      "6B_103/2021 E. 4.1",
+      "6B_103/2021 E. 4.3",
+      "6B_103/2021 E. 4.4",
+      "6B_367/2020 E. 3.1",
+      "6B_367/2020 E. 3.2",
+      "6B_367/2020 E. 3.6",
+      "6B_986/2020 E. 5.1",
+      "6B_986/2020 E. 5.2",
+      "6B_52/2020 E. 2.3",
+      "6B_52/2020 E. 2.5",
+      "6B_689/2019 E. 1.4",
+      "6B_689/2019 E. 1.5",
+      "6B_689/2019 E. 2.2",
+      "6B_824/2016 E. 13.1",
+      "6B_824/2016 E. 13.2",
+      "6B_824/2016 E. 13.3",
+      "6B_446/2014 E. 4.2",
+      "6B_446/2014 E. 4.4",
+      "6B_967/2013 E. 5.1",
+      "6B_967/2013 E. 5.4",
+      "6B_54/2013 E. 3.1",
+      "6B_54/2013 E. 3.3",
+      "6B_492/2012 E. 1.2",
+      "6B_492/2012 E. 1.4",
+      "6B_633/2011 E. 2.1",
+      "6B_633/2011 E. 2.3"
+    ]
+  },
+  "val_009": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 137 III 59",
+          "erwägungen": [
+            "E. 4.2.1",
+            "E. 4.2.2",
+            "E. 4.2.3",
+            "E. 4.2.4"
+          ],
+          "relevance": "leading case on the priority of child maintenance and the method for assessing maintenance capacity, including use of hypothetical income where earning incapacity is self-induced or avoidable"
+        },
+        {
+          "case": "BGE 140 III 337",
+          "erwägungen": [
+            "E. 4.2.1",
+            "E. 4.2.2",
+            "E. 4.3"
+          ],
+          "relevance": "important authority on imputing hypothetical income in family maintenance matters; relevant where the debtor invokes lack of actual earnings"
+        },
+        {
+          "case": "BGE 143 III 233",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 3.4"
+          ],
+          "relevance": "general principles on child maintenance, needs of the child, and assessment of the debtor’s economic capacity"
+        },
+        {
+          "case": "BGE 147 III 265",
+          "erwägungen": [
+            "E. 5.5",
+            "E. 6.2",
+            "E. 7.2"
+          ],
+          "relevance": "leading case on the two-step method with surplus allocation for calculating maintenance; relevant for determining whether monthly contributions are realistic given minimum subsistence"
+        },
+        {
+          "case": "BGE 147 III 293",
+          "erwägungen": [
+            "E. 4.4",
+            "E. 4.5"
+          ],
+          "relevance": "companion authority on the unified method of maintenance calculation and treatment of household budgets in child support cases"
+        },
+        {
+          "case": "BGE 147 III 301",
+          "erwägungen": [
+            "E. 4.3",
+            "E. 4.4",
+            "E. 6.2"
+          ],
+          "relevance": "further leading authority on maintenance calculation methodology and the interaction between child support and the debtor’s minimum subsistence"
+        },
+        {
+          "case": "BGE 144 III 377",
+          "erwägungen": [
+            "E. 7.1.1",
+            "E. 7.1.2",
+            "E. 7.1.3"
+          ],
+          "relevance": "authority on post-majority maintenance under Art. 277 ZGB and the limits of support obligations for children in education"
+        },
+        {
+          "case": "BGE 129 III 55",
+          "erwägungen": [
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "classic precedent on maintenance for adult children in education and the requirement of reasonableness under Art. 277 Abs. 2 ZGB"
+        },
+        {
+          "case": "BGE 118 II 97",
+          "erwägungen": [
+            "E. 4a",
+            "E. 4b"
+          ],
+          "relevance": "older but frequently cited authority on educational maintenance after majority and the temporal limits of support"
+        },
+        {
+          "case": "BGE 134 III 581",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "important authority on modification of maintenance under Art. 286 ZGB when circumstances change substantially"
+        },
+        {
+          "case": "BGE 138 III 289",
+          "erwägungen": [
+            "E. 11.1.1",
+            "E. 11.1.2",
+            "E. 11.1.3"
+          ],
+          "relevance": "relevant to the distinction between current maintenance, arrears, and capitalized claims; useful for rejecting unsupported capitalization of future claims"
+        },
+        {
+          "case": "BGE 108 II 69",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "classic authority on security for maintenance claims under Art. 132 ZGB and the conditions for ordering Sicherstellung"
+        },
+        {
+          "case": "BGE 110 II 9",
+          "erwägungen": [
+            "E. 2",
+            "E. 3",
+            "E. 4"
+          ],
+          "relevance": "older leading case on the scope of judicial measures securing maintenance obligations and the relationship between maintenance judgment and enforcement"
+        },
+        {
+          "case": "BGE 126 III 353",
+          "erwägungen": [
+            "E. 2b",
+            "E. 2c",
+            "E. 3"
+          ],
+          "relevance": "authority on attachment/arrest and the need for a sufficiently concrete claim; relevant by analogy to freezing proceeds as security for future maintenance"
+        },
+        {
+          "case": "BGE 135 III 315",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "important precedent on arrest under Art. 271 SchKG, especially the requirement that assets and claim basis be sufficiently identifiable"
+        },
+        {
+          "case": "BGE 107 III 67",
+          "erwägungen": [
+            "E. 2",
+            "E. 3"
+          ],
+          "relevance": "classic debt-enforcement authority on seizure of future or contingent assets and limits of protective measures under SchKG"
+        },
+        {
+          "case": "BGE 111 III 13",
+          "erwägungen": [
+            "E. 5",
+            "E. 6"
+          ],
+          "relevance": "relevant to treatment of proceeds and claims in enforcement proceedings and to whether an authority may reserve or block expected proceeds"
+        },
+        {
+          "case": "BGE 130 III 489",
+          "erwägungen": [
+            "E. 1.2",
+            "E. 2.3",
+            "E. 2.4"
+          ],
+          "relevance": "authority on the relation between family-law maintenance claims and debt-enforcement remedies, including protective measures"
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "5A_311/2019",
+          "erwägungen": [
+            "E. 7.1",
+            "E. 7.2",
+            "E. 7.3"
+          ],
+          "relevance": "recent application of hypothetical income principles in child maintenance where the debtor claimed inability to earn"
+        },
+        {
+          "case": "5A_907/2018",
+          "erwägungen": [
+            "E. 3.3",
+            "E. 3.4",
+            "E. 5.2"
+          ],
+          "relevance": "recent Federal Supreme Court decision on child maintenance calculation and the debtor’s minimum subsistence"
+        },
+        {
+          "case": "5A_104/2018",
+          "erwägungen": [
+            "E. 4.3",
+            "E. 4.4"
+          ],
+          "relevance": "application of Art. 277 ZGB concerning maintenance beyond majority for children in education"
+        },
+        {
+          "case": "5A_75/2020",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 6.2"
+          ],
+          "relevance": "recent authority on the two-step method and allocation of available resources in child support cases"
+        },
+        {
+          "case": "5A_800/2021",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "recent application of BGE 147 III 265 ff. to child maintenance and household budget analysis"
+        },
+        {
+          "case": "5A_382/2021",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 6.1"
+          ],
+          "relevance": "recent case on post-majority educational maintenance and the requirement that support remain reasonable for the parent"
+        },
+        {
+          "case": "5A_330/2022",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3",
+            "E. 5.1"
+          ],
+          "relevance": "recent decision on modification of maintenance under Art. 286 ZGB in light of changed financial circumstances"
+        },
+        {
+          "case": "5A_926/2019",
+          "erwägungen": [
+            "E. 6.1",
+            "E. 6.2"
+          ],
+          "relevance": "application of principles governing security for maintenance claims and the need for a concrete risk of non-payment"
+        },
+        {
+          "case": "5A_778/2017",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.4"
+          ],
+          "relevance": "decision addressing whether and how assets may be earmarked or secured for future maintenance obligations"
+        },
+        {
+          "case": "5A_248/2012",
+          "erwägungen": [
+            "E. 6.3",
+            "E. 7.1"
+          ],
+          "relevance": "useful authority on capitalization of maintenance-related claims and the court’s reluctance to replace periodic support with lump-sum awards absent clear legal basis"
+        },
+        {
+          "case": "5A_874/2014",
+          "erwägungen": [
+            "E. 6.2",
+            "E. 6.3"
+          ],
+          "relevance": "recent application of Art. 132 ZGB concerning security for maintenance where the debtor had previously defaulted"
+        },
+        {
+          "case": "5A_832/2013",
+          "erwägungen": [
+            "E. 2.4",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "relevant to the interaction between family-law maintenance orders and debt-enforcement measures"
+        },
+        {
+          "case": "5A_771/2018",
+          "erwägungen": [
+            "E. 5.4",
+            "E. 5.5"
+          ],
+          "relevance": "recent case on the evidentiary burden for asserting inability to pay maintenance and on imputing earning capacity"
+        },
+        {
+          "case": "5A_608/2014",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3"
+          ],
+          "relevance": "authority on educational maintenance for adult children and the age/education horizon under Art. 277 ZGB"
+        },
+        {
+          "case": "5A_217/2012",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2"
+          ],
+          "relevance": "relevant to whether future maintenance claims may be secured against identifiable assets expected from liquidation or sale"
+        }
+      ],
+      "reasoning": "The fact pattern points to four clusters of Swiss precedent: (1) child maintenance calculation under Arts. 276, 276a, 285 ZGB, especially priority of child support, minimum subsistence, and hypothetical income despite alleged lack of earnings; (2) post-majority educational maintenance under Art. 277 ZGB, because the requested support runs to age 25; (3) modification and structuring of maintenance under Art. 286 ZGB, including whether periodic indexed payments rather than capitalization are appropriate; and (4) security/enforcement measures under Art. 132 ZGB and SchKG (Arts. 271, 275, 93), especially whether a court may order proceeds from a forced sale to be blocked as security for future maintenance where the debtor has a history of default and identifiable assets exist. The listed BGE include the standard leading authorities on maintenance methodology and educational support, plus classic cases on Sicherstellung and arrest/seizure. The individual cases are the kinds of more recent 5A decisions typically cited for concrete application of those principles. The most likely core citations in a Swiss brief or judgment would be BGE 137 III 59; BGE 140 III 337; BGE 147 III 265, 293, 301; BGE 144 III 377; BGE 129 III 55; and the older security cases such as BGE 108 II 69 and BGE 110 II 9."
+    },
+    "expanded": [
+      "BGE 137 III 59 E. 4.2.1",
+      "BGE 137 III 59 E. 4.2.2",
+      "BGE 137 III 59 E. 4.2.3",
+      "BGE 137 III 59 E. 4.2.4",
+      "BGE 140 III 337 E. 4.2.1",
+      "BGE 140 III 337 E. 4.2.2",
+      "BGE 140 III 337 E. 4.3",
+      "BGE 143 III 233 E. 3.2",
+      "BGE 143 III 233 E. 3.3",
+      "BGE 143 III 233 E. 3.4",
+      "BGE 147 III 265 E. 5.5",
+      "BGE 147 III 265 E. 6.2",
+      "BGE 147 III 265 E. 7.2",
+      "BGE 147 III 293 E. 4.4",
+      "BGE 147 III 293 E. 4.5",
+      "BGE 147 III 301 E. 4.3",
+      "BGE 147 III 301 E. 4.4",
+      "BGE 147 III 301 E. 6.2",
+      "BGE 144 III 377 E. 7.1.1",
+      "BGE 144 III 377 E. 7.1.2",
+      "BGE 144 III 377 E. 7.1.3",
+      "BGE 129 III 55 E. 3",
+      "BGE 129 III 55 E. 4",
+      "BGE 118 II 97 E. 4a",
+      "BGE 118 II 97 E. 4b",
+      "BGE 134 III 581 E. 3.3",
+      "BGE 134 III 581 E. 4.1",
+      "BGE 134 III 581 E. 4.2",
+      "BGE 138 III 289 E. 11.1.1",
+      "BGE 138 III 289 E. 11.1.2",
+      "BGE 138 III 289 E. 11.1.3",
+      "BGE 108 II 69 E. 2",
+      "BGE 108 II 69 E. 3",
+      "BGE 110 II 9 E. 2",
+      "BGE 110 II 9 E. 3",
+      "BGE 110 II 9 E. 4",
+      "BGE 126 III 353 E. 2b",
+      "BGE 126 III 353 E. 2c",
+      "BGE 126 III 353 E. 3",
+      "BGE 135 III 315 E. 2.3",
+      "BGE 135 III 315 E. 3.1",
+      "BGE 135 III 315 E. 3.2",
+      "BGE 107 III 67 E. 2",
+      "BGE 107 III 67 E. 3",
+      "BGE 111 III 13 E. 5",
+      "BGE 111 III 13 E. 6",
+      "BGE 130 III 489 E. 1.2",
+      "BGE 130 III 489 E. 2.3",
+      "BGE 130 III 489 E. 2.4",
+      "5A_311/2019 E. 7.1",
+      "5A_311/2019 E. 7.2",
+      "5A_311/2019 E. 7.3",
+      "5A_907/2018 E. 3.3",
+      "5A_907/2018 E. 3.4",
+      "5A_907/2018 E. 5.2",
+      "5A_104/2018 E. 4.3",
+      "5A_104/2018 E. 4.4",
+      "5A_75/2020 E. 5.1",
+      "5A_75/2020 E. 5.2",
+      "5A_75/2020 E. 6.2",
+      "5A_800/2021 E. 3.2",
+      "5A_800/2021 E. 4.1",
+      "5A_800/2021 E. 4.2",
+      "5A_382/2021 E. 5.1",
+      "5A_382/2021 E. 5.2",
+      "5A_382/2021 E. 6.1",
+      "5A_330/2022 E. 4.2",
+      "5A_330/2022 E. 4.3",
+      "5A_330/2022 E. 5.1",
+      "5A_926/2019 E. 6.1",
+      "5A_926/2019 E. 6.2",
+      "5A_778/2017 E. 4.1",
+      "5A_778/2017 E. 4.2",
+      "5A_778/2017 E. 4.4",
+      "5A_248/2012 E. 6.3",
+      "5A_248/2012 E. 7.1",
+      "5A_874/2014 E. 6.2",
+      "5A_874/2014 E. 6.3",
+      "5A_832/2013 E. 2.4",
+      "5A_832/2013 E. 4.1",
+      "5A_832/2013 E. 4.2",
+      "5A_771/2018 E. 5.4",
+      "5A_771/2018 E. 5.5",
+      "5A_608/2014 E. 4.1",
+      "5A_608/2014 E. 4.2",
+      "5A_608/2014 E. 4.3",
+      "5A_217/2012 E. 3.1",
+      "5A_217/2012 E. 3.2"
+    ]
+  },
+  "val_010": {
+    "raw": {
+      "bge_citations": [
+        {
+          "case": "BGE 146 III 121",
+          "erwägungen": [
+            "E. 3",
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3",
+            "E. 4.4",
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.3"
+          ],
+          "relevance": "central recent leading case on forged payment instructions, bank’s duty of care in signature verification, validity/effect of bank clauses on statement-hold and complaint periods, and allocation of loss under Art. 398 OR / Art. 100 OR"
+        },
+        {
+          "case": "BGE 132 III 449",
+          "erwägungen": [
+            "E. 2",
+            "E. 2.1",
+            "E. 2.2",
+            "E. 2.3",
+            "E. 2.4"
+          ],
+          "relevance": "leading authority on bank liability for unauthorized dispositions and the legal characterization of debits based on forged instructions; frequently cited for the principle that absent valid instruction the bank generally bears the burden unless contractual risk allocation validly intervenes"
+        },
+        {
+          "case": "BGE 122 III 26",
+          "erwägungen": [
+            "E. 4a",
+            "E. 4b",
+            "E. 4c"
+          ],
+          "relevance": "classic precedent on bank’s contractual duty of diligence when checking signatures and limits of exculpatory clauses under mandate law"
+        },
+        {
+          "case": "BGE 112 II 450",
+          "erwägungen": [
+            "E. 3a",
+            "E. 3b",
+            "E. 3c"
+          ],
+          "relevance": "older but still-cited authority on forged signatures, allocation of risk in giro/payment relationships, and the standard of care expected from banks in signature control"
+        },
+        {
+          "case": "BGE 124 III 155",
+          "erwägungen": [
+            "E. 2b",
+            "E. 3a",
+            "E. 3b"
+          ],
+          "relevance": "important on the effect of bank general terms concerning approval fiction / complaint duties and their interaction with good faith and mandate duties"
+        },
+        {
+          "case": "BGE 133 III 97",
+          "erwägungen": [
+            "E. 7.1",
+            "E. 7.2",
+            "E. 7.3"
+          ],
+          "relevance": "authority on interpretation and control of general terms in banking relationships, including clauses shifting risk or imposing complaint obligations"
+        },
+        {
+          "case": "BGE 135 III 1",
+          "erwägungen": [
+            "E. 2.1",
+            "E. 2.4",
+            "E. 2.5"
+          ],
+          "relevance": "frequently cited on contractual complaint clauses and approval fiction in continuing contractual relationships; relevant by analogy to 30-day protest clauses in bank terms"
+        },
+        {
+          "case": "BGE 137 III 243",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.3",
+            "E. 4.4"
+          ],
+          "relevance": "relevant for the limits of reliance on account statements and the effect of silence/ratification clauses under the principle of good faith"
+        },
+        {
+          "case": "BGE 119 II 333",
+          "erwägungen": [
+            "E. 5a",
+            "E. 5b"
+          ],
+          "relevance": "authority on Art. 100 OR and the invalidity/limited effect of contractual exclusions for unlawful intent or gross negligence in service relationships"
+        },
+        {
+          "case": "BGE 117 II 315",
+          "erwägungen": [
+            "E. 4",
+            "E. 5"
+          ],
+          "relevance": "relevant on mandate liability under Art. 398 OR and the standard of care owed by professional service providers, including banks"
+        },
+        {
+          "case": "BGE 134 III 151",
+          "erwägungen": [
+            "E. 2.2",
+            "E. 2.4",
+            "E. 2.5"
+          ],
+          "relevance": "important on claims denominated in foreign currency and the consequences of suing in Swiss francs instead of the contract currency under Art. 84 OR"
+        },
+        {
+          "case": "BGE 137 III 158",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 3.3"
+          ],
+          "relevance": "leading case on Art. 84 OR concerning payment and pleading in foreign currency; highly relevant where the account and disputed debits are in euros but the claim is pleaded in CHF"
+        },
+        {
+          "case": "BGE 142 III 102",
+          "erwägungen": [
+            "E. 5.3",
+            "E. 5.4"
+          ],
+          "relevance": "further authority on foreign-currency claims, judgment currency, and procedural handling under Swiss civil procedure"
+        },
+        {
+          "case": "BGE 144 III 155",
+          "erwägungen": [
+            "E. 4.2",
+            "E. 4.3",
+            "E. 4.4"
+          ],
+          "relevance": "relevant on the requirement that monetary claims generally be brought in the owed currency and on the distinction between debt currency and payment currency"
+        }
+      ],
+      "individual_cases": [
+        {
+          "case": "4A_119/2018",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 4.3",
+            "E. 5.1",
+            "E. 5.2"
+          ],
+          "relevance": "the underlying judgment published as BGE 146 III 121; directly on forged fax instructions, statement-hold, 30-day complaint clause, exculpatory clause, and foreign-currency pleading"
+        },
+        {
+          "case": "4A_386/2016",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.1",
+            "E. 4.2"
+          ],
+          "relevance": "recent application of principles on unauthorized banking transactions and the customer’s complaint duties under bank general terms"
+        },
+        {
+          "case": "4A_471/2017",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5.1"
+          ],
+          "relevance": "relevant on approval fiction / complaint clauses in banking documentation and their limits under good faith"
+        },
+        {
+          "case": "4A_54/2017",
+          "erwägungen": [
+            "E. 5.1",
+            "E. 5.2",
+            "E. 5.4"
+          ],
+          "relevance": "useful on bank mandate duties and the threshold for gross negligence in operational controls"
+        },
+        {
+          "case": "4A_379/2016",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "application of Art. 100 OR to contractual exclusions/limitations of liability in commercial relationships"
+        },
+        {
+          "case": "4A_161/2016",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.3",
+            "E. 4.2"
+          ],
+          "relevance": "relevant on interpretation of bank general terms and complaint clauses in account relationships"
+        },
+        {
+          "case": "4A_262/2015",
+          "erwägungen": [
+            "E. 2.4",
+            "E. 4.1",
+            "E. 4.3"
+          ],
+          "relevance": "recent authority on foreign-currency claims and the need to formulate the prayer for relief in the proper currency"
+        },
+        {
+          "case": "4A_270/2010",
+          "erwägungen": [
+            "E. 3.1",
+            "E. 3.2",
+            "E. 4.1"
+          ],
+          "relevance": "application of Art. 84 OR to claims brought in the wrong currency"
+        },
+        {
+          "case": "4A_205/2008",
+          "erwägungen": [
+            "E. 2.3",
+            "E. 2.4",
+            "E. 3.1"
+          ],
+          "relevance": "banking case on unauthorized transactions and the significance of delayed objection to account statements"
+        },
+        {
+          "case": "4C.18/2004",
+          "erwägungen": [
+            "E. 3.2",
+            "E. 3.3",
+            "E. 4.1"
+          ],
+          "relevance": "older but often-cited decision on forged instructions, signature verification, and contractual allocation of risk in bank-client relations"
+        },
+        {
+          "case": "4C.81/2002",
+          "erwägungen": [
+            "E. 4.1",
+            "E. 4.2",
+            "E. 5"
+          ],
+          "relevance": "relevant on statement-hold arrangements and the fiction of receipt/knowledge of retained bank correspondence"
+        },
+        {
+          "case": "4A_42/2015",
+          "erwägungen": [
+            "E. 5.2",
+            "E. 5.3"
+          ],
+          "relevance": "useful on the procedural treatment of foreign-currency claims under the ZPO"
+        }
+      ],
+      "reasoning": "The most likely controlling authority is BGE 146 III 121 (case 4A_119/2018), because its fact pattern closely matches the present one: forged fax transfer orders on a Zurich bank account, statement-hold, a 30-day written objection clause, a broad exculpatory clause limited by gross negligence, and a claim pleaded in CHF although the account was in EUR. That decision synthesizes the governing rules: (1) debits based on forged instructions are in principle unauthorized and engage the bank’s contractual liability unless the loss is shifted by valid contractual clauses; (2) the bank’s signature-check duty is not absolute and is assessed against the agreed verification routine and the circumstances, with gross negligence remaining non-excludable under Art. 100 OR; (3) statement-hold and short complaint clauses are generally enforceable in Swiss banking law, and retained correspondence is treated as received, so failure to object in time can trigger approval/ratification unless the clause is abused or the bank acted contrary to good faith; and (4) under Art. 84 OR, a claim for a debt denominated in euros must generally be pleaded and awarded in euros, making a CHF prayer problematic. The older BGE and individual cases listed are the authorities most likely to be cited alongside BGE 146 III 121 for the underlying doctrines on forged orders, mandate liability under Art. 398 OR, limits on exculpation under Art. 100 OR, approval fiction/complaint clauses, statement-hold arrangements, and foreign-currency pleading."
+    },
+    "expanded": [
+      "BGE 146 III 121 E. 3",
+      "BGE 146 III 121 E. 4.1",
+      "BGE 146 III 121 E. 4.2",
+      "BGE 146 III 121 E. 4.3",
+      "BGE 146 III 121 E. 4.4",
+      "BGE 146 III 121 E. 5.1",
+      "BGE 146 III 121 E. 5.2",
+      "BGE 146 III 121 E. 5.3",
+      "BGE 132 III 449 E. 2",
+      "BGE 132 III 449 E. 2.1",
+      "BGE 132 III 449 E. 2.2",
+      "BGE 132 III 449 E. 2.3",
+      "BGE 132 III 449 E. 2.4",
+      "BGE 122 III 26 E. 4a",
+      "BGE 122 III 26 E. 4b",
+      "BGE 122 III 26 E. 4c",
+      "BGE 112 II 450 E. 3a",
+      "BGE 112 II 450 E. 3b",
+      "BGE 112 II 450 E. 3c",
+      "BGE 124 III 155 E. 2b",
+      "BGE 124 III 155 E. 3a",
+      "BGE 124 III 155 E. 3b",
+      "BGE 133 III 97 E. 7.1",
+      "BGE 133 III 97 E. 7.2",
+      "BGE 133 III 97 E. 7.3",
+      "BGE 135 III 1 E. 2.1",
+      "BGE 135 III 1 E. 2.4",
+      "BGE 135 III 1 E. 2.5",
+      "BGE 137 III 243 E. 4.1",
+      "BGE 137 III 243 E. 4.3",
+      "BGE 137 III 243 E. 4.4",
+      "BGE 119 II 333 E. 5a",
+      "BGE 119 II 333 E. 5b",
+      "BGE 117 II 315 E. 4",
+      "BGE 117 II 315 E. 5",
+      "BGE 134 III 151 E. 2.2",
+      "BGE 134 III 151 E. 2.4",
+      "BGE 134 III 151 E. 2.5",
+      "BGE 137 III 158 E. 3.1",
+      "BGE 137 III 158 E. 3.2",
+      "BGE 137 III 158 E. 3.3",
+      "BGE 142 III 102 E. 5.3",
+      "BGE 142 III 102 E. 5.4",
+      "BGE 144 III 155 E. 4.2",
+      "BGE 144 III 155 E. 4.3",
+      "BGE 144 III 155 E. 4.4",
+      "4A_119/2018 E. 4.1",
+      "4A_119/2018 E. 4.2",
+      "4A_119/2018 E. 4.3",
+      "4A_119/2018 E. 5.1",
+      "4A_119/2018 E. 5.2",
+      "4A_386/2016 E. 3.2",
+      "4A_386/2016 E. 3.3",
+      "4A_386/2016 E. 4.1",
+      "4A_386/2016 E. 4.2",
+      "4A_471/2017 E. 4.1",
+      "4A_471/2017 E. 4.2",
+      "4A_471/2017 E. 5.1",
+      "4A_54/2017 E. 5.1",
+      "4A_54/2017 E. 5.2",
+      "4A_54/2017 E. 5.4",
+      "4A_379/2016 E. 3.1",
+      "4A_379/2016 E. 3.2",
+      "4A_379/2016 E. 4.1",
+      "4A_161/2016 E. 3.1",
+      "4A_161/2016 E. 3.3",
+      "4A_161/2016 E. 4.2",
+      "4A_262/2015 E. 2.4",
+      "4A_262/2015 E. 4.1",
+      "4A_262/2015 E. 4.3",
+      "4A_270/2010 E. 3.1",
+      "4A_270/2010 E. 3.2",
+      "4A_270/2010 E. 4.1",
+      "4A_205/2008 E. 2.3",
+      "4A_205/2008 E. 2.4",
+      "4A_205/2008 E. 3.1",
+      "4C.18/2004 E. 3.2",
+      "4C.18/2004 E. 3.3",
+      "4C.18/2004 E. 4.1",
+      "4C.81/2002 E. 4.1",
+      "4C.81/2002 E. 4.2",
+      "4C.81/2002 E. 5",
+      "4A_42/2015 E. 5.2",
+      "4A_42/2015 E. 5.3"
+    ]
+  }
+}

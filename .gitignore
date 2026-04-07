@@ -1,0 +1,38 @@
+# Secrets
+.env
+.env.*
+*.key
+.kaggle/
+
+# Large data files (download from Kaggle, do not commit)
+data/
+
+# Generated indices (multi-GB, regeneratable)
+index/*.index
+index/*.pkl
+index/*_test.index
+index/*_test.pkl
+index/faiss_court_openai_checkpoint*
+*.faiss
+*.bin
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
+.idea/
+*.swp
