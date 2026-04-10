@@ -112,7 +112,7 @@ log ""
 if [[ $QE_DONE -lt $TOTAL_TRAIN ]]; then
   write_status "precompute" "running" "query_expansions ($QE_DONE/$TOTAL_TRAIN)"
   log "STAGE 1a: Generating query expansions ($QE_DONE done, $((TOTAL_TRAIN - QE_DONE)) remaining)..."
-  $PYTHON precompute/gen_query_expansions.py --splits train >> "$LOG_FILE" 2>&1
+  $PYTHON precompute/gen_query_expansions.py train >> "$LOG_FILE" 2>&1
   QE_DONE=$(count_precompute "precompute/train_query_expansions.json")
   log "  Query expansions done: $QE_DONE"
 else
@@ -123,7 +123,7 @@ fi
 if [[ $CC_DONE -lt $TOTAL_TRAIN ]]; then
   write_status "precompute" "running" "case_citations ($CC_DONE/$TOTAL_TRAIN)"
   log "STAGE 1b: Generating case citations ($CC_DONE done, $((TOTAL_TRAIN - CC_DONE)) remaining)..."
-  $PYTHON precompute/gen_case_citations.py --splits train >> "$LOG_FILE" 2>&1
+  $PYTHON precompute/gen_case_citations.py train >> "$LOG_FILE" 2>&1
   CC_DONE=$(count_precompute "precompute/train_case_citations.json")
   log "  Case citations done: $CC_DONE"
 else
@@ -134,7 +134,7 @@ fi
 if [[ $FC_DONE -lt $TOTAL_TRAIN ]]; then
   write_status "precompute" "running" "full_citations ($FC_DONE/$TOTAL_TRAIN)"
   log "STAGE 1c: Generating full citations v2 ($FC_DONE done, $((TOTAL_TRAIN - FC_DONE)) remaining)..."
-  $PYTHON precompute/gen_full_citations_v2.py --splits train >> "$LOG_FILE" 2>&1
+  $PYTHON precompute/gen_full_citations_v2.py train >> "$LOG_FILE" 2>&1
   FC_DONE=$(count_precompute "precompute/train_full_citations_v2.json")
   log "  Full citations done: $FC_DONE"
 else
