@@ -1,0 +1,11 @@
+query_id,predicted_citations
+val_001,Art. 212 Abs. 2 StPO;Art. 212 Abs. 3 StPO;Art. 221 Abs. 1 StPO;Art. 222 StPO;Art. 225 Abs. 1 StPO;Art. 225 Abs. 2 StPO;Art. 227 Abs. 1 StPO;Art. 227 Abs. 4 StPO;Art. 227 Abs. 5 StPO;Art. 227 Abs. 7 StPO
+val_002,Art. 15 Abs. 1 IVG;Art. 16 ATSG;Art. 17 Abs. 1 IVG;Art. 18 Abs. 1 IVG;Art. 21 Abs. 1 IVG;Art. 28 Abs. 1 IVG;Art. 28a Abs. 1 IVG;Art. 6 ATSG;Art. 7 Abs. 1 ATSG;Art. 8 Abs. 1 ATSG
+val_003,Art. 107 Abs. 1 StPO;Art. 197 Abs. 1 StPO;Art. 212 Abs. 1 StPO;Art. 212 Abs. 2 StPO;Art. 212 Abs. 3 StPO;Art. 221 Abs. 1 StPO;Art. 224 Abs. 1 StPO;Art. 29 Abs. 2 BV;BGE 137 IV 122 E. 3.2;BGE 137 IV 122 E. 4.2
+val_004,5A_323/2013 E. 3.1;5A_323/2013 E. 3.2;Art. 18 Abs. 1 OR;Art. 458 Abs. 1 ZGB;Art. 467 ZGB;Art. 469 Abs. 1 ZGB;Art. 498 ZGB;Art. 505 Abs. 1 ZGB;Art. 519 Abs. 1 ZGB;Art. 520 Abs. 1 ZGB
+val_005,Art. 273 Abs. 1 ZGB;Art. 274 Abs. 2 ZGB;Art. 298 Abs. 2 ZGB;Art. 307 Abs. 1 ZGB;Art. 307 Abs. 3 ZGB;Art. 308 Abs. 1 ZGB;Art. 308 Abs. 2 ZGB;Art. 308 Abs. 3 ZGB;Art. 315b Abs. 1 ZGB;Art. 445 Abs. 1 ZGB
+val_006,4A_275/2013 E. 5.1;Art. 101 Abs. 1 OR;Art. 248 Abs. 1 OR;Art. 363 OR;Art. 364 Abs. 1 OR;Art. 398 Abs. 1 OR;Art. 41 Abs. 1 OR;Art. 95 BGG;Art. 99 Abs. 3 OR;BGE 129 III 181 E. 3.2
+val_007,Art. 100 Abs. 1 IPRG;Art. 150 Abs. 1 ZPO;Art. 152 Abs. 1 ZPO;Art. 16 ZGB;Art. 239 Abs. 1 OR;Art. 242 Abs. 1 OR;Art. 245 Abs. 1 OR;Art. 714 Abs. 1 ZGB;Art. 922 Abs. 1 ZGB;Art. 923 ZGB
+val_008,Art. 105 Abs. 1 BGG;Art. 105 Abs. 2 BGG;Art. 158 Abs. 1 StGB;Art. 158 Abs. 3 StGB;Art. 314 StGB;Art. 325 Abs. 1 StPO;Art. 333 Abs. 1 StPO;Art. 350 Abs. 1 StPO;BGE 142 IV 346 E. 3.2;BGE 143 IV 214 E. 5.3.3
+val_009,Art. 131 Abs. 1 ZGB;Art. 132 Abs. 1 ZGB;Art. 132 Abs. 2 ZGB;Art. 271 Abs. 1 SchKG;Art. 276 Abs. 1 ZGB;Art. 277 Abs. 1 ZGB;Art. 285 Abs. 1 ZGB;Art. 286 Abs. 1 ZGB;Art. 287 Abs. 1 ZGB;Art. 290 Abs. 1 ZGB
+val_010,4A_119/2018 E. 5.1;Art. 100 Abs. 1 OR;Art. 101 Abs. 1 OR;Art. 18 Abs. 1 OR;Art. 398 Abs. 1 OR;Art. 398 Abs. 2 OR;Art. 72 Abs. 1 BGG;Art. 74 Abs. 1 BGG;Art. 8 ZGB;BGE 132 III 449 E. 2

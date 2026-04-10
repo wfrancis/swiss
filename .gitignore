@@ -36,3 +36,21 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Claude
+.claude/
+
+# Run artifacts (regeneratable from code)
+artifacts/
+logs/
+
+# Rust build artifacts
+rust/*/target/
+
+# Precompute caches — large, regeneratable
+precompute/judge_cache_*.jsonl
+precompute/court_dense_hits_*.json
+precompute/court_text_cache_*.json
+precompute/train_case_citations.json
+precompute/train_query_expansions.json
+precompute/train_full_citations*.json

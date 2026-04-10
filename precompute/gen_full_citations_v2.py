@@ -6,12 +6,17 @@ import csv
 import json
 import os
 import time
+import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+BASE_URL = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL")
+FULL_CITATIONS_MODEL = os.getenv("FULL_CITATIONS_MODEL", "gpt-5.4")
+client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
 BASE = Path(__file__).parent.parent
 DATA = BASE / "data"
@@ -67,18 +72,23 @@ Respond with a JSON object:
 
 def predict_citations(query, qid, retries=2):
     """Ask GPT-5.4 to predict full citation list."""
+    use_max_tokens = os.getenv("LLM_USE_MAX_TOKENS", "0") == "1" or FULL_CITATIONS_MODEL.startswith("deepseek")
     for attempt in range(retries + 1):
         try:
-            response = client.chat.completions.create(
-                model="gpt-5.4",
-                messages=[
+            kwargs = {
+                "model": FULL_CITATIONS_MODEL,
+                "messages": [
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": f"Predict ALL citations for this Swiss Federal Supreme Court legal question:\n\n{query}"}
                 ],
-                temperature=0.2,
-                max_completion_tokens=8000,
-                response_format={"type": "json_object"},
-            )
+                "temperature": 0.2,
+                "response_format": {"type": "json_object"},
+            }
+            if use_max_tokens:
+                kwargs["max_tokens"] = 8000
+            else:
+                kwargs["max_completion_tokens"] = 8000
+            response = client.chat.completions.create(**kwargs)
             content = response.choices[0].message.content
             result = json.loads(content)
             usage = response.usage
@@ -94,20 +104,40 @@ def predict_citations(query, qid, retries=2):
         time.sleep(1)
 
 
-def process_dataset(csv_path, out_name, gold_available=False):
+def process_dataset(
+    csv_path,
+    out_name,
+    gold_available=False,
+    offset: int = 0,
+    limit: int | None = None,
+    query_ids: set[str] | None = None,
+    max_workers: int = 1,
+):
     """Process all queries in a dataset."""
     with open(csv_path) as f:
         rows = list(csv.DictReader(f))
+    if query_ids is not None:
+        rows = [row for row in rows if row["query_id"] in query_ids]
+    if offset:
+        rows = rows[offset:]
+    if limit is not None:
+        rows = rows[:limit]
 
-    results = {}
+    out_path = OUT / out_name
+    results = json.loads(out_path.read_text()) if out_path.exists() else {}
     total_cost = 0
 
-    for row in rows:
+    pending_rows = []
+    for i, row in enumerate(rows, start=1):
         qid = row["query_id"]
-        query = row["query"]
-        print(f"\n{qid}: {query[:80]}...", flush=True)
+        if qid in results:
+            print(f"\n[{i}/{len(rows)}] {qid}: skip existing", flush=True)
+            continue
+        pending_rows.append((i, row))
 
-        result, usage = predict_citations(query, qid)
+    def handle_result(i: int, row: dict[str, str], result: dict, usage) -> None:
+        nonlocal total_cost
+        qid = row["query_id"]
         results[qid] = result
 
         n_law = len(result.get("law_citations", []))
@@ -117,16 +147,38 @@ def process_dataset(csv_path, out_name, gold_available=False):
         if usage:
             cost = usage.prompt_tokens / 1e6 * 2.50 + usage.completion_tokens / 1e6 * 15.0
             total_cost += cost
-            print(f"  → {n_law} laws + {n_court} court = {n_law + n_court} total (est={est}) | cost=${cost:.4f}")
+            print(
+                f"  → {n_law} laws + {n_court} court = {n_law + n_court} total (est={est}) | cost=${cost:.4f}",
+                flush=True,
+            )
         else:
-            print(f"  → ERROR: {result.get('error', 'unknown')}")
+            print(f"  → ERROR: {result.get('error', 'unknown')}", flush=True)
 
-        time.sleep(0.3)
+        with open(out_path, "w") as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
 
-    # Save
-    out_path = OUT / out_name
-    with open(out_path, "w") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+    if max_workers <= 1:
+        for i, row in pending_rows:
+            qid = row["query_id"]
+            query = row["query"]
+            print(f"\n[{i}/{len(rows)}] {qid}: {query[:80]}...", flush=True)
+            result, usage = predict_citations(query, qid)
+            handle_result(i, row, result, usage)
+            time.sleep(0.3)
+    else:
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {
+                executor.submit(predict_citations, row["query"], row["query_id"]): (i, row)
+                for i, row in pending_rows
+            }
+            total = len(future_map)
+            for done_idx, future in enumerate(as_completed(future_map), start=1):
+                i, row = future_map[future]
+                qid = row["query_id"]
+                print(f"\n[{done_idx}/{total}] {qid}: {row['query'][:80]}...", flush=True)
+                result, usage = future.result()
+                handle_result(i, row, result, usage)
+
     print(f"\nSaved to {out_path}")
     print(f"Total cost: ${total_cost:.4f}")
 
@@ -143,17 +195,45 @@ def process_dataset(csv_path, out_name, gold_available=False):
     return results
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("splits", nargs="*", choices=["train", "val", "test", "both"])
+    parser.add_argument("--offset", type=int, default=0)
+    parser.add_argument("--limit", type=int)
+    parser.add_argument("--query-ids", type=Path)
+    parser.add_argument("--max-workers", type=int, default=1)
+    return parser.parse_args()
+
+
 def main():
-    import sys
-    target = sys.argv[1] if len(sys.argv) > 1 else "val"
+    args = parse_args()
+    raw_splits = args.splits or ["val"]
+    query_ids = None
+    if args.query_ids:
+        query_ids = {
+            line.strip()
+            for line in args.query_ids.read_text().splitlines()
+            if line.strip()
+        }
+    splits: list[str] = []
+    for split in raw_splits:
+        if split == "both":
+            splits.extend(["val", "test"])
+        else:
+            splits.append(split)
 
-    if target in ("val", "both"):
-        print("=== Processing VAL queries with GPT-5.4 ===")
-        process_dataset(DATA / "val.csv", "val_full_citations_v2.json", gold_available=True)
-
-    if target in ("test", "both"):
-        print("\n=== Processing TEST queries with GPT-5.4 ===")
-        process_dataset(DATA / "test.csv", "test_full_citations_v2.json", gold_available=False)
+    for split in splits:
+        print(f"=== Processing {split.upper()} queries with GPT-5.4 ===")
+        process_dataset(
+            DATA / f"{split}.csv",
+            f"{split}_full_citations_v2.json",
+            gold_available=(split != "test"),
+            offset=args.offset,
+            limit=args.limit,
+            query_ids=query_ids,
+            max_workers=args.max_workers,
+        )
+        print()
 
 
 if __name__ == "__main__":

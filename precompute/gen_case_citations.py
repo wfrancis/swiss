@@ -5,12 +5,18 @@ This is the key differentiator — BM25 finds the topic, GPT identifies specific
 """
 import csv
 import json
+import argparse
+import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 from openai import OpenAI
-client = OpenAI()
+API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+BASE_URL = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL")
+CASE_CITATIONS_MODEL = os.getenv("CASE_CITATIONS_MODEL", "gpt-5.4")
+client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
 BASE = Path(__file__).parent.parent
 
@@ -26,7 +32,7 @@ Specific articles identified: {', '.join(domain_info.get('specific_articles', []
 """
 
     resp = client.chat.completions.create(
-        model="gpt-5.4",
+        model=CASE_CITATIONS_MODEL,
         temperature=0.0,
         response_format={"type": "json_object"},
         messages=[
@@ -91,61 +97,124 @@ def expand_case_citations(result: dict) -> list:
     return citations
 
 
+def load_split_rows(
+    split: str,
+    offset: int,
+    limit: int | None,
+    query_ids: set[str] | None = None,
+) -> list[dict[str, str]]:
+    with open(BASE / "data" / f"{split}.csv", "r") as f:
+        rows = list(csv.DictReader(f))
+    if query_ids is not None:
+        rows = [row for row in rows if row["query_id"] in query_ids]
+    if offset:
+        rows = rows[offset:]
+    if limit is not None:
+        rows = rows[:limit]
+    return rows
+
+
+def process_split(
+    split: str,
+    offset: int,
+    limit: int | None,
+    query_ids: set[str] | None = None,
+    max_workers: int = 1,
+) -> int:
+    exp_path = BASE / "precompute" / f"{split}_query_expansions.json"
+    out_path = BASE / "precompute" / f"{split}_case_citations.json"
+    domain_expansions = json.loads(exp_path.read_text()) if exp_path.exists() else {}
+    results = json.loads(out_path.read_text()) if out_path.exists() else {}
+    rows = load_split_rows(split, offset=offset, limit=limit, query_ids=query_ids)
+
+    print(f"=== Generating case citations for {split} queries ===")
+    processed = 0
+    pending_rows = []
+    for i, row in enumerate(rows, start=1):
+        qid = row["query_id"]
+        if qid in results:
+            print(f"[{i}/{len(rows)}] {qid}: skip existing", flush=True)
+            continue
+        pending_rows.append((i, row))
+
+    if max_workers <= 1:
+        for i, row in pending_rows:
+            qid = row["query_id"]
+            print(f"[{i}/{len(rows)}] {qid}...", flush=True)
+            try:
+                domain_info = domain_expansions.get(qid, {})
+                result = generate_case_citations(row["query"], qid, domain_info)
+                expanded = expand_case_citations(result)
+                results[qid] = {"raw": result, "expanded": expanded}
+                out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2))
+                print(f"  -> {len(expanded)} case citations", flush=True)
+                processed += 1
+            except Exception as e:
+                print(f"  ERROR: {e}", flush=True)
+                results[qid] = {"raw": {}, "expanded": []}
+                out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2))
+        return processed
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_map = {
+            executor.submit(
+                generate_case_citations,
+                row["query"],
+                row["query_id"],
+                domain_expansions.get(row["query_id"], {}),
+            ): (i, row)
+            for i, row in pending_rows
+        }
+        total = len(future_map)
+        for done_idx, future in enumerate(as_completed(future_map), start=1):
+            i, row = future_map[future]
+            qid = row["query_id"]
+            print(f"[{done_idx}/{total}] {qid}...", flush=True)
+            try:
+                result = future.result()
+                expanded = expand_case_citations(result)
+                results[qid] = {"raw": result, "expanded": expanded}
+                out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2))
+                print(f"  -> {len(expanded)} case citations", flush=True)
+                processed += 1
+            except Exception as e:
+                print(f"  ERROR: {e}", flush=True)
+                results[qid] = {"raw": {}, "expanded": []}
+                out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2))
+
+    return processed
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("splits", nargs="*", choices=["train", "val", "test"])
+    parser.add_argument("--offset", type=int, default=0)
+    parser.add_argument("--limit", type=int)
+    parser.add_argument("--query-ids", type=Path)
+    parser.add_argument("--max-workers", type=int, default=1)
+    return parser.parse_args()
+
+
 def main():
-    # Load existing query expansions for domain context
-    val_exp_path = BASE / "precompute" / "val_query_expansions.json"
-    test_exp_path = BASE / "precompute" / "test_query_expansions.json"
-
-    val_exp = json.loads(val_exp_path.read_text()) if val_exp_path.exists() else {}
-    test_exp = json.loads(test_exp_path.read_text()) if test_exp_path.exists() else {}
-
-    # Process val queries
-    print("=== Generating case citations for val queries ===")
-    val_cases = {}
-    with open(BASE / "data" / "val.csv", "r") as f:
-        val_rows = list(csv.DictReader(f))
-
-    for i, row in enumerate(val_rows):
-        qid = row["query_id"]
-        print(f"[{i+1}/{len(val_rows)}] {qid}...", flush=True)
-        try:
-            domain_info = val_exp.get(qid, {})
-            result = generate_case_citations(row["query"], qid, domain_info)
-            expanded = expand_case_citations(result)
-            val_cases[qid] = {"raw": result, "expanded": expanded}
-            print(f"  -> {len(expanded)} case citations", flush=True)
-        except Exception as e:
-            print(f"  ERROR: {e}", flush=True)
-            val_cases[qid] = {"raw": {}, "expanded": []}
-
-    (BASE / "precompute" / "val_case_citations.json").write_text(
-        json.dumps(val_cases, ensure_ascii=False, indent=2)
-    )
-
-    # Process test queries
-    print("\n=== Generating case citations for test queries ===")
-    test_cases = {}
-    with open(BASE / "data" / "test.csv", "r") as f:
-        test_rows = list(csv.DictReader(f))
-
-    for i, row in enumerate(test_rows):
-        qid = row["query_id"]
-        print(f"[{i+1}/{len(test_rows)}] {qid}...", flush=True)
-        try:
-            domain_info = test_exp.get(qid, {})
-            result = generate_case_citations(row["query"], qid, domain_info)
-            expanded = expand_case_citations(result)
-            test_cases[qid] = {"raw": result, "expanded": expanded}
-            print(f"  -> {len(expanded)} case citations", flush=True)
-        except Exception as e:
-            print(f"  ERROR: {e}", flush=True)
-            test_cases[qid] = {"raw": {}, "expanded": []}
-
-    (BASE / "precompute" / "test_case_citations.json").write_text(
-        json.dumps(test_cases, ensure_ascii=False, indent=2)
-    )
-
-    print(f"\nDone! Val: {len(val_cases)}, Test: {len(test_cases)}")
+    args = parse_args()
+    splits = args.splits or ["val", "test"]
+    query_ids = None
+    if args.query_ids:
+        query_ids = {
+            line.strip()
+            for line in args.query_ids.read_text().splitlines()
+            if line.strip()
+        }
+    processed = 0
+    for split in splits:
+        processed += process_split(
+            split,
+            offset=args.offset,
+            limit=args.limit,
+            query_ids=query_ids,
+            max_workers=args.max_workers,
+        )
+    print(f"\nDone! New rows processed across {', '.join(splits)}: {processed}")
 
 
 if __name__ == "__main__":

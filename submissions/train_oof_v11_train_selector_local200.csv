@@ -1,0 +1,203 @@
+query_id,predicted_citations
+train_0002,Art. 239 Abs. 2 ZPO;Art. 319 ZPO;Art. 320 ZPO;Art. 325 Abs. 2 ZPO;Art. 46 Abs. 2 GBV;Art. 649a Abs. 2 ZGB;Art. 732 Abs. 2 ZGB;Art. 87 Abs. 4 GBV;Art. 976 ZGB;Art. 98 Abs. 1 GBV
+train_0010,Art. 102 Abs. 1 StGB;Art. 111 StGB;Art. 117 StGB;Art. 123 Abs. 1 BV;Art. 13 Abs. 2 MSchG;Art. 19 Abs. 1 StGB;Art. 3 Abs. 1 StPO;Art. 42 Abs. 4 StGB;Art. 682 Abs. 2 ZGB;Art. 9 BV
+train_0015,Art. 102 Abs. 2 IPRG;Art. 102 Abs. 3 IPRG;Art. 14 BV;Art. 29 Abs. 2 BV;Art. 3 Abs. 1 AsylG;Art. 34 Abs. 1 BV;Art. 4 AsylG;Art. 62 Abs. 1 AIG;Art. 7 Abs. 1 AsylG;Art. 90 Abs. 1 IPRG
+train_0016,Art. 1 Abs. 1 StromVG;Art. 13 Abs. 1 StromVG;Art. 14 Abs. 1 StromVG;Art. 16 Abs. 1 StromVG;Art. 2 Abs. 1 StromVG;Art. 36 Abs. 1 DBG;Art. 36 Abs. 2 DBG;Art. 4 Abs. 1 StromVV;Art. 6 Abs. 3 StromVG;Art. 9 BV
+train_0026,Art. 12 Abs. 1 DSG;Art. 13 Abs. 2 DSG;Art. 19 Abs. 1 URG;Art. 2 Abs. 1 DSG;Art. 2 Abs. 1 URG;Art. 2 Abs. 2 URG;Art. 20 Abs. 2 URG;Art. 4 Abs. 1 DSG;Art. 5 Abs. 1 URG;Art. 62 Abs. 2 URG
+train_0036,Art. 15 Abs. 2 ZPO;Art. 204 Abs. 3 ZPO;Art. 23 Abs. 2 JStG;Art. 309 ZPO;Art. 401 Abs. 2 ZGB;Art. 60 Abs. 1 OR;Art. 62 Abs. 2 URG;Art. 67 Abs. 1 ZPO;Art. 842 Abs. 3 ZGB;Art. 9 BV
+train_0043,Art. 135 Abs. 4 StPO;Art. 16 Abs. 3 DBG;Art. 18 Abs. 2 DBG;Art. 186 Abs. 2 DBG;Art. 197 Abs. 2 ZGB;Art. 20 Abs. 1 DBG;Art. 36 Abs. 1 DBG;Art. 4 Abs. 1 VStG;Art. 58 Abs. 1 DBG;Art. 765 Abs. 1 ZGB
+train_0044,Art. 12 FIDLEG;Art. 2 Abs. 2 ZGB;Art. 2 UWG;Art. 20 Abs. 1 FIDLEG;Art. 24 Abs. 1 OR;Art. 3 FIDLEG;Art. 36 Abs. 1 FIDLEG;Art. 4 Abs. 2 FIDLEG;Art. 7 Abs. 1 FIDLEG;Art. 9 Abs. 1 FIDLEG
+train_0045,Art. 12 Abs. 1 DSG;Art. 13 Abs. 1 DSG;Art. 162 Abs. 1 StGB;Art. 17 Abs. 2 DSG;Art. 2 Abs. 1 DSG;Art. 2 Abs. 2 DSG;Art. 29 Abs. 3 BV;Art. 312 OR;Art. 4 Abs. 1 DSG;Art. 7 Abs. 1 DSG
+train_0058,Art. 100 Abs. 1 BGG;Art. 111 StGB;Art. 122 StGB;Art. 131 Abs. 3 StPO;Art. 158 Abs. 1 StPO;Art. 162 StPO;Art. 190 StPO;Art. 300 Abs. 1 StPO;Art. 309 Abs. 1 StPO;Art. 439 Abs. 2 StPO
+train_0060,Art. 1 Abs. 1 IPRG;Art. 199 Abs. 2 ZPO;Art. 27 Abs. 1 IPRG;Art. 49 IPRG;Art. 59 IPRG;Art. 60 IPRG;Art. 65 Abs. 2 IPRG;Art. 741 Abs. 2 ZGB;Art. 85 Abs. 1 IPRG;Art. 90 Abs. 1 IPRG
+train_0068,Art. 647e Abs. 2 ZGB;Art. 655 Abs. 3 ZGB;Art. 675 Abs. 1 ZGB;Art. 712a Abs. 1 ZGB;Art. 712d Abs. 2 ZGB;Art. 730 Abs. 1 ZGB;Art. 779 Abs. 1 ZGB;Art. 781 Abs. 1 ZGB;Art. 96 Abs. 1 GBV;Art. 98 Abs. 3 GBV
+train_0069,Art. 11 Abs. 1 JStG;Art. 13 Abs. 1 JStG;Art. 14 Abs. 1 JStG;Art. 2 Abs. 1 JStG;Art. 22 Abs. 1 JStG;Art. 22 Abs. 2 JStG;Art. 23 Abs. 1 JStG;Art. 23 Abs. 2 JStG;Art. 23 Abs. 5 JStG;Art. 33 JStG
+train_0070,Art. 184 Abs. 1 OR;Art. 681 Abs. 1 ZGB;Art. 681a Abs. 3 ZGB;Art. 681b Abs. 1 ZGB;Art. 682 Abs. 2 ZGB;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 1 ZGB;Art. 712d Abs. 1 ZGB;Art. 78 Abs. 1 GBV;Art. 959 Abs. 1 ZGB
+train_0077,Art. 187 Abs. 1 OR;Art. 20 Abs. 1 OR;Art. 20 Abs. 2 OR;Art. 201 Abs. 1 OR;Art. 203 OR;Art. 205 Abs. 1 OR;Art. 24 OR;Art. 31 OR;Art. 395 Abs. 4 ZGB;Art. 8 ZGB
+train_0083,Art. 16a Abs. 1 RPG;Art. 22 Abs. 2 RPG;Art. 24 RPG;Art. 37 Abs. 1 RPV;Art. 37 Abs. 2 RPV;Art. 61 IPRG;Art. 647e Abs. 2 ZGB;Art. 655 Abs. 3 ZGB;Art. 736 Abs. 1 ZGB;Art. 779k Abs. 2 ZGB
+train_0087,Art. 22 Abs. 2 USG;Art. 31 Abs. 1 LSV;Art. 39 Abs. 1 LSV;Art. 647e Abs. 1 ZGB;Art. 656 Abs. 2 ZGB;Art. 661 ZGB;Art. 679 Abs. 1 ZGB;Art. 679a ZGB;Art. 684 Abs. 1 ZGB;Art. 946 Abs. 1 ZGB
+train_0089,Art. 129 Abs. 3 ZGB;Art. 164 ZPO;Art. 20 Abs. 1 VStG;Art. 25 Abs. 1 BV;Art. 25 Abs. 2 BV;Art. 489 Abs. 1 ZGB;Art. 489 Abs. 2 ZGB;Art. 490 Abs. 2 ZGB;Art. 559 Abs. 1 ZGB;Art. 65a Abs. 3 IRSG
+train_0093,Art. 647e Abs. 2 ZGB;Art. 649a Abs. 2 ZGB;Art. 656 Abs. 2 ZGB;Art. 681a Abs. 2 ZGB;Art. 712i Abs. 3 ZGB;Art. 76 Abs. 2 GBV;Art. 78 Abs. 1 GBV;Art. 839 Abs. 3 ZGB;Art. 948 Abs. 1 ZGB;Art. 958 ZGB
+train_0094,Art. 22 Abs. 2 RPG;Art. 24 RPG;Art. 24b Abs. 1 RPG;Art. 24c Abs. 2 RPG;Art. 24c Abs. 4 RPG;Art. 24c Abs. 5 RPG;Art. 25 Abs. 2 USG;Art. 712g Abs. 3 ZGB;Art. 712g Abs. 4 ZGB;Art. 78 Abs. 2 BV
+train_0109,Art. 1 Abs. 1 R-UEK;Art. 123 Abs. 1 BV;Art. 123 Abs. 3 FinfraG;Art. 154 Abs. 1 FinfraG;Art. 25 StGB;Art. 395 Abs. 4 ZGB;Art. 42 Abs. 1 JStPO;Art. 64 Abs. 3 FIDLEG;Art. 9 BV;Art. 94 Abs. 2 IRSG
+train_0111,Art. 14 BV;Art. 25 Abs. 1 BV;Art. 38 Abs. 4 AIG;Art. 41 Abs. 2 AIG;Art. 59 IPRG;Art. 83 Abs. 2 AIG;Art. 83 Abs. 3 AIG;Art. 83 Abs. 4 AIG;Art. 9 BV;Art. 96 Abs. 1 AIG
+train_0115,Art. 154 Abs. 1 IPRG;Art. 288 Abs. 1 SchKG;Art. 309 ZPO;Art. 325 SchKG;Art. 395 Abs. 4 ZGB;Art. 756 Abs. 1 OR;Art. 757 Abs. 1 OR;Art. 9 BV;Art. 955 Abs. 1 ZGB;Art. 955 Abs. 2 ZGB
+train_0119,Art. 1 Abs. 1 BankG;Art. 13 Abs. 3 FIDLEG;Art. 1b Abs. 1 BankG;Art. 2 Abs. 1 BankG;Art. 2 Abs. 3 BankG;Art. 312 OR;Art. 462 Abs. 2 OR;Art. 7 Abs. 1 FIDLEG;Art. 7 Abs. 1 FIDLEV;Art. 74 Abs. 1 BGG
+train_0129,Art. 12 Abs. 1 DSG;Art. 13 Abs. 1 BV;Art. 13 Abs. 2 DSG;Art. 15 Abs. 1 DSG;Art. 1a Abs. 1 UVG;Art. 2 Abs. 2 ZGB;Art. 4 Abs. 1 DSG;Art. 5 Abs. 4 BeV;Art. 5 DSG;Art. 974 Abs. 2 ZGB
+train_0130,Art. 19 Abs. 2 StPO;Art. 439 Abs. 2 StPO;Art. 59 Abs. 1 StGB;Art. 59 Abs. 2 StGB;Art. 59 Abs. 3 StGB;Art. 62c Abs. 6 StGB;Art. 64 Abs. 1 StGB;Art. 64 Abs. 4 StGB;Art. 76 Abs. 2 StGB;Art. 82 Abs. 1 StPO
+train_0135,Art. 13 Abs. 1 USG;Art. 22 Abs. 1 USG;Art. 22 Abs. 2 USG;Art. 31 Abs. 1 LSV;Art. 40 Abs. 1 LSV;Art. 43 Abs. 1 LSV;Art. 647e Abs. 2 ZGB;Art. 648 Abs. 2 ZGB;Art. 679 Abs. 1 ZGB;Art. 679a ZGB
+train_0137,Art. 1 Abs. 1 OR;Art. 1 OR;Art. 23 OR;Art. 24 Abs. 1 OR;Art. 24 OR;Art. 25 OR;Art. 26 OR;Art. 64 Abs. 1 GBV;Art. 7 Abs. 3 OR;Art. 7 OR
+train_0138,"Art. 24 RPG;Art. 25 Abs. 2 USG;Art. 36 Abs. 2 BV;Art. 5 Abs. 1 EBG;Art. 5 Abs. 2 BV;Art. 6 
+Schutzziel;Art. 6 Abs. 1 EBG;Art. 7 Abs. 1 TwwV;Art. 7 Abs. 2 LSV;Art. 78 Abs. 2 BV"
+train_0168,Art. 395 Abs. 4 ZGB;Art. 649a Abs. 2 ZGB;Art. 655 Abs. 3 ZGB;Art. 730 Abs. 1 ZGB;Art. 731 Abs. 1 ZGB;Art. 734 ZGB;Art. 736 Abs. 1 ZGB;Art. 779 Abs. 1 ZGB;Art. 942 Abs. 1 ZGB;Art. 969 Abs. 1 ZGB
+train_0170,Art. 309 ZPO;Art. 681a Abs. 3 ZGB;Art. 69 Abs. 1 GBV;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 2 ZGB;Art. 712g Abs. 3 ZGB;Art. 712h Abs. 1 ZGB;Art. 712l Abs. 2 ZGB;Art. 779i Abs. 1 ZGB;Art. 958 ZGB
+train_0190,Art. 11 Abs. 1 JStG;Art. 122 StGB;Art. 134 StGB;Art. 2 Abs. 1 JStG;Art. 22 Abs. 2 JStG;Art. 23 Abs. 1 JStG;Art. 23 Abs. 2 JStG;Art. 23 Abs. 5 JStG;Art. 25 Abs. 1 JStG;Art. 25 Abs. 2 JStG
+train_0194,Art. 560 Abs. 1 ZGB;Art. 656 Abs. 1 ZGB;Art. 679a ZGB;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 2 ZGB;Art. 779 Abs. 1 ZGB;Art. 779a Abs. 1 ZGB;Art. 779a Abs. 2 ZGB;Art. 842 Abs. 3 ZGB;Art. 942 Abs. 1 ZGB
+train_0195,Art. 100 Abs. 1 BGG;Art. 102 Abs. 1 StGB;Art. 123 Abs. 1 BV;Art. 146 Abs. 1 StGB;Art. 186 Abs. 1 DBG;Art. 186 Abs. 2 DBG;Art. 395 Abs. 4 ZGB;Art. 56 Abs. 3 StHG;Art. 56 Abs. 5 StHG;Art. 9 BV
+train_0197,Art. 15 Abs. 2 JStG;Art. 19 Abs. 2 StPO;Art. 59 Abs. 1 StGB;Art. 59 Abs. 2 StGB;Art. 59 Abs. 3 StGB;Art. 62c Abs. 6 StGB;Art. 64 Abs. 1 StGB;Art. 64 Abs. 4 StGB;Art. 82 Abs. 1 StPO;Art. 9 Abs. 3 JStG
+train_0202,Art. 16 Abs. 1 GeoIG;Art. 656 Abs. 2 ZGB;Art. 679a ZGB;Art. 69 Abs. 4 GBV;Art. 712b Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 712h Abs. 3 ZGB;Art. 779 Abs. 1 ZGB;Art. 824 Abs. 2 ZGB;Art. 946 Abs. 1 ZGB
+train_0204,Art. 14 Abs. 1 DBG;Art. 161 Abs. 3 DBG;Art. 187 Abs. 1 OR;Art. 20 Abs. 1 DBG;Art. 36 Abs. 1 DBG;Art. 36 Abs. 2 DBG;Art. 395 Abs. 4 ZGB;Art. 49 Abs. 1 BV;Art. 58 Abs. 1 DBG;Art. 712e Abs. 1 ZGB
+train_0206,Art. 22 Abs. 2 RPG;Art. 22a SSV;Art. 24 RPG;Art. 24c Abs. 5 RPG;Art. 37 Abs. 1 RPV;Art. 37 Abs. 2 RPV;Art. 4 Abs. 1 BGBB;Art. 40 Abs. 3 RPV;Art. 837 Abs. 1 ZGB;Art. 976 ZGB
+train_0231,Art. 46 Abs. 1 GBV;Art. 47 Abs. 2 GBV;Art. 646 Abs. 1 ZGB;Art. 681a Abs. 2 ZGB;Art. 681b Abs. 1 ZGB;Art. 816 Abs. 2 ZGB;Art. 842 Abs. 1 ZGB;Art. 843 ZGB;Art. 857 Abs. 1 ZGB;Art. 948 Abs. 1 ZGB
+train_0234,Art. 123 Abs. 4 GBV;Art. 649a Abs. 2 ZGB;Art. 656 Abs. 2 ZGB;Art. 960 Abs. 1 ZGB;Art. 961 Abs. 2 ZGB;Art. 961 Abs. 3 ZGB;Art. 965 Abs. 1 ZGB;Art. 965 Abs. 2 ZGB;Art. 969 Abs. 1 ZGB;Art. 98 Abs. 3 GBV
+train_0236,Art. 114 Abs. 3 OR;Art. 118 Abs. 3 OR;Art. 125 Abs. 2 DBG;Art. 186 Abs. 2 DBG;Art. 261b Abs. 2 OR;Art. 395 Abs. 4 ZGB;Art. 45a Abs. 2 IPRG;Art. 58 Abs. 1 DBG;Art. 78 Abs. 1 GBV;Art. 959 Abs. 2 OR
+train_0237,Art. 23 Abs. 5 GBV;Art. 656 Abs. 1 ZGB;Art. 657 Abs. 1 ZGB;Art. 679 Abs. 1 ZGB;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 1 ZGB;Art. 779 Abs. 1 ZGB;Art. 842 Abs. 1 ZGB;Art. 843 ZGB;Art. 97 Abs. 2 GBV
+train_0245,Art. 12 Abs. 1 NHG;Art. 12 Abs. 3 NHG;Art. 24 Abs. 4 RTVG;Art. 321 Abs. 2 ZPO;Art. 482 Abs. 2 ZGB;Art. 74 Abs. 1 BGG;Art. 86 Abs. 1 BGG;Art. 89 Abs. 1 BGG;Art. 92 Abs. 1 BGG;Art. 98 BGG
+train_0249,Art. 187 Abs. 1 OR;Art. 20 Abs. 1 OR;Art. 20 Abs. 2 OR;Art. 203 OR;Art. 205 Abs. 1 OR;Art. 23 OR;Art. 24 Abs. 1 OR;Art. 24 OR;Art. 31 OR;Art. 8 ZGB
+train_0257,Art. 656 Abs. 2 ZGB;Art. 657 Abs. 1 ZGB;Art. 793 Abs. 1 ZGB;Art. 839 Abs. 3 ZGB;Art. 842 Abs. 1 ZGB;Art. 842 Abs. 2 ZGB;Art. 853 ZGB;Art. 860 Abs. 1 ZGB;Art. 948 Abs. 1 ZGB;Art. 968 ZGB
+train_0259,Art. 1 Abs. 2 OR;Art. 101 Abs. 1 OR;Art. 23 Abs. 2 JStG;Art. 39 Abs. 3 OR;Art. 399 Abs. 2 OR;Art. 44 OR;Art. 8 ZGB;Art. 864 Abs. 2 ZGB;Art. 98 Abs. 1 OR;Art. 99 Abs. 2 OR
+train_0275,Art. 656 Abs. 1 ZGB;Art. 656 Abs. 2 ZGB;Art. 681a Abs. 2 ZGB;Art. 682 Abs. 2 ZGB;Art. 779i Abs. 1 ZGB;Art. 779l Abs. 1 ZGB;Art. 781 Abs. 1 ZGB;Art. 948 Abs. 1 ZGB;Art. 98 Abs. 2 GBV;Art. 98 Abs. 3 GBV
+train_0281,Art. 216 Abs. 2 ZGB;Art. 247 ZGB;Art. 457 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 473 Abs. 3 ZGB;Art. 477 ZGB;Art. 494 Abs. 1 ZGB;Art. 527 ZGB;Art. 9 Abs. 1 DBG
+train_0282,Art. 1 OR;Art. 111 OR;Art. 2 UWG;Art. 2 ZGB;Art. 33 Abs. 3 OR;Art. 33 OR;Art. 34 Abs. 3 OR;Art. 395 Abs. 4 ZGB;Art. 41 OR;Art. 712t Abs. 2 ZGB
+train_0287,Art. 462 ZGB;Art. 559 Abs. 1 ZGB;Art. 65 Abs. 1 GBV;Art. 656 Abs. 1 ZGB;Art. 657 Abs. 1 ZGB;Art. 730 Abs. 1 ZGB;Art. 731 Abs. 1 ZGB;Art. 970 Abs. 1 ZGB;Art. 971 Abs. 1 ZGB;Art. 973 Abs. 1 ZGB
+train_0295,Art. 649a Abs. 2 ZGB;Art. 656 Abs. 2 ZGB;Art. 681b Abs. 1 ZGB;Art. 816 Abs. 2 ZGB;Art. 832 Abs. 1 ZGB;Art. 860 Abs. 1 ZGB;Art. 860 Abs. 2 ZGB;Art. 963 Abs. 1 ZGB;Art. 965 Abs. 1 ZGB;Art. 972 Abs. 1 ZGB
+train_0300,Art. 125 Abs. 2 ZGB;Art. 181 ZGB;Art. 204 Abs. 1 ZGB;Art. 241 Abs. 2 ZGB;Art. 241 Abs. 3 ZGB;Art. 374 Abs. 1 ZGB;Art. 462 ZGB;Art. 470 Abs. 1 ZGB;Art. 646 Abs. 1 ZGB;Art. 657 Abs. 1 ZGB
+train_0306,Art. 1 Abs. 2 IPRG;Art. 178 Abs. 1 IPRG;Art. 26 Abs. 3 IRSV;Art. 45a Abs. 2 IPRG;Art. 61 IPRG;Art. 75 ZGB;Art. 85 Abs. 1 IPRG;Art. 86 Abs. 2 IPRG;Art. 87 Abs. 2 IPRG;Art. 90 Abs. 1 IPRG
+train_0313,Art. 1 Abs. 1 IPRG;Art. 155 IPRG;Art. 395 Abs. 4 ZGB;Art. 457 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 493 Abs. 1 ZGB;Art. 745 Abs. 1 ZGB;Art. 81 Abs. 1 ZGB;Art. 90 Abs. 1 IPRG
+train_0314,Art. 1 UWG;Art. 2 UWG;Art. 3 Abs. 1 UWG;Art. 5 UWG;Art. 6 UWG;Art. 74 Abs. 1 BGG;Art. 9 Abs. 1 UWG;Art. 9 Abs. 2 UWG;Art. 9 Abs. 3 UWG;Art. 9 BV
+train_0317,Art. 10 Abs. 3 StGB;Art. 100 Abs. 1 BGG;Art. 112 StGB;Art. 122 StGB;Art. 123 Abs. 2 StGB;Art. 134 StGB;Art. 482 Abs. 1 ZGB;Art. 482 Abs. 2 ZGB;Art. 90 Abs. 2 SVG;Art. 90 Abs. 3 SVG
+train_0320,Art. 241 Abs. 3 ZGB;Art. 395 Abs. 4 ZGB;Art. 457 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 476 Abs. 1 ZGB;Art. 494 Abs. 1 ZGB;Art. 498 ZGB;Art. 518 Abs. 2 ZGB;Art. 527 ZGB
+train_0324,Art. 100 Abs. 1 BGG;Art. 106 Abs. 2 BGG;Art. 20 Abs. 1 IPRG;Art. 34 Abs. 1 AIG;Art. 34 Abs. 2 AIG;Art. 34 Abs. 3 AIG;Art. 34 Abs. 4 AIG;Art. 37 Abs. 3 AIG;Art. 38 Abs. 4 AIG;Art. 482 Abs. 2 ZGB
+train_0326,Art. 1 Abs. 1 MSchG;Art. 1 UWG;Art. 114 Abs. 1 OR;Art. 184 Abs. 1 OR;Art. 2 MSchG;Art. 2 UWG;Art. 3 Abs. 1 MSchG;Art. 59 MSchG;Art. 9 Abs. 2 UWG;Art. 9 Abs. 3 UWG
+train_0337,Art. 655 Abs. 1 ZGB;Art. 656 Abs. 2 ZGB;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 1 ZGB;Art. 712d Abs. 2 ZGB;Art. 730 Abs. 1 ZGB;Art. 776 Abs. 1 ZGB;Art. 779 Abs. 1 ZGB;Art. 779a Abs. 1 ZGB;Art. 959 Abs. 1 ZGB
+train_0339,Art. 1 OR;Art. 20 Abs. 2 OR;Art. 20 OR;Art. 23 OR;Art. 25 Abs. 1 OR;Art. 26 OR;Art. 28 OR;Art. 31 OR;Art. 320 Abs. 3 OR;Art. 906 Abs. 2 ZGB
+train_0351,Art. 12 Abs. 2 StGB;Art. 130 StPO;Art. 134 StGB;Art. 22 Abs. 1 StGB;Art. 26 Abs. 1 JStPO;Art. 3 Abs. 1 JStG;Art. 42 Abs. 4 StGB;Art. 56 Abs. 2 StGB;Art. 59 Abs. 1 StGB;Art. 64 Abs. 1 StGB
+train_0352,Art. 123 Abs. 4 GBV;Art. 129 Abs. 2 GBV;Art. 129 Abs. 3 GBV;Art. 261b Abs. 2 OR;Art. 77 Abs. 1 GBV;Art. 779b Abs. 2 ZGB;Art. 78 Abs. 1 GBV;Art. 78 Abs. 3 GBV;Art. 959 Abs. 1 ZGB;Art. 970 Abs. 1 ZGB
+train_0358,Art. 1 EpG;Art. 10 Abs. 1 EpG;Art. 100 Abs. 1 BGG;Art. 118 Abs. 1 BV;Art. 19 Abs. 1 EpG;Art. 19 Abs. 3 EpG;Art. 26 Abs. 1 JStPO;Art. 38 Abs. 3 EpV;Art. 53 Abs. 2 GBV;Art. 7 EpG
+train_0362,Art. 23 Abs. 1 IPRG;Art. 34 Abs. 2 AIG;Art. 59 IPRG;Art. 62 Abs. 1 VZAE;Art. 66a Abs. 2 StGB;Art. 82 BGG;Art. 83 Abs. 3 AIG;Art. 9 BV;Art. 90 Abs. 1 IPRG;Art. 96 Abs. 1 AIG
+train_0365,Art. 122 StGB;Art. 134 StGB;Art. 23 Abs. 2 JStG;Art. 25 Abs. 1 JStG;Art. 25 Abs. 2 JStG;Art. 26 Abs. 1 JStPO;Art. 32 Abs. 1 JStPO;Art. 34 Abs. 1 JStPO;Art. 42 Abs. 1 JStPO;Art. 5 JStG
+train_0366,Art. 130 Abs. 1 ZPO;Art. 138 Abs. 1 ZPO;Art. 138 Abs. 3 ZPO;Art. 285 Abs. 1 ZGB;Art. 3 IPRG;Art. 49 IPRG;Art. 5 Abs. 3 IPRG;Art. 59 Abs. 2 ZPO;Art. 85 Abs. 1 IPRG;Art. 85 Abs. 3 IRSG
+train_0372,Art. 125 Abs. 1 ZGB;Art. 129 Abs. 3 ZGB;Art. 25 IPRG;Art. 45a Abs. 1 IPRG;Art. 49 IPRG;Art. 59 IPRG;Art. 60 IPRG;Art. 64 Abs. 2 IPRG;Art. 65 Abs. 2 IPRG;Art. 85 Abs. 1 IPRG
+train_0373,Art. 150 Abs. 1 ZPO;Art. 184 Abs. 1 OR;Art. 197 ZPO;Art. 214 SchKG;Art. 243 Abs. 1 ZPO;Art. 4 Abs. 1 ZPO;Art. 679a ZGB;Art. 753 Abs. 2 ZGB;Art. 779k Abs. 2 ZGB;Art. 842 Abs. 3 ZGB
+train_0384,Art. 125 Abs. 1 ZGB;Art. 181 ZGB;Art. 216 Abs. 1 ZGB;Art. 216 Abs. 2 ZGB;Art. 462 ZGB;Art. 471 ZGB;Art. 473 Abs. 1 ZGB;Art. 473 Abs. 3 ZGB;Art. 490 Abs. 1 ZGB;Art. 527 ZGB
+train_0385,Art. 216 Abs. 1 ZGB;Art. 301 Abs. 2 ZGB;Art. 395 Abs. 4 ZGB;Art. 401 Abs. 2 ZGB;Art. 458 Abs. 1 ZGB;Art. 49 IPRG;Art. 59 IPRG;Art. 61 IPRG;Art. 63 Abs. 2 IPRG;Art. 78 Abs. 1 GBV
+train_0387,Art. 23 Abs. 5 GBV;Art. 679 Abs. 1 ZGB;Art. 682 Abs. 2 ZGB;Art. 684 Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 1 ZGB;Art. 712d Abs. 2 ZGB;Art. 712g Abs. 3 ZGB;Art. 776 Abs. 1 ZGB;Art. 945 Abs. 1 ZGB
+train_0390,Art. 10 Abs. 1 VStG;Art. 16 Abs. 3 DBG;Art. 17 Abs. 1 DBG;Art. 18 Abs. 1 DBG;Art. 20 Abs. 1 DBG;Art. 20 Abs. 1 VStG;Art. 36 Abs. 1 DBG;Art. 36 Abs. 1 FIDLEG;Art. 36 Abs. 2 DBG;Art. 4 Abs. 1 VStG
+train_0391,Art. 23 OR;Art. 24 Abs. 1 OR;Art. 24 OR;Art. 31 Abs. 3 OR;Art. 31 OR;Art. 373 Abs. 2 OR;Art. 62 OR;Art. 64 OR;Art. 67 Abs. 1 OR;Art. 67 OR
+train_0395,Art. 23 Abs. 5 GBV;Art. 395 Abs. 4 ZGB;Art. 494 Abs. 3 ZGB;Art. 679 Abs. 1 ZGB;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 1 ZGB;Art. 712e Abs. 1 ZGB;Art. 712g Abs. 1 ZGB;Art. 712g Abs. 2 ZGB;Art. 712i Abs. 1 ZGB
+train_0402,Art. 10 Abs. 2 BV;Art. 102 Abs. 2 StGB;Art. 13 Abs. 2 DSG;Art. 2 Abs. 1 URG;Art. 27 Abs. 1 SVG;Art. 4 Abs. 1 DSG;Art. 42 Abs. 4 StGB;Art. 56 Abs. 2 StGB;Art. 9 BV;Art. 90 Abs. 1 SVG
+train_0415,Art. 1 Abs. 1 BankG;Art. 10 Abs. 2 952.3;Art. 100 Abs. 1 BGG;Art. 2 Abs. 1 BankG;Art. 3 Abs. 1 BankG;Art. 312 OR;Art. 4 Abs. 1 BankG;Art. 8 Abs. 1 952.3;Art. 9 Abs. 3 952.3;Art. 961 Abs. 1 ZGB
+train_0417,Art. 158 Abs. 1 ZPO;Art. 187 Abs. 1 OR;Art. 20 Abs. 1 OR;Art. 20 Abs. 2 OR;Art. 201 Abs. 1 OR;Art. 203 OR;Art. 23 OR;Art. 24 OR;Art. 31 OR;Art. 8 ZGB
+train_0420,Art. 102 Abs. 3 IPRG;Art. 19 Abs. 1 URG;Art. 2 Abs. 1 URG;Art. 20 Abs. 2 URG;Art. 25a Abs. 1 VwVG;Art. 395 Abs. 4 ZGB;Art. 6 URG;Art. 62 Abs. 2 AIG;Art. 641 Abs. 2 ZGB;Art. 970 Abs. 3 ZGB
+train_0424,Art. 47 Abs. 2 GBV;Art. 655 Abs. 3 ZGB;Art. 679a ZGB;Art. 682 Abs. 2 ZGB;Art. 712b Abs. 2 ZGB;Art. 779a Abs. 2 ZGB;Art. 779b Abs. 1 ZGB;Art. 779i Abs. 1 ZGB;Art. 779l Abs. 1 ZGB;Art. 958 ZGB
+train_0427,Art. 12 Abs. 1 DSG;Art. 13 Abs. 1 DSG;Art. 2 Abs. 1 DSG;Art. 295 ZPO;Art. 296 Abs. 3 ZPO;Art. 311 Abs. 1 ZPO;Art. 36 DesG;Art. 39 Abs. 3 OR;Art. 4 Abs. 1 DSG;Art. 93 Abs. 1 ZPO
+train_0440,Art. 162 Abs. 1 StGB;Art. 19 Abs. 3 URG;Art. 2 Abs. 2 URG;Art. 33a Abs. 1 URG;Art. 33a Abs. 2 URG;Art. 5 Abs. 1 URG;Art. 6 URG;Art. 62 Abs. 2 URG;Art. 66 PatG;Art. 9 Abs. 2 DesG
+train_0444,Art. 215 Abs. 1 ZGB;Art. 216 Abs. 2 ZGB;Art. 360 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 473 Abs. 3 ZGB;Art. 490 Abs. 2 ZGB;Art. 494 Abs. 3 ZGB;Art. 518 Abs. 2 ZGB;Art. 527 ZGB
+train_0455,Art. 131 Abs. 3 StPO;Art. 141 Abs. 2 StPO;Art. 152 Abs. 2 ZPO;Art. 229 Abs. 1 ZPO;Art. 229 Abs. 3 ZPO;Art. 300 Abs. 1 StPO;Art. 307 Abs. 3 StPO;Art. 328 Abs. 1 ZPO;Art. 355 Abs. 1 StPO;Art. 355 Abs. 3 StPO
+train_0460,Art. 203 OR;Art. 216c Abs. 1 OR;Art. 23 OR;Art. 24 Abs. 1 OR;Art. 26 FinfraG;Art. 4 Abs. 1 BankV;Art. 494 Abs. 3 ZGB;Art. 6 Abs. 1 BankV;Art. 6 Abs. 2 BankV;Art. 82 ZGB
+train_0473,Art. 12c Abs. 2 NHG;Art. 48 Abs. 1 GBV;Art. 712e Abs. 1 ZGB;Art. 81 Abs. 3 BGBB;Art. 89 Abs. 2 GBV;Art. 9 BV;Art. 942 Abs. 1 ZGB;Art. 943 Abs. 1 ZGB;Art. 945 Abs. 1 ZGB;Art. 98 Abs. 3 GBV
+train_0475,Art. 116 BGG;Art. 25 IPRG;Art. 25a Abs. 2 VwVG;Art. 48 Abs. 1 VwVG;Art. 48 Abs. 2 VwVG;Art. 6 Abs. 2 EpG;Art. 7 EpG;Art. 86 Abs. 1 BGG;Art. 87 Abs. 1 BGG;Art. 9 BV
+train_0480,Art. 1 Abs. 1 IPRG;Art. 1 Abs. 2 IPRG;Art. 150 Abs. 1 ZPO;Art. 27 Abs. 2 BEG;Art. 3 IPRG;Art. 4 Abs. 1 ZPO;Art. 5 Abs. 3 IPRG;Art. 61 IPRG;Art. 67 Abs. 1 ZPO;Art. 85 Abs. 1 IPRG
+train_0485,Art. 48 Abs. 1 GBV;Art. 517 Abs. 1 ZGB;Art. 518 Abs. 1 ZGB;Art. 824 Abs. 1 ZGB;Art. 843 ZGB;Art. 858 Abs. 1 ZGB;Art. 860 Abs. 1 ZGB;Art. 91 Abs. 3 GBV;Art. 958 ZGB;Art. 968 ZGB
+train_0487,Art. 10 Abs. 1 JStPO;Art. 25 Abs. 2 JStG;Art. 26 Abs. 1 JStPO;Art. 32 Abs. 1 JStPO;Art. 32 Abs. 3 JStPO;Art. 34 Abs. 1 JStPO;Art. 34 Abs. 2 JStPO;Art. 40 Abs. 1 JStPO;Art. 6 Abs. 2 JStPO;Art. 82 Abs. 1 StPO
+train_0490,Art. 11 Abs. 2 R-UEK;Art. 20 Abs. 1 FIDLEG;Art. 20 Abs. 2 FIDLEG;Art. 36 Abs. 1 FIDLEG;Art. 36 Abs. 3 956.161.1;Art. 4 Abs. 2 FIDLEG;Art. 620 Abs. 1 OR;Art. 729b Abs. 2 OR;Art. 74 Abs. 1 BGG;Art. 9 BV
+train_0497,Art. 23 Abs. 4 GBV;Art. 23 Abs. 5 GBV;Art. 656 Abs. 1 ZGB;Art. 657 Abs. 1 ZGB;Art. 682 Abs. 2 ZGB;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 946 Abs. 1 ZGB;Art. 958 ZGB;Art. 959 Abs. 1 ZGB
+train_0501,Art. 2 Abs. 2 ZGB;Art. 2 UWG;Art. 2 ZGB;Art. 3 FIDLEG;Art. 395 Abs. 4 ZGB;Art. 534 Abs. 1 OR;Art. 55 Abs. 1 ZGB;Art. 659 Abs. 1 OR;Art. 659 Abs. 2 OR;Art. 659 Abs. 3 OR
+train_0504,Art. 2 GBV;Art. 679a ZGB;Art. 712b Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 1 ZGB;Art. 842 Abs. 1 ZGB;Art. 843 ZGB;Art. 860 Abs. 1 ZGB;Art. 945 Abs. 1 ZGB;Art. 963 Abs. 1 ZGB
+train_0507,Art. 1013 Abs. 1 OR;Art. 1021 Abs. 1 OR;Art. 1026 Abs. 1 OR;Art. 263 Abs. 1 StPO;Art. 814 Abs. 3 ZGB;Art. 839 Abs. 3 ZGB;Art. 854 Abs. 1 ZGB;Art. 9 BV;Art. 959 Abs. 1 ZGB;Art. 959 Abs. 2 ZGB
+train_0515,Art. 19 Abs. 1 URG;Art. 19 Abs. 3 URG;Art. 24a URG;Art. 33 Abs. 1 URG;Art. 33 Abs. 2 URG;Art. 33a Abs. 1 URG;Art. 33a Abs. 2 URG;Art. 5 Abs. 1 URG;Art. 6 URG;Art. 62 Abs. 1 URG
+train_0519,Art. 10 Abs. 2 URG;Art. 19 Abs. 1 URG;Art. 2 Abs. 1 URG;Art. 2 Abs. 2 URG;Art. 2 UWG;Art. 20 Abs. 2 URG;Art. 399 Abs. 2 OR;Art. 6 URG;Art. 946 Abs. 1 ZGB;Art. 967 Abs. 1 OR
+train_0532,Art. 712a Abs. 2 ZGB;Art. 712b Abs. 2 ZGB;Art. 712e Abs. 1 ZGB;Art. 712g Abs. 2 ZGB;Art. 712g Abs. 3 ZGB;Art. 712g Abs. 4 ZGB;Art. 712h Abs. 1 ZGB;Art. 712i Abs. 1 ZGB;Art. 712t Abs. 2 ZGB;Art. 741 Abs. 2 ZGB
+train_0542,Art. 203 OR;Art. 34 Abs. 2 AIG;Art. 34 Abs. 3 OR;Art. 34 Abs. 4 AIG;Art. 34 Abs. 5 AIG;Art. 38 Abs. 4 AIG;Art. 56 Abs. 1 StGB;Art. 62 Abs. 1 VZAE;Art. 62c Abs. 6 StGB;Art. 83 Abs. 3 AIG
+train_0544,Art. 14 BV;Art. 241 Abs. 3 ZGB;Art. 322 Abs. 1 ZGB;Art. 401 Abs. 2 ZGB;Art. 462 ZGB;Art. 471 ZGB;Art. 494 Abs. 1 ZGB;Art. 494 Abs. 3 ZGB;Art. 712d Abs. 3 ZGB;Art. 76 Abs. 1 VVG
+train_0556,Art. 11 Abs. 1 JStG;Art. 13 Abs. 2 JStG;Art. 23 Abs. 2 JStG;Art. 25 Abs. 2 JStG;Art. 26 Abs. 1 JStPO;Art. 34 Abs. 1 JStPO;Art. 5 JStG;Art. 62c Abs. 6 StGB;Art. 9 Abs. 1 JStG;Art. 9 Abs. 3 JStG
+train_0557,Art. 51 Abs. 1 lit. c OG;Art. 55 Abs. 1 lit. c OG;Art. 55 Abs. 1 lit. d OG;Art. 64 OR;Art. 712t Abs. 2 ZGB;Art. 718 Abs. 1 OR;Art. 725 Abs. 2 OR;Art. 729b Abs. 2 OR;Art. 754 Abs. 1 OR;Art. 757 Abs. 1 OR
+train_0574,Art. 11 Abs. 1 JStG;Art. 2 Abs. 1 JStG;Art. 23 Abs. 2 JStG;Art. 25 Abs. 2 JStG;Art. 26 Abs. 1 JStPO;Art. 32 Abs. 1 JStPO;Art. 33 JStG;Art. 42 Abs. 1 JStPO;Art. 5 JStG;Art. 9 Abs. 1 JStG
+train_0577,Art. 395 Abs. 4 ZGB;Art. 648 Abs. 2 ZGB;Art. 681a Abs. 3 ZGB;Art. 684 Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 2 ZGB;Art. 779 Abs. 1 ZGB;Art. 781 Abs. 1 ZGB;Art. 814 Abs. 3 ZGB;Art. 960 Abs. 1 ZGB
+train_0588,Art. 10 Abs. 1 VwVG;Art. 10 Abs. 2 HFMV 22;Art. 11 Abs. 2 HFMV 20;Art. 40 Abs. 1 JStPO;Art. 5 Abs. 1 VwVG;Art. 6 Abs. 1 EpG;Art. 7 EpG;Art. 86 Abs. 1 BGG;Art. 87 Abs. 1 BGG;Art. 9 BV
+train_0594,Art. 23 Abs. 4 GBV;Art. 23 Abs. 5 GBV;Art. 675 Abs. 1 ZGB;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 779 Abs. 1 ZGB;Art. 958 ZGB;Art. 973 Abs. 1 ZGB;Art. 98 Abs. 1 GBV;Art. 98 Abs. 3 GBV
+train_0595,Art. 114 Abs. 3 OR;Art. 118 Abs. 3 OR;Art. 2 Abs. 1 ZGB;Art. 23 Abs. 4 GBV;Art. 656 Abs. 1 ZGB;Art. 657 Abs. 1 ZGB;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 1 ZGB;Art. 842 Abs. 1 ZGB;Art. 97 Abs. 2 GBV
+train_0601,Art. 23 Abs. 5 JStG;Art. 3 IPRG;Art. 31 Abs. 4 BV;Art. 31 ZPO;Art. 4 Abs. 1 ZPO;Art. 5 Abs. 1 IPRG;Art. 6 IPRG;Art. 61 IPRG;Art. 63 Abs. 2 IPRG;Art. 67 Abs. 1 ZPO
+train_0607,Art. 101 Abs. 3 GBV;Art. 140 Abs. 2 GBV;Art. 679a ZGB;Art. 712i Abs. 3 ZGB;Art. 76 Abs. 2 GBV;Art. 837 Abs. 1 ZGB;Art. 842 Abs. 1 ZGB;Art. 948 Abs. 1 ZGB;Art. 970 Abs. 1 ZGB;Art. 971 Abs. 1 ZGB
+train_0611,Art. 184 Abs. 1 OR;Art. 216 Abs. 1 ZGB;Art. 395 Abs. 4 ZGB;Art. 647e Abs. 2 ZGB;Art. 656 Abs. 1 ZGB;Art. 682 Abs. 2 ZGB;Art. 712b Abs. 2 ZGB;Art. 732 Abs. 2 ZGB;Art. 741 Abs. 2 ZGB;Art. 779 Abs. 1 ZGB
+train_0617,Art. 1 LwG;Art. 100 Abs. 1 BGG;Art. 16a Abs. 1bis RPG;Art. 16a Abs. 3 RPG;Art. 2 Abs. 1 LwG;Art. 24 RPG;Art. 24c Abs. 5 RPG;Art. 4 Abs. 1 LwG;Art. 43a RPV;Art. 74 Abs. 1 BGG
+train_0621,Art. 216 Abs. 2 ZGB;Art. 241 Abs. 3 ZGB;Art. 395 Abs. 4 ZGB;Art. 457 Abs. 1 ZGB;Art. 462 ZGB;Art. 471 ZGB;Art. 494 Abs. 1 ZGB;Art. 527 ZGB;Art. 548 Abs. 2 ZGB;Art. 63 Abs. 2 IPRG
+train_0643,Art. 288 Abs. 1 SchKG;Art. 580 Abs. 2 ZGB;Art. 647c ZGB;Art. 647e Abs. 2 ZGB;Art. 712i Abs. 3 ZGB;Art. 779k Abs. 2 ZGB;Art. 83 Abs. 1 SchKG;Art. 839 Abs. 3 ZGB;Art. 906 Abs. 2 ZGB;Art. 91 Abs. 1 SchKG
+train_0662,Art. 19 Abs. 1 Bst;Art. 19 Abs. 2 Bst;Art. 58 Abs. 2 IRSG;Art. 62 Abs. 2 AIG;Art. 66a Abs. 1 Bst;Art. 66a Abs. 1 StGB;Art. 66a Abs. 2 StGB;Art. 9 BV;Art. 96 Abs. 1 AIG;Art. 96 IRSG
+train_0663,Art. 16 Abs. 1 GeoIG;Art. 395 Abs. 4 ZGB;Art. 656 Abs. 1 ZGB;Art. 681a Abs. 2 ZGB;Art. 732 Abs. 2 ZGB;Art. 779 Abs. 2 ZGB;Art. 839 Abs. 2 ZGB;Art. 948 Abs. 1 ZGB;Art. 958 ZGB;Art. 977 Abs. 3 ZGB
+train_0664,Art. 129 Abs. 2 GBV;Art. 16 Abs. 1 GeoIG;Art. 46 Abs. 1 GBV;Art. 64 Abs. 1 GBV;Art. 681b Abs. 1 ZGB;Art. 732 Abs. 2 ZGB;Art. 943 Abs. 1 ZGB;Art. 946 Abs. 1 ZGB;Art. 959 Abs. 1 ZGB;Art. 962 Abs. 1 ZGB
+train_0692,Art. 395 Abs. 4 ZGB;Art. 655 Abs. 2 ZGB;Art. 655 Abs. 3 ZGB;Art. 678 Abs. 2 ZGB;Art. 682 Abs. 2 ZGB;Art. 684 Abs. 2 ZGB;Art. 732 Abs. 2 ZGB;Art. 741 Abs. 2 ZGB;Art. 779k Abs. 1 ZGB;Art. 943 Abs. 1 ZGB
+train_0694,Art. 10 Abs. 3 BV;Art. 118 Abs. 2 Bst;Art. 123 Abs. 1 BV;Art. 136 Abs. 1 BV;Art. 139 Abs. 1 BV;Art. 216 Abs. 1 OR;Art. 69 Abs. 1 BPR;Art. 71 Abs. 1 BPR;Art. 72 Abs. 1 BPR;Art. 75 Abs. 1 BPR
+train_0696,Art. 10 Abs. 1 JStG;Art. 11 Abs. 1 JStG;Art. 14 Abs. 1 JStG;Art. 22 Abs. 2 JStG;Art. 23 Abs. 1 JStG;Art. 23 Abs. 2 JStG;Art. 23 Abs. 5 JStG;Art. 25 Abs. 1 JStG;Art. 3 Abs. 1 JStG;Art. 309 Abs. 1 StPO
+train_0702,Art. 10 Abs. 1 JStG;Art. 11 Abs. 1 JStG;Art. 13 Abs. 1 JStG;Art. 14 Abs. 1 JStG;Art. 23 Abs. 2 JStG;Art. 25 Abs. 1 JStG;Art. 25 Abs. 2 JStG;Art. 3 Abs. 1 JStG;Art. 401 Abs. 1 ZGB;Art. 9 Abs. 1 JStG
+train_0708,Art. 102 Abs. 1 StGB;Art. 102 Abs. 2 StGB;Art. 102 Abs. 4 StGB;Art. 106 Abs. 2 BGG;Art. 22 Abs. 1 StGB;Art. 25 StGB;Art. 34 Abs. 2 SVG;Art. 35 Abs. 6 SVG;Art. 74 Abs. 1 BGG;Art. 9 BV
+train_0710,Art. 1 UWG;Art. 10 Abs. 1 URG;Art. 11 Abs. 1 URG;Art. 20 Abs. 2 URG;Art. 24a URG;Art. 3 Abs. 1 UWG;Art. 5 UWG;Art. 6 URG;Art. 9 Abs. 1 UWG;Art. 9 Abs. 2 URG
+train_0712,Art. 15 Abs. 3 RPG;Art. 22 Abs. 2 RPG;Art. 24b Abs. 2 RPG;Art. 24c Abs. 2 RPG;Art. 24c Abs. 5 RPG;Art. 37 Abs. 1 RPV;Art. 37 Abs. 2 RPV;Art. 40 Abs. 3 RPV;Art. 61 Abs. 1 BGBB;Art. 75 Abs. 1 BV
+train_0724,Art. 181 ZGB;Art. 216 Abs. 1 OR;Art. 216 Abs. 1 ZGB;Art. 216 Abs. 2 ZGB;Art. 23 OR;Art. 241 Abs. 1 ZGB;Art. 241 Abs. 2 ZGB;Art. 241 Abs. 3 ZGB;Art. 63 Abs. 2 IPRG;Art. 78 Abs. 1 GBV
+train_0728,Art. 184 Abs. 1 OR;Art. 656 Abs. 2 ZGB;Art. 657 Abs. 1 ZGB;Art. 665 Abs. 3 ZGB;Art. 779b Abs. 1 ZGB;Art. 799 Abs. 2 ZGB;Art. 91 Abs. 3 GBV;Art. 948 Abs. 1 ZGB;Art. 951 Abs. 2 ZGB;Art. 963 Abs. 1 ZGB
+train_0730,Art. 131 Abs. 2 GBV;Art. 81 Abs. 1 GBV;Art. 83 Abs. 1 GBV;Art. 84 Abs. 1 GBV;Art. 87 Abs. 1 GBV;Art. 945 Abs. 1 ZGB;Art. 946 Abs. 1 ZGB;Art. 955 Abs. 2 ZGB;Art. 958 ZGB;Art. 98 Abs. 3 GBV
+train_0731,Art. 10 Abs. 3 StGB;Art. 100 Abs. 1 BGG;Art. 2 MSchG;Art. 30 Abs. 1 BV;Art. 36 Abs. 2 BV;Art. 4 DesG;Art. 56 Abs. 1 StGB;Art. 64 Abs. 4 StGB;Art. 74 Abs. 1 BGG;Art. 76 Abs. 1 131.219
+train_0735,Art. 116 AsylG;Art. 123 Abs. 1 BV;Art. 25 Abs. 1 BV;Art. 263 Abs. 1 StGB;Art. 3 Abs. 1 AsylG;Art. 307 Abs. 1 StGB;Art. 66a Abs. 1 StGB;Art. 66a Abs. 2 StGB;Art. 7 Abs. 1 AsylG;Art. 9 BV
+train_0743,Art. 1 Abs. 2 OR;Art. 101 Abs. 1 OR;Art. 39 Abs. 3 OR;Art. 395 Abs. 4 ZGB;Art. 399 Abs. 2 OR;Art. 44 OR;Art. 78 Abs. 1 GBV;Art. 8 ZGB;Art. 864 Abs. 2 ZGB;Art. 99 Abs. 2 OR
+train_0754,Art. 649a Abs. 2 ZGB;Art. 655 Abs. 3 ZGB;Art. 656 Abs. 1 ZGB;Art. 682 Abs. 2 ZGB;Art. 712b Abs. 2 ZGB;Art. 779 Abs. 1 ZGB;Art. 779 Abs. 2 ZGB;Art. 860 Abs. 1 ZGB;Art. 958 ZGB;Art. 962 Abs. 1 ZGB
+train_0755,Art. 1 641.131;Art. 35 Abs. 1 FIDLEG;Art. 36 Abs. 1 FIDLEG;Art. 36 Abs. 2 BV;Art. 40 Abs. 5 FIDLEG;Art. 64 Abs. 3 FIDLEG;Art. 64 Abs. 6 FIDLEG;Art. 74 Abs. 1 BGG;Art. 8 Abs. 5 FIDLEG;Art. 960b Abs. 1 OR
+train_0759,Art. 123 Abs. 1 BV;Art. 212 Abs. 3 StPO;Art. 246 StPO;Art. 247 Abs. 3 StPO;Art. 300 Abs. 1 StPO;Art. 307 Abs. 3 StPO;Art. 309 Abs. 1 StPO;Art. 309 Abs. 3 StPO;Art. 439 Abs. 2 StPO;Art. 959 Abs. 1 ZGB
+train_0760,"Art. 117 ZPO;Art. 129 Abs. 3 ZGB;Art. 204 Abs. 3 ZPO;Art. 308 Abs. 2 ZPO;Art. 401 Abs. 1 ZGB;Art. 428 Abs. 1 StPO;Art. 67 Abs. 1 ZPO;Art. 712t Abs. 2 ZGB;Art. 87 Abs. 1 BGG;Art. 8a
+SchKG"
+train_0762,Art. 15 Abs. 1 LSV;Art. 20 Abs. 1 USG;Art. 25 Abs. 1 USG;Art. 25 Abs. 2 USG;Art. 25 Abs. 3 USG;Art. 43 Abs. 1 LSV;Art. 647e Abs. 2 ZGB;Art. 679a ZGB;Art. 684 Abs. 2 ZGB;Art. 7 Abs. 2 LSV
+train_0763,Art. 125 Abs. 2 ZGB;Art. 241 Abs. 3 ZGB;Art. 247 ZGB;Art. 401 Abs. 2 ZGB;Art. 462 ZGB;Art. 470 Abs. 1 ZGB;Art. 473 Abs. 3 ZGB;Art. 494 Abs. 1 ZGB;Art. 527 ZGB;Art. 906 Abs. 2 ZGB
+train_0769,Art. 2 Abs. 1 ZGB;Art. 214 SchKG;Art. 395 Abs. 4 ZGB;Art. 44 OR;Art. 490 Abs. 1 ZGB;Art. 659 Abs. 1 OR;Art. 659a Abs. 2 OR;Art. 675 Abs. 2 OR;Art. 680 Abs. 2 OR;Art. 754 Abs. 1 OR
+train_0775,Art. 24 RPG;Art. 247 Abs. 2 ZPO;Art. 37 Abs. 1 RPV;Art. 37 Abs. 2 RPV;Art. 5 Abs. 1 EBG;Art. 682 Abs. 2 ZGB;Art. 7 Abs. 1 BGBB;Art. 712d Abs. 2 ZGB;Art. 730 Abs. 1 ZGB;Art. 779k Abs. 2 ZGB
+train_0781,Art. 131 Abs. 1 StPO;Art. 131 Abs. 2 StPO;Art. 131 Abs. 3 StPO;Art. 140 Abs. 2 GBV;Art. 141 Abs. 1 StPO;Art. 158 Abs. 1 StPO;Art. 159 Abs. 1 StPO;Art. 439 Abs. 2 StPO;Art. 96 Abs. 1 AIG;Art. 96 IRSG
+train_0782,Art. 1 Abs. 1 AVIG;Art. 1 Abs. 3 BVV 2;Art. 10 Abs. 1 AHVG;Art. 100 Abs. 1 BGG;Art. 2 Abs. 1 AHVG;Art. 2 Abs. 1 AVIG;Art. 3 Abs. 1 AHVG;Art. 319 Abs. 1 OR;Art. 4 Abs. 1 AHVG;Art. 5 Abs. 2 837.174
+train_0804,Art. 10 Abs. 1 VwVG;Art. 11 Abs. 1 VwVG;Art. 13 Abs. 1 USG;Art. 22a Abs. 2 VwVG;Art. 29 GSchG;Art. 31 Abs. 1 GSchG;Art. 7 Abs. 1 VwVG;Art. 8 Abs. 1 VwVG;Art. 9 Abs. 1 VwVG;Art. 9 BV
+train_0808,Art. 181 ZGB;Art. 215 Abs. 1 ZGB;Art. 216 Abs. 1 ZGB;Art. 241 Abs. 3 ZGB;Art. 462 ZGB;Art. 471 ZGB;Art. 517 Abs. 1 ZGB;Art. 527 ZGB;Art. 9 Abs. 1 DBG;Art. 966 Abs. 1 ZGB
+train_0817,Art. 123 Abs. 1 BV;Art. 15 Abs. 1 DSG;Art. 15 Abs. 3 DSG;Art. 2 Abs. 1 DSG;Art. 2 Abs. 6 LSV;Art. 4 Abs. 1 DSG;Art. 457 Abs. 2 ZGB;Art. 9 Abs. 1 UWG;Art. 90 Abs. 2 SVG;Art. 977 Abs. 1 ZGB
+train_0818,Art. 125 Abs. 2 DBG;Art. 146 Abs. 1 StGB;Art. 15 Abs. 1 StHG;Art. 16 Abs. 3 DBG;Art. 186 Abs. 1 DBG;Art. 186 Abs. 2 DBG;Art. 36 Abs. 1 DBG;Art. 396 Abs. 1 StPO;Art. 9 BV;Art. 90 Abs. 2 SVG
+train_0836,Art. 646 Abs. 1 ZGB;Art. 656 Abs. 1 ZGB;Art. 68 Abs. 2 GBV;Art. 69 Abs. 1 GBV;Art. 712a Abs. 1 ZGB;Art. 712b Abs. 1 ZGB;Art. 712d Abs. 1 ZGB;Art. 85 GBV;Art. 943 Abs. 1 ZGB;Art. 969 Abs. 1 ZGB
+train_0838,Art. 12 Abs. 1 DSG;Art. 13 Abs. 1 DSG;Art. 13 Abs. 2 DSG;Art. 147 Abs. 3 ZPO;Art. 156 ZPO;Art. 158 Abs. 1 ZPO;Art. 158 Abs. 2 ZPO;Art. 2 Abs. 1 DSG;Art. 296 Abs. 3 ZPO;Art. 326 Abs. 2 ZPO
+train_0840,Art. 152 Abs. 2 ZPO;Art. 155 Abs. 3 ZPO;Art. 158 Abs. 1 ZPO;Art. 197 ZPO;Art. 201 Abs. 1 OR;Art. 210 Abs. 1 OR;Art. 40 Abs. 1 JStPO;Art. 67 Abs. 1 ZPO;Art. 67 Abs. 2 ZPO;Art. 96 IRSG
+train_0841,Art. 1 OR;Art. 20 Abs. 2 OR;Art. 20 OR;Art. 23 OR;Art. 25 Abs. 1 OR;Art. 26 OR;Art. 28 OR;Art. 31 OR;Art. 320 Abs. 3 OR;Art. 906 Abs. 2 ZGB
+train_0843,Art. 10 FIDLEG;Art. 11 FIDLEG;Art. 12 FIDLEG;Art. 14 Abs. 2 FIDLEG;Art. 14 Abs. 3 FIDLEG;Art. 2 Abs. 2 FIDLEV;Art. 25 Abs. 1 FIDLEG;Art. 26 Abs. 1 FIDLEG;Art. 3 Abs. 1 BankG;Art. 398 Abs. 1 OR
+train_0845,Art. 150 Abs. 1 ZPO;Art. 152 Abs. 2 ZPO;Art. 158 Abs. 2 ZPO;Art. 162 StPO;Art. 197 ZPO;Art. 199 Abs. 2 ZPO;Art. 223 Abs. 1 ZPO;Art. 245 Abs. 2 ZPO;Art. 296 Abs. 3 ZPO;Art. 311 Abs. 1 ZPO
+train_0890,Art. 152 Abs. 2 ZPO;Art. 158 Abs. 1 ZPO;Art. 158 Abs. 2 ZPO;Art. 243 Abs. 1 ZPO;Art. 295 ZPO;Art. 31 ZPO;Art. 67 Abs. 1 ZPO;Art. 679 Abs. 1 ZGB;Art. 8 ZGB;Art. 98 Abs. 1 OR
+train_0891,Art. 1 Abs. 2 IPRG;Art. 125 Abs. 2 ZGB;Art. 296 Abs. 2 ZGB;Art. 5 Abs. 3 IPRG;Art. 59 IPRG;Art. 60 IPRG;Art. 61 IPRG;Art. 63 Abs. 1 IPRG;Art. 63 Abs. 2 IPRG;Art. 65 Abs. 1 IPRG
+train_0896,Art. 19 Abs. 2 StPO;Art. 439 Abs. 2 StPO;Art. 59 Abs. 1 StGB;Art. 59 Abs. 2 StGB;Art. 59 Abs. 3 StGB;Art. 62c Abs. 6 StGB;Art. 64 Abs. 1 StGB;Art. 64 Abs. 4 StGB;Art. 76 Abs. 2 StGB;Art. 82 Abs. 1 StPO
+train_0898,Art. 14 BV;Art. 16 Abs. 1 BV;Art. 29 Abs. 2 BV;Art. 36 Abs. 3 BV;Art. 4 Abs. 1 RTVG;Art. 5 RTVG;Art. 78 Abs. 2 BV;Art. 9 Abs. 1 FIDLEG;Art. 9 Abs. 1 FIDLEV;Art. 9 BV
+train_0908,Art. 150 Abs. 1 ZPO;Art. 197 ZPO;Art. 25a Abs. 1 VwVG;Art. 59 IPRG;Art. 67 Abs. 1 ZPO;Art. 67 Abs. 2 ZPO;Art. 74 Abs. 1 BGG;Art. 85 Abs. 1 IPRG;Art. 86 Abs. 2 IPRG;Art. 90 Abs. 1 IPRG
+train_0909,Art. 656 Abs. 1 ZGB;Art. 656 Abs. 2 ZGB;Art. 665 Abs. 3 ZGB;Art. 681a Abs. 2 ZGB;Art. 730 Abs. 1 ZGB;Art. 733 ZGB;Art. 948 Abs. 1 ZGB;Art. 951 Abs. 2 ZGB;Art. 952 Abs. 1 ZGB;Art. 963 Abs. 1 ZGB
+train_0910,Art. 12 Abs. 1 DSG;Art. 13 Abs. 1 DSG;Art. 138 Abs. 1 ZPO;Art. 138 Abs. 3 ZPO;Art. 169 ZPO;Art. 177 ZPO;Art. 197 ZPO;Art. 243 Abs. 1 ZPO;Art. 67 Abs. 1 ZPO;Art. 67 Abs. 2 ZPO
+train_0914,Art. 215 Abs. 1 ZGB;Art. 242 Abs. 1 OR;Art. 457 Abs. 1 ZGB;Art. 462 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 476 Abs. 2 ZGB;Art. 527 ZGB;Art. 559 Abs. 1 ZGB;Art. 560 Abs. 1 ZGB
+train_0926,Art. 126 OR;Art. 395 Abs. 4 ZGB;Art. 649a Abs. 2 ZGB;Art. 655 Abs. 3 ZGB;Art. 661 ZGB;Art. 679 Abs. 1 ZGB;Art. 730 Abs. 1 ZGB;Art. 955 Abs. 1 ZGB;Art. 955 Abs. 2 ZGB;Art. 969 Abs. 1 ZGB
+train_0930,Art. 100 Abs. 1 BGG;Art. 11 Abs. 2 RPV;Art. 113 BGG;Art. 12c Abs. 2 NHG;Art. 48 Abs. 2 VwVG;Art. 74 Abs. 1 BGG;Art. 82 BGG;Art. 89 Abs. 1 BGG;Art. 8a Abs. 1 RPG;Art. 93 Abs. 3 BGG
+train_0932,Art. 1 Abs. 2 IPRG;Art. 17 IPRG;Art. 18 IPRG;Art. 184 Abs. 1 OR;Art. 61 IPRG;Art. 681a Abs. 2 ZGB;Art. 681a Abs. 3 ZGB;Art. 682 Abs. 2 ZGB;Art. 814 Abs. 3 ZGB;Art. 958 ZGB
+train_0941,Art. 1 UWG;Art. 2 UWG;Art. 5 MSchG;Art. 5 UWG;Art. 74 Abs. 1 BGG;Art. 9 Abs. 1 UWG;Art. 9 Abs. 2 UWG;Art. 9 Abs. 3 UWG;Art. 93 Abs. 1 ZPO;Art. 948 Abs. 1 ZGB
+train_0945,Art. 204 Abs. 1 ZGB;Art. 215 Abs. 1 ZGB;Art. 216 Abs. 1 ZGB;Art. 241 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 656 Abs. 1 ZGB;Art. 684 Abs. 1 ZGB;Art. 736 Abs. 1 ZGB;Art. 794 Abs. 2 ZGB;Art. 976 ZGB
+train_0947,Art. 22 Abs. 2 RPG;Art. 656 Abs. 1 ZGB;Art. 656 Abs. 2 ZGB;Art. 681b Abs. 1 ZGB;Art. 799 Abs. 1 ZGB;Art. 943 Abs. 1 ZGB;Art. 959 Abs. 1 ZGB;Art. 969 Abs. 1 ZGB;Art. 970 Abs. 1 ZGB;Art. 98 Abs. 1 GBV
+train_0948,Art. 1 Abs. 1 AVIG;Art. 100 Abs. 1 BGG;Art. 14 Abs. 1 AVIG;Art. 15 Abs. 1 AVIG;Art. 16 Abs. 1 AVIG;Art. 17 Abs. 1 AVIG;Art. 22a Abs. 1 AVIG;Art. 3 Abs. 1 AVIG;Art. 906 Abs. 3 ZGB;Art. 90a Abs. 1 AVIG
+train_0949,Art. 1 OR;Art. 20 Abs. 2 OR;Art. 20 OR;Art. 23 OR;Art. 25 Abs. 1 OR;Art. 26 OR;Art. 28 OR;Art. 31 OR;Art. 320 Abs. 3 OR;Art. 906 Abs. 2 ZGB
+train_0959,Art. 102 Abs. 2 StGB;Art. 102 Abs. 4 StGB;Art. 111 StGB;Art. 134 StGB;Art. 22 Abs. 1 JStG;Art. 22 Abs. 1 StGB;Art. 3 Abs. 1 StGB;Art. 33 Abs. 2 JStPO;Art. 42 Abs. 4 StGB;Art. 5 JStG
+train_0965,Art. 100 Abs. 1 BGG;Art. 125 Abs. 2 DBG;Art. 16 Abs. 1 StHG;Art. 18 Abs. 1 DBG;Art. 19 Abs. 1 FINIV;Art. 20 Abs. 1 DBG;Art. 33a Abs. 1 URG;Art. 38 Abs. 4 AIG;Art. 395 Abs. 4 ZGB;Art. 59 Abs. 2 StGB
+train_0966,Art. 125 Abs. 2 ZGB;Art. 215 Abs. 1 ZGB;Art. 216 Abs. 2 ZGB;Art. 23 Abs. 1 IPRG;Art. 4 Abs. 1 ZPO;Art. 457 Abs. 1 ZGB;Art. 462 ZGB;Art. 470 Abs. 1 ZGB;Art. 527 ZGB;Art. 90 Abs. 1 IPRG
+train_0969,Art. 100 Abs. 1 BGG;Art. 130 StPO;Art. 183 Abs. 1 StGB;Art. 184 Abs. 3 StGB;Art. 309 Abs. 1 StPO;Art. 32 Abs. 5 JStPO;Art. 42 Abs. 2 StGB;Art. 42 Abs. 4 StGB;Art. 439 Abs. 2 StPO;Art. 59 Abs. 1 StGB
+train_0977,Art. 47 Abs. 2 SVG;Art. 58 Abs. 1 SVG;Art. 59 Abs. 1 SVG;Art. 65 Abs. 1 SVG;Art. 65 Abs. 2 SVG;Art. 65 Abs. 3 SVG;Art. 90 Abs. 1 SVG;Art. 90 Abs. 2 SVG;Art. 90 Abs. 3 SVG;Art. 90 Abs. 4 SVG
+train_0979,Art. 100 Abs. 1 BGG;Art. 34 Abs. 2 SVG;Art. 35 Abs. 6 SVG;Art. 4 DesG;Art. 42 Abs. 1 VVG;Art. 50 Abs. 1 SVG;Art. 58 Abs. 4 SVG;Art. 59 Abs. 1 SVG;Art. 74 Abs. 1 BGG;Art. 76 Abs. 1 VVG
+train_0999,Art. 10 Abs. 3 StGB;Art. 123 Abs. 1 BV;Art. 246 StPO;Art. 263 Abs. 1 StPO;Art. 263 Abs. 2 StPO;Art. 4 Abs. 2 DSG;Art. 439 Abs. 2 StPO;Art. 58 Abs. 2 IRSG;Art. 9 Abs. 1bis GwG;Art. 9 BV
+train_1002,Art. 129 Abs. 2 GBV;Art. 395 Abs. 4 ZGB;Art. 64 Abs. 1 GBV;Art. 656 Abs. 1 ZGB;Art. 732 Abs. 2 ZGB;Art. 87 Abs. 1 GBV;Art. 88 Abs. 1 GBV;Art. 88 Abs. 3 GBV;Art. 945 Abs. 1 ZGB;Art. 973 Abs. 1 ZGB
+train_1004,Art. 1 Abs. 1 IPRG;Art. 149 Abs. 1 StPO;Art. 21 JStPO;Art. 25 Abs. 1 BV;Art. 26 Abs. 1 JStPO;Art. 32 Abs. 5 JStPO;Art. 4 Abs. 2 DSG;Art. 7 Abs. 2 IRSG;Art. 70 Abs. 2 IRSG;Art. 74 Abs. 1 BGG
+train_1006,Art. 100 Abs. 1 BGG;Art. 2 Zweck;Art. 3 GSchG;Art. 46 Abs. 1 VwVG;Art. 48 Abs. 1 VwVG;Art. 48 Abs. 2 VwVG;Art. 76 Abs. 2 BV;Art. 86 Abs. 1 BGG;Art. 9 BV;Art. 956a Abs. 1 ZGB
+train_1007,Art. 395 Abs. 4 ZGB;Art. 649a Abs. 2 ZGB;Art. 656 Abs. 2 ZGB;Art. 661 ZGB;Art. 679 Abs. 1 ZGB;Art. 684 Abs. 1 ZGB;Art. 730 Abs. 1 ZGB;Art. 779 Abs. 1 ZGB;Art. 824 Abs. 2 ZGB;Art. 958 ZGB
+train_1011,Art. 150 Abs. 1 ZPO;Art. 184 Abs. 1 OR;Art. 201 Abs. 1 OR;Art. 203 OR;Art. 205 Abs. 1 OR;Art. 210 Abs. 1 OR;Art. 309 ZPO;Art. 67 Abs. 1 ZPO;Art. 86 Abs. 2 IPRG;Art. 87 Abs. 2 IPRG
+train_1024,Art. 12 Abs. 2 DSG;Art. 12 Abs. 3 DSG;Art. 13 Abs. 2 DSG;Art. 179novies StGB;Art. 2 Abs. 1 DSG;Art. 27 Abs. 1 ZGB;Art. 28 Abs. 1 ZGB;Art. 4 Abs. 1 DSG;Art. 5 DSG;Art. 977 Abs. 1 ZGB
+train_1027,Art. 100 Abs. 1 BGG;Art. 15 Abs. 3 RPG;Art. 22 Abs. 2 RPG;Art. 24c Abs. 5 RPG;Art. 3 Abs. 1 EBG;Art. 4 AtraG;Art. 5 Abs. 1 WaG;Art. 6 Abs. 1 EBG;Art. 712g Abs. 3 ZGB;Art. 8 725.151.1
+train_1038,Art. 10 Abs. 1 URG;Art. 123 Abs. 1 BV;Art. 19 Abs. 1 URG;Art. 2 Abs. 1 URG;Art. 33 Abs. 1 URG;Art. 33a Abs. 1 URG;Art. 33a Abs. 2 URG;Art. 6 URG;Art. 62 Abs. 2 URG;Art. 67 Abs. 1 URG
+train_1039,Art. 175 Abs. 1 OR;Art. 2 MSchG;Art. 793 Abs. 1 ZGB;Art. 842 Abs. 2 ZGB;Art. 855 ZGB;Art. 858 Abs. 1 ZGB;Art. 860 Abs. 1 ZGB;Art. 860 Abs. 2 ZGB;Art. 906 Abs. 2 ZGB;Art. 961 Abs. 1 ZGB
+train_1040,Art. 395 Abs. 4 ZGB;Art. 656 Abs. 2 ZGB;Art. 712d Abs. 1 ZGB;Art. 732 Abs. 2 ZGB;Art. 860 Abs. 1 ZGB;Art. 946 Abs. 1 ZGB;Art. 951 Abs. 2 ZGB;Art. 968 ZGB;Art. 969 Abs. 1 ZGB;Art. 976a Abs. 1 ZGB
+train_1043,Art. 10 Abs. 1 BV;Art. 10 Abs. 2 BV;Art. 14 BV;Art. 18 IPRG;Art. 35 Abs. 1 IRSG;Art. 37 Abs. 1 IRSG;Art. 439 Abs. 2 StPO;Art. 65a Abs. 2 IRSG;Art. 8 Abs. 2 IRSV;Art. 85 Abs. 2 IRSG
+train_1045,Art. 49 IPRG;Art. 69 Abs. 1 GBV;Art. 712a Abs. 1 ZGB;Art. 712a Abs. 2 ZGB;Art. 712b Abs. 1 ZGB;Art. 712b Abs. 2 ZGB;Art. 712d Abs. 1 ZGB;Art. 712h Abs. 1 ZGB;Art. 712i Abs. 1 ZGB;Art. 712k ZGB
+train_1046,Art. 10 Abs. 1 URG;Art. 10 Abs. 2 URG;Art. 184 Abs. 1 OR;Art. 19 Abs. 1 URG;Art. 2 Abs. 1 URG;Art. 229 Abs. 3 ZPO;Art. 247 Abs. 2 ZPO;Art. 33a Abs. 1 URG;Art. 33a Abs. 2 URG;Art. 6 URG
+train_1050,Art. 1 Abs. 2 IPRG;Art. 154 Abs. 1 IPRG;Art. 155 IPRG;Art. 18 Abs. 2 DBG;Art. 186 Abs. 2 DBG;Art. 36 Abs. 1 DBG;Art. 493 Abs. 1 ZGB;Art. 63 Abs. 2 IPRG;Art. 81 Abs. 1 ZGB;Art. 82 ZGB
+train_1053,Art. 1 Abs. 2 IPRG;Art. 154 Abs. 1 IPRG;Art. 181 ZGB;Art. 401 Abs. 2 ZGB;Art. 471 ZGB;Art. 492 Abs. 2 ZGB;Art. 493 Abs. 1 ZGB;Art. 81 Abs. 1 ZGB;Art. 86 Abs. 1 IPRG;Art. 87 Abs. 1 IPRG
+train_1062,Art. 154 Abs. 1 IPRG;Art. 181 ZGB;Art. 2 Abs. 2 URG;Art. 216 Abs. 1 ZGB;Art. 395 Abs. 4 ZGB;Art. 457 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 473 Abs. 3 ZGB;Art. 82 ZGB
+train_1065,Art. 150 Abs. 1 ZPO;Art. 177 ZPO;Art. 184 Abs. 1 OR;Art. 59 Abs. 2 ZPO;Art. 647e Abs. 2 ZGB;Art. 679a ZGB;Art. 712d Abs. 2 ZGB;Art. 779a Abs. 1 ZGB;Art. 779a Abs. 2 ZGB;Art. 849 Abs. 2 ZGB
+train_1072,Art. 112 Abs. 1 SchKG;Art. 17 Abs. 1 SchKG;Art. 271 Abs. 1 SchKG;Art. 288 Abs. 1 SchKG;Art. 309 ZPO;Art. 82 Abs. 1 SchKG;Art. 83 Abs. 1 SchKG;Art. 842 Abs. 3 ZGB;Art. 97 Abs. 1 SchKG;Art. 97 Abs. 2 SchKG
+train_1075,Art. 1 Abs. 1 IPRG;Art. 1 Abs. 2 IPRG;Art. 129 Abs. 3 ZGB;Art. 59 IPRG;Art. 60 IPRG;Art. 61 IPRG;Art. 63 Abs. 1 IPRG;Art. 63 Abs. 2 IPRG;Art. 65 Abs. 1 IPRG;Art. 91 Abs. 2 IPRG
+train_1081,Art. 15 Abs. 2 ZPO;Art. 2 Abs. 1 DSG;Art. 2 Abs. 1 URG;Art. 2 UWG;Art. 33 Abs. 1 URG;Art. 33a Abs. 1 URG;Art. 33a Abs. 2 URG;Art. 5 Abs. 1 URG;Art. 6 URG;Art. 93 Abs. 1 ZPO
+train_1099,Art. 12 Abs. 1 NHG;Art. 22a Abs. 2 VwVG;Art. 29 GSchG;Art. 30 GSchG;Art. 48 Abs. 2 VwVG;Art. 82 BGG;Art. 86 Abs. 1 BGG;Art. 86 Abs. 3 BGG;Art. 89 Abs. 2 BGG;Art. 9 BV
+train_1102,Art. 247 ZGB;Art. 395 Abs. 4 ZGB;Art. 401 Abs. 2 ZGB;Art. 457 Abs. 1 ZGB;Art. 470 Abs. 1 ZGB;Art. 471 ZGB;Art. 493 Abs. 1 ZGB;Art. 527 ZGB;Art. 626 Abs. 2 ZGB;Art. 90 Abs. 1 IPRG
+train_1111,Art. 181 ZGB;Art. 182 Abs. 1 ZGB;Art. 198 ZGB;Art. 199 Abs. 1 ZGB;Art. 224 Abs. 1 ZGB;Art. 646 Abs. 2 ZGB;Art. 649a Abs. 2 ZGB;Art. 656 Abs. 2 ZGB;Art. 741 Abs. 2 ZGB;Art. 78 Abs. 1 GBV
+train_1115,Art. 12 Abs. 3 DSG;Art. 13 Abs. 1 DSG;Art. 13 Abs. 2 DSG;Art. 15 Abs. 1 DSG;Art. 15 Abs. 3 DSG;Art. 2 Abs. 2 DSG;Art. 4 Abs. 1 DSG;Art. 4 Abs. 2 DSG;Art. 5 DSG;Art. 7 Abs. 1 DSG
+train_1116,Art. 29 Abs. 2 BV;Art. 309 ZPO;Art. 625 OR;Art. 718b OR;Art. 725 Abs. 2 OR;Art. 74 Abs. 1 BGG;Art. 78 Abs. 1 GBV;Art. 83 Abs. 2 GBV;Art. 842 Abs. 3 ZGB;Art. 9 Abs. 1 FIDLEV
+train_1131,Art. 11 Abs. 1 JStG;Art. 123 Abs. 1 BV;Art. 130 StPO;Art. 2 Abs. 1 JStG;Art. 23 Abs. 2 JStG;Art. 33 JStG;Art. 352 Abs. 1 StPO;Art. 5 JStG;Art. 86 Abs. 1 BGG;Art. 87 Abs. 1 BGG
+train_1133,Art. 655 Abs. 3 ZGB;Art. 675 Abs. 1 ZGB;Art. 731 Abs. 1 ZGB;Art. 734 ZGB;Art. 779 Abs. 1 ZGB;Art. 779k Abs. 2 ZGB;Art. 799 Abs. 2 ZGB;Art. 862 Abs. 2 ZGB;Art. 946 Abs. 1 ZGB;Art. 952 Abs. 1 ZGB
+train_1137,Art. 102 Abs. 1 StGB;Art. 102 Abs. 2 StGB;Art. 102 Abs. 4 StGB;Art. 12 Abs. 1 StGB;Art. 123 Abs. 1 BV;Art. 162 StPO;Art. 34 Abs. 2 SVG;Art. 681a Abs. 3 ZGB;Art. 7 Abs. 1 StGB;Art. 9 BV
