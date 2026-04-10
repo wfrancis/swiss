@@ -49,10 +49,10 @@ export V11_USE_MAX_TOKENS=1
 export V11_MAX_TOKENS=12000
 export V11_JUDGE_MAX_ATTEMPTS=3
 export V11_USE_COURT_DENSE=1
-export V11_JUDGE_WORKERS=8
+export V11_JUDGE_WORKERS=16
 export V11_PROMPT_VERSION="v11_strict_v1"
 
-CHUNK_SIZE=50  # Process train in chunks of 50 queries
+CHUNK_SIZE=100  # Process train in chunks of 100 queries
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"; }
 
@@ -112,7 +112,7 @@ log ""
 if [[ $QE_DONE -lt $TOTAL_TRAIN ]]; then
   write_status "precompute" "running" "query_expansions ($QE_DONE/$TOTAL_TRAIN)"
   log "STAGE 1a: Generating query expansions ($QE_DONE done, $((TOTAL_TRAIN - QE_DONE)) remaining)..."
-  $PYTHON precompute/gen_query_expansions.py train >> "$LOG_FILE" 2>&1
+  $PYTHON precompute/gen_query_expansions.py train --max-workers 16 >> "$LOG_FILE" 2>&1
   QE_DONE=$(count_precompute "precompute/train_query_expansions.json")
   log "  Query expansions done: $QE_DONE"
 else
@@ -123,7 +123,7 @@ fi
 if [[ $CC_DONE -lt $TOTAL_TRAIN ]]; then
   write_status "precompute" "running" "case_citations ($CC_DONE/$TOTAL_TRAIN)"
   log "STAGE 1b: Generating case citations ($CC_DONE done, $((TOTAL_TRAIN - CC_DONE)) remaining)..."
-  $PYTHON precompute/gen_case_citations.py train >> "$LOG_FILE" 2>&1
+  $PYTHON precompute/gen_case_citations.py train --max-workers 16 >> "$LOG_FILE" 2>&1
   CC_DONE=$(count_precompute "precompute/train_case_citations.json")
   log "  Case citations done: $CC_DONE"
 else
@@ -134,7 +134,7 @@ fi
 if [[ $FC_DONE -lt $TOTAL_TRAIN ]]; then
   write_status "precompute" "running" "full_citations ($FC_DONE/$TOTAL_TRAIN)"
   log "STAGE 1c: Generating full citations v2 ($FC_DONE done, $((TOTAL_TRAIN - FC_DONE)) remaining)..."
-  $PYTHON precompute/gen_full_citations_v2.py train >> "$LOG_FILE" 2>&1
+  $PYTHON precompute/gen_full_citations_v2.py train --max-workers 16 >> "$LOG_FILE" 2>&1
   FC_DONE=$(count_precompute "precompute/train_full_citations_v2.json")
   log "  Full citations done: $FC_DONE"
 else
