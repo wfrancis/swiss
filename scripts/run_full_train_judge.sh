@@ -44,13 +44,15 @@ done
 
 # --- Config ---
 export V11_BASE_URL="${V11_BASE_URL:-https://api.deepseek.com/v1}"
-export V11_JUDGE_MODEL="${V11_JUDGE_MODEL:-deepseek-reasoner}"
+export V11_JUDGE_MODEL="${V11_JUDGE_MODEL:-deepseek-chat}"
 export V11_USE_MAX_TOKENS=1
-export V11_MAX_TOKENS=12000
+export V11_MAX_TOKENS=4000
 export V11_JUDGE_MAX_ATTEMPTS=3
 export V11_USE_COURT_DENSE=1
-export V11_JUDGE_WORKERS=16
-export V11_PROMPT_VERSION="v11_strict_v1"
+export V11_JUDGE_WORKERS=32
+export V11_LAW_BATCH_SIZE=10
+export V11_COURT_BATCH_SIZE=6
+export V11_PROMPT_VERSION="${V11_PROMPT_VERSION:-v11_strict_v1}"
 
 CHUNK_SIZE=100  # Process train in chunks of 100 queries
 
