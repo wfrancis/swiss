@@ -43,7 +43,9 @@ Each row = one candidate evaluated. Columns: name, date, val F1, LB90, per-query
 
 | # | Candidate | Date | Val F1 | LB90 | Std | Test Jaccard | Gate verdict | Kaggle LB | Outcome |
 |---|-----------|------|--------|------|-----|-------------|-------------|-----------|---------|
-| 0 | **winner_localperturb_top1** (BASELINE) | 2026-04-08 | 0.2824 | 0.2552 | 0.0675 | 1.0000 | likely_better_or_flat | **0.30257** | **Current best** |
+| 1 | **overnight_combo_a** (NEW BEST) | 2026-04-10 | 0.2865 | 0.2601 | 0.0659 | 0.8240 | likely_worse (WRONG) | **0.30681** | **NEW BEST — gate was wrong, Jaccard 0.82 still won** |
+| 2 | overnight_perturb_r7 | 2026-04-10 | 0.2840 | 0.2580 | 0.0657 | 0.9798 | unclear (WRONG) | **0.30532** | Also beat prior best |
+| 0 | winner_localperturb_top1 (PRIOR BASELINE) | 2026-04-08 | 0.2824 | 0.2552 | 0.0675 | 1.0000 | likely_better_or_flat | 0.30257 | Dethroned by combo_a |
 | -1 | consensus_loose_deepseekpriors | 2026-04-08 | — | — | — | — | — | 0.30094 | Prior best, base for winner |
 | -2 | meta_trainjudged333_perturb_top1 | 2026-04-09 | — | — | — | — | — | 0.29887 | Lost vs baseline (dead zone) |
 | -3 | blend_courtdense_additive_raw_n1 | 2026-04-09 | — | — | — | — | — | 0.29868 | Lost vs baseline (dead zone) |
