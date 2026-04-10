@@ -11,6 +11,21 @@ Competition: [LLM Agentic Legal Information Retrieval](https://www.kaggle.com/co
 - Frozen baseline: `submissions/test_submission_baseline_public_best_30681.csv`
 - Prior best: 0.30257 (`test_submission_baseline_public_best_30257.csv`) — still valid as a reference point
 
+## HARD CONSTRAINT: Public leaderboard overfitting
+
+**The public leaderboard uses only ~50% of test queries. Final standings use the OTHER 50%.** Every submission where we react to the public score increases overfitting to those ~20 public queries. This is the #1 risk in Kaggle competitions — teams at rank 5 public can drop to rank 50 private.
+
+**Rules (non-negotiable):**
+
+1. **Do NOT use the public LB score as a gradient.** Do not iterate by submitting → checking score → adjusting. Each such cycle overfits to the public 50%.
+2. **Minimize total Kaggle submissions.** Every submission is a data leak from the public test set into our decision-making. Only submit when local evaluation gives strong, diverse signal — not to "check if it works."
+3. **Never submit more than 2 candidates per experimental direction.** If the first two don't improve, the direction is wrong — don't keep submitting variations.
+4. **Trust local diversity over public score.** A candidate that's strong across diverse val queries with stable bootstrap confidence is more likely to survive the private shakeup than one hill-climbed on public feedback.
+5. **Final submission selection must hedge.** Kaggle allows 2 final submissions for private scoring. One should be the highest public score. The other MUST be a stable, conservative pick (high Jaccard, minimal changes, strong LB90) to hedge against public→private shakeup.
+6. **Never overwrite or delete frozen baselines.** Keep `test_submission_baseline_public_best_30681.csv` and `test_submission_baseline_public_best_30257.csv` intact as hedge candidates.
+
+**Why combo_a is exposed:** It changed 83 adds + 73 removes across all 40 test queries. If those changes happened to help mostly on the ~20 public queries, the private score could drop significantly. The prior 0.30257 winner (52 adds, 7 removes) has less shakeup variance.
+
 ## Testing workflow — how to tell better from worse
 
 **Local val is unreliable on its own.** The val set has only 10 queries with ~5 gold cites each. A single citation flip = ~2pp F1 swing.
@@ -47,20 +62,19 @@ Competition: [LLM Agentic Legal Information Retrieval](https://www.kaggle.com/co
        --ref-test baseline=submissions/test_submission_baseline_public_best_30257.csv
    ```
 
-### Promotion rules — all must pass before submitting to Kaggle
+### Promotion rules — updated 2026-04-10
 
-- Raw val F1 >= winner's 0.282430 (not significantly worse)
-- Bootstrap LB90 >= winner's 0.255176
+- Raw val F1 AND LB90 both improved vs current best (not just one)
 - Per-query F1 std is not elevated vs winner
-- Test Jaccard vs baseline > 0.90 (not a wild departure)
-- Promotion gate verdict is `likely_better_or_flat`, not `likely_worse`
-- If any signal is ambiguous, do NOT submit — iterate first
+- Promotion gate verdict is advisory only — it was wrong on combo_a (0.30681). Do NOT blindly trust it.
+- Jaccard > 0.90 is NOT required (combo_a won at 0.82). But lower Jaccard = higher private-shakeup variance.
+- Before submitting: check if this is worth burning a submission on (see overfitting constraint above)
 
 ### What to avoid
 
+- Do NOT use Kaggle submissions as a search loop. Iterate locally, submit sparingly.
 - Do NOT trust a single raw val F1 number. A +2pp local lift means nothing on 10 queries.
-- Do NOT submit candidates in the "1-2pp local lift" zone — this is the dead zone where multiple prior attempts lost on Kaggle.
-- Do NOT overwrite `submissions/test_submission_v11_winner_localperturb_top1.csv` or `submissions/test_submission_baseline_public_best_30257.csv` — these are the canonical winners.
+- Do NOT overwrite frozen baselines (`test_submission_baseline_public_best_30681.csv`, `test_submission_baseline_public_best_30257.csv`).
 
 ## Key files
 
