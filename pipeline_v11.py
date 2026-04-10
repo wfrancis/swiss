@@ -868,6 +868,8 @@ def annotate_snippets(bundles: list[QueryBundle], assets: Assets, court_text_sto
 
 
 def judge_prompt(kind: str) -> str:
+    variant = os.getenv("V11_JUDGE_PROMPT_VARIANT", "default")
+
     if kind == "law":
         kind_rules = (
             "For laws, the exact article matters. Reject topically related articles that are not likely to be cited. "
@@ -879,6 +881,25 @@ def judge_prompt(kind: str) -> str:
             "looks doubtful, prefer plausible or reject."
         )
 
+    if variant == "enriched":
+        extra = (
+            "\nPay special attention to the evidence snippet provided for each candidate. "
+            "If the snippet text directly discusses the legal issue in the question, lean toward must_include. "
+            "If the snippet is procedural boilerplate or only tangentially related, lean toward reject.\n"
+        )
+    elif variant == "generous":
+        extra = (
+            "\nBe slightly more generous with plausible labels. If a citation could reasonably "
+            "appear in a thorough judgment on this topic, label it plausible rather than reject.\n"
+        )
+    elif variant == "strict":
+        extra = (
+            "\nBe extra strict. Only label must_include if you are highly confident (>85%) that "
+            "this exact citation would appear. Use reject for anything uncertain.\n"
+        )
+    else:
+        extra = ""
+
     return (
         "You are reviewing Swiss legal citations for a Federal Supreme Court judgment.\n"
         "Decide whether the court would ACTUALLY cite each exact candidate citation in an opinion answering the question.\n"
@@ -888,6 +909,7 @@ def judge_prompt(kind: str) -> str:
         "- plausible: defensible supporting citation, but not strong enough for must_include\n"
         "- reject: unlikely, wrong granularity, wrong authority, or only loosely related\n\n"
         f"{kind_rules}\n"
+        f"{extra}"
         "Never invent new citations. Only judge the candidates provided.\n"
         'Return JSON: {"decisions":[{"id":1,"label":"must_include|plausible|reject","confidence":0.0,"reason":"short"}]}'
     )
