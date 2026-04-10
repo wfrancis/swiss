@@ -4,15 +4,18 @@ Competition: [LLM Agentic Legal Information Retrieval](https://www.kaggle.com/co
 
 ## Current best
 
-- **Public LB: 0.30257** — `submissions/test_submission_v11_winner_localperturb_top1.csv`
-- Kaggle submission ref: `51580808` (2026-04-08)
-- Produced by: `python3 scripts/winner_localperturb_search.py` (recovered from Codex session, hash-verified)
-- Val companion: `submissions/val_pred_v11_winner_localperturb_top1.csv`
-- Frozen baseline re-upload: `submissions/test_submission_baseline_public_best_30257.csv` (same content, same score)
+- **Public LB: 0.30681** — `submissions/test_submission_overnight_combo_a.csv`
+- Submitted 2026-04-10
+- Produced by: `scripts/overnight_multi_path.sh` combo phase — perturbation search with 3 overnight API-path neighbors around the prior 0.30257 winner
+- Val companion: `submissions/val_pred_overnight_combo_a.csv`
+- Frozen baseline: `submissions/test_submission_baseline_public_best_30681.csv`
+- Prior best: 0.30257 (`test_submission_baseline_public_best_30257.csv`) — still valid as a reference point
 
 ## Testing workflow — how to tell better from worse
 
-**Local val is unreliable on its own.** The val set has only 10 queries with ~5 gold cites each. A single citation flip = ~2pp F1 swing. Historically, candidates with +1-2pp local lifts have lost on Kaggle (0.29887, 0.29868 vs the 0.30257 winner).
+**Local val is unreliable on its own.** The val set has only 10 queries with ~5 gold cites each. A single citation flip = ~2pp F1 swing.
+
+**Key learning (2026-04-10):** The old promotion gate was too conservative. combo_a had 82% Jaccard (gate said "likely_worse") but scored 0.30681 on Kaggle — our biggest jump ever. The Jaccard > 0.90 rule was wrong. What matters more: val F1 lift AND LB90 lift together, not Jaccard alone. Candidates with both metrics up are worth submitting even at moderate Jaccard.
 
 ### Required evaluation steps for any new candidate
 
