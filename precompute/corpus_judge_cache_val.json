@@ -1,0 +1,778 @@
+{
+  "to_judge": {
+    "val_001": [
+      "Art. 221 Abs. 1 lit. b StPO",
+      "Art. 221 Abs",
+      "Art. 197 Abs",
+      "Art. 221 StPO",
+      "BGE 132 I 21 E. 3.2.1",
+      "Art. 212 Abs",
+      "Art. 212 Abs. 2 lit. c StPO",
+      "BGE 140 IV 74 E. 2.2",
+      "Art. 5 Abs",
+      "BGE 123 I 31 E. 3",
+      "Art. 221 Abs. 2 StPO",
+      "Art. 237 StPO",
+      "Art. 197 StPO",
+      "Art. 221 Abs. 1 Ingress",
+      "Art. 31 BV"
+    ],
+    "val_002": [
+      "Art. 17 IVG",
+      "BGE 124 V 110",
+      "Art. 8 Abs",
+      "Art. 15 IVG",
+      "Art. 8 ATSG",
+      "Art. 7 ATSG",
+      "Art. 18 IVG",
+      "Art. 8 Abs. 3 lit. b IVG",
+      "Art. 16 IVG",
+      "Art. 8 IVG",
+      "Art. 6 Abs. 1 IVV",
+      "Art. 18 Abs. 1 IVG",
+      "Art. 16 Abs. 1 IVG",
+      "Art. 28 IVG",
+      "Art. 14a IVG"
+    ],
+    "val_003": [
+      "Art. 197 Abs",
+      "Art. 36 Abs. 3 BV",
+      "Art. 212 Abs. 2 lit. c StPO",
+      "Art. 5 Abs",
+      "Art. 221 StPO",
+      "Art. 221 Abs. 1 lit. a StPO",
+      "Art. 221 Abs",
+      "Art. 221 Abs. 1 lit. b StPO",
+      "Art. 212 Abs. 2 StPO"
+    ],
+    "val_004": [
+      "Art. 519 ZGB",
+      "Art. 511 Abs. 1 ZGB",
+      "Art. 505 ZGB",
+      "Art. 509 ZGB",
+      "Art. 511 ZGB",
+      "Art. 510 ZGB",
+      "Art. 16 ZGB",
+      "Art. 540 Abs. 1 Ziff. 3 ZGB",
+      "BGE 91 II 264 E. 5",
+      "BGE 101 II 211 E. 4",
+      "Art. 469 ZGB"
+    ],
+    "val_005": [
+      "BGE 122 III 404 E. 3",
+      "Art. 273 ZGB",
+      "BGE 123 III 445 E. 3",
+      "Art. 308 Abs. 2 ZGB",
+      "BGE 131 III 209 E. 5",
+      "BGE 127 III 295 E. 4",
+      "Art. 4 ZGB",
+      "BGE 120 II 229 E. 4",
+      "Art. 308 Abs",
+      "BGE 130 III 585 E. 2.2.2",
+      "BGE 119 II 201 E. 3",
+      "Art. 308 ZGB",
+      "Art. 389 Abs",
+      "BGE 120 II 229 E. 3",
+      "Art. 273 Abs. 2 ZGB"
+    ],
+    "val_006": [
+      "Art. 52 AHVG",
+      "BGE 129 V 11",
+      "BGE 108 V 199 E. 3",
+      "Art. 51 Abs. 1 AHVG",
+      "Art. 14 Abs",
+      "Art. 14 Abs. 1 AHVG",
+      "Art. 221 Abs. 1 StGB",
+      "BGE 119 V 401",
+      "9C_92/2007",
+      "Art. 56a BVG",
+      "BGE 118 V 193 E. 2",
+      "Art. 52 BVG",
+      "BGE 126 V 443 E. 3",
+      "Art. 43 Abs. 1 OR",
+      "BGE 137 III 539"
+    ],
+    "val_007": [
+      "Art. 924 Abs. 1 ZGB",
+      "Art. 922 Abs. 1 ZGB",
+      "Art. 924 ZGB",
+      "Art. 930 ZGB",
+      "Art. 641 Abs. 2 ZGB",
+      "Art. 922 ZGB",
+      "BGE 131 III 217 E. 4.1",
+      "Art. 9 ZGB",
+      "Art. 714 ZGB",
+      "Art. 626 Abs. 2 ZGB",
+      "BGE 109 II 144 E. 3",
+      "BGE 112 II 406 E. 5",
+      "Art. 184 Abs. 1 OR",
+      "Art. 9 Abs. 1 ZGB",
+      "Art. 641 ZGB"
+    ],
+    "val_008": [
+      "Art. 158 Ziff. 1 Abs",
+      "Art. 158 StGB",
+      "BGE 142 IV 346 E. 3.2",
+      "Art. 158 Ziff. 1 StGB",
+      "6B_1422/2019",
+      "Art. 146 StGB",
+      "Art. 138 Ziff. 1 Abs",
+      "Art. 251 StGB",
+      "BGE 81 IV 276 E. 2",
+      "6B_910/2019",
+      "6B_203/2022"
+    ],
+    "val_009": [
+      "Art. 125 ZGB",
+      "Art. 285 ZGB",
+      "Art. 286 Abs. 2 ZGB",
+      "Art. 276 ZGB",
+      "Art. 276 Abs. 3 ZGB",
+      "Art. 4 ZGB",
+      "5A_90/2017",
+      "BGE 137 III 118 E. 2.3",
+      "Art. 125 Abs. 2 Ziff. 5 ZGB",
+      "Art. 125 Abs. 2 ZGB",
+      "BGE 134 III 581 E. 3.3",
+      "BGE 138 III 289 E. 11.1.2",
+      "Art. 285a Abs. 2 ZGB",
+      "Art. 163 ZGB",
+      "BGE 128 III 4 E. 4"
+    ],
+    "val_010": [
+      "4A_262/2008"
+    ]
+  },
+  "results": {
+    "val_010": [
+      {
+        "id": 1,
+        "label": "reject",
+        "confidence": 0.9
+      }
+    ],
+    "val_003": [
+      {
+        "id": 1,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 2,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 3,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 4,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 5,
+        "label": "must_include",
+        "confidence": 0.99
+      },
+      {
+        "id": 6,
+        "label": "must_include",
+        "confidence": 0.98
+      },
+      {
+        "id": 7,
+        "label": "must_include",
+        "confidence": 0.97
+      },
+      {
+        "id": 8,
+        "label": "must_include",
+        "confidence": 0.98
+      },
+      {
+        "id": 9,
+        "label": "reject",
+        "confidence": 0.85
+      }
+    ],
+    "val_008": [
+      {
+        "id": 1,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 2,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 3,
+        "label": "plausible",
+        "confidence": 0.8
+      },
+      {
+        "id": 4,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 5,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 6,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 7,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 8,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 9,
+        "label": "plausible",
+        "confidence": 0.6
+      },
+      {
+        "id": 10,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 11,
+        "label": "plausible",
+        "confidence": 0.7
+      }
+    ],
+    "val_004": [
+      {
+        "id": 1,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 2,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 3,
+        "label": "must_include",
+        "confidence": 0.85
+      },
+      {
+        "id": 4,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 5,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 6,
+        "label": "plausible",
+        "confidence": 0.65
+      },
+      {
+        "id": 7,
+        "label": "reject",
+        "confidence": 0.8
+      },
+      {
+        "id": 8,
+        "label": "must_include",
+        "confidence": 0.85
+      },
+      {
+        "id": 9,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 10,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 11,
+        "label": "reject",
+        "confidence": 0.85
+      }
+    ],
+    "val_006": [
+      {
+        "id": 1,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 2,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 3,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 4,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 5,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 6,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 7,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 8,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 9,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 10,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 11,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 12,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 13,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 14,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 15,
+        "label": "reject",
+        "confidence": 0.9
+      }
+    ],
+    "val_002": [
+      {
+        "id": 1,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 2,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 3,
+        "label": "reject",
+        "confidence": 0.95
+      },
+      {
+        "id": 4,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 5,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 6,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 7,
+        "label": "plausible",
+        "confidence": 0.75
+      },
+      {
+        "id": 8,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 9,
+        "label": "plausible",
+        "confidence": 0.8
+      },
+      {
+        "id": 10,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 11,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 12,
+        "label": "plausible",
+        "confidence": 0.75
+      },
+      {
+        "id": 13,
+        "label": "plausible",
+        "confidence": 0.8
+      },
+      {
+        "id": 14,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 15,
+        "label": "reject",
+        "confidence": 0.85
+      }
+    ],
+    "val_001": [
+      {
+        "id": 1,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 2,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 3,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 4,
+        "label": "plausible",
+        "confidence": 0.8
+      },
+      {
+        "id": 5,
+        "label": "plausible",
+        "confidence": 0.75
+      },
+      {
+        "id": 6,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 7,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 8,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 9,
+        "label": "reject",
+        "confidence": 0.8
+      },
+      {
+        "id": 10,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 11,
+        "label": "plausible",
+        "confidence": 0.75
+      },
+      {
+        "id": 12,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 13,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 14,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 15,
+        "label": "reject",
+        "confidence": 0.8
+      }
+    ],
+    "val_007": [
+      {
+        "id": 1,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 2,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 3,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 4,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 5,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 6,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 7,
+        "label": "plausible",
+        "confidence": 0.75
+      },
+      {
+        "id": 8,
+        "label": "reject",
+        "confidence": 0.8
+      },
+      {
+        "id": 9,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 10,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 11,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 12,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 13,
+        "label": "reject",
+        "confidence": 0.8
+      },
+      {
+        "id": 14,
+        "label": "reject",
+        "confidence": 0.8
+      },
+      {
+        "id": 15,
+        "label": "reject",
+        "confidence": 0.85
+      }
+    ],
+    "val_009": [
+      {
+        "id": 1,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 2,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 3,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 4,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 5,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 6,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 7,
+        "label": "plausible",
+        "confidence": 0.8
+      },
+      {
+        "id": 8,
+        "label": "must_include",
+        "confidence": 0.95
+      },
+      {
+        "id": 9,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 10,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 11,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 12,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 13,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 14,
+        "label": "reject",
+        "confidence": 0.85
+      },
+      {
+        "id": 15,
+        "label": "plausible",
+        "confidence": 0.8
+      }
+    ],
+    "val_005": [
+      {
+        "id": 1,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 2,
+        "label": "must_include",
+        "confidence": 0.9
+      },
+      {
+        "id": 3,
+        "label": "plausible",
+        "confidence": 0.6
+      },
+      {
+        "id": 4,
+        "label": "must_include",
+        "confidence": 0.85
+      },
+      {
+        "id": 5,
+        "label": "plausible",
+        "confidence": 0.65
+      },
+      {
+        "id": 6,
+        "label": "plausible",
+        "confidence": 0.6
+      },
+      {
+        "id": 7,
+        "label": "must_include",
+        "confidence": 0.8
+      },
+      {
+        "id": 8,
+        "label": "plausible",
+        "confidence": 0.55
+      },
+      {
+        "id": 9,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 10,
+        "label": "plausible",
+        "confidence": 0.7
+      },
+      {
+        "id": 11,
+        "label": "plausible",
+        "confidence": 0.55
+      },
+      {
+        "id": 12,
+        "label": "must_include",
+        "confidence": 0.85
+      },
+      {
+        "id": 13,
+        "label": "reject",
+        "confidence": 0.9
+      },
+      {
+        "id": 14,
+        "label": "plausible",
+        "confidence": 0.6
+      },
+      {
+        "id": 15,
+        "label": "must_include",
+        "confidence": 0.8
+      }
+    ]
+  }
+}
