@@ -1,0 +1,350 @@
+{
+  "val_007": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves substantive legal issues about gift validity and title transfer under New York and Swiss law, with no mention of an appeal to the Swiss Federal Supreme Court."
+  },
+  "val_005": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a civil judge making decisions on visitation rights in a family law context, which is a first-instance or cantonal proceeding, not an appeal to the Federal Supreme Court."
+  },
+  "val_001": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question concerns pre-trial detention extension at first-instance criminal proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "val_002": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question concerns entitlement to vocational rehabilitation under Art. 17 LAI, which is a substantive social insurance law matter typically decided by administrative authorities or cantonal courts, not an appeal to the Federal Supreme Court."
+  },
+  "test_002": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question describes a civil damages case involving prescription and negligence issues, with no indication that it has reached the Federal Supreme Court on appeal."
+  },
+  "test_003": {
+    "uses_bgg": false,
+    "confidence": 0.1,
+    "bgg_citations": [],
+    "reasoning": "The question describes a contractual dispute between private parties with no indication of an appeal to the Federal Supreme Court, suggesting it is a first-instance or cantonal court matter."
+  },
+  "test_006": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a product liability claim under the PrHG, which is a substantive legal issue typically handled in first-instance civil proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "val_006": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves substantive liability issues under Swiss civil law (OR) regarding a private dispute between homeowners and an installer, with no indication of an appeal to the Federal Supreme Court."
+  },
+  "test_001": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a request for interim relief to cantonal authorities in Lausanne, which is a first-instance cantonal proceeding, not an appeal to the Federal Supreme Court."
+  },
+  "val_003": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a pretrial detention extension in a criminal proceeding, which is a first-instance matter handled by cantonal or federal criminal courts, not an appeal to the Federal Supreme Court."
+  },
+  "test_005": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves enforcement of a real-estate pledge and oppositions in a debt collection context, which is a first-instance proceeding under the SchKG, not an appeal to the Federal Supreme Court."
+  },
+  "val_008": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question describes a criminal proceeding involving disloyal management allegations with references to indictment, conviction, and superior-instance remand, indicating this is likely a Bundesstrafgericht case where StBOG applies, not a Bundesgericht appeal."
+  },
+  "test_004": {
+    "uses_bgg": true,
+    "confidence": 0.9,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The question involves an appeal against the opening of bankruptcy, which is a civil matter that would be heard by the Swiss Federal Supreme Court (Bundesgericht) as an appeal from a cantonal court decision."
+  },
+  "val_010": {
+    "uses_bgg": true,
+    "confidence": 0.9,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query involves a civil appeal to the Federal Supreme Court, as indicated by the case references starting with '4A_' which denote civil appeals in the Bundesgericht."
+  },
+  "val_009": {
+    "uses_bgg": true,
+    "confidence": 0.9,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The question involves an appeal to the Federal Supreme Court regarding maintenance obligations and enforcement measures, which is a civil matter falling under BGG provisions for civil appeals."
+  },
+  "val_004": {
+    "uses_bgg": true,
+    "confidence": 0.95,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query references case number 5A_323/2013, which is a Bundesgericht civil appeal case, indicating this involves an appeal to the Federal Supreme Court."
+  },
+  "test_009": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a cantonal court decision on recognition of foreign instruments, not an appeal to the Federal Supreme Court."
+  },
+  "test_010": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question focuses on substantive criminal law and procedural issues in a criminal trial, not on an appeal to the Federal Supreme Court."
+  },
+  "test_007": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves substantive legal issues about contract characterization and professional liability in a medical treatment dispute, with no indication of an appeal to the Federal Supreme Court."
+  },
+  "test_008": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a jurisdictional dispute between Swiss and German courts regarding provisional maintenance measures, which is a first-instance or cantonal-level proceeding, not an appeal to the Federal Supreme Court."
+  },
+  "test_013": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves substantive labor law interpretation regarding wage obligations under collective agreements and statutes, not an appeal procedure to the Federal Supreme Court."
+  },
+  "test_011": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a first-instance jurisdictional dispute in Geneva courts, not an appeal to the Federal Supreme Court."
+  },
+  "test_012": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves substantive legal issues about contract characterization, prescription, burden of proof, and novation in a civil dispute, with no indication of an appeal to the Federal Supreme Court."
+  },
+  "test_014": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a substantive insurance law issue regarding accident coverage under UVG/ATSG, with no indication of an appeal to the Federal Supreme Court."
+  },
+  "test_015": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question describes divorce proceedings and related claims (restitution, maintenance) which are typically handled by cantonal courts in first instance, not an appeal to the Federal Supreme Court."
+  },
+  "test_016": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a provisional maintenance order and disputes over income calculation, which are typically handled in first-instance or cantonal family court proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "test_018": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The case involves a cantonal court order and a legal challenge at the cantonal level, not an appeal to the Federal Supreme Court (Bundesgericht)."
+  },
+  "test_020": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "This appears to be a first-instance construction dispute about mortgage registration and expert appraisal, not an appeal to the Federal Supreme Court."
+  },
+  "test_022": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question focuses on jurisdiction and protective measures in a first-instance family law proceeding in Lausanne, not on an appeal to the Federal Supreme Court."
+  },
+  "test_017": {
+    "uses_bgg": true,
+    "confidence": 0.9,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The question involves an appeal to the Federal Supreme Court regarding a civil matter (tenancy dispute) with procedural issues like admission of new evidence and validity of eviction orders."
+  },
+  "test_021": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a contractual dispute between private parties (Alpine Trade GmbH and Nordic Logistics SA) regarding liability for lost goods, which is a civil law matter likely to be heard in a cantonal court or first-instance proceeding, not an appeal to the Federal Supreme Court."
+  },
+  "test_025": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question describes a first-instance divorce proceeding before a Swiss divorce court (trial authority), not an appeal to the Federal Supreme Court."
+  },
+  "test_024": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question describes first-instance divorce proceedings and a review by a lower court, not an appeal to the Federal Supreme Court (Bundesgericht)."
+  },
+  "test_023": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question describes a substantive liability issue regarding a former director's responsibility for AHV contributions, with no indication of an appeal to the Federal Supreme Court (Bundesgericht)."
+  },
+  "test_026": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves legal issues related to matrimonial property, maintenance, and child support, which are typically addressed in first-instance or cantonal family court proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "test_019": {
+    "uses_bgg": true,
+    "confidence": 0.9,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The question involves recognition of foreign divorce decrees and provisional measures, which are civil matters that would typically reach the Federal Supreme Court on appeal from cantonal courts, requiring BGG provisions for civil appeals."
+  },
+  "test_027": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question describes a family law proceeding involving provisional custody measures and an expedited review at a lower authority, not an appeal to the Federal Supreme Court."
+  },
+  "test_028": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a liability claim under Art. 58 Abs. 1 OR for a construction defect, which is a substantive civil law issue typically addressed in first-instance or cantonal court proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "test_031": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves a substantive legal issue about spousal maintenance under the Civil Code (ZGB) in a divorce context, with no indication of an appeal to the Federal Supreme Court."
+  },
+  "test_029": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "This case involves a guardianship appeal at the cantonal level (likely to a cantonal appellate court) regarding welfare inquiry procedures, not a final appeal to the Swiss Federal Supreme Court."
+  },
+  "test_030": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question describes first-instance summary/interim matrimonial-protection proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "test_032": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a criminal proceeding at the pretrial detention stage, which is a first-instance matter handled by cantonal courts or the Federal Criminal Court, not an appeal to the Federal Supreme Court."
+  },
+  "test_033": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question involves an administrative denial by an accident insurer under UVG, which is a first-instance or cantonal-level proceeding, not an appeal to the Federal Supreme Court."
+  },
+  "test_035": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question concerns the interpretation of procedural rules for provisional measures and foreign proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "test_036": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a challenge to a juvenile investigating judge's order in a criminal investigation, which is a first-instance proceeding, not an appeal to the Federal Supreme Court."
+  },
+  "test_037": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question describes a trademark and unfair competition dispute seeking injunctive relief and domain transfer, which would typically be heard in first-instance civil proceedings (likely at cantonal level or commercial court), not an appeal to the Federal Supreme Court."
+  },
+  "test_039": {
+    "uses_bgg": false,
+    "confidence": 0.95,
+    "bgg_citations": [],
+    "reasoning": "The question involves a contractual dispute between two parties regarding their business relationship, which is a substantive civil law matter that would be addressed in first-instance proceedings, not an appeal to the Federal Supreme Court."
+  },
+  "test_038": {
+    "uses_bgg": false,
+    "confidence": 0.9,
+    "bgg_citations": [],
+    "reasoning": "The question describes civil liability proceedings for compensation claims, which appear to be first-instance civil proceedings rather than an appeal to the Federal Supreme Court."
+  },
+  "test_034": {
+    "uses_bgg": true,
+    "confidence": 0.95,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query references Bundesgericht case numbers (5A_282/2016, 5A_420/2014) which indicate civil appeals to the Federal Supreme Court, requiring BGG provisions for appeal admissibility and procedure."
+  },
+  "test_040": {
+    "uses_bgg": true,
+    "confidence": 0.9,
+    "bgg_citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The question involves a civil appeal to the Federal Supreme Court regarding protective measures for marital union and maintenance claims, which falls under civil law jurisdiction requiring BGG provisions for appeal admissibility and procedure."
+  }
+}

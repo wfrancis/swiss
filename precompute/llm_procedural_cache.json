@@ -1,0 +1,595 @@
+{
+  "val_val_010": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal involving contractual banking liability, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "val_val_002": {
+    "proceeding_type": "social_insurance",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 56 ATSG",
+      "Art. 60 ATSG"
+    ],
+    "reasoning": "This is clearly a social insurance appeal about disability benefits and vocational rehabilitation, requiring the standard procedural citations for appeals to the Federal Supreme Court in social insurance matters."
+  },
+  "val_val_009": {
+    "proceeding_type": "family",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a family law appeal involving child maintenance and enforcement, requiring standard civil appeal procedure and cost provisions for BGer."
+  },
+  "val_val_004": {
+    "proceeding_type": "inheritance",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 74 Abs. 1 BGG",
+      "Art. 74 Abs. 2 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is clearly an inheritance case involving will validity, requiring standard civil appeal procedural citations and cost provisions for BGer proceedings."
+  },
+  "val_val_006": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "The query involves civil liability for property damage, and existing predictions include Art. 72 Abs. 1 BGG, indicating a civil appeal to the Federal Supreme Court, so additional procedural and cost provisions for civil appeals are needed."
+  },
+  "val_val_001": {
+    "proceeding_type": "criminal_appeal",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 384 StPO",
+      "Art. 385 StPO",
+      "Art. 390 StPO",
+      "Art. 393 StPO",
+      "Art. 396 StPO",
+      "Art. 436 StPO"
+    ],
+    "reasoning": "This is a criminal detention appeal case requiring standard procedural citations for appeal deadlines, requirements, and costs."
+  },
+  "val_val_007": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil inheritance/gift dispute involving cross-border elements, requiring standard civil appeal procedure and cost provisions for BGer review."
+  },
+  "val_val_005": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a family law appeal to the Federal Supreme Court regarding visitation rights, requiring standard civil appeal procedure and cost provisions."
+  },
+  "val_val_003": {
+    "proceeding_type": "criminal_appeal",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 78 BGG",
+      "Art. 80 BGG",
+      "Art. 81 BGG",
+      "Art. 384 StPO",
+      "Art. 385 StPO",
+      "Art. 390 StPO",
+      "Art. 393 StPO",
+      "Art. 396 StPO",
+      "Art. 422 StPO",
+      "Art. 436 StPO",
+      "Art. 135 Abs. 3 StPO",
+      "Art. 135 Abs. 4 StPO"
+    ],
+    "reasoning": "This is a criminal appeal concerning pretrial detention extension, requiring standard criminal appeal procedure, deadline, and cost provisions."
+  },
+  "val_val_008": {
+    "proceeding_type": "criminal_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 78 BGG",
+      "Art. 80 BGG",
+      "Art. 81 BGG",
+      "Art. 384 StPO",
+      "Art. 385 StPO",
+      "Art. 390 StPO",
+      "Art. 393 StPO",
+      "Art. 396 StPO",
+      "Art. 422 StPO",
+      "Art. 436 StPO",
+      "Art. 135 Abs. 3 StPO",
+      "Art. 135 Abs. 4 StPO",
+      "Art. 42 StGB",
+      "Art. 44 StGB",
+      "Art. 49 StGB",
+      "Art. 12 Abs. 1 StGB",
+      "Art. 25 StGB",
+      "Art. 26 StGB"
+    ],
+    "reasoning": "The query involves a criminal appeal regarding disloyal management (Art. 158 StGB) and embezzlement (Art. 314 StGB), with existing procedural citations like Art. 333, 350, 398, 404, 409 StPO indicating criminal proceedings, necessitating standard criminal appeal, cost, and sentencing provisions."
+  },
+  "test_test_013": {
+    "proceeding_type": "other",
+    "confidence": 0.3,
+    "citations": [],
+    "reasoning": "The query involves labor law and collective agreements, but the proceeding type is unclear from the context and existing predictions, making it unsafe to add procedural or auxiliary citations."
+  },
+  "test_test_004": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil bankruptcy appeal case involving SchKG provisions, requiring standard civil appeal procedure and cost articles from BGG."
+  },
+  "test_test_011": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil jurisdiction dispute involving contract claims and assignment, requiring standard civil appeal procedure and cost provisions for BGer review."
+  },
+  "test_test_014": {
+    "proceeding_type": "social_insurance",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 56 ATSG",
+      "Art. 60 ATSG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a social insurance appeal about accident coverage under ATSG/UVG, requiring procedural citations for appeals to the Federal Supreme Court in social insurance matters."
+  },
+  "test_test_006": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil product liability appeal to the Federal Supreme Court involving PrHG provisions, requiring standard civil appeal procedure and cost citations."
+  },
+  "test_test_009": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal involving recognition of foreign judgments and inheritance matters, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_001": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal case about interim relief involving copyright and unfair competition, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_008": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal involving international child maintenance jurisdiction under the Lugano Convention, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_015": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal involving divorce proceedings with claims for restitution, patrimonial settlement, and maintenance, requiring standard civil appeal procedure and cost provisions."
+  },
+  "test_test_005": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "The query involves a civil dispute over mortgage enforcement and debt obligations, with existing predictions focused on substantive law (OR, SchKG, ZGB), indicating a civil appeal to the Federal Supreme Court."
+  },
+  "test_test_016": {
+    "proceeding_type": "family",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 285 Abs. 1 ZGB",
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG"
+    ],
+    "reasoning": "This is a family law maintenance case involving provisional maintenance orders, requiring procedural citations for civil appeals to the Federal Supreme Court and the substantive boilerplate for child support criteria which applies to maintenance cases generally."
+  },
+  "test_test_003": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is clearly a civil contract dispute about a vehicle hire agreement and debt remission, requiring civil appeal procedure and cost provisions for the Federal Supreme Court."
+  },
+  "test_test_002": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "This is a civil damages appeal involving road traffic accident claims, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_007": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query involves a civil dispute over medical services and contractual liability, with existing predictions including civil appeal provisions, indicating a civil appeal proceeding requiring standard procedural and cost citations."
+  },
+  "test_test_012": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "This is a civil dispute about contract characterization, prescription, burden of proof, and novation, requiring civil appeal procedural citations which are partially missing from existing predictions."
+  },
+  "test_test_010": {
+    "proceeding_type": "criminal_appeal",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 78 BGG",
+      "Art. 80 BGG",
+      "Art. 81 BGG",
+      "Art. 384 StPO",
+      "Art. 385 StPO",
+      "Art. 390 StPO",
+      "Art. 393 StPO",
+      "Art. 396 StPO",
+      "Art. 422 StPO",
+      "Art. 436 StPO",
+      "Art. 12 Abs. 1 StGB",
+      "Art. 42 StGB",
+      "Art. 44 StGB",
+      "Art. 49 StGB"
+    ],
+    "reasoning": "This is clearly a criminal appeal case involving robbery charges and sentencing, requiring standard criminal appeal procedure citations, sentencing provisions, and cost articles."
+  },
+  "test_test_018": {
+    "proceeding_type": "other",
+    "confidence": 0.3,
+    "citations": [],
+    "reasoning": "The query involves international judicial assistance and procedural issues, but the proceeding type is unclear and doesn't clearly match standard criminal, civil, or administrative appeal patterns requiring boilerplate citations."
+  },
+  "test_test_017": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "This is a civil appeal concerning tenancy law and eviction procedures, requiring standard BGer civil appeal jurisdiction and cost provisions."
+  },
+  "test_test_025": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG"
+    ],
+    "reasoning": "This is a civil appeal from divorce proceedings involving property division, requiring standard BGer civil appeal jurisdiction and procedure citations."
+  },
+  "test_test_019": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal case involving international family law and recognition of foreign judgments, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_022": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a family law case involving protective measures and jurisdiction issues, clearly indicating a civil appeal proceeding to the Federal Supreme Court requiring standard procedural and cost provisions."
+  },
+  "test_test_027": {
+    "proceeding_type": "family",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 285 Abs. 1 ZGB"
+    ],
+    "reasoning": "This is a family law custody appeal involving expedited review of provisional measures, requiring BGG civil appeal provisions and child support criteria."
+  },
+  "test_test_023": {
+    "proceeding_type": "social_insurance",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 56 ATSG",
+      "Art. 60 ATSG"
+    ],
+    "reasoning": "This is a social insurance appeal concerning AHV contributions and director liability, requiring the standard procedural citations for appeals to the Federal Supreme Court in social insurance matters."
+  },
+  "test_test_024": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "This is a civil appeal from divorce proceedings, requiring standard BGer civil appeal provisions for admissibility, grounds, and costs."
+  },
+  "test_test_029": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 Abs. 1 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal concerning guardianship proceedings under ZGB, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_020": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil construction dispute involving mortgage registration and contract performance, requiring standard civil appeal procedure and cost provisions for Bundesgericht review."
+  },
+  "test_test_031": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 285 Abs. 1 ZGB"
+    ],
+    "reasoning": "This is a family law case about spousal maintenance under Art. 125 ZGB, requiring Art. 285 Abs. 1 ZGB for child support criteria which is routinely cited in maintenance cases to assess financial needs and resources."
+  },
+  "test_test_030": {
+    "proceeding_type": "family",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a family law appeal involving maintenance and matrimonial protection proceedings, requiring standard civil appeal provisions to the Federal Supreme Court and cost provisions."
+  },
+  "test_test_026": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "This is a family law case involving matrimonial property, maintenance, and child support, clearly indicating a civil appeal proceeding requiring standard BGer procedural and cost provisions."
+  },
+  "test_test_028": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "The query involves a civil liability claim under Art. 58 OR regarding property damage/injury, and existing predictions include multiple BGG articles (42, 90, 95, 97, 105, 106) indicating a civil appeal to the Federal Supreme Court, requiring standard procedural and cost provisions for such appeals."
+  },
+  "test_test_021": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query involves a civil contract dispute over liability in a forwarding arrangement, and the existing predictions include Art. 72 Abs. 1 BGG, indicating a civil appeal to the Federal Supreme Court, so procedural and cost provisions for civil appeals are required."
+  },
+  "test_test_033": {
+    "proceeding_type": "social_insurance",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 56 ATSG",
+      "Art. 60 ATSG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "The query involves an appeal in a social insurance case under UVG, requiring procedural citations for social insurance appeals and BGer costs."
+  },
+  "test_test_037": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 74 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil trademark/unfair competition case with existing BGG citations indicating a civil appeal to the Federal Supreme Court, requiring standard procedural and cost provisions."
+  },
+  "test_test_038": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal case involving tort liability and damages claims, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_035": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil appeal involving provisional measures and international jurisdiction, requiring standard BGer civil appeal procedure and cost provisions."
+  },
+  "test_test_032": {
+    "proceeding_type": "criminal_appeal",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 384 StPO",
+      "Art. 385 StPO",
+      "Art. 390 StPO",
+      "Art. 393 StPO",
+      "Art. 396 StPO",
+      "Art. 422 StPO",
+      "Art. 436 StPO",
+      "Art. 135 Abs. 3 StPO",
+      "Art. 135 Abs. 4 StPO",
+      "Art. 37 StBOG",
+      "Art. 39 StBOG"
+    ],
+    "reasoning": "This is a criminal detention appeal case as evidenced by existing Art. 221 StPO citations, requiring standard criminal appeal procedure, deadline, and cost provisions."
+  },
+  "test_test_039": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 BGG",
+      "Art. 74 BGG",
+      "Art. 75 BGG",
+      "Art. 66 BGG",
+      "Art. 68 BGG"
+    ],
+    "reasoning": "This is a civil dispute about contractual relationships and accounting between two parties, requiring civil appeal provisions for jurisdiction and costs at the Federal Supreme Court."
+  },
+  "test_test_036": {
+    "proceeding_type": "criminal_appeal",
+    "confidence": 0.95,
+    "citations": [
+      "Art. 393 StPO",
+      "Art. 396 StPO",
+      "Art. 384 StPO",
+      "Art. 385 StPO",
+      "Art. 390 StPO",
+      "Art. 436 StPO",
+      "Art. 135 Abs. 3 StPO",
+      "Art. 135 Abs. 4 StPO"
+    ],
+    "reasoning": "This is a criminal appeal challenging a juvenile investigating judge's order for DNA profiling, requiring standard criminal appeal procedure and cost provisions."
+  },
+  "test_test_040": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query involves a civil appeal on family law matters (maintenance and protective measures), requiring standard procedural and cost citations for civil appeals to the Federal Supreme Court."
+  },
+  "test_test_034": {
+    "proceeding_type": "civil_appeal",
+    "confidence": 0.9,
+    "citations": [
+      "Art. 72 Abs. 1 BGG",
+      "Art. 74 Abs. 1 BGG",
+      "Art. 75 Abs. 1 BGG",
+      "Art. 66 Abs. 1 BGG",
+      "Art. 68 Abs. 1 BGG"
+    ],
+    "reasoning": "The query involves a civil law matter (craftsmen's lien under ZGB) and existing predictions include civil appeal provisions (Art. 72, 74, 75 BGG) and cost provisions (Art. 66, 68 BGG), but procedural and auxiliary citations for civil appeals are incomplete."
+  }
+}

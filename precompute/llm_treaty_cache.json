@@ -1,0 +1,345 @@
+{
+  "test_002": {
+    "has_international": false,
+    "confidence": 0.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss traffic accident case with no cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "val_006": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves purely domestic Swiss liability law with no cross-border elements, foreign parties, or international legal issues."
+  },
+  "val_002": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss social security case with no cross-border elements, focusing on entitlement to vocational rehabilitation and invalidity benefits under Swiss law."
+  },
+  "val_008": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic criminal and procedural law in Switzerland with no cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "test_003": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss contract dispute between Swiss entities with no apparent cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "val_004": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss inheritance dispute with no cross-border elements, focusing on formal requirements and testamentary capacity under Swiss Civil Code."
+  },
+  "val_001": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves purely domestic Swiss criminal procedure regarding pre-trial detention extension with no cross-border elements, foreign decisions, or international family law aspects."
+  },
+  "test_004": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves purely domestic Swiss bankruptcy proceedings between Swiss entities with no cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "val_009": {
+    "has_international": true,
+    "confidence": 0.8,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ",
+      "Art. 2 Abs. 1 HKsÜ"
+    ],
+    "reasoning": "The query involves cross-border elements with the non-custodial parent imprisoned overseas and potential enforcement of maintenance orders across jurisdictions."
+  },
+  "val_005": {
+    "has_international": false,
+    "confidence": 0.9,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic family law issues (visitation rights, child protection, evidence standards) without clear cross-border elements such as foreign jurisdiction, enforcement of foreign decisions, or international child abduction."
+  },
+  "test_005": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss dispute over a mortgage certificate and enforcement under Swiss law without any cross-border elements."
+  },
+  "val_010": {
+    "has_international": false,
+    "confidence": 0.9,
+    "treaty_citations": [],
+    "reasoning": "The query involves a dispute between a Belize-registered entity and a Swiss bank, but it centers on contractual obligations, duty of care, and procedural issues under Swiss domestic law without clear cross-border jurisdiction, recognition of foreign decisions, or international family law elements."
+  },
+  "test_006": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic product liability case under Swiss law (PrHG) with no cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "val_007": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ",
+      "Art. 6 Abs. 1 EMRK"
+    ],
+    "reasoning": "The case involves cross-border elements with parties and evidence in the United States and Switzerland, triggering jurisdiction and evidence recognition issues under LugÜ and EMRK."
+  },
+  "val_003": {
+    "has_international": true,
+    "confidence": 0.8,
+    "treaty_citations": [
+      "Art. 5 Abs. 1 EMRK",
+      "Art. 6 Abs. 2 EMRK"
+    ],
+    "reasoning": "The query involves a Peruvian national arrested in a neighbouring state and returned to the prosecuting country, raising cross-border detention and fundamental rights issues under the European Convention on Human Rights."
+  },
+  "test_001": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 31 LugÜ"
+    ],
+    "reasoning": "The case involves a Swiss court being asked to grant provisional measures against a Swiss company regarding alleged intellectual property violations by a former employee who worked in Italy, with claimants based in the U.S., creating cross-border civil jurisdiction issues under the Lugano Convention."
+  },
+  "test_007": {
+    "has_international": false,
+    "confidence": 0.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a purely domestic medical malpractice and contract dispute between a patient and doctor in Switzerland with no cross-border elements mentioned."
+  },
+  "test_010": {
+    "has_international": false,
+    "confidence": 0.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic criminal case in Switzerland with no cross-border jurisdiction, recognition of foreign decisions, or international family law elements."
+  },
+  "test_014": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss insurance law dispute with no cross-border elements, focusing on the definition of an accident under Swiss statutes."
+  },
+  "test_012": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic contractual dispute between a Swiss cooperative and a Swiss optometrist with no cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "test_013": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves purely domestic Swiss labor law issues regarding collective agreements, cantonal/federal law, and wage obligations without any cross-border elements."
+  },
+  "test_017": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss tenancy dispute with no cross-border elements regarding jurisdiction, recognition of foreign decisions, or international family law."
+  },
+  "test_016": {
+    "has_international": false,
+    "confidence": 0.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic maintenance calculations and Swiss procedural law without any cross-border elements."
+  },
+  "test_020": {
+    "has_international": false,
+    "confidence": 0.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic construction contract dispute with no cross-border jurisdiction, recognition of foreign decisions, or international family law elements."
+  },
+  "test_009": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ",
+      "Art. 32 Abs. 1 LugÜ",
+      "Art. 34 Abs. 1 LugÜ"
+    ],
+    "reasoning": "The query involves recognition and enforcement of Canadian probate decisions in Switzerland, which falls under the Lugano Convention's scope for cross-border civil and commercial matters."
+  },
+  "test_011": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 23 Abs. 1 LugÜ"
+    ],
+    "reasoning": "The query involves cross-border jurisdiction with parties in Switzerland, Panama, and the Cayman Islands, and a forum-selection clause designating Delaware courts, making the Lugano Convention applicable for determining jurisdiction in civil and commercial matters."
+  },
+  "test_015": {
+    "has_international": true,
+    "confidence": 0.8,
+    "treaty_citations": [
+      "Art. 8 EMRK"
+    ],
+    "reasoning": "The wife holds two nationalities and the cash originated from foreign bank accounts, but the core divorce and maintenance issues are governed by Swiss law with no clear cross-border jurisdiction or recognition elements requiring Lugano or Hague conventions."
+  },
+  "test_018": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ"
+    ],
+    "reasoning": "The query involves an international judicial assistance request from a U.S. court to Switzerland, which falls under the scope of the Lugano Convention regarding cross-border civil procedure and evidence-taking."
+  },
+  "test_008": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 12 Abs. 1 LugÜ",
+      "Art. 13 Abs. 1 LugÜ",
+      "Art. 20 HKsÜ"
+    ],
+    "reasoning": "The query involves cross-border jurisdiction between Germany and Switzerland for provisional maintenance measures in a child abduction context, implicating the Lugano Convention for civil jurisdiction and the Hague Child Protection Convention for child-related matters."
+  },
+  "test_021": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 31 Abs. 1 LugÜ"
+    ],
+    "reasoning": "The case involves cross-border carriage of goods from Costa Rica to Switzerland with an intermediate stop in the United States, raising jurisdiction issues under the Lugano Convention for potential enforcement of judgments across European states."
+  },
+  "test_019": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ",
+      "Art. 8 EMRK",
+      "Art. 3 Abs. 1 KSÜ"
+    ],
+    "reasoning": "The query involves cross-border jurisdiction for provisional measures, recognition of a foreign divorce decree, and international family law with a child, triggering Lugano Convention, European Convention on Human Rights, and UN Convention on the Rights of the Child."
+  },
+  "test_022": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ",
+      "Art. 20 HKsÜ"
+    ],
+    "reasoning": "The query involves cross-border jurisdiction between Switzerland and a foreign country (Al-Basar) regarding family matters including child protection measures, triggering the Lugano Convention for civil jurisdiction and the Hague Child Protection Convention for international child custody issues."
+  },
+  "test_024": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves purely domestic Swiss divorce proceedings with no cross-border elements, jurisdiction issues, or foreign decisions mentioned."
+  },
+  "test_027": {
+    "has_international": false,
+    "confidence": 0.9,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic child custody and procedural issues within Switzerland, with no explicit cross-border elements such as foreign parties, jurisdictions, or recognition of foreign decisions."
+  },
+  "test_029": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic adult protection law and procedural appeals within a single jurisdiction without any cross-border elements."
+  },
+  "test_026": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic Swiss family law matters (matrimonial property, maintenance, child support) with no apparent cross-border elements regarding jurisdiction, recognition of foreign decisions, or international child protection."
+  },
+  "test_023": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss legal dispute regarding liability of a former director for AHV contributions, with no cross-border elements such as foreign parties, jurisdictions, or international treaties."
+  },
+  "test_028": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss tort liability case concerning property maintenance and construction defects with no cross-border elements or international parties mentioned."
+  },
+  "test_033": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss occupational disease claim under UVG with no cross-border elements, jurisdiction issues, or international family law aspects."
+  },
+  "test_031": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic Swiss divorce and maintenance case with no cross-border elements, such as foreign residence, jurisdiction, or recognition of foreign decisions."
+  },
+  "test_025": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 1 Abs. 1 LugÜ",
+      "Art. 22 Abs. 1 LugÜ"
+    ],
+    "reasoning": "The case involves a Swiss divorce court dealing with immovable property located in Spain, raising cross-border jurisdiction and enforcement issues under the Lugano Convention."
+  },
+  "test_034": {
+    "has_international": false,
+    "confidence": 1.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves purely domestic Swiss law regarding statutory liens and registration deadlines without any cross-border elements."
+  },
+  "test_030": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic Swiss matrimonial law issues (maintenance, protective measures, income imputation) with no apparent cross-border elements, foreign jurisdictions, or international family law aspects."
+  },
+  "test_036": {
+    "has_international": false,
+    "confidence": 0.95,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic criminal procedure regarding DNA profiling of a juvenile within Switzerland, with no cross-border elements, foreign decisions, or international family law aspects."
+  },
+  "test_032": {
+    "has_international": true,
+    "confidence": 0.8,
+    "treaty_citations": [
+      "Art. 5 EMRK"
+    ],
+    "reasoning": "The query involves pretrial detention with a flight risk assessment partly based on the suspect's partner living abroad in a non-extradition state, raising fundamental rights issues under the European Convention on Human Rights regarding liberty and security."
+  },
+  "test_035": {
+    "has_international": true,
+    "confidence": 0.9,
+    "treaty_citations": [
+      "Art. 31 LugÜ"
+    ],
+    "reasoning": "The query involves cross-border provisional measures in Switzerland concerning assets located there, with parallel proceedings pending in a foreign jurisdiction, directly engaging the Lugano Convention's provisions on provisional measures and their relationship to foreign proceedings."
+  },
+  "test_038": {
+    "has_international": false,
+    "confidence": 0.9,
+    "treaty_citations": [],
+    "reasoning": "The query involves domestic civil liability and damages claims between Swiss parties with no apparent cross-border jurisdiction, foreign decisions, or international family law elements."
+  },
+  "test_037": {
+    "has_international": false,
+    "confidence": 0.9,
+    "treaty_citations": [],
+    "reasoning": "The dispute involves Swiss and foreign entities but centers on domestic trademark and unfair competition law in Switzerland without cross-border jurisdiction, recognition of foreign decisions, or international family law elements."
+  },
+  "test_039": {
+    "has_international": false,
+    "confidence": 0.0,
+    "treaty_citations": [],
+    "reasoning": "The query involves a domestic dispute between two consultants working together in the same coastal town with no cross-border elements mentioned regarding jurisdiction, foreign decisions, or international family law."
+  },
+  "test_040": {
+    "has_international": true,
+    "confidence": 0.8,
+    "treaty_citations": [
+      "Art. 8 EMRK"
+    ],
+    "reasoning": "The case involves a Swiss national married to a foreign national with allegations of marriage for residence permit purposes, raising cross-border family law issues with potential human rights implications regarding family life."
+  }
+}
