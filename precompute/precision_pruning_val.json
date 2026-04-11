@@ -1,0 +1,1146 @@
+{
+  "val_006": {
+    "ratings": [
+      {
+        "citation": "4A_275/2013 E. 5.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 248 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 363 OR",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 364 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 394 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 398 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 398 Abs. 2 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 41 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 41 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 42 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 72 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 8 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 97 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 99 Abs. 2 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 129 III 181 E. 3.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 129 III 181 E. 3.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 133 III 121 E. 3.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_004": {
+    "ratings": [
+      {
+        "citation": "5A_323/2013 E. 3.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "5A_323/2013 E. 3.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 105 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 105 Abs. 2 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 467 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 469 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 498 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 505 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 505 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 519 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 519 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 520 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 72 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 8 ZGB",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 97 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 124 III 414 E. 3",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 131 III 106 E. 1.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 131 III 601 E. 3.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_009": {
+    "ratings": [
+      {
+        "citation": "Art. 105 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 126 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 126 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 131 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 132 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 132 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 133 Abs. 3 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 271 Abs. 1 SchKG",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 272 Abs. 1 SchKG",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 276 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 276 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 277 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 277 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 285 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 285 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 286 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 289 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 75 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 137 III 59 E. 4.2.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_010": {
+    "ratings": [
+      {
+        "citation": "4A_119/2018 E. 5.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "4A_161/2016 E. 3.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "4A_42/2015 E. 5.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "4A_471/2017 E. 4.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 100 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 101 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 18 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 2 Abs. 1 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 2 Abs. 2 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 394 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 398 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 398 Abs. 2 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 72 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 8 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 84 Abs. 1 OR",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 84 Abs. 2 OR",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 97 Abs. 1 OR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "BGE 132 III 449 E. 2",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_002": {
+    "ratings": [
+      {
+        "citation": "Art. 15 Abs. 1 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 16 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 17 Abs. 1 IVG",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 17 LAI",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 28 Abs. 1 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 28a Abs. 1 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 4 Abs. 1 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 43 Abs. 1 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 44 Abs. 1 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 49 Abs. 1 IVV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 56 Abs. 1 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 6 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 60 Abs. 1 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 66 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 7 Abs. 1 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 8 Abs. 1 ATSG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 8 Abs. 1 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 8 Abs. 1bis IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 8 Abs. 2 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 8 Abs. 3 IVG",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 9 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 95 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 97 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 124 V 108 E. 2b",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 127 V 294 E. 4c",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 130 V 343 E. 3.5",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 134 V 231 E. 5.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 135 V 465 E. 4.4",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 141 V 281 E. 2.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_007": {
+    "ratings": [
+      {
+        "citation": "Art. 100 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 100 Abs. 1 IPRG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 102 Abs. 1 IPRG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 157 ZPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 16 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 17 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 177 ZPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 178 ZPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 18 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 180 Abs. 1 ZPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 239 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 242 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 243 Abs. 1 OR",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 29 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 3 Abs. 2 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 4519 CPLR",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 714 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 714 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 72 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 75 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 8 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 9 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 933 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 934 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 936 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 938 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "BGE 131 III 418 E. 2.4",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 138 III 659 E. 4.2.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 139 III 305 E. 3.2.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 145 III 1 E. 3.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 145 III 1 E. 4.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_005": {
+    "ratings": [
+      {
+        "citation": "5A_875/2017 E. 3.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "5A_875/2017 E. 3.3",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 100 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 106 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 13 Abs. 1 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 133 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 272 ZPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 273 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 274 Abs. 2 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 29 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 296 Abs. 1 ZPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 296 Abs. 2 ZPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 296 Abs. 3 ZPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 307 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 307 Abs. 3 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 308 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 308 Abs. 3 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 314 Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 315a Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 315b Abs. 1 ZGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 446 Abs. 2 ZGB",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 72 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 75 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 90 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 97 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 98 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 127 III 295 E. 4a",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 130 III 585 E. 2.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 130 III 585 E. 2.3",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 137 III 475 E. 4.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_001": {
+    "ratings": [
+      {
+        "citation": "1B_210/2023 E. 4.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 10 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 100 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 197 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 212 Abs. 1 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 212 Abs. 2 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 212 Abs. 3 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 221 Abs. 1 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 222 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 225 Abs. 1 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 225 Abs. 2 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 227 Abs. 1 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 227 Abs. 7 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 237 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 31 Abs. 3 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 32 Abs. 1 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 36 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 36 Abs. 3 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 37 Abs. 1 StBOG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 382 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 384 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 385 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 39 Abs. 1 StBOG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 390 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 390 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 393 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 396 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 422 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 422 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 436 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 78 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 132 I 21 E. 3.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 137 IV 122 E. 4.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 142 IV 367 E. 2.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 143 IV 160 E. 4.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_008": {
+    "ratings": [
+      {
+        "citation": "Art. 105 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 106 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 107 Abs. 2 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 12 Abs. 1 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 135 Abs. 3 StPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 135 Abs. 4 StPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 158 Abs. 1 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 25 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 26 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 29 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 314 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 32 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 333 Abs. 1 StPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 350 Abs. 1 StPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 37 Abs. 1 StBOG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 384 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 385 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 39 Abs. 1 StBOG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 390 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 390 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 393 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 396 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 398 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 404 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 409 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 42 Abs. 1 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 422 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 422 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 436 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 44 Abs. 1 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 49 Abs. 1 StGB",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 9 Abs. 1 StPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 9 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 129 IV 124 E. 3.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 141 IV 132 E. 3.4.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 143 IV 214 E. 5.3.3",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 143 IV 63 E. 2.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 144 IV 189 E. 5.1",
+        "verdict": "MAYBE"
+      }
+    ]
+  },
+  "val_003": {
+    "ratings": [
+      {
+        "citation": "Art. 10 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 100 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 135 Abs. 3 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 135 Abs. 4 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 197 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 212 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 212 Abs. 3 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 221 Abs. 1 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 221 Abs. 2 StPO",
+        "verdict": "KEEP"
+      },
+      {
+        "citation": "Art. 222 StPO",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "Art. 224 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 225 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 226 Abs. 4 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 227 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 227 Abs. 7 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 237 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 29 Abs. 2 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 31 Abs. 1 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 31 Abs. 3 BV",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 37 Abs. 1 StBOG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 384 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 385 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 39 Abs. 1 StBOG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 390 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 390 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 393 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 396 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 422 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 422 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 428 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 436 Abs. 1 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 78 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 80 Abs. 1 BGG",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "Art. 80 Abs. 2 StPO",
+        "verdict": "DROP"
+      },
+      {
+        "citation": "BGE 137 IV 122 E. 3.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 137 IV 122 E. 4.2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 139 IV 186 E. 2",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 141 IV 87 E. 1.3.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 143 IV 316 E. 3.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 143 IV 330 E. 2.1",
+        "verdict": "MAYBE"
+      },
+      {
+        "citation": "BGE 145 IV 503 E. 2.2",
+        "verdict": "MAYBE"
+      }
+    ]
+  }
+}
