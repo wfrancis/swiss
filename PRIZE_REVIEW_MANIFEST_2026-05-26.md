@@ -44,7 +44,7 @@ private Kaggle datasets.
 
 - `data/` — Kaggle competition data. Do not redistribute publicly.
 - `models/` — local Hugging Face model assets used during offline experiments.
-- `precompute/*.npy`, dense E5 matrices, and compact/expanded court dense arrays.
+- Large dense arrays such as law E5 matrices and compact/expanded court dense arrays. A small legacy `precompute/treaty_embeddings.npy` was already tracked before this prize package and is unrelated to the final notebook assets.
 - `artifacts/kaggle_dataset_swiss_legal_prize_offline_20260520/`
 - Private Kaggle dataset: `wbfranci/swiss-legal-prize-offline-assets-2026-05-20`
 - Private Kaggle dataset: `wbfranci/swiss-legal-prize-law-dense-2026-05-20`

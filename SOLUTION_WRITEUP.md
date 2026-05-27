@@ -20,7 +20,7 @@ query_id,predicted_citations
 test_001,Art. 221 Abs. 1 StPO;BGE 137 IV 122 E. 4.2;1B_210/2023 E. 4.1
 ```
 
-Evaluation metric: macro-averaged F1 over per-query citation sets. The hidden test set has 40 queries; the public leaderboard uses ~50% (~20 queries) and the private leaderboard uses the other ~50%. Final standings are determined by the private leaderboard.
+Evaluation metric: macro-averaged F1 over per-query citation sets. The official test set has 40 queries; the public leaderboard uses ~50% (~20 queries) and the private leaderboard uses the other ~50%. Final standings are determined by the private leaderboard.
 
 Corpus:
 - `laws_de.csv` — 175,933 Swiss law articles (German)
@@ -58,7 +58,7 @@ The current offline prize path is:
 - `notebooks/swiss_prize_offline_retriever.py`
 - `scripts/package_prize_offline_for_kaggle.py`
 - staged asset dataset: `artifacts/kaggle_dataset_swiss_legal_prize_offline_20260520/`
-- staged private notebook wrapper: `artifacts/kaggle_kernel_swiss_prize_offline_20260520/`
+- submitted private notebook wrapper: `artifacts/kaggle_kernel_proof_intersect_33028/`
 
 This notebook is designed for both parts of the host's offline re-run
 requirement: byte-identical reproduction on the official test file, and
@@ -234,9 +234,10 @@ are static byte-identity notebooks.
 For prize-qualification/offline re-evaluation, upload the asset dataset staged
 by `scripts/package_prize_offline_for_kaggle.py`, then run the private notebook
 wrapper staged in
-`artifacts/kaggle_kernel_swiss_prize_offline_20260520/`. Its metadata disables
+`artifacts/kaggle_kernel_proof_intersect_33028/`. Its metadata disables
 internet and attaches the competition data plus
-`wbfranci/swiss-legal-prize-offline-assets-2026-05-20`.
+`wbfranci/swiss-legal-prize-offline-assets-2026-05-20` and
+`wbfranci/swiss-legal-prize-law-dense-2026-05-20`.
 
 ### End-to-end Kaggle verification
 
