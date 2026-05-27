@@ -433,7 +433,12 @@ def load_assets(split: str) -> Assets:
             court_faiss_cites = pickle.load(f)
         print(f"  Court index: {court_faiss.ntotal:,} citations", flush=True)
 
-    embed_model = SentenceTransformer("intfloat/multilingual-e5-large")
+    default_embed_model = BASE / "models" / "intfloat-multilingual-e5-large"
+    embed_model_name = os.getenv(
+        "V11_EMBED_MODEL_PATH",
+        str(default_embed_model) if default_embed_model.exists() else "intfloat/multilingual-e5-large",
+    )
+    embed_model = SentenceTransformer(embed_model_name)
 
     return Assets(
         expansions=expansions,
@@ -574,6 +579,7 @@ def generate_candidates_for_row(
     assets: Assets,
     config: V11Config,
     court_dense_cache: CourtDenseCache | None = None,
+    law_dense_hits: list[tuple[float, int]] | None = None,
 ) -> QueryBundle:
     qid = row["query_id"]
     query = row["query"]
@@ -667,9 +673,11 @@ def generate_candidates_for_row(
             else:
                 update_candidate(citation, 0.95, "explicit", is_explicit=True)
 
-    q_emb = assets.embed_model.encode([f"query: {query}"], normalize_embeddings=True)
-    dense_scores, dense_indices = assets.faiss_index.search(q_emb.astype(np.float32), 200)
-    for rank, (score, idx) in enumerate(zip(dense_scores[0], dense_indices[0]), start=1):
+    if law_dense_hits is None:
+        q_emb = assets.embed_model.encode([f"query: {query}"], normalize_embeddings=True)
+        dense_scores, dense_indices = assets.faiss_index.search(q_emb.astype(np.float32), 200)
+        law_dense_hits = list(zip(dense_scores[0], dense_indices[0]))
+    for rank, (score, idx) in enumerate(law_dense_hits, start=1):
         citation = assets.faiss_law_cites[idx]
         norm = float(score) * 0.65
         if rank <= 10:
@@ -1014,6 +1022,7 @@ def judge_batch(
                 or os.getenv("OPENAI_API_KEY")
             ),
             base_url=os.getenv("V11_BASE_URL") or os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL"),
+            timeout=float(os.getenv("V11_API_TIMEOUT", "600")),
         )
         kwargs = {
             "model": config.judge_model,
@@ -1024,6 +1033,11 @@ def judge_batch(
             "temperature": 0.0,
             "response_format": {"type": "json_object"},
         }
+        deepseek_thinking = os.getenv("V11_DEEPSEEK_THINKING")
+        if deepseek_thinking:
+            kwargs["extra_body"] = {"thinking": {"type": deepseek_thinking}}
+            if deepseek_thinking == "enabled":
+                kwargs["reasoning_effort"] = os.getenv("V11_REASONING_EFFORT", "high")
         use_max_tokens = os.getenv("V11_USE_MAX_TOKENS", "0") == "1" or config.judge_model.startswith("deepseek")
         if use_max_tokens:
             kwargs["max_tokens"] = int(os.getenv("V11_MAX_TOKENS", "8000"))

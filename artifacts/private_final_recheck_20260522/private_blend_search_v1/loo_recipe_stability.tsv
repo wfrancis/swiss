@@ -1,0 +1,11 @@
+heldout	selected_second_leg	train_pair_mean	heldout_pair_f1	current_pair_f1	old_pair_f1	delta_vs_current
+val_001	vote_top16_diverse_t50	0.591295	0.594595	0.589744	0.600000	0.004851
+val_002	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.600635	0.548387	0.548387	0.548387	0.000000
+val_003	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.595156	0.597701	0.619048	0.597701	-0.021346
+val_004	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.584273	0.695652	0.695652	0.695652	0.000000
+val_005	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.611388	0.451613	0.451613	0.451613	0.000000
+val_006	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.582714	0.709677	0.709677	0.709677	0.000000
+val_007	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.603790	0.520000	0.509804	0.500000	0.010196
+val_008	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.588651	0.656250	0.646154	0.656250	0.010096
+val_009	base_widebankG_hailmary_30702_winners_uniform_k18_a50	0.593666	0.611111	0.611111	0.611111	0.000000
+val_010	vote_nonclone_private_t60	0.605122	0.488889	0.478261	0.448980	0.010628

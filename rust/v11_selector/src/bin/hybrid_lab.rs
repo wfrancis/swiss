@@ -254,11 +254,16 @@ fn select_v11_bundle<'a>(bundle: &'a Bundle, config: &ConfigSnapshot) -> Vec<&'a
         .iter()
         .chain(plausible_candidates.iter())
         .copied()
-        .filter(|candidate| candidate.kind == "court" && !selected_ids.contains(candidate.citation.as_str()))
+        .filter(|candidate| {
+            candidate.kind == "court" && !selected_ids.contains(candidate.citation.as_str())
+        })
         .collect();
     positive_courts.sort_by(|left, right| candidate_cmp(left, right));
 
-    let mut selected_courts = selected.iter().filter(|candidate| candidate.kind == "court").count();
+    let mut selected_courts = selected
+        .iter()
+        .filter(|candidate| candidate.kind == "court")
+        .count();
     if !positive_courts.is_empty() {
         let soft_court_target = config
             .min_courts_if_any
@@ -308,7 +313,11 @@ fn law_base(citation: &str) -> Option<String> {
         return None;
     }
     let statute = citation.split_whitespace().last()?;
-    let article = citation.split_whitespace().take(2).collect::<Vec<_>>().join(" ");
+    let article = citation
+        .split_whitespace()
+        .take(2)
+        .collect::<Vec<_>>()
+        .join(" ");
     Some(format!("{article} {statute}"))
 }
 
@@ -381,7 +390,12 @@ fn load_train_priors(train_csv: &PathBuf) -> Result<TrainPriors, Box<dyn Error>>
         let query_id = row.get("query_id").cloned().unwrap_or_default();
         let citations = row
             .get("gold_citations")
-            .map(|value| value.split(';').filter(|value| !value.is_empty()).collect::<Vec<_>>())
+            .map(|value| {
+                value
+                    .split(';')
+                    .filter(|value| !value.is_empty())
+                    .collect::<Vec<_>>()
+            })
             .unwrap_or_default();
         let dense = citations.len() >= 10;
         if !query_id.is_empty() {
@@ -419,15 +433,13 @@ fn load_train_priors(train_csv: &PathBuf) -> Result<TrainPriors, Box<dyn Error>>
         .cloned()
         .collect();
 
-    let full_path = precompute_dir.join("precompute").join("train_full_citations_v2.json");
+    let full_path = precompute_dir
+        .join("precompute")
+        .join("train_full_citations_v2.json");
     if let Ok(text) = fs::read_to_string(&full_path) {
         if let Ok(rows) = serde_json::from_str::<HashMap<String, FullCitationRow>>(&text) {
             for (query_id, row) in rows {
-                for citation in row
-                    .law_citations
-                    .iter()
-                    .chain(row.court_citations.iter())
-                {
+                for citation in row.law_citations.iter().chain(row.court_citations.iter()) {
                     if dense100_ids.contains(&query_id) {
                         add_channel_citation(&mut priors.dense100, citation);
                     } else if dense12_ids.contains(&query_id) {
@@ -440,7 +452,9 @@ fn load_train_priors(train_csv: &PathBuf) -> Result<TrainPriors, Box<dyn Error>>
         }
     }
 
-    let case_path = precompute_dir.join("precompute").join("train_case_citations.json");
+    let case_path = precompute_dir
+        .join("precompute")
+        .join("train_case_citations.json");
     if let Ok(text) = fs::read_to_string(&case_path) {
         if let Ok(rows) = serde_json::from_str::<HashMap<String, CaseCitationRow>>(&text) {
             for (query_id, row) in rows {
@@ -457,7 +471,9 @@ fn load_train_priors(train_csv: &PathBuf) -> Result<TrainPriors, Box<dyn Error>>
         }
     }
 
-    let expansions_path = precompute_dir.join("precompute").join("train_query_expansions.json");
+    let expansions_path = precompute_dir
+        .join("precompute")
+        .join("train_query_expansions.json");
     if let Ok(text) = fs::read_to_string(&expansions_path) {
         if let Ok(rows) = serde_json::from_str::<HashMap<String, ExpansionRow>>(&text) {
             for (query_id, row) in rows {
@@ -477,7 +493,9 @@ fn load_train_priors(train_csv: &PathBuf) -> Result<TrainPriors, Box<dyn Error>>
     Ok(priors)
 }
 
-fn parse_prediction_csv(path: &PathBuf) -> Result<HashMap<String, BTreeSet<String>>, Box<dyn Error>> {
+fn parse_prediction_csv(
+    path: &PathBuf,
+) -> Result<HashMap<String, BTreeSet<String>>, Box<dyn Error>> {
     let mut reader = ReaderBuilder::new().from_path(path)?;
     let mut predictions: HashMap<String, BTreeSet<String>> = HashMap::new();
     for row in reader.deserialize::<HashMap<String, String>>() {
@@ -510,8 +528,16 @@ fn f1(pred: &BTreeSet<String>, gold_citations: &str) -> f64 {
         .collect();
     let pred_set: HashSet<&str> = pred.iter().map(String::as_str).collect();
     let tp = pred_set.intersection(&gold).count() as f64;
-    let precision = if pred_set.is_empty() { 0.0 } else { tp / pred_set.len() as f64 };
-    let recall = if gold.is_empty() { 0.0 } else { tp / gold.len() as f64 };
+    let precision = if pred_set.is_empty() {
+        0.0
+    } else {
+        tp / pred_set.len() as f64
+    };
+    let recall = if gold.is_empty() {
+        0.0
+    } else {
+        tp / gold.len() as f64
+    };
     if precision + recall > 0.0 {
         2.0 * precision * recall / (precision + recall)
     } else {
@@ -643,10 +669,18 @@ fn hybrid_score(
         if candidate.sources.iter().any(|source| source == "gpt_case") {
             score += cfg.gpt_case_bonus;
         }
-        if candidate.sources.iter().any(|source| source == "cocitation") {
+        if candidate
+            .sources
+            .iter()
+            .any(|source| source == "cocitation")
+        {
             score += cfg.cocitation_penalty;
         }
-        if candidate.sources.iter().any(|source| source == "court_dense") {
+        if candidate
+            .sources
+            .iter()
+            .any(|source| source == "court_dense")
+        {
             score += cfg.court_dense_bonus;
         }
         if candidate.sources.len() == 1 && candidate.sources[0] == "court_dense" {
@@ -656,32 +690,49 @@ fn hybrid_score(
             score += cfg.single_source_penalty;
         }
         score += cfg.exact_train_weight * log_count(&priors.exact_all, Some(citation.to_string()));
-        score += cfg.dense_train_weight * log_count(&priors.exact_dense, Some(citation.to_string()));
+        score +=
+            cfg.dense_train_weight * log_count(&priors.exact_dense, Some(citation.to_string()));
         score += cfg.law_base_train_weight * log_count(&priors.law_base_all, law_key.clone());
-        score += cfg.dense_law_base_train_weight * log_count(&priors.law_base_dense, law_key.clone());
-        score += cfg.dense100_exact_weight * log_count(&priors.dense100.exact, Some(citation.to_string()));
-        score += cfg.dense12_exact_weight * log_count(&priors.dense12.exact, Some(citation.to_string()));
-        score += cfg.sparse79_exact_weight * log_count(&priors.sparse79.exact, Some(citation.to_string()));
-        score += cfg.dense100_law_base_weight * log_count(&priors.dense100.law_base, law_key.clone());
+        score +=
+            cfg.dense_law_base_train_weight * log_count(&priors.law_base_dense, law_key.clone());
+        score += cfg.dense100_exact_weight
+            * log_count(&priors.dense100.exact, Some(citation.to_string()));
+        score +=
+            cfg.dense12_exact_weight * log_count(&priors.dense12.exact, Some(citation.to_string()));
+        score += cfg.sparse79_exact_weight
+            * log_count(&priors.sparse79.exact, Some(citation.to_string()));
+        score +=
+            cfg.dense100_law_base_weight * log_count(&priors.dense100.law_base, law_key.clone());
         score += cfg.dense12_law_base_weight * log_count(&priors.dense12.law_base, law_key.clone());
-        score += cfg.sparse79_law_base_weight * log_count(&priors.sparse79.law_base, law_key.clone());
+        score +=
+            cfg.sparse79_law_base_weight * log_count(&priors.sparse79.law_base, law_key.clone());
     } else if parse_kind(citation) == "law" {
         score += cfg.law_bonus;
         score += cfg.exact_train_weight * log_count(&priors.exact_all, Some(citation.to_string()));
-        score += cfg.dense_train_weight * log_count(&priors.exact_dense, Some(citation.to_string()));
+        score +=
+            cfg.dense_train_weight * log_count(&priors.exact_dense, Some(citation.to_string()));
         score += cfg.law_base_train_weight * log_count(&priors.law_base_all, law_key.clone());
-        score += cfg.dense_law_base_train_weight * log_count(&priors.law_base_dense, law_key.clone());
-        score += cfg.dense100_exact_weight * log_count(&priors.dense100.exact, Some(citation.to_string()));
-        score += cfg.dense12_exact_weight * log_count(&priors.dense12.exact, Some(citation.to_string()));
-        score += cfg.sparse79_exact_weight * log_count(&priors.sparse79.exact, Some(citation.to_string()));
-        score += cfg.dense100_law_base_weight * log_count(&priors.dense100.law_base, law_key.clone());
+        score +=
+            cfg.dense_law_base_train_weight * log_count(&priors.law_base_dense, law_key.clone());
+        score += cfg.dense100_exact_weight
+            * log_count(&priors.dense100.exact, Some(citation.to_string()));
+        score +=
+            cfg.dense12_exact_weight * log_count(&priors.dense12.exact, Some(citation.to_string()));
+        score += cfg.sparse79_exact_weight
+            * log_count(&priors.sparse79.exact, Some(citation.to_string()));
+        score +=
+            cfg.dense100_law_base_weight * log_count(&priors.dense100.law_base, law_key.clone());
         score += cfg.dense12_law_base_weight * log_count(&priors.dense12.law_base, law_key.clone());
-        score += cfg.sparse79_law_base_weight * log_count(&priors.sparse79.law_base, law_key.clone());
+        score +=
+            cfg.sparse79_law_base_weight * log_count(&priors.sparse79.law_base, law_key.clone());
     } else {
         score += cfg.court_bonus;
-        score += cfg.dense100_exact_weight * log_count(&priors.dense100.exact, Some(citation.to_string()));
-        score += cfg.dense12_exact_weight * log_count(&priors.dense12.exact, Some(citation.to_string()));
-        score += cfg.sparse79_exact_weight * log_count(&priors.sparse79.exact, Some(citation.to_string()));
+        score += cfg.dense100_exact_weight
+            * log_count(&priors.dense100.exact, Some(citation.to_string()));
+        score +=
+            cfg.dense12_exact_weight * log_count(&priors.dense12.exact, Some(citation.to_string()));
+        score += cfg.sparse79_exact_weight
+            * log_count(&priors.sparse79.exact, Some(citation.to_string()));
     }
     score
 }
@@ -695,7 +746,10 @@ fn evaluate_config(
 ) -> EvalResult {
     let mut macro_f1 = 0.0;
     let mut macro_count = 0usize;
-    let has_gold = artifact.rows.iter().any(|row| !row.gold_citations.is_empty());
+    let has_gold = artifact
+        .rows
+        .iter()
+        .any(|row| !row.gold_citations.is_empty());
     let gold_map: HashMap<&str, &str> = artifact
         .rows
         .iter()
@@ -705,14 +759,27 @@ fn evaluate_config(
     let mut per_query_f1 = Vec::new();
 
     for bundle in &artifact.bundles {
-        let v7 = v7_predictions.get(&bundle.query_id).cloned().unwrap_or_default();
-        let v11 = v11_predictions.get(&bundle.query_id).cloned().unwrap_or_default();
+        let v7 = v7_predictions
+            .get(&bundle.query_id)
+            .cloned()
+            .unwrap_or_default();
+        let v11 = v11_predictions
+            .get(&bundle.query_id)
+            .cloned()
+            .unwrap_or_default();
         let mut candidate_map: HashMap<String, HybridCandidate> = HashMap::new();
 
         for candidate in &bundle.candidates {
             let in_v7 = v7.contains(&candidate.citation);
             let in_v11 = v11.contains(&candidate.citation);
-            let score = hybrid_score(cfg, &candidate.citation, in_v7, in_v11, Some(candidate), priors);
+            let score = hybrid_score(
+                cfg,
+                &candidate.citation,
+                in_v7,
+                in_v11,
+                Some(candidate),
+                priors,
+            );
             candidate_map.insert(
                 candidate.citation.clone(),
                 HybridCandidate {
@@ -726,23 +793,27 @@ fn evaluate_config(
         }
 
         for citation in &v7 {
-            candidate_map.entry(citation.clone()).or_insert_with(|| HybridCandidate {
-                citation: citation.clone(),
-                kind: parse_kind(citation),
-                in_v7: true,
-                in_v11: v11.contains(citation),
-                score: hybrid_score(cfg, citation, true, v11.contains(citation), None, priors),
-            });
+            candidate_map
+                .entry(citation.clone())
+                .or_insert_with(|| HybridCandidate {
+                    citation: citation.clone(),
+                    kind: parse_kind(citation),
+                    in_v7: true,
+                    in_v11: v11.contains(citation),
+                    score: hybrid_score(cfg, citation, true, v11.contains(citation), None, priors),
+                });
         }
 
         for citation in &v11 {
-            candidate_map.entry(citation.clone()).or_insert_with(|| HybridCandidate {
-                citation: citation.clone(),
-                kind: parse_kind(citation),
-                in_v7: v7.contains(citation),
-                in_v11: true,
-                score: hybrid_score(cfg, citation, v7.contains(citation), true, None, priors),
-            });
+            candidate_map
+                .entry(citation.clone())
+                .or_insert_with(|| HybridCandidate {
+                    citation: citation.clone(),
+                    kind: parse_kind(citation),
+                    in_v7: v7.contains(citation),
+                    in_v11: true,
+                    score: hybrid_score(cfg, citation, v7.contains(citation), true, None, priors),
+                });
         }
 
         let mut ranked: Vec<HybridCandidate> = candidate_map.into_values().collect();
@@ -778,7 +849,8 @@ fn evaluate_config(
             }
             if item.kind == "court" && cfg.max_court_per_base > 0 {
                 if let Some(base) = court_base(&item.citation) {
-                    if court_base_counts.get(&base).copied().unwrap_or(0) >= cfg.max_court_per_base {
+                    if court_base_counts.get(&base).copied().unwrap_or(0) >= cfg.max_court_per_base
+                    {
                         continue;
                     }
                 }
@@ -828,11 +900,7 @@ fn robust_objective(
 ) -> f64 {
     let macro_f1 = val_result.macro_f1.unwrap_or(0.0);
     let query_std = stddev(&val_result.per_query_f1);
-    let query_min = val_result
-        .per_query_f1
-        .iter()
-        .copied()
-        .fold(1.0, f64::min);
+    let query_min = val_result.per_query_f1.iter().copied().fold(1.0, f64::min);
 
     let mut objective = macro_f1;
     objective -= 0.45 * query_std;
@@ -857,7 +925,11 @@ fn robust_objective(
     objective
 }
 
-fn push_top_results(top_results: &mut Vec<CandidateResult>, candidate: CandidateResult, keep_top: usize) {
+fn push_top_results(
+    top_results: &mut Vec<CandidateResult>,
+    candidate: CandidateResult,
+    keep_top: usize,
+) {
     top_results.push(candidate);
     top_results.sort_by(|left, right| cmp_desc_f64(left.objective, right.objective));
     if top_results.len() > keep_top {
@@ -888,8 +960,8 @@ fn consensus_predictions(
             .ok()
             .and_then(|value| value.parse().ok())
             .unwrap_or(0);
-        let consensus_target_mode = env::var("HYBRID_LAB_CONSENSUS_TARGET_MODE")
-            .unwrap_or_else(|_| "median".to_string());
+        let consensus_target_mode =
+            env::var("HYBRID_LAB_CONSENSUS_TARGET_MODE").unwrap_or_else(|_| "median".to_string());
         for result in top_results {
             let source_predictions = if use_test_predictions {
                 result
@@ -1042,14 +1114,22 @@ fn random_config(rng: &mut StdRng) -> HybridConfig {
     }
 }
 
-fn write_predictions(path: &PathBuf, predictions: &HashMap<String, BTreeSet<String>>) -> Result<(), Box<dyn Error>> {
-    let mut writer = WriterBuilder::new().terminator(csv::Terminator::CRLF).from_path(path)?;
+fn write_predictions(
+    path: &PathBuf,
+    predictions: &HashMap<String, BTreeSet<String>>,
+) -> Result<(), Box<dyn Error>> {
+    let mut writer = WriterBuilder::new()
+        .terminator(csv::Terminator::CRLF)
+        .from_path(path)?;
     writer.write_record(["query_id", "predicted_citations"])?;
     let mut keys: Vec<&String> = predictions.keys().collect();
     keys.sort();
     for key in keys {
         let citations = predictions.get(key).cloned().unwrap_or_default();
-        writer.write_record([key.as_str(), &citations.into_iter().collect::<Vec<_>>().join(";")])?;
+        writer.write_record([
+            key.as_str(),
+            &citations.into_iter().collect::<Vec<_>>().join(";"),
+        ])?;
     }
     writer.flush()?;
     Ok(())
@@ -1088,7 +1168,10 @@ fn main() -> Result<(), Box<dyn Error>> {
         let selected = select_v11_bundle(bundle, &artifact.config);
         v11_predictions.insert(
             bundle.query_id.clone(),
-            selected.iter().map(|candidate| candidate.citation.clone()).collect(),
+            selected
+                .iter()
+                .map(|candidate| candidate.citation.clone())
+                .collect(),
         );
     }
 
@@ -1103,7 +1186,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         .unwrap_or(16);
 
     let paired_artifact = if let Some(path) = paired_judged_json.as_ref() {
-        Some(serde_json::from_str::<Artifact>(&fs::read_to_string(path)?)?)
+        Some(serde_json::from_str::<Artifact>(&fs::read_to_string(
+            path,
+        )?)?)
     } else {
         None
     };
@@ -1119,7 +1204,10 @@ fn main() -> Result<(), Box<dyn Error>> {
             let selected = select_v11_bundle(bundle, &artifact.config);
             predictions.insert(
                 bundle.query_id.clone(),
-                selected.iter().map(|candidate| candidate.citation.clone()).collect(),
+                selected
+                    .iter()
+                    .map(|candidate| candidate.citation.clone())
+                    .collect(),
             );
         }
         paired_v11_predictions = Some(predictions);
@@ -1127,7 +1215,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut top_results: Vec<CandidateResult> = Vec::new();
 
     if mode == "apply" {
-        let cfg_path = best_cfg_json.as_ref().ok_or("apply mode requires config path")?;
+        let cfg_path = best_cfg_json
+            .as_ref()
+            .ok_or("apply mode requires config path")?;
         let cfg = load_base_config(cfg_path).ok_or("failed to load config json")?;
         let result = evaluate_config(&artifact, &v7_predictions, &v11_predictions, &cfg, &priors);
         best_score = result.macro_f1.unwrap_or(0.0);
@@ -1217,7 +1307,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                                             cfg.court_dense_bonus = court_dense_bonus;
                                             cfg.exact_train_weight = exact_train_weight;
                                             cfg.law_base_train_weight = law_base_train_weight;
-                                            cfg.dense_law_base_train_weight = dense_law_base_train_weight;
+                                            cfg.dense_law_base_train_weight =
+                                                dense_law_base_train_weight;
                                             cfg.max_law_per_base = max_law_per_base;
                                             cfg.max_court_per_base = max_court_per_base;
                                             cfg.court_cap_frac = court_cap_frac;
@@ -1234,9 +1325,15 @@ fn main() -> Result<(), Box<dyn Error>> {
                                                 best_score = score;
                                                 best_cfg = Some(cfg.clone());
                                                 best_predictions = result.predictions;
-                                                println!("iter {idx}/{total}: best {:.6} {:?}", best_score, cfg);
+                                                println!(
+                                                    "iter {idx}/{total}: best {:.6} {:?}",
+                                                    best_score, cfg
+                                                );
                                             } else if idx % 10000 == 0 {
-                                                println!("iter {idx}/{total}: current_best {:.6}", best_score);
+                                                println!(
+                                                    "iter {idx}/{total}: current_best {:.6}",
+                                                    best_score
+                                                );
                                             }
                                         }
                                     }
@@ -1251,8 +1348,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         let mut rng = StdRng::seed_from_u64(0);
         for i in 0..iterations {
             let cfg = random_config(&mut rng);
-            let val_result = evaluate_config(&artifact, &v7_predictions, &v11_predictions, &cfg, &priors);
-            let test_result = if let (Some(paired_artifact), Some(paired_v7_predictions), Some(paired_v11_predictions)) = (
+            let val_result =
+                evaluate_config(&artifact, &v7_predictions, &v11_predictions, &cfg, &priors);
+            let test_result = if let (
+                Some(paired_artifact),
+                Some(paired_v7_predictions),
+                Some(paired_v11_predictions),
+            ) = (
                 paired_artifact.as_ref(),
                 paired_v7_predictions.as_ref(),
                 paired_v11_predictions.as_ref(),
@@ -1346,13 +1448,15 @@ fn main() -> Result<(), Box<dyn Error>> {
                     &v11_predictions,
                 )
             };
-            best_predictions = consensus_predictions(&top_results, &query_ids, use_test, ref_v7, ref_v11);
+            best_predictions =
+                consensus_predictions(&top_results, &query_ids, use_test, ref_v7, ref_v11);
         }
     } else {
         let mut rng = StdRng::seed_from_u64(0);
         for i in 0..iterations {
             let cfg = random_config(&mut rng);
-            let result = evaluate_config(&artifact, &v7_predictions, &v11_predictions, &cfg, &priors);
+            let result =
+                evaluate_config(&artifact, &v7_predictions, &v11_predictions, &cfg, &priors);
             let score = result.macro_f1.unwrap_or(0.0);
             if score > best_score {
                 best_score = score;

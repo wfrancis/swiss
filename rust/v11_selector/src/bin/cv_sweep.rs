@@ -104,7 +104,11 @@ fn python_round(value: f64) -> usize {
         (lower + 1.0) as usize
     } else {
         let lower_int = lower as usize;
-        if lower_int % 2 == 0 { lower_int } else { lower_int + 1 }
+        if lower_int % 2 == 0 {
+            lower_int
+        } else {
+            lower_int + 1
+        }
     }
 }
 
@@ -124,16 +128,26 @@ fn select_bundle<'a>(bundle: &'a Bundle, cfg: &SelectorConfig) -> Vec<&'a Candid
         must_keep_confidence: cfg.must_keep_confidence,
     };
 
-    let mut must_cands: Vec<&Candidate> = bundle.candidates.iter()
-        .filter(|c| judge_label(c) == "must_include").collect();
-    let mut plausible_cands: Vec<&Candidate> = bundle.candidates.iter()
-        .filter(|c| judge_label(c) == "plausible").collect();
+    let mut must_cands: Vec<&Candidate> = bundle
+        .candidates
+        .iter()
+        .filter(|c| judge_label(c) == "must_include")
+        .collect();
+    let mut plausible_cands: Vec<&Candidate> = bundle
+        .candidates
+        .iter()
+        .filter(|c| judge_label(c) == "plausible")
+        .collect();
     must_cands.sort_by(|a, b| candidate_cmp(a, b));
     plausible_cands.sort_by(|a, b| candidate_cmp(a, b));
 
-    let mut locked_keep: Vec<&Candidate> = must_cands.iter().copied()
-        .filter(|c| c.auto_bucket.as_deref() == Some("auto_keep")
-            || c.judge_confidence >= cfg_snap.must_keep_confidence)
+    let mut locked_keep: Vec<&Candidate> = must_cands
+        .iter()
+        .copied()
+        .filter(|c| {
+            c.auto_bucket.as_deref() == Some("auto_keep")
+                || c.judge_confidence >= cfg_snap.must_keep_confidence
+        })
         .collect();
     locked_keep.sort_by(|a, b| candidate_cmp(a, b));
 
@@ -146,44 +160,65 @@ fn select_bundle<'a>(bundle: &'a Bundle, cfg: &SelectorConfig) -> Vec<&'a Candid
     let mut ids: HashSet<&str> = HashSet::new();
 
     for c in &locked_keep {
-        if selected.len() >= target { break; }
-        if ids.insert(c.citation.as_str()) { selected.push(c); }
+        if selected.len() >= target {
+            break;
+        }
+        if ids.insert(c.citation.as_str()) {
+            selected.push(c);
+        }
     }
 
     // Court filling
-    let mut pos_courts: Vec<&Candidate> = must_cands.iter()
-        .chain(plausible_cands.iter()).copied()
+    let mut pos_courts: Vec<&Candidate> = must_cands
+        .iter()
+        .chain(plausible_cands.iter())
+        .copied()
         .filter(|c| c.kind == "court" && !ids.contains(c.citation.as_str()))
         .collect();
     pos_courts.sort_by(|a, b| candidate_cmp(a, b));
 
     let mut n_courts = selected.iter().filter(|c| c.kind == "court").count();
     if !pos_courts.is_empty() {
-        let court_target = cfg_snap.min_courts_if_any
+        let court_target = cfg_snap
+            .min_courts_if_any
             .max(python_round(target as f64 * cfg_snap.court_fraction));
         while let Some(c) = pos_courts.first().copied() {
-            if n_courts >= court_target || selected.len() >= target { break; }
+            if n_courts >= court_target || selected.len() >= target {
+                break;
+            }
             pos_courts.remove(0);
-            if ids.insert(c.citation.as_str()) { selected.push(c); n_courts += 1; }
+            if ids.insert(c.citation.as_str()) {
+                selected.push(c);
+                n_courts += 1;
+            }
         }
     }
 
     // Fill remaining
-    let mut remaining: Vec<&Candidate> = must_cands.iter()
-        .chain(plausible_cands.iter()).copied()
+    let mut remaining: Vec<&Candidate> = must_cands
+        .iter()
+        .chain(plausible_cands.iter())
+        .copied()
         .filter(|c| !ids.contains(c.citation.as_str()))
         .collect();
     remaining.sort_by(|a, b| candidate_cmp(a, b));
 
     for c in remaining {
-        if selected.len() >= target { break; }
-        if ids.insert(c.citation.as_str()) { selected.push(c); }
+        if selected.len() >= target {
+            break;
+        }
+        if ids.insert(c.citation.as_str()) {
+            selected.push(c);
+        }
     }
 
     selected
 }
 
-fn macro_f1(predictions: &HashMap<String, BTreeSet<String>>, gold_map: &HashMap<String, HashSet<String>>) -> f64 {
+fn macro_f1(
+    predictions: &HashMap<String, BTreeSet<String>>,
+    gold_map: &HashMap<String, HashSet<String>>,
+) -> f64 {
     let mut total = 0.0;
     let mut count = 0;
     for (qid, gold) in gold_map {
@@ -191,13 +226,29 @@ fn macro_f1(predictions: &HashMap<String, BTreeSet<String>>, gold_map: &HashMap<
         let pred_set: HashSet<&str> = pred.iter().map(String::as_str).collect();
         let gold_set: HashSet<&str> = gold.iter().map(String::as_str).collect();
         let tp = pred_set.intersection(&gold_set).count() as f64;
-        let p = if pred_set.is_empty() { 0.0 } else { tp / pred_set.len() as f64 };
-        let r = if gold_set.is_empty() { 0.0 } else { tp / gold_set.len() as f64 };
-        let f1 = if p + r > 0.0 { 2.0 * p * r / (p + r) } else { 0.0 };
+        let p = if pred_set.is_empty() {
+            0.0
+        } else {
+            tp / pred_set.len() as f64
+        };
+        let r = if gold_set.is_empty() {
+            0.0
+        } else {
+            tp / gold_set.len() as f64
+        };
+        let f1 = if p + r > 0.0 {
+            2.0 * p * r / (p + r)
+        } else {
+            0.0
+        };
         total += f1;
         count += 1;
     }
-    if count == 0 { 0.0 } else { total / count as f64 }
+    if count == 0 {
+        0.0
+    } else {
+        total / count as f64
+    }
 }
 
 fn evaluate_on_bundles(
@@ -216,7 +267,9 @@ fn evaluate_on_bundles(
 
 fn random_config(rng: &mut StdRng) -> SelectorConfig {
     let court_fracs = [0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50];
-    let confs = [0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.86, 0.90, 0.95];
+    let confs = [
+        0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.86, 0.90, 0.95,
+    ];
     let max_outs = [15, 20, 25, 30, 35, 40, 45, 50, 60];
     let min_outs = [4, 6, 8, 10, 12, 15, 18, 20];
     let min_courts_vals = [1, 2, 3, 4, 5, 6, 8];
@@ -245,7 +298,8 @@ fn write_predictions_csv(
     let mut qids: Vec<&String> = predictions.keys().collect();
     qids.sort();
     for qid in qids {
-        let cites = predictions.get(qid)
+        let cites = predictions
+            .get(qid)
             .map(|s| s.iter().cloned().collect::<Vec<_>>().join(";"))
             .unwrap_or_default();
         wtr.write_record([qid.as_str(), cites.as_str()])?;
@@ -260,8 +314,14 @@ fn load_gold(path: &PathBuf) -> Result<HashMap<String, HashSet<String>>, Box<dyn
     for result in rdr.deserialize::<HashMap<String, String>>() {
         let row = result?;
         let qid = row.get("query_id").cloned().unwrap_or_default();
-        let cites: HashSet<String> = row.get("gold_citations")
-            .map(|v| v.split(';').filter(|s| !s.is_empty()).map(String::from).collect())
+        let cites: HashSet<String> = row
+            .get("gold_citations")
+            .map(|v| {
+                v.split(';')
+                    .filter(|s| !s.is_empty())
+                    .map(String::from)
+                    .collect()
+            })
             .unwrap_or_default();
         gold_map.insert(qid, cites);
     }
@@ -277,9 +337,11 @@ fn load_all_train_bundles(dir: &PathBuf) -> Result<(Vec<Bundle>, ConfigSnapshot)
     for entry in fs::read_dir(dir)? {
         let entry = entry?;
         let path = entry.path();
-        if path.is_dir() && path.file_name()
-            .map(|n| n.to_string_lossy().starts_with("train_"))
-            .unwrap_or(false)
+        if path.is_dir()
+            && path
+                .file_name()
+                .map(|n| n.to_string_lossy().starts_with("train_"))
+                .unwrap_or(false)
         {
             let json_path = path.join("judged_bundles.json");
             if json_path.exists() {
@@ -342,15 +404,41 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut i = 3;
     while i < args.len() {
         match args[i].as_str() {
-            "--folds" => { i += 1; n_folds = args[i].parse()?; }
-            "--iterations" => { i += 1; iterations = args[i].parse()?; }
-            "--seed" => { i += 1; seed = args[i].parse()?; }
-            "--val-judged" => { i += 1; val_judged = Some(PathBuf::from(&args[i])); }
-            "--test-judged" => { i += 1; test_judged = Some(PathBuf::from(&args[i])); }
-            "--val-output" => { i += 1; val_output = Some(PathBuf::from(&args[i])); }
-            "--test-output" => { i += 1; test_output = Some(PathBuf::from(&args[i])); }
-            "--config-output" => { i += 1; config_output = Some(PathBuf::from(&args[i])); }
-            _ => { eprintln!("Unknown arg: {}", args[i]); }
+            "--folds" => {
+                i += 1;
+                n_folds = args[i].parse()?;
+            }
+            "--iterations" => {
+                i += 1;
+                iterations = args[i].parse()?;
+            }
+            "--seed" => {
+                i += 1;
+                seed = args[i].parse()?;
+            }
+            "--val-judged" => {
+                i += 1;
+                val_judged = Some(PathBuf::from(&args[i]));
+            }
+            "--test-judged" => {
+                i += 1;
+                test_judged = Some(PathBuf::from(&args[i]));
+            }
+            "--val-output" => {
+                i += 1;
+                val_output = Some(PathBuf::from(&args[i]));
+            }
+            "--test-output" => {
+                i += 1;
+                test_output = Some(PathBuf::from(&args[i]));
+            }
+            "--config-output" => {
+                i += 1;
+                config_output = Some(PathBuf::from(&args[i]));
+            }
+            _ => {
+                eprintln!("Unknown arg: {}", args[i]);
+            }
         }
         i += 1;
     }
@@ -360,7 +448,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let (all_bundles, _default_config) = load_all_train_bundles(&bundles_dir)?;
 
     // Filter to bundles that have gold labels
-    let train_bundles: Vec<&Bundle> = all_bundles.iter()
+    let train_bundles: Vec<&Bundle> = all_bundles
+        .iter()
         .filter(|b| gold_map.contains_key(&b.query_id))
         .collect();
     let n = train_bundles.len();
@@ -377,13 +466,22 @@ fn main() -> Result<(), Box<dyn Error>> {
     indices.shuffle(&mut rng);
 
     let fold_size = n / n_folds;
-    let folds: Vec<Vec<usize>> = (0..n_folds).map(|f| {
-        let start = f * fold_size;
-        let end = if f == n_folds - 1 { n } else { start + fold_size };
-        indices[start..end].to_vec()
-    }).collect();
+    let folds: Vec<Vec<usize>> = (0..n_folds)
+        .map(|f| {
+            let start = f * fold_size;
+            let end = if f == n_folds - 1 {
+                n
+            } else {
+                start + fold_size
+            };
+            indices[start..end].to_vec()
+        })
+        .collect();
 
-    eprintln!("\n=== {}-FOLD CROSS-VALIDATION ({} iterations/fold) ===\n", n_folds, iterations);
+    eprintln!(
+        "\n=== {}-FOLD CROSS-VALIDATION ({} iterations/fold) ===\n",
+        n_folds, iterations
+    );
 
     let mut fold_best_configs: Vec<SelectorConfig> = Vec::new();
     let mut fold_test_f1s: Vec<f64> = Vec::new();
@@ -392,17 +490,28 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     for fold_idx in 0..n_folds {
         let test_indices: HashSet<usize> = folds[fold_idx].iter().copied().collect();
-        let fold_train: Vec<&Bundle> = (0..n).filter(|i| !test_indices.contains(i))
-            .map(|i| train_bundles[i]).collect();
-        let fold_test: Vec<&Bundle> = folds[fold_idx].iter()
-            .map(|&i| train_bundles[i]).collect();
+        let fold_train: Vec<&Bundle> = (0..n)
+            .filter(|i| !test_indices.contains(i))
+            .map(|i| train_bundles[i])
+            .collect();
+        let fold_test: Vec<&Bundle> = folds[fold_idx].iter().map(|&i| train_bundles[i]).collect();
 
-        let fold_train_gold: HashMap<String, HashSet<String>> = fold_train.iter()
-            .filter_map(|b| gold_map.get(&b.query_id).map(|g| (b.query_id.clone(), g.clone())))
+        let fold_train_gold: HashMap<String, HashSet<String>> = fold_train
+            .iter()
+            .filter_map(|b| {
+                gold_map
+                    .get(&b.query_id)
+                    .map(|g| (b.query_id.clone(), g.clone()))
+            })
             .collect();
 
-        let fold_test_gold: HashMap<String, HashSet<String>> = fold_test.iter()
-            .filter_map(|b| gold_map.get(&b.query_id).map(|g| (b.query_id.clone(), g.clone())))
+        let fold_test_gold: HashMap<String, HashSet<String>> = fold_test
+            .iter()
+            .filter_map(|b| {
+                gold_map
+                    .get(&b.query_id)
+                    .map(|g| (b.query_id.clone(), g.clone()))
+            })
             .collect();
 
         let mut best_train_f1 = 0.0f64;
@@ -416,15 +525,26 @@ fn main() -> Result<(), Box<dyn Error>> {
                 best_config = cfg;
             }
             if (iter + 1) % 10000 == 0 {
-                eprint!("  fold {}: {}/{} iters, best train F1={:.6}\r",
-                    fold_idx + 1, iter + 1, iterations, best_train_f1);
+                eprint!(
+                    "  fold {}: {}/{} iters, best train F1={:.6}\r",
+                    fold_idx + 1,
+                    iter + 1,
+                    iterations,
+                    best_train_f1
+                );
             }
         }
 
         let fold_test_f1 = evaluate_on_bundles(&fold_test, &fold_test_gold, &best_config);
 
-        eprintln!("  Fold {}/{}: train F1={:.6}, TEST F1={:.6}  cfg={:?}",
-            fold_idx + 1, n_folds, best_train_f1, fold_test_f1, best_config);
+        eprintln!(
+            "  Fold {}/{}: train F1={:.6}, TEST F1={:.6}  cfg={:?}",
+            fold_idx + 1,
+            n_folds,
+            best_train_f1,
+            fold_test_f1,
+            best_config
+        );
 
         fold_best_configs.push(best_config.clone());
         fold_test_f1s.push(fold_test_f1);
@@ -438,7 +558,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let mean_cv_f1: f64 = fold_test_f1s.iter().sum::<f64>() / fold_test_f1s.len() as f64;
     let std_cv_f1 = {
-        let var = fold_test_f1s.iter().map(|f| (f - mean_cv_f1).powi(2)).sum::<f64>() / fold_test_f1s.len() as f64;
+        let var = fold_test_f1s
+            .iter()
+            .map(|f| (f - mean_cv_f1).powi(2))
+            .sum::<f64>()
+            / fold_test_f1s.len() as f64;
         var.sqrt()
     };
 
@@ -450,8 +574,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Also evaluate default config for comparison
     let default_cfg = SelectorConfig {
-        min_output: 10, max_output: 40, court_fraction: 0.25,
-        min_courts_if_any: 4, must_keep_confidence: 0.86,
+        min_output: 10,
+        max_output: 40,
+        court_fraction: 0.25,
+        min_courts_if_any: 4,
+        must_keep_confidence: 0.86,
     };
     let default_f1 = evaluate_on_bundles(&train_bundles, &gold_map, &default_cfg);
     eprintln!("Default config full-train F1: {:.6}", default_f1);
@@ -475,17 +602,27 @@ fn main() -> Result<(), Box<dyn Error>> {
         let mut preds: HashMap<String, BTreeSet<String>> = HashMap::new();
         for bundle in &artifact.bundles {
             let selected = select_bundle(bundle, &best_cfg);
-            preds.insert(bundle.query_id.clone(), selected.iter().map(|c| c.citation.clone()).collect());
+            preds.insert(
+                bundle.query_id.clone(),
+                selected.iter().map(|c| c.citation.clone()).collect(),
+            );
         }
 
         // Evaluate on val gold if available
-        let val_gold: HashMap<String, HashSet<String>> = artifact.rows.iter()
+        let val_gold: HashMap<String, HashSet<String>> = artifact
+            .rows
+            .iter()
             .filter(|r| !r.gold_citations.is_empty())
             .map(|r| {
-                let cites: HashSet<String> = r.gold_citations.split(';')
-                    .filter(|s| !s.is_empty()).map(String::from).collect();
+                let cites: HashSet<String> = r
+                    .gold_citations
+                    .split(';')
+                    .filter(|s| !s.is_empty())
+                    .map(String::from)
+                    .collect();
                 (r.query_id.clone(), cites)
-            }).collect();
+            })
+            .collect();
         if !val_gold.is_empty() {
             let val_f1 = macro_f1(&preds, &val_gold);
             eprintln!("Val F1 with best config: {:.6}", val_f1);
@@ -503,7 +640,10 @@ fn main() -> Result<(), Box<dyn Error>> {
         let mut preds: HashMap<String, BTreeSet<String>> = HashMap::new();
         for bundle in &artifact.bundles {
             let selected = select_bundle(bundle, &best_cfg);
-            preds.insert(bundle.query_id.clone(), selected.iter().map(|c| c.citation.clone()).collect());
+            preds.insert(
+                bundle.query_id.clone(),
+                selected.iter().map(|c| c.citation.clone()).collect(),
+            );
         }
         if let Some(out) = &test_output {
             write_predictions_csv(&preds, out)?;

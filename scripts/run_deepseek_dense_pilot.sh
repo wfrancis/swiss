@@ -24,20 +24,20 @@ fi
 export LLM_BASE_URL="${LLM_BASE_URL:-https://api.deepseek.com/v1}"
 export MAX_WORKERS="${MAX_WORKERS:-4}"
 export V11_JUDGE_WORKERS="${V11_JUDGE_WORKERS:-8}"
-export QUERY_EXPANSIONS_MODEL="${QUERY_EXPANSIONS_MODEL:-deepseek-reasoner}"
-export DOMAIN_TEMPLATES_MODEL="${DOMAIN_TEMPLATES_MODEL:-deepseek-reasoner}"
-export CASE_CITATIONS_MODEL="${CASE_CITATIONS_MODEL:-deepseek-reasoner}"
-export FULL_CITATIONS_MODEL="${FULL_CITATIONS_MODEL:-deepseek-reasoner}"
+export QUERY_EXPANSIONS_MODEL="${QUERY_EXPANSIONS_MODEL:-deepseek-v4-pro}"
+export DOMAIN_TEMPLATES_MODEL="${DOMAIN_TEMPLATES_MODEL:-deepseek-v4-pro}"
+export CASE_CITATIONS_MODEL="${CASE_CITATIONS_MODEL:-deepseek-v4-pro}"
+export FULL_CITATIONS_MODEL="${FULL_CITATIONS_MODEL:-deepseek-v4-pro}"
 export LLM_USE_MAX_TOKENS="${LLM_USE_MAX_TOKENS:-1}"
 
 export V11_QUERY_IDS_PATH="$(cd "$(dirname "$QUERY_IDS_FILE")" && pwd)/$(basename "$QUERY_IDS_FILE")"
 export V11_USE_COURT_DENSE="${V11_USE_COURT_DENSE:-0}"
-export V11_JUDGE_MODEL="${V11_JUDGE_MODEL:-deepseek-reasoner}"
+export V11_JUDGE_MODEL="${V11_JUDGE_MODEL:-deepseek-v4-pro}"
 export V11_USE_MAX_TOKENS="${V11_USE_MAX_TOKENS:-1}"
 export V11_MAX_TOKENS="${V11_MAX_TOKENS:-8000}"
 export V11_API_KEY="${V11_API_KEY:-$LLM_API_KEY}"
 export V11_BASE_URL="${V11_BASE_URL:-$LLM_BASE_URL}"
-export V11_PROMPT_VERSION="${V11_PROMPT_VERSION:-v11_strict_v1_deepseek_reasoner_dense}"
+export V11_PROMPT_VERSION="${V11_PROMPT_VERSION:-v11_strict_v1_deepseek_v4pro_dense}"
 
 common_args=(train --query-ids "$QUERY_IDS_FILE")
 stage_args=(--split train)

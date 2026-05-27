@@ -15,7 +15,7 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 from openai import OpenAI
 API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
 BASE_URL = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL")
-CASE_CITATIONS_MODEL = os.getenv("CASE_CITATIONS_MODEL", "gpt-5.4")
+CASE_CITATIONS_MODEL = os.getenv("CASE_CITATIONS_MODEL", "deepseek-v4-pro")
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
 BASE = Path(__file__).parent.parent

@@ -1,0 +1,2294 @@
+{
+  "elapsed_ms": 25714,
+  "train_features": [
+    "artifacts/gpt55_offline_selector_20260520/train_candidate_features_wide50000_graph8000_filtered2k_norerank.jsonl"
+  ],
+  "eval_features": "artifacts/gpt55_offline_selector_20260520/val_candidate_features_wide50000_graph8000_filtered2k_norerank.jsonl",
+  "gold_csv": "data/val.csv",
+  "eval_queries": 10,
+  "eval_candidates": 20212,
+  "train": {
+    "raw_rows_seen": 2281190,
+    "rows_used": 48750,
+    "positives": 3190,
+    "negatives": 45560,
+    "queries": 1139,
+    "capped_negatives_per_query": 40,
+    "final_weighted_logloss": 0.3761413512084092
+  },
+  "model": {
+    "feature_names": [
+      "base_score",
+      "log_score",
+      "sqrt_score",
+      "log_train_freq",
+      "num_reasons",
+      "statute_vote",
+      "statute_match",
+      "src_explicit",
+      "src_tfidf",
+      "src_dense_law",
+      "src_dense_law_chunk",
+      "src_dense_court",
+      "src_memory",
+      "src_statute",
+      "src_kit",
+      "src_graph",
+      "src_rerank",
+      "inv_tfidf_rank",
+      "inv_dense_law_rank",
+      "inv_dense_law_chunk_rank",
+      "inv_dense_court_rank",
+      "inv_rerank_rank",
+      "is_law",
+      "is_court",
+      "is_article",
+      "is_bge",
+      "has_e",
+      "domain_criminal",
+      "domain_detention",
+      "domain_social",
+      "domain_family",
+      "domain_inheritance",
+      "domain_obligations",
+      "selected_initial",
+      "inv_rank",
+      "neg_log_rank",
+      "source_count",
+      "bias"
+    ],
+    "weights": [
+      2.417532995935262,
+      -1.4342143541874564,
+      -0.641748810604012,
+      1.1201199198363632,
+      1.4065368237425098,
+      0.28701183791284063,
+      -0.09811519134766156,
+      -1.214332883570216,
+      -1.8469311706067812,
+      -2.3811798607905876,
+      -2.524014023443947,
+      -1.6858340218200079,
+      -1.424548840508446,
+      -1.8965922745588335,
+      -3.3076963048518735,
+      -0.9832755058768385,
+      0.0,
+      0.21304349279219578,
+      -0.34718368629066965,
+      -0.6035714239474517,
+      -1.7025090910279954,
+      0.0,
+      0.37606636222082923,
+      -0.37606636222083145,
+      0.37606636222082923,
+      0.4155294778271011,
+      -0.37606636222083145,
+      0.0,
+      0.0,
+      0.0,
+      -0.2682217036401744,
+      -0.6393375177841991,
+      -0.17751687177367007,
+      1.0576443815322867,
+      3.251519193984875,
+      -8.058745680002524,
+      5.773261351356641,
+      -3.908874043369537
+    ],
+    "standardizer": {
+      "mean": [
+        1.5609393937517495,
+        0.871476411309679,
+        1.1892712423930136,
+        0.621040139100517,
+        6.658338461538461,
+        4.859107692307692,
+        0.38166153846153844,
+        0.029866666666666666,
+        0.8042666666666667,
+        0.4970051282051282,
+        0.31794871794871793,
+        0.15675897435897435,
+        0.12162051282051282,
+        0.7436307692307692,
+        0.08371282051282052,
+        0.10984615384615384,
+        0.0,
+        0.1468447077154041,
+        0.1314115568172485,
+        0.12415850736542063,
+        0.0329499432724669,
+        0.0,
+        0.8425025641025641,
+        0.1574974358974359,
+        0.8425025641025641,
+        0.01872820512820513,
+        0.1574974358974359,
+        0.0,
+        0.0,
+        0.0,
+        0.028964102564102565,
+        0.2950974358974359,
+        0.12147692307692308,
+        0.4075076923076923,
+        0.2679364786499669,
+        -3.103235916294546,
+        2.8646564102564103,
+        0.0
+      ],
+      "scale": [
+        1.2711683281009096,
+        0.3339673665318414,
+        0.3828489333519522,
+        0.8490480133956158,
+        3.8314094224406334,
+        19.492163333219718,
+        0.4857942038772283,
+        0.17021941396000895,
+        0.39676415608715915,
+        0.49999103066248324,
+        0.4656794291178048,
+        0.3635733740483436,
+        0.32684700347683826,
+        0.4366280434008147,
+        0.2769566467781714,
+        0.31269789946745874,
+        1e-6,
+        0.21749048950005875,
+        0.22422120851609165,
+        0.22499500911462622,
+        0.15485504241392944,
+        1e-6,
+        0.36426912246739906,
+        0.36426912246739906,
+        0.36426912246739906,
+        0.13556348867184334,
+        0.36426912246739906,
+        1e-6,
+        1e-6,
+        1e-6,
+        0.1677056448863863,
+        0.4560865479535596,
+        0.3266807007410851,
+        0.4913707083432543,
+        0.16965571347998512,
+        1.3865008666600214,
+        1.0070826411216969,
+        1.0
+      ]
+    },
+    "epochs": 4,
+    "learning_rate": 0.02,
+    "l2": 0.0001
+  },
+  "best": {
+    "config": {
+      "score_mode": "prob",
+      "bonus": {
+        "name": "plain",
+        "law_bonus": 0.0,
+        "court_bonus": 0.0,
+        "explicit_bonus": 0.0,
+        "selected_bonus": 0.0,
+        "source_bonus": 0.0,
+        "bge_penalty": 0.0,
+        "rank_penalty": 0.0
+      },
+      "target_mult": 0.5,
+      "target_add": -1,
+      "min_keep": 1,
+      "max_keep": 16,
+      "court_family_cap": 3
+    },
+    "macro_f1": 0.4553783394494749,
+    "micro_f1": 0.47411444141689374,
+    "precision": 0.75,
+    "recall": 0.3466135458167331,
+    "predicted_pairs": 116,
+    "true_positives": 87
+  },
+  "top": [
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 36,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 45,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 45,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 45,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 36,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 45,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 45,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 45,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 36,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 45,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 45,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 45,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 36,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 45,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 45,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "prob",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 6,
+        "max_keep": 45,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 36,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 45,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 45,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 1,
+        "max_keep": 45,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 36,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 45,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 45,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 2,
+        "max_keep": 45,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 16,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 16,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 16,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 24,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 24,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 24,
+        "court_family_cap": 99
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 36,
+        "court_family_cap": 3
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    },
+    {
+      "config": {
+        "score_mode": "logit",
+        "bonus": {
+          "name": "plain",
+          "law_bonus": 0.0,
+          "court_bonus": 0.0,
+          "explicit_bonus": 0.0,
+          "selected_bonus": 0.0,
+          "source_bonus": 0.0,
+          "bge_penalty": 0.0,
+          "rank_penalty": 0.0
+        },
+        "target_mult": 0.5,
+        "target_add": -1,
+        "min_keep": 4,
+        "max_keep": 36,
+        "court_family_cap": 5
+      },
+      "macro_f1": 0.4553783394494749,
+      "micro_f1": 0.47411444141689374,
+      "precision": 0.75,
+      "recall": 0.3466135458167331,
+      "predicted_pairs": 116,
+      "true_positives": 87
+    }
+  ]
+}

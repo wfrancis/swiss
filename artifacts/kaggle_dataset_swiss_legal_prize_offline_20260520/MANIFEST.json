@@ -1,0 +1,242 @@
+[
+  {
+    "source": "scripts/prepare_prize_dense_assets.py",
+    "path": "scripts/prepare_prize_dense_assets.py",
+    "required": true,
+    "bytes": 29067,
+    "files": 1,
+    "sha256": "c18644438efbf8382a385f9e5aa26f5226e873cc37c5f5dec3f136eafd6b565c"
+  },
+  {
+    "source": "scripts/train_offline_selector.py",
+    "path": "scripts/train_offline_selector.py",
+    "required": true,
+    "bytes": 12704,
+    "files": 1,
+    "sha256": "03500e374d7089b755fb2c97865ad3ca945bc0b56de8b4b71e9b6c998f700da1"
+  },
+  {
+    "source": "precompute/legal_glossary.json",
+    "path": "precompute/legal_glossary.json",
+    "required": true,
+    "bytes": 800717,
+    "files": 1,
+    "sha256": "b614fa0b69eaf8b8ee4828c7a8df0c0601eec0206d5a1082b86311733e7fc8f3"
+  },
+  {
+    "source": "precompute/domain_templates.json",
+    "path": "precompute/domain_templates.json",
+    "required": true,
+    "bytes": 70491,
+    "files": 1,
+    "sha256": "3e166f5af2d416d3c6a9adf4146e37d7dc0e4e41988a8629f53eeba2bdace14f"
+  },
+  {
+    "source": "precompute/citation_first_chunk_optC.json",
+    "path": "precompute/citation_first_chunk_optC.json",
+    "required": true,
+    "bytes": 11436356,
+    "files": 1,
+    "sha256": "81eeebc5ae63c2a75b69732ba9b8f2ec018f326444680fac6a5c86e292186608"
+  },
+  {
+    "source": "precompute/citation_graph.json",
+    "path": "precompute/citation_graph.json",
+    "required": true,
+    "bytes": 98030277,
+    "files": 1,
+    "sha256": "9bd681baab413f4c9baf5b03a504dbe4d81afbaff8effd8b6f43305bf88d4117"
+  },
+  {
+    "source": "precompute/court_text_cache_train_v11.json",
+    "path": "precompute/court_text_cache_train_v11.json",
+    "required": true,
+    "bytes": 6496094,
+    "files": 1,
+    "sha256": "d5ca5474784c0766339f784b733ea1f5403409758ab0d8ec43102d024cdb0f9e"
+  },
+  {
+    "source": "precompute/court_text_cache_val_v11.json",
+    "path": "precompute/court_text_cache_val_v11.json",
+    "required": true,
+    "bytes": 247138,
+    "files": 1,
+    "sha256": "e115c7b366a6a6a58ae0e2de64362b22481a15c731d28208e085f8d5e25eff15"
+  },
+  {
+    "source": "index/court_citations.pkl",
+    "path": "index/court_citations.pkl",
+    "required": true,
+    "bytes": 58956404,
+    "files": 1,
+    "sha256": "5f0055262ef370d266fedfc7fd2765a77227167b61c1bbe6cfe18d3cfa301166"
+  },
+  {
+    "source": "bin/offline_dense_search-linux-x86_64",
+    "path": "bin/offline_dense_search-linux-x86_64",
+    "required": false,
+    "bytes": 904112,
+    "files": 1,
+    "sha256": "5603d1dc9c0693593135cba865d69db0200ffa9487f57785a428118797c4aed6"
+  },
+  {
+    "source": "precompute/compact_court_dense_e5.npz",
+    "path": "precompute/compact_court_dense_e5.npz",
+    "required": false,
+    "bytes": 48365244,
+    "files": 1,
+    "sha256": "36f45a0dbc1c30762c05eab37bce5966bcf72629574de889f03bbefb92f3ebfa"
+  },
+  {
+    "source": "precompute/compact_court_dense_e5_embeddings.npy",
+    "path": "precompute/compact_court_dense_e5_embeddings.npy",
+    "required": false,
+    "bytes": 52471936,
+    "files": 1,
+    "sha256": "b4a5aa2344f8dfff3bc71a6813dc6ef7b3daddeefb529294e030e91551f848c6"
+  },
+  {
+    "source": "precompute/compact_court_dense_e5_citations.json",
+    "path": "precompute/compact_court_dense_e5_citations.json",
+    "required": false,
+    "bytes": 637336,
+    "files": 1,
+    "sha256": "950d87fb0d167d39912dcdf9b367afadae121ea34c5514d5c07f211bf54d9652"
+  },
+  {
+    "source": "precompute/expanded_court_dense_e5.npz",
+    "path": "precompute/expanded_court_dense_e5.npz",
+    "required": false,
+    "bytes": 150997159,
+    "files": 1,
+    "sha256": "eaf8d98c73ad5e11707234836afa477b58755ae296582b17b3d2159be36f8c15"
+  },
+  {
+    "source": "precompute/expanded_court_dense_e5_embeddings.npy",
+    "path": "precompute/expanded_court_dense_e5_embeddings.npy",
+    "required": false,
+    "bytes": 163840128,
+    "files": 1,
+    "sha256": "0d8bc84936b640a1bf37af348b89cfc298154d7fed099b1da143249abd5803fc"
+  },
+  {
+    "source": "precompute/expanded_court_dense_e5_citations.json",
+    "path": "precompute/expanded_court_dense_e5_citations.json",
+    "required": false,
+    "bytes": 1847148,
+    "files": 1,
+    "sha256": "de5f167bc742f5b2c73255747d4c65a4d6c7497150301b8ac79103e4035d394a"
+  },
+  {
+    "source": "precompute/law_dense_e5_embeddings.npy",
+    "path": "precompute/law_dense_e5_embeddings.npy",
+    "required": false,
+    "bytes": 360310912,
+    "files": 1,
+    "sha256": "54f43b3b52c8ece8f183ad16f0bbfcd12a21fea038ee0f4d76bc42d37790f775"
+  },
+  {
+    "source": "precompute/law_dense_e5_citations.json",
+    "path": "precompute/law_dense_e5_citations.json",
+    "required": false,
+    "bytes": 4173874,
+    "files": 1,
+    "sha256": "2b75c7ca3c98cb670c70ce8c42e169e089f8208cbfc1fc5ae070e5ee30fe4d53"
+  },
+  {
+    "source": "precompute/law_chunk_dense_e5_embeddings.npy",
+    "path": "precompute/law_chunk_dense_e5_embeddings.npy",
+    "required": false,
+    "bytes": 361320576,
+    "files": 1,
+    "sha256": "4ce3d8e5e7944ee3f9b8cdac76d32ea2c43a8812cc647f8af027f221cb9db800"
+  },
+  {
+    "source": "precompute/law_chunk_dense_e5_citations.json",
+    "path": "precompute/law_chunk_dense_e5_citations.json",
+    "required": false,
+    "bytes": 4185114,
+    "files": 1,
+    "sha256": "c0d28366156361af24d5dd9db7b9937daf412887a3153019f13985ef3faa48e9"
+  },
+  {
+    "source": "precompute/offline_selector.json",
+    "path": "precompute/offline_selector.json",
+    "required": false,
+    "bytes": 2084,
+    "files": 1,
+    "sha256": "d897aa4d7987561514d5c1b772d632f8aefa504203be351b64aeed628927a9a7"
+  },
+  {
+    "source": "precompute/offline_selector_finalist_distilled_sgd_20260521.json",
+    "path": "precompute/offline_selector_finalist_distilled_sgd_20260521.json",
+    "required": false,
+    "bytes": 23296,
+    "files": 1,
+    "sha256": "9d587eda21e6582777a39982ddaeefb352c1358696457c98a1e2603fd24c197b"
+  },
+  {
+    "source": "precompute/dynamic_recipe_profiles.json",
+    "path": "precompute/dynamic_recipe_profiles.json",
+    "required": false,
+    "bytes": 188831,
+    "files": 1,
+    "sha256": "10d0b29c1bacdea512f6a66e3cdb686d7dd2ac2526e6abc33dea22cc37c7412c"
+  },
+  {
+    "source": "index/faiss_laws.index",
+    "path": "index/faiss_laws.index",
+    "required": false,
+    "bytes": 720621613,
+    "files": 1,
+    "sha256": "cae2c64491ce16193008572ed2e8e731364ef11424c215384def21d5115c9fa7"
+  },
+  {
+    "source": "index/faiss_laws_citations.pkl",
+    "path": "index/faiss_laws_citations.pkl",
+    "required": false,
+    "bytes": 3998856,
+    "files": 1,
+    "sha256": "3f932e90713636713efc9e951f93faf9e2976505dd505ee87991a2fe2c1af834"
+  },
+  {
+    "source": "models/intfloat-multilingual-e5-large",
+    "path": "models/intfloat-multilingual-e5-large",
+    "required": false,
+    "bytes": 2261931626,
+    "files": 57,
+    "sha256": null
+  },
+  {
+    "source": "models/bge-reranker-v2-m3",
+    "path": "models/bge-reranker-v2-m3",
+    "required": false,
+    "bytes": 2293569057,
+    "files": 28,
+    "sha256": null
+  },
+  {
+    "source": "submissions/staff3_pairing_20260513/test_submission_private_rethink_intersect_bold7h_j955.csv",
+    "path": "finalists/intersect_bold7h_33028.csv",
+    "required": true,
+    "bytes": 15163,
+    "files": 1,
+    "sha256": "542b40471aec01c53a891cccab44e8b3495cf6bb06e6c1a521fe88da61afd8ca"
+  },
+  {
+    "source": "submissions/public_precision_targeted_20260518/live_refit_after_33385/test_submission_33385_nextrem_03_est33390.csv",
+    "path": "finalists/public_peak_33438.csv",
+    "required": true,
+    "bytes": 15970,
+    "files": 1,
+    "sha256": "89acefcdc37eeaf7d08b99559427a5167e7997cf5304a02278c7f09e27c85b9b"
+  },
+  {
+    "source": "submissions/final_staff_level_20260513/test_submission_final_hedge_overlay_fusion01_plus_samesrc03.csv",
+    "path": "finalists/fusion_samesrc03_32274.csv",
+    "required": true,
+    "bytes": 17130,
+    "files": 1,
+    "sha256": "163f0bba09ca6e07d648a62360abb09bb63f45f227e3e421b3f569b84225d5d2"
+  }
+]

@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
 """Test topic-specific LLM citation injection."""
-import csv, json, time, re
+import csv, json, os, time, re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from openai import OpenAI
+from dotenv import load_dotenv
 
 BASE = Path(__file__).resolve().parent.parent
-client = OpenAI(api_key='sk-8d5e67b45fe64f43914cfa82e3aab96c', base_url='https://api.deepseek.com/v1')
+load_dotenv(BASE / ".env", override=False)
+api_key = os.getenv("LLM_API_KEY") or os.getenv("V11_API_KEY") or os.getenv("DEEPSEEK_API_KEY")
+if not api_key:
+    raise SystemExit("Set LLM_API_KEY, V11_API_KEY, or DEEPSEEK_API_KEY before running.")
+client = OpenAI(
+    api_key=api_key,
+    base_url=os.getenv("LLM_BASE_URL") or os.getenv("V11_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL") or "https://api.deepseek.com/v1",
+)
 
 SYSTEM = (
     "You are a Swiss Federal Supreme Court clerk preparing a draft judgment.\n\n"

@@ -1,0 +1,13 @@
+{
+  "id": "wbfranci/swiss-prize-proof-private-vote-t24",
+  "title": "Swiss Prize Proof Private Vote T24",
+  "code_file": "swiss_prize_proof_private_vote_t24.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [
+    "llm-agentic-legal-information-retrieval"
+  ]
+}

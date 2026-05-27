@@ -130,11 +130,12 @@ log ""
 # Pass 1: Default (may already be done from run_full_train_judge.sh)
 run_judge_pass "default" "v11_strict_v1" 60 36 "default"
 
-# Pass 2: Enriched prompt (snippet-aware — leans on evidence text)
-run_judge_pass "enriched" "v11_multipass_enriched" 60 36 "enriched"
-
-# Pass 3: Strict prompt (higher bar — only confident must_include)
-run_judge_pass "strict" "v11_multipass_strict" 60 36 "strict"
+# Pass 2 and 3 DISABLED — train CV sweep showed selector params aren't
+# the bottleneck. The win comes from diverse val/test variants → perturbation.
+# Keeping pass 1 for retrieval expansion data.
+#
+# run_judge_pass "enriched" "v11_multipass_enriched" 60 36 "enriched"
+# run_judge_pass "strict" "v11_multipass_strict" 60 36 "strict"
 
 log ""
 log "========================================="

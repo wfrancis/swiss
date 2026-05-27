@@ -13,10 +13,18 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
-BASE_URL = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL")
-FULL_CITATIONS_MODEL = os.getenv("FULL_CITATIONS_MODEL", "gpt-5.4")
-client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
+FULL_CITATIONS_MODEL = os.getenv("FULL_CITATIONS_MODEL", "deepseek-v4-pro")
+if FULL_CITATIONS_MODEL.startswith("gpt"):
+    API_KEY = os.getenv("OPENAI_API_KEY") or os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY")
+    BASE_URL = os.getenv("OPENAI_BASE_URL")
+else:
+    API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+    BASE_URL = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL")
+client = OpenAI(
+    api_key=API_KEY,
+    base_url=BASE_URL,
+    timeout=float(os.getenv("LLM_TIMEOUT", "240")),
+)
 
 BASE = Path(__file__).parent.parent
 DATA = BASE / "data"
@@ -84,11 +92,29 @@ def predict_citations(query, qid, retries=2):
                 "temperature": 0.2,
                 "response_format": {"type": "json_object"},
             }
+            reasoning_effort = os.getenv("LLM_REASONING_EFFORT", "").strip()
+            if reasoning_effort:
+                kwargs["reasoning_effort"] = reasoning_effort
             if use_max_tokens:
                 kwargs["max_tokens"] = 8000
             else:
                 kwargs["max_completion_tokens"] = 8000
-            response = client.chat.completions.create(**kwargs)
+            try:
+                response = client.chat.completions.create(**kwargs)
+            except Exception as e:
+                msg = str(e)
+                if "temperature" in msg.lower():
+                    kwargs.pop("temperature", None)
+                    response = client.chat.completions.create(**kwargs)
+                elif "reasoning_effort" in msg:
+                    kwargs.pop("reasoning_effort", None)
+                    response = client.chat.completions.create(**kwargs)
+                elif "max_completion_tokens" in msg:
+                    value = kwargs.pop("max_completion_tokens", 8000)
+                    kwargs["max_tokens"] = value
+                    response = client.chat.completions.create(**kwargs)
+                else:
+                    raise
             content = response.choices[0].message.content
             result = json.loads(content)
             usage = response.usage
@@ -130,9 +156,12 @@ def process_dataset(
     pending_rows = []
     for i, row in enumerate(rows, start=1):
         qid = row["query_id"]
-        if qid in results:
+        cached = results.get(qid)
+        if cached and not cached.get("error"):
             print(f"\n[{i}/{len(rows)}] {qid}: skip existing", flush=True)
             continue
+        if cached and cached.get("error"):
+            print(f"\n[{i}/{len(rows)}] {qid}: retry existing error", flush=True)
         pending_rows.append((i, row))
 
     def handle_result(i: int, row: dict[str, str], result: dict, usage) -> None:
@@ -202,6 +231,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--query-ids", type=Path)
     parser.add_argument("--max-workers", type=int, default=1)
+    parser.add_argument("--out-tag", default=os.getenv("FULL_CITATIONS_OUT_TAG", "v2"))
     return parser.parse_args()
 
 
@@ -223,10 +253,10 @@ def main():
             splits.append(split)
 
     for split in splits:
-        print(f"=== Processing {split.upper()} queries with GPT-5.4 ===")
+        print(f"=== Processing {split.upper()} queries with {FULL_CITATIONS_MODEL} ===")
         process_dataset(
             DATA / f"{split}.csv",
-            f"{split}_full_citations_v2.json",
+            f"{split}_full_citations_{args.out_tag}.json",
             gold_available=(split != "test"),
             offset=args.offset,
             limit=args.limit,

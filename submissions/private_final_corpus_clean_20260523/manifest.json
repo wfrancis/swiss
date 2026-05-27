@@ -1,0 +1,126 @@
+[
+  {
+    "name": "private_vote_winners_t24_corpusclean",
+    "val": "submissions/private_final_corpus_clean_20260523/val_pred_private_vote_winners_t24_corpusclean.csv",
+    "test": "submissions/private_final_corpus_clean_20260523/test_submission_private_vote_winners_t24_corpusclean.csv",
+    "sha256": "e8790048ce4a706353797ddbac5c1d57da022fb3d754ee9dbe83b97e346b9a16",
+    "val_removed": [
+      {
+        "query_id": "val_006",
+        "citation": "Art. 41 OR"
+      },
+      {
+        "query_id": "val_007",
+        "citation": "Art. 4519 CPLR"
+      }
+    ],
+    "test_removed": [
+      {
+        "query_id": "test_014",
+        "citation": "BGE 146 V 51"
+      },
+      {
+        "query_id": "test_014",
+        "citation": "BGE 146 V 51 E. 8.2"
+      }
+    ]
+  },
+  {
+    "name": "private_blend_widebankG_winners_k18_a50_corpusclean",
+    "val": "submissions/private_final_corpus_clean_20260523/val_pred_private_blend_widebankG_winners_k18_a50_corpusclean.csv",
+    "test": "submissions/private_final_corpus_clean_20260523/test_submission_private_blend_widebankG_winners_k18_a50_corpusclean.csv",
+    "sha256": "52f4809468bcd1ddf8620d3f93f629418ea1ac732a7a6651c2262ae0458e926f",
+    "val_removed": [
+      {
+        "query_id": "val_006",
+        "citation": "Art. 41 OR"
+      },
+      {
+        "query_id": "val_007",
+        "citation": "Art. 4519 CPLR"
+      }
+    ],
+    "test_removed": [
+      {
+        "query_id": "test_014",
+        "citation": "BGE 146 V 51"
+      },
+      {
+        "query_id": "test_014",
+        "citation": "BGE 146 V 51 E. 8.2"
+      }
+    ]
+  },
+  {
+    "name": "widebankG_hailmary_30702_corpusclean",
+    "val": "submissions/private_final_corpus_clean_20260523/val_pred_widebankG_hailmary_30702_corpusclean.csv",
+    "test": "submissions/private_final_corpus_clean_20260523/test_submission_widebankG_hailmary_30702_corpusclean.csv",
+    "sha256": "059cbdd5a7e25ce4400445bf115aaba216eb1f3d24763d7fa7d5264a210f581e",
+    "val_removed": [
+      {
+        "query_id": "val_005",
+        "citation": "Art. 296 ZGB"
+      },
+      {
+        "query_id": "val_006",
+        "citation": "Art. 41 OR"
+      },
+      {
+        "query_id": "val_007",
+        "citation": "Art. 4519 CPLR"
+      },
+      {
+        "query_id": "val_009",
+        "citation": "Art. 276 ZGB"
+      },
+      {
+        "query_id": "val_009",
+        "citation": "Art. 277 ZGB"
+      }
+    ],
+    "test_removed": [
+      {
+        "query_id": "test_001",
+        "citation": "Art. 268 ZPO"
+      },
+      {
+        "query_id": "test_008",
+        "citation": "Art. 268 ZPO"
+      },
+      {
+        "query_id": "test_035",
+        "citation": "Art. 268 ZPO"
+      },
+      {
+        "query_id": "test_037",
+        "citation": "Art. 268 ZPO"
+      }
+    ]
+  },
+  {
+    "name": "fusion_samesrc03_32274_corpusclean",
+    "val": "submissions/private_final_corpus_clean_20260523/val_pred_fusion_samesrc03_32274_corpusclean.csv",
+    "test": "submissions/private_final_corpus_clean_20260523/test_submission_fusion_samesrc03_32274_corpusclean.csv",
+    "sha256": "f3ebe4734eba752f9a77edf304c53e3fdc70e708e8273e823f5d85862c6287ac",
+    "val_removed": [
+      {
+        "query_id": "val_006",
+        "citation": "Art. 41 OR"
+      },
+      {
+        "query_id": "val_007",
+        "citation": "Art. 4519 CPLR"
+      }
+    ],
+    "test_removed": [
+      {
+        "query_id": "test_014",
+        "citation": "BGE 146 V 51"
+      },
+      {
+        "query_id": "test_014",
+        "citation": "BGE 146 V 51 E. 8.2"
+      }
+    ]
+  }
+]

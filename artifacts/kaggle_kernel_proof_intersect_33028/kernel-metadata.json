@@ -1,0 +1,18 @@
+{
+  "id": "wbfranci/swiss-prize-proof-intersect-33028",
+  "title": "Swiss Prize Proof Intersect 33028",
+  "code_file": "swiss_prize_offline_retriever.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "wbfranci/swiss-legal-prize-offline-assets-2026-05-20",
+    "wbfranci/swiss-legal-prize-law-dense-2026-05-20"
+  ],
+  "competition_sources": [
+    "llm-agentic-legal-information-retrieval"
+  ]
+}

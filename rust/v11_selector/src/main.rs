@@ -133,11 +133,16 @@ fn select_bundle<'a>(bundle: &'a Bundle, config: &ConfigSnapshot) -> Vec<&'a Can
         .iter()
         .chain(plausible_candidates.iter())
         .copied()
-        .filter(|candidate| candidate.kind == "court" && !selected_ids.contains(candidate.citation.as_str()))
+        .filter(|candidate| {
+            candidate.kind == "court" && !selected_ids.contains(candidate.citation.as_str())
+        })
         .collect();
     positive_courts.sort_by(|left, right| candidate_cmp(left, right));
 
-    let mut selected_courts = selected.iter().filter(|candidate| candidate.kind == "court").count();
+    let mut selected_courts = selected
+        .iter()
+        .filter(|candidate| candidate.kind == "court")
+        .count();
     if !positive_courts.is_empty() {
         let soft_court_target = config
             .min_courts_if_any
@@ -193,8 +198,16 @@ fn evaluate_predictions(
         let pred = predictions.get(&row.query_id).cloned().unwrap_or_default();
         let pred_set: HashSet<&str> = pred.iter().map(String::as_str).collect();
         let tp = pred_set.intersection(&gold).count() as f64;
-        let precision = if pred_set.is_empty() { 0.0 } else { tp / pred_set.len() as f64 };
-        let recall = if gold.is_empty() { 0.0 } else { tp / gold.len() as f64 };
+        let precision = if pred_set.is_empty() {
+            0.0
+        } else {
+            tp / pred_set.len() as f64
+        };
+        let recall = if gold.is_empty() {
+            0.0
+        } else {
+            tp / gold.len() as f64
+        };
         let f1 = if precision + recall > 0.0 {
             2.0 * precision * recall / (precision + recall)
         } else {
@@ -213,8 +226,14 @@ fn evaluate_predictions(
 
 fn main() -> Result<(), Box<dyn Error>> {
     let mut args = env::args().skip(1);
-    let input = PathBuf::from(args.next().ok_or("usage: v11_selector <judged_json> <output_csv>")?);
-    let output = PathBuf::from(args.next().ok_or("usage: v11_selector <judged_json> <output_csv>")?);
+    let input = PathBuf::from(
+        args.next()
+            .ok_or("usage: v11_selector <judged_json> <output_csv>")?,
+    );
+    let output = PathBuf::from(
+        args.next()
+            .ok_or("usage: v11_selector <judged_json> <output_csv>")?,
+    );
 
     let artifact: Artifact = serde_json::from_str(&fs::read_to_string(&input)?)?;
     let mut predictions: HashMap<String, BTreeSet<String>> = HashMap::new();
@@ -247,7 +266,10 @@ fn main() -> Result<(), Box<dyn Error>> {
             .filter(|candidate| judge_label(candidate) == "reject")
             .count();
 
-        let citations: BTreeSet<String> = selected.iter().map(|candidate| candidate.citation.clone()).collect();
+        let citations: BTreeSet<String> = selected
+            .iter()
+            .map(|candidate| candidate.citation.clone())
+            .collect();
         println!(
             "  {}: auto_keep={}, judge={}, selected={} (must={}, plausible={}, reject={})",
             bundle.query_id,
@@ -277,7 +299,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     writer.flush()?;
 
     if let Some(macro_f1) = evaluate_predictions(&predictions, &artifact.rows) {
-        println!("\n=== V11 RUST MACRO F1: {:.4} ({:.2}%) ===", macro_f1, macro_f1 * 100.0);
+        println!(
+            "\n=== V11 RUST MACRO F1: {:.4} ({:.2}%) ===",
+            macro_f1,
+            macro_f1 * 100.0
+        );
     }
 
     let avg_predictions = if predictions.is_empty() {

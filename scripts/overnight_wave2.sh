@@ -13,6 +13,8 @@ REPO="/Users/william/swiss-legal-retrieval"
 cd "$REPO"
 
 source "$REPO/.env"
+export V11_API_KEY="${V11_API_KEY:-${DEEPSEEK_API_KEY:-${LLM_API_KEY:-}}}"
+export V11_BASE_URL="${V11_BASE_URL:-${DEEPSEEK_BASE_URL:-${LLM_BASE_URL:-https://api.deepseek.com/v1}}}"
 PYTHON="$REPO/.venv/bin/python"
 LOG_DIR="$REPO/logs/overnight_wave2_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$LOG_DIR"
@@ -82,8 +84,8 @@ run_eval() {
 # ============================================================
 log "=== STREAM C: DeepSeek extra retrieval variants ==="
 (
-  export V11_API_KEY="sk-8d5e67b45fe64f43914cfa82e3aab96c"
-  export V11_BASE_URL="https://api.deepseek.com/v1"
+  export V11_API_KEY="${V11_API_KEY:?V11_API_KEY or DEEPSEEK_API_KEY required}"
+  export V11_BASE_URL="${V11_BASE_URL:-https://api.deepseek.com/v1}"
   export V11_JUDGE_MODEL="deepseek-reasoner"
 
   # C1: No court dense at all (pure BM25+law dense)
@@ -115,8 +117,8 @@ PID_C=$!
 # ============================================================
 log "=== STREAM D: Extra DeepSeek variants ==="
 (
-  export V11_API_KEY="sk-8d5e67b45fe64f43914cfa82e3aab96c"
-  export V11_BASE_URL="https://api.deepseek.com/v1"
+  export V11_API_KEY="${V11_API_KEY:?V11_API_KEY or DEEPSEEK_API_KEY required}"
+  export V11_BASE_URL="${V11_BASE_URL:-https://api.deepseek.com/v1}"
   export V11_JUDGE_MODEL="deepseek-reasoner"
 
   # D1: Court dense query limit 16 (up from 8)

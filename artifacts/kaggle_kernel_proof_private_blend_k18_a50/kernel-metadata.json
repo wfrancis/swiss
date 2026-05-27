@@ -1,0 +1,13 @@
+{
+  "id": "wbfranci/swiss-prize-proof-private-blend-k18-a50",
+  "title": "Swiss Prize Proof Private Blend K18 A50",
+  "code_file": "swiss_prize_proof_private_blend_k18_a50.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [
+    "llm-agentic-legal-information-retrieval"
+  ]
+}

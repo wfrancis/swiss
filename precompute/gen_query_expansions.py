@@ -17,7 +17,7 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 
 API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
 BASE_URL = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL")
-QUERY_EXPANSIONS_MODEL = os.getenv("QUERY_EXPANSIONS_MODEL", "gpt-5.4")
+QUERY_EXPANSIONS_MODEL = os.getenv("QUERY_EXPANSIONS_MODEL", "deepseek-v4-pro")
 DOMAIN_TEMPLATES_MODEL = os.getenv("DOMAIN_TEMPLATES_MODEL", "gpt-5.4-mini")
 
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)

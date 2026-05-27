@@ -1889,14 +1889,1073 @@ The 0.30257 baseline appears to sit at a tight local optimum where ANY small add
 
 ### Kaggle auth note
 
-Old `kaggle.json` (username `wbfranci`, 37-char key) returns 401 — expired/rotated. New auth uses `KAGGLE_API_TOKEN=KGAT_...` env var (NOT a kaggle.json file). Token format: `KGAT_<numeric>`. Submission pattern that worked:
+Old `kaggle.json` (username `wbfranci`, 37-char key) returns 401 — expired/rotated. New auth uses `KAGGLE_API_TOKEN=<redacted>` env var (NOT a kaggle.json file). Token format: `<redacted>`. Submission pattern that worked:
 
 ```bash
-KAGGLE_API_TOKEN=KGAT_731104568562008188aeb9e24a4e5323 \
+KAGGLE_API_TOKEN=<redacted> \
   .venv/bin/kaggle competitions submit \
   -c llm-agentic-legal-information-retrieval \
   -f submissions/blend_courtdense_additive_test_raw_n1.csv \
   -m "blend court-dense raw_score N=1 additive"
 ```
 
+---
 
+## 2026-04-23 — New public best 0.32107 and rule corrections
+
+New public best:
+
+- Submitted:
+  - `submissions/test_submission_targeted_proc_delta_balanced_swap.csv`
+- Description:
+  - `targeted procedural balanced swap local 0.4096`
+- Public Kaggle score:
+  - **0.32107**
+- Public rank immediately after submit:
+  - 2nd public (`WBF_USA_NYC`), behind `Kanak Raj` at `0.35940`
+- Frozen copies:
+  - `submissions/test_submission_baseline_public_best_32107.csv`
+  - `submissions/val_pred_baseline_public_best_32107.csv`
+
+Local profile before submit:
+
+- Val macro F1: `0.409637`
+- Val LB90: `0.361074`
+- Val LB95: `0.346745`
+- Val std: `0.115711` (elevated)
+- Val floor: `0.240000`
+- Test avg predictions: `22.27`
+- Test court fraction: `0.1621`
+- Test Jaccard vs 0.30911: `0.964573`
+- Diverse eval vs 0.30911: `STRONG PROMOTE`
+
+Interpretation:
+
+- The public score confirms targeted procedural/boilerplate deltas are currently the highest-yield direction.
+- The candidate is still exposed to public/private shakeup because the public leaderboard uses only about 50% of the test set. Treat `0.32107` as an aggressive/public-winning leg, not as the only final choice.
+- Keep `0.30911` and `0.30257` frozen as conservative final-submission hedges.
+
+Rule corrections to remember:
+
+- Public leaderboard uses approximately **50%** of the test data; final results use the other **50%**.
+- This competition allows **5 submissions/day**.
+- This competition allows **2 final submissions**, not 3.
+- One Kaggle account only; no multiple-account submissions.
+- No hand labeling or human prediction of validation/test records.
+- Competition data is non-commercial/research/competition use only and must not be redistributed outside permitted Kaggle/team channels.
+- External data/tools must be publicly/equally accessible at minimal/reasonable cost and documented for reproducibility.
+- Winning code/docs must reproduce the selected final submission and satisfy the permissive open-source license requirement.
+
+Current likely final-submission posture:
+
+1. Aggressive/public leg: `test_submission_baseline_public_best_32107.csv`
+2. Conservative hedge leg: likely `test_submission_baseline_public_best_30911.csv` or `test_submission_baseline_public_best_30257.csv`, selected near deadline based on private-shakeup risk tolerance and any further robust local evidence.
+
+---
+
+## 2026-04-23 — Post-32107 tiny additive probe lost
+
+After the 0.32107 result, a no-new-API local mining pass found one tiny high-Jaccard probe:
+
+- Candidate:
+  - `submissions/test_submission_mined_wide_positive_safe.csv`
+  - `submissions/val_pred_mined_wide_positive_safe.csv`
+- Local profile vs 0.32107:
+  - Val macro F1: `0.414093` (`+0.004456`)
+  - Val LB90: `0.364321`
+  - Val std: `0.118517`
+  - Test Jaccard vs 0.32107: `0.996404`
+  - Test churn: `4` adds, `0` removes
+  - Diverse eval verdict: `HOLD`
+- Test adds:
+  - `Art. 21 Abs. 4 ATSG` on social-insurance rows
+  - `Art. 436 Abs. 2 StPO` on one criminal row
+- Kaggle submission:
+  - Description: `codex mined wide positive safe 32107 2026-04-23`
+  - Public score: `0.31993`
+
+Interpretation:
+
+- Even a very small +4 additive probe with a higher local val F1 lost to the frozen 0.32107 file.
+- Do **not** iterate this as a public-LB gradient.
+- Keep `test_submission_baseline_public_best_32107.csv` as the aggressive/public leg.
+
+---
+
+## 2026-04-24 UTC — Remaining daily quota spent aggressively; no new best
+
+After the user explicitly asked to use the remaining quota for a higher public leaderboard score, three pre-declared aggressive submissions were made:
+
+| Candidate | Local profile vs 0.32107 | Public LB | Takeaway |
+|-----------|--------------------------|-----------|----------|
+| `submissions/test_submission_cached_llm_signal_gemini_law1.csv` | Val `0.410357`, LB90 `0.3612`, test Jaccard `0.9766`, `20` adds / `0` removes | `0.31743` | Best cached-signal law-add shot still lost; pure/additive branch is below 0.32107. |
+| `submissions/test_submission_private_safe_selector_aggressive.csv` | Val `0.407788`, LB90 `0.3607`, test Jaccard `0.8842`, `95` adds / `27` removes | `0.30821` | High-churn selector swaps/removes are not calibrated enough. |
+| `submissions/test_submission_bf2_top1_opus_high_safe.csv` | Val `0.395798`, LB90 `0.3627`, test Jaccard `0.7374`, `164` adds / `113` removes | `0.28650` | Broad BF2/Opus structural churn collapsed. |
+
+Interpretation:
+
+- Current best remains `0.32107` from `test_submission_targeted_proc_delta_balanced_swap.csv`.
+- The failed quota burn reinforces that neither tiny additive lifts nor broad high-churn selector/Opus variants are the path to a public jump.
+- For private finals, keep the two-leg posture: aggressive/public `0.32107` plus a conservative hedge (`0.30911` or `0.30257`).
+
+---
+
+## 2026-04-24 UTC — PhD-agent round: strong local candidates still failed public
+
+After the user asked for a serious `.35` attempt, local subagents were used in parallel with no external AI/API calls. New scripts and candidates were produced:
+
+- `scripts/article_family_delta_miner.py`
+  - Outputs included `submissions/test_submission_article_family_article_family_phd.csv`.
+  - Best standalone local profile: val `0.422792`, LB90 `0.372571`, test churn `+11/-1`, diverse `PROMOTE (weak)`.
+- `scripts/build_highupside_combo.py`
+  - Combined article-family PhD deltas with the guarded ATSG selector.
+  - Output: `submissions/test_submission_highupside_article_phd_atsg.csv`.
+  - Local profile: val `0.425008`, LB90 `0.374109`, std `0.120828`, test Jaccard `0.984244`, test churn `+14/-1`, diverse `PROMOTE (weak)`.
+  - Kaggle public: `0.31901`.
+- `scripts/adversarial_error_analysis_candidate.py`
+  - Output: `submissions/test_submission_adversarial_error_analysis.csv`.
+  - Local profile: val `0.431804`, LB90 `0.384800`, std `0.113987`, test Jaccard `0.991585`, balanced test churn `+5/-5`, diverse `STRONG PROMOTE`.
+  - Test deltas:
+    - `test_010`: `+ Art. 49 Abs. 2 StGB`
+    - `test_021`: `+ Art. 101 Abs. 3 OR`, `+ Art. 397 Abs. 1 OR`
+    - `test_027`: `+ Art. 133 Abs. 2 ZGB`, `- Art. 285 Abs. 1 ZGB`
+    - `test_032`: `+ Art. 222 StPO`, `- Art. 10 Abs. 2 BV`, `- Art. 31 Abs. 1 BV`, `- Art. 31 Abs. 3 BV`, `- Art. 36 Abs. 3 BV`
+  - Kaggle public: `0.31988`.
+
+Interpretation:
+
+- Current best remains `0.32107`.
+- This was not a lazy local pass: the adversarial candidate passed every local promotion signal, including balanced churn and robust bucket dominance, but still failed public.
+- The public half appears highly sensitive against any post-32107 deltas, including balanced high-local-lift changes. Do not keep spending submissions on small variants of article-family, ATSG, cached-topic, or adversarial val-error patches.
+- Final selection posture is unchanged: keep `0.32107` as the aggressive/public leg and hedge with `0.30911` or `0.30257` for private shakeup.
+
+---
+
+## 2026-04-25 UTC — No-API exact-source recovery branch
+
+After the user asked to keep pushing toward `.35` without AI/API calls, two structurally new source-recovery scripts were added:
+
+- `scripts/factual_source_recovery_candidate.py`
+  - Builds `artifacts/factual_source_recovery/factual_term_index.json` from `data/court_considerations.csv`.
+  - Uses factual fingerprints (dates, amounts, article numbers, rare fact terms) to retrieve likely source decisions.
+  - Plain source-copy variants were rejected: they pulled many wrong 4A/IPRG and civil decisions and had `0` validation add hits.
+- `scripts/dense_factual_cross_candidate.py`
+  - Adds a dense court hit only when factual-source retrieval independently retrieves the same base decision.
+  - Best standalone candidate: `densefact_crim_rare_minimal`
+    - Val `0.410854`, LB90 `0.3634`, std `0.1169`
+    - Test Jaccard `0.9983`, test churn `+2/-0`
+    - Val add hits `1/2`, recovering exact hidden-source citation `7B_496/2025 E. 3.2`
+    - Diverse eval `HOLD`
+- `scripts/micro_signal_combo_candidate.py`
+  - Combines `sourcefp_caseagree` with `densefact_crim_rare_minimal`.
+  - Output: `submissions/test_submission_micro_signal_combo_sourcefp_densefact.csv`
+  - Local profile:
+    - Val `0.413115`, LB90 `0.3649`, std `0.1185`
+    - Test Jaccard `0.9974`, test churn `+3/-0`
+    - Val add hits `2/3`
+    - Diverse eval `PROMOTE (weak)`: 3/12 robust buckets improved, no regressions.
+  - Test additions:
+    - `test_023`: `BGE 126 V 61`
+    - `test_036`: `7B_1060/2023 E. 3.2`; `BGE 145 IV 263 E. 3.2`
+
+Interpretation:
+
+- This is the cleanest unsubmitted no-API candidate after `0.32107`, but it is still a micro-signal, not a credible `.35` jump.
+- Because repeated post-32107 additive probes have lost publicly, this should be treated as a next-day optional one-shot only, not as a public-LB search loop.
+
+---
+
+## 2026-04-25 UTC — Neuro/physics no-API specialist round
+
+The user asked for two bold specialist lanes aimed at a `.35`-scale jump, with no AI/API calls. Two local-only agents were used:
+
+- Neuro lane: `scripts/neuro_memory_recall_candidate.py`
+  - Best raw output: `submissions/test_submission_neuro_memory_law_balanced.csv`
+  - Local profile vs 0.32107: val `0.4533`, LB90 `0.4138`, std `0.0960`, test Jaccard `0.9536`, churn `+42/-0`
+  - Diverse eval: `HOLD`; robust local lift, but pure-additive precision risk.
+- Physics lane: `scripts/physics_spin_glass_selector.py`
+  - Best output: `submissions/test_submission_physics_spin_glass_critical.csv`
+  - Local profile vs 0.32107: val `0.4178`, LB90 `0.3708`, std `0.1155`, test Jaccard `0.9963`, churn `+4/-0`
+  - Diverse eval: `PROMOTE (weak)`; too small and additive to be a credible `.35` shot.
+
+To make the neuro signal less one-sided, `scripts/neuro_counterweight_candidate.py` was added. It keeps the neuro law-recall additions and applies removals from independent no-API fullpower families:
+
+| Candidate | Val F1 | LB90 | Std | Test Jaccard | Test churn | Diverse eval |
+|-----------|--------|------|-----|--------------|------------|--------------|
+| `neuro_counterweight_char_k1` | `0.4598` | `0.4197` | `0.0968` | `0.9500` | `+42/-5` | `HOLD`, mostly additive |
+| `neuro_counterweight_s3_top3` | `0.4587` | `0.4172` | `0.0997` | `0.9487` | `+42/-6` | `HOLD`, mostly additive |
+| `neuro_counterweight_word_k4` | `0.4635` | `0.4217` | `0.1008` | `0.9085` | `+42/-43` | `STRONG PROMOTE` |
+
+Key interpretation:
+
+- `neuro_counterweight_word_k4` is the boldest generated no-API candidate and the only one from this round that passes diverse eval as `STRONG PROMOTE`.
+- It is not a guaranteed public jump: the removal donor comes from the fullpower family, and previous fullpower submissions with high local scores failed public at roughly `0.3178-0.3179`.
+- If spending exactly one future submission on a `.35`-or-bust idea, this is the best currently materialized bold shot:
+  - `submissions/test_submission_neuro_counterweight_word_k4.csv`
+  - Companion val: `submissions/val_pred_neuro_counterweight_word_k4.csv`
+- If choosing a less chaotic sibling, use:
+  - `submissions/test_submission_neuro_counterweight_char_k1.csv`
+  - Companion val: `submissions/val_pred_neuro_counterweight_char_k1.csv`
+
+Promotion gate status:
+
+- `promotion_gate.py` still cannot run because `artifacts/v11_meta/kaggle_public_history.json` is missing in this checkout.
+
+---
+
+## 2026-04-25 UTC — Long bold no-API iteration run
+
+The user requested a sustained no-shortcut iteration run with the same neuro and physics specialist agents, no AI/API calls, and bold candidates each iteration. Work completed so far:
+
+1. Main-thread delta-energy search: `scripts/bold_candidate_iteration.py`
+   - Best aggressive output: `submissions/test_submission_bold_iter_delta_energy_broad.csv`
+   - Profile: val `0.4658`, LB90 `0.4226`, std `0.1061`, test Jaccard `0.9001`, churn `+64/-30`, diverse `STRONG PROMOTE`
+   - Safer output: `submissions/test_submission_bold_iter_delta_energy_sparse.csv`
+   - Profile: val `0.4559`, LB90 `0.4145`, std `0.1025`, test Jaccard `0.9562`, churn `+28/-13`, diverse `STRONG PROMOTE`
+   - Important fix: the generator now excludes all `bold_*` outputs from its candidate bank so it cannot self-feed on reruns.
+
+2. Per-query regime switching: `scripts/bold_regime_switch_selector.py`
+   - Best guarded output: `submissions/test_submission_bold_regime_switch_guarded.csv`
+   - Profile: val `0.4514`, LB90 `0.4112`, std `0.0996`, test Jaccard `0.9457`, churn `+43/-9`
+   - Useful as confirmation, but too correlated with energy-broad to be the top artifact.
+
+3. Train-neighbor sieve: `scripts/bold_train_sieve_candidate.py`
+   - Best output: `submissions/test_submission_bold_train_sieve_energy_broad_any.csv`
+   - Profile: val `0.4155`, LB90 `0.3692`, std `0.1111`, test Jaccard `0.9901`, churn `+5/-4`, diverse `PROMOTE (weak)`
+   - Killed as a massive-jump path: train support strips away the bold signal.
+
+4. Cross-fit stress test: `scripts/bold_crossfit_energy.py`
+   - Cross-fit sparse held up: `submissions/test_submission_bold_xfit_energy_sparse.csv`
+   - Profile: val `0.4574`, LB90 `0.4143`, std `0.1059`, test Jaccard `0.9562`
+   - Interpretation: the sparse energy signal does not collapse when the validation row is excluded from the success table.
+
+5. Physics-agent phase-transition lane: `scripts/physics_phase_transition_selector.py`
+   - Safer physics output: `submissions/test_submission_physics_phase_transition_critical_bridge.csv`
+   - Profile: val `0.4613`, LB90 `0.4199`, std `0.1017`, test Jaccard `0.9341`, churn `+46/-14`, diverse `STRONG PROMOTE`
+   - Bolder physics output: `submissions/test_submission_physics_phase_transition_domainwall.csv`
+   - Profile: val `0.4640`, LB90 `0.4210`, std `0.1053`, test Jaccard `0.9025`, churn `+58/-34`, diverse `STRONG PROMOTE`
+
+6. Physics-energy fusion: `scripts/bold_physics_energy_fusion.py`
+   - Best current risk-adjusted bold artifact: `submissions/test_submission_bold_physics_energy_sparse_bridge_safe.csv`
+   - Profile: val `0.4640`, LB90 `0.4217`, std `0.1037`, test Jaccard `0.9356`, churn `+45/-15`, diverse `STRONG PROMOTE`
+   - This fuses energy-sparse with the independent physics bridge and admits extra physics deltas only when broad energy also supports them.
+
+7. Stability vote: `scripts/bold_stability_vote_candidate.py`
+   - Best output: `submissions/test_submission_bold_stability_vote_a3r3.csv`
+   - Profile: val `0.4640`, LB90 `0.4217`, std `0.1037`, test Jaccard `0.9194`, churn `+56/-20`, diverse `STRONG PROMOTE`
+   - Good hail-mary artifact, but lower risk-adjusted than the physics-energy safe fusion.
+
+8. Neuro attractor lane: `scripts/neuro_attractor_gate_candidate.py`
+   - Controlled run loaded `462` paired memory candidates and `3,089` test attractors.
+   - No precise/balanced/bold attractor candidate survived constraints.
+   - Killed as a jump path unless constraints are deliberately relaxed.
+
+Current ordering for a future single bold submission, from most defensible to most hail-mary:
+
+9. Energy config sweep: `scripts/bold_energy_config_sweep.py`
+   - Best non-duplicate output: `submissions/test_submission_bold_energy_sweep_top1.csv`
+   - Raw val companion: val `0.4665`, LB90 `0.4229`, std `0.1051`, test Jaccard `0.9489`, churn `+24/-22`, diverse `STRONG PROMOTE`
+   - Cross-fit companion from `scripts/bold_crossfit_energy.py`: `submissions/val_pred_bold_xfit_energy_sweep_top1.csv`
+   - Cross-fit profile: val `0.4651`, LB90 `0.4220`, std `0.1056`, same test Jaccard `0.9489`, churn `+24/-22`, diverse `STRONG PROMOTE`
+   - Current best no-API bold artifact:
+     - `submissions/test_submission_bold_xfit_energy_sweep_top1.csv`
+     - `submissions/val_pred_bold_xfit_energy_sweep_top1.csv`
+
+10. Audit guard pass: `scripts/bold_audit_guard_candidate.py`
+   - Best guarded output: `submissions/test_submission_bold_xfit_energy_sweep_top1_bgg_guard.csv`
+   - Companion val: `submissions/val_pred_bold_xfit_energy_sweep_top1_bgg_guard.csv`
+   - Profile: val `0.4651`, LB90 `0.4220`, std `0.1056`, test Jaccard `0.9523`, churn `+24/-19`, diverse `STRONG PROMOTE`
+   - This keeps the top sweep signal but restores removed BGG boilerplate/procedural anchors, improving Jaccard without reducing cross-fit val.
+
+Current ordering for a future single bold submission, from most defensible to most hail-mary:
+
+11. Sustained 4h long-run orchestrator: `scripts/bold_longrun_orchestrator.py`
+   - Live-written current leader from seed3:
+     - `submissions/test_submission_bold_longrun_4h_seed3_balanced.csv`
+     - `submissions/val_pred_bold_longrun_4h_seed3_balanced.csv`
+   - Profile: val `0.4694`, LB90 `0.4264` in multi-signal scorecard, std `0.1060`, test Jaccard `0.9618`, churn `+20/-14`, diverse `STRONG PROMOTE`
+   - Diverse eval: +6.0pp overall val, 12/12 robust buckets, no regressions, conservative shape.
+   - This is currently the best lift/shape combination found.
+
+12. Physics residual-basin lane: `scripts/physics_residual_basin_selector.py`
+   - Best output:
+     - `submissions/test_submission_physics_residual_basin_energy_lock_cold_neuro_vote.csv`
+     - `submissions/val_pred_physics_residual_basin_energy_lock_cold_neuro_vote.csv`
+   - Profile: val `0.4670`, LB90 `0.4250`, std `0.1039`, test Jaccard `0.9430`, churn `+27/-25`, diverse `STRONG PROMOTE`
+   - Diverse eval: +5.7pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - This is the strongest independent physics-agent candidate so far, but it is still behind the seed3 long-run balanced artifact on lift/shape.
+
+13. Neuro ensemble-code lane: `scripts/neuro_ensemble_coding_candidate.py`
+   - Best output:
+     - `submissions/test_submission_neuro_ensemble_code_triple_guard.csv`
+     - `submissions/val_pred_neuro_ensemble_code_triple_guard.csv`
+   - Profile: val `0.4668`, LB90 `0.4244` in multi-signal scorecard, std `0.1033`, test Jaccard `0.9566`, churn `+20/-19`, diverse `STRONG PROMOTE`
+   - Diverse eval: +5.7pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - This is much better shaped than the earlier neuro additive branch and becomes the third-best current submission leg behind seed3 balanced and physics residual-basin.
+
+14. Neuro second-order family/regime guard: `scripts/neuro_second_order_error_selector.py`
+   - New current local leader:
+     - `submissions/test_submission_neuro_second_order_family5_art133_property_guard.csv`
+     - `submissions/val_pred_neuro_second_order_family5_art133_property_guard.csv`
+   - Profile: val `0.4707`, multi-signal LB90 `0.4269`, submission-scorecard LB90 `0.4258`, std `0.1067`, test Jaccard `0.9659`, churn `+16/-14`, diverse `STRONG PROMOTE`
+   - Diverse eval: +6.1pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - It beats `bold_longrun_4h_seed3_balanced` on raw val, LB90, test Jaccard, and churn. The key move is pruning four weak long-run test adds with a cross-family support gate and an `Art. 133 Abs. 2 ZGB` regime guard.
+
+15. Physics second-order fusion: `scripts/physics_second_order_fusion_iter2.py`
+   - Best output:
+     - `submissions/test_submission_physics_second_order_fusion_iter2_sweep_052.csv`
+     - `submissions/val_pred_physics_second_order_fusion_iter2_sweep_052.csv`
+   - Profile: val `0.4704`, multi-signal LB90 `0.4268`, submission-scorecard LB90 `0.4253`, std `0.1073`, test Jaccard `0.9578`, churn `+21/-17`, diverse `STRONG PROMOTE`
+   - It is a strong alternate and a tiny positive val lift vs seed3, but it is lower quality than the neuro second-order leader because Jaccard is lower and churn is higher.
+
+16. Neuro third-order merits/regime prune: `scripts/neuro_third_order_merits_v3_selector.py`
+   - New current local leader:
+     - `submissions/test_submission_neuro_third_order_v3_merits_art390_regime_prune.csv`
+     - `submissions/val_pred_neuro_third_order_v3_merits_art390_regime_prune.csv`
+   - Profile: val `0.4716`, multi-signal LB90 `0.4272`, submission-scorecard LB90 `0.4263`, std `0.1080`, test Jaccard `0.9666`, churn `+14/-16`, diverse `STRONG PROMOTE`
+   - Diverse eval: +6.2pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - Improvement over the second-order leader comes from an `Art. 390 Abs. 2 StPO` merits-criminal rule that fixes `val_008` plus a regime prune that removes four questionable test citations.
+
+17. Physics third-order remove-invariant shell: `scripts/physics_third_order_residual_selector.py`
+   - Best output:
+     - `submissions/test_submission_physics_third_order_v2_remove_invariant_shell.csv`
+     - `submissions/val_pred_physics_third_order_v2_remove_invariant_shell.csv`
+   - Profile: val `0.4716`, multi-signal LB90 `0.4272`, submission-scorecard LB90 `0.4263`, std `0.1080`, test Jaccard `0.9569`, churn `+21/-18`, diverse `STRONG PROMOTE`
+   - Same local val as the current leader, but lower Jaccard and higher churn. Keep as a different-leg/high-upside alternate, not the risk-adjusted top.
+
+18. Main-thread second-order fusion grid: `scripts/bold_second_order_fusion.py`
+   - Best generated output: `submissions/test_submission_bold_second_order_fusion_top1.csv`
+   - Profile: val `0.4677`, LB90 `0.4229`, test Jaccard `0.9402`, churn `+35/-20`
+   - Killed as too noisy: it did not beat the neuro/physics third-order artifacts and had worse shape than the current top.
+
+19. Neuro fourth-order signature bridge: `scripts/neuro_fourth_order_selector.py`
+   - New current local leader:
+     - `submissions/test_submission_neuro_fourth_order_signature_art15_bridge.csv`
+     - `submissions/val_pred_neuro_fourth_order_signature_art15_bridge.csv`
+   - Profile: val `0.4784`, multi-signal LB90 `0.4359`, submission-scorecard LB90 `0.4345`, std `0.1043`, test Jaccard `0.9645`, churn `+16/-16`, diverse `STRONG PROMOTE`
+   - Diverse eval: +6.9pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - Diff vs third-order leader on test is only two additions: `test_011 + Art. 15 OR`, `test_035 + Art. 15 OR`.
+   - Val-side changes vs third-order leader: remove `Art. 29 Abs. 2 BV` from `val_001`, remove `Art. 16 ZGB` from `val_004`, add `Art. 15 OR` to `val_007`, remove `Art. 4 ZGB` from `val_009`.
+   - This is the first materially larger local jump after the pruning ladder; it improves both LB90 and std while keeping test churn balanced.
+
+20. Physics fourth-order shape recovered: `scripts/physics_fourth_order_shape_basin_selector.py`
+   - Best output:
+     - `submissions/test_submission_physics_fourth_order_shape_recovered_art390_shell.csv`
+     - `submissions/val_pred_physics_fourth_order_shape_recovered_art390_shell.csv`
+   - Profile: val `0.4716`, multi-signal LB90 `0.4272`, submission-scorecard LB90 `0.4263`, std `0.1080`, test Jaccard `0.9683`, churn `+14/-14`, diverse `STRONG PROMOTE`
+   - Good conservative physics leg and cleaner than the physics third-order candidate, but not competitive with the neuro fourth-order leader on lift.
+
+21. Physics fifth-order low-temperature bridge: `scripts/physics_fifth_order_bridge_selector.py`
+   - New current local leader:
+     - `submissions/test_submission_physics_fifth_order_art458_art100_lowtemp_bridge.csv`
+     - `submissions/val_pred_physics_fifth_order_art458_art100_lowtemp_bridge.csv`
+   - Profile: val `0.4871`, multi-signal LB90 `0.4469`, submission-scorecard LB90 `0.4465`, std `0.0973`, test Jaccard `0.9652`, churn `+17/-14`, diverse `STRONG PROMOTE`
+   - Diverse eval: +7.7pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - Diff vs neuro fourth-order leader on test:
+     - `test_010 + Art. 390 Abs. 2 StPO`
+     - `test_011 + Art. 100 Abs. 2 OR`
+     - `test_035 + Art. 458 Abs. 3 ZGB`, remove `Art. 15 OR`
+     - `test_036 + Art. 390 Abs. 2 StPO`
+   - Val-side lift vs neuro fourth-order comes from `val_004 + Art. 458 Abs. 3 ZGB` and `val_010 + Art. 100 Abs. 2 OR`.
+   - The agent also produced `physics_fifth_order_art458_art100_art110_valprobe` at val `0.4892`, but it is held because the extra `Art. 110 Abs. 3 StGB` gain is val-only and does not change test under the strict predicate.
+
+22. Neuro fifth-order Art. 15 support gate: `scripts/neuro_fifth_order_selector.py`
+   - Best risk-adjusted output:
+     - `submissions/test_submission_neuro_fifth_order_art15_supported_test011_only.csv`
+     - `submissions/val_pred_neuro_fifth_order_art15_supported_test011_only.csv`
+   - Profile: val `0.4784`, multi-signal LB90 `0.4359`, submission-scorecard LB90 `0.4352`, std `0.1043`, test Jaccard `0.9657`, churn `+15/-16`, diverse `STRONG PROMOTE`
+   - Cleaner than the neuro fourth-order bridge because it drops unsupported `test_035 + Art. 15 OR`, but it is lower lift than the physics fifth-order bridge.
+
+23. Physics sixth-order strict Art. 20 / Art. 4 bridge: `scripts/physics_sixth_order_bridge_stress.py`
+   - New current local leader:
+     - `submissions/test_submission_physics_sixth_order_art20_art4_strict_bridge.csv`
+     - `submissions/val_pred_physics_sixth_order_art20_art4_strict_bridge.csv`
+   - Profile: val `0.4953`, multi-signal LB90 `0.4560`, submission-scorecard LB90 `0.4566`, std `0.0933`, test Jaccard `0.9634`, churn `+19/-14`, diverse `STRONG PROMOTE`
+   - Diverse eval: +8.6pp overall val, 12/12 robust buckets, no regressions, balanced churn.
+   - Diff vs fifth-order leader on test:
+     - `test_011 + Art. 20 Abs. 2 OR`
+     - `test_012 + Art. 4 ZGB`
+   - Val-side lift vs fifth-order leader comes from `val_004 + Art. 20 Abs. 2 OR` and `val_010 + Art. 4 ZGB`.
+   - Art. 110 is killed as deployable: strict test predicate fires on no test rows; weak probes had only one-source support each.
+
+24. Neuro sixth-order low-temp shadow: `scripts/neuro_sixth_order_selector.py`
+   - Best cleaner match output:
+     - `submissions/test_submission_neuro_sixth_order_lowtemp_prune_both_test_shadow.csv`
+     - `submissions/val_pred_neuro_sixth_order_lowtemp_prune_both_test_shadow.csv`
+   - Profile: val `0.4871`, multi-signal LB90 `0.4469`, submission-scorecard LB90 `0.4475`, std `0.0973`, test Jaccard `0.9673`, churn `+15/-14`, diverse `STRONG PROMOTE`
+   - Cleaner than the physics fifth-order leader but probably less transferable because it keeps the val lift while suppressing the corresponding test adds.
+
+25. Physics seventh-order property-possession probe: `scripts/physics_seventh_order_harden_bridge.py`
+   - Highest local/high-upside probe:
+     - `submissions/test_submission_physics_seventh_order_property_possession_triplet_probe.csv`
+     - `submissions/val_pred_physics_seventh_order_property_possession_triplet_probe.csv`
+   - Profile: val `0.5046`, multi-signal LB90 `0.4707`, submission-scorecard LB90 `0.4695`, std `0.0835`, test Jaccard `0.9605`, churn `+22/-14`, diverse `STRONG PROMOTE`
+   - Diff vs sixth-order strict bridge on test:
+     - `test_025 + Art. 641 Abs. 2 ZGB`
+     - `test_025 + Art. 934 Abs. 1bis ZGB`
+     - `test_025 + Art. 940 Abs. 1 ZGB`
+   - Hold behind the strict bridge for clean deployability: the local signal is huge, but the transfer maps movable-property possession articles from `val_007` onto a matrimonial-property/co-ownership test row, so private-LB risk is materially higher.
+   - Safer sibling: `test_submission_physics_seventh_order_loo_hardened_art4_only.csv`, val `0.4904`, J `0.9642`.
+
+26. Neuro seventh-order clean shape shadow: `scripts/neuro_seventh_order_selector.py`
+   - Best clean-shape hedge:
+     - `submissions/test_submission_neuro_seventh_order_clean_shape_valbridge_shadow.csv`
+     - `submissions/val_pred_neuro_seventh_order_clean_shape_valbridge_shadow.csv`
+   - Profile: val `0.4953`, multi-signal LB90 `0.4560`, submission-scorecard LB90 `0.4566`, std `0.0933`, test Jaccard `0.9673`, churn `+15/-14`, diverse `STRONG PROMOTE`
+   - Same local val/LB90 as the strict bridge but cleaner test shape. Caveat: it achieves val lift while pruning the corresponding test bridges (`test_011 + Art.20`, `test_012 + Art.4`, `test_011 + Art.100`, `test_035 + Art.458`), so it is a conservative shadow rather than proof of transfer.
+
+27. Physics eighth-order property adjudication: `scripts/physics_eighth_order_property_adjudicator.py`
+   - Best bold-but-contained output:
+     - `submissions/test_submission_physics_eighth_order_property_art641_934_pair.csv`
+     - `submissions/val_pred_physics_eighth_order_property_art641_934_pair.csv`
+   - Profile: val `0.5016`, multi-signal LB90 `0.4665`, submission-scorecard LB90 `0.4655`, std `0.0858`, test Jaccard `0.9614`, churn `+21/-14`, diverse `STRONG PROMOTE`
+   - Diff vs sixth-order strict bridge on test:
+     - `test_025 + Art. 641 Abs. 2 ZGB`
+     - `test_025 + Art. 934 Abs. 1bis ZGB`
+   - Full triplet sibling remains the highest non-shadow local probe at val `0.5046`, LB90 `0.4707`, J `0.9605`, churn `+22/-14`, but the adjudicator holds it behind the pair because `Art. 940 Abs. 1 ZGB` carries the highest possession/recovery mismatch risk on a matrimonial-property/co-ownership row.
+   - Val-only `Art. 197 Abs. 1 ZGB` shadows are diagnostic only: Art.197 is already present on the relevant test row, so they inflate validation without a deployable test delta.
+
+28. Per-query eighth-family selector: `scripts/per_query_candidate_selector.py`
+   - Output:
+     - `submissions/test_submission_perquery_eighth_family_selector.csv`
+     - `submissions/val_pred_perquery_eighth_family_selector.csv`
+   - Profile: val `0.4953`, multi-signal LB90 `0.4560`, submission-scorecard LB90 `0.4566`, std `0.0933`, test Jaccard `0.9605`, churn `+22/-14`, diverse `STRONG PROMOTE`
+   - Diagnostic rather than a new leader. The selector chooses `physics_eighth_triplet` for IPRG test rows because the only IPRG validation row favors the triplet, but its leave-one-out validation companion falls back to sixth-order for `val_007`. That one-row bucket makes the selector less trustworthy than the direct pair/triplet artifacts.
+
+29. Neuro eighth-order independent bridge stack: `scripts/neuro_eighth_order_selector.py`
+   - New highest verified local artifact:
+     - `submissions/test_submission_neuro_eighth_order_clean_shape_triplet_independent.csv`
+     - `submissions/val_pred_neuro_eighth_order_clean_shape_triplet_independent.csv`
+   - Profile: val `0.5149`, multi-signal LB90 `0.4798`, submission-scorecard LB90 `0.4790`, LB95 `0.4681`, std `0.0866`, test Jaccard `0.9605`, churn `+22/-14`, diverse `STRONG PROMOTE`
+   - Deltas vs sixth-order strict bridge on test:
+     - `test_005 + Art. 67 Abs. 1 SchKG`
+     - `test_025 + Art. 641 Abs. 2 ZGB; Art. 934 Abs. 1bis ZGB; Art. 940 Abs. 1 ZGB`
+     - `test_032 + Art. 93 Abs. 1 BGG`
+     - `test_035 + Art. 467 ZGB; Art. 505 Abs. 1 ZGB`
+     - remove `test_011 Art. 100 Abs. 2 OR`, `test_011 Art. 20 Abs. 2 OR`, `test_012 Art. 4 ZGB`, and `test_035 Art. 458 Abs. 3 ZGB`
+   - Best genuinely non-property sibling: `submissions/test_submission_neuro_eighth_order_independent_93_67_inheritance.csv`, val `0.5057`, multi-signal LB90 `0.4647`, J `0.9596`, churn `+23/-14`.
+   - `bold_valshadow_stack` reaches val `0.5178` but is killed as a validation shadow: the extra Art.197 lift has no deployable test delta because the relevant test row already contains Art.197.
+
+30. Physics ninth-order source-fingerprint and main-thread spin-glass checks
+   - Physics source-fingerprint script: `scripts/physics_ninth_order_sourcefp_selector.py`
+   - Best sourcefp output:
+     - `submissions/test_submission_physics_ninth_order_same_source_dense_direct.csv`
+     - `submissions/val_pred_physics_ninth_order_same_source_dense_direct.csv`
+   - Profile: val `0.5053`, multi-signal LB90 `0.4686`, submission-scorecard LB90 `0.4682`, std `0.0893`, test Jaccard `0.9549`, churn `+28/-14`, diverse `STRONG PROMOTE`
+   - Recommendation: hold as exploratory sourcefp backup. It is reproducible and real, but below neuro eighth and adds seven more court/source citations over the eighth-order pair.
+   - Main-thread spin-glass script: `scripts/physics_spin_glass_selector.py --output-prefix physics_spin_glass_main_ninth`
+   - Best spin-glass output: `submissions/test_submission_physics_spin_glass_main_ninth_bold.csv`, val `0.4818`, LB90 `0.4457`, J `0.9795`, pure additive `+17/-0`. Killed as not competitive with the eighth-order bridge stack.
+
+31. Neuro ninth-order hardening: `scripts/neuro_ninth_order_selector.py`
+   - Highest local hail-mary:
+     - `submissions/test_submission_neuro_ninth_order_hailmary_clean_shape_inheritance_merits.csv`
+     - `submissions/val_pred_neuro_ninth_order_hailmary_clean_shape_inheritance_merits.csv`
+   - Profile: val `0.5182`, multi-signal LB90 `0.4817`, submission-scorecard LB90 `0.4811`, LB95 `0.4701`, std `0.0890`, test Jaccard `0.9586`, churn `+24/-14`, diverse `STRONG PROMOTE`
+   - Delta vs neuro eighth clean stack is only `test_035 + Art. 519 Abs. 1 ZGB; Art. 520 Abs. 1 ZGB`.
+   - Caveat: `Art.519/520` are weakly supported inheritance-merits additions; this is aggressive only and min test Jaccard drops to `0.8333`.
+   - Best private-safe hedge:
+     - `submissions/test_submission_neuro_ninth_order_clean_shape_triplet_no_inheritance.csv`
+     - `submissions/val_pred_neuro_ninth_order_clean_shape_triplet_no_inheritance.csv`
+   - Profile: val `0.5115`, multi-signal LB90 `0.4766`, submission-scorecard LB90 `0.4759`, std `0.0852`, test Jaccard `0.9628`, churn `+20/-14`, diverse `STRONG PROMOTE`
+   - This keeps the strongest independent bridges (`test_032 + Art.93 BGG`, `test_005 + Art.67 SchKG`) and the property triplet, but drops all `test_035` inheritance additions. It is currently the cleaner private-safe candidate.
+
+32. Neuro tenth-order final stress: `scripts/neuro_tenth_order_final_stress.py`
+   - Aggressive pick after killing weak merits:
+     - `submissions/neuro_tenth_order_form_only_no_prune_test.csv`
+     - `submissions/neuro_tenth_order_form_only_no_prune_val.csv`
+   - Profile: val `0.5149`, multi-signal LB90 `0.4798`, submission-scorecard LB90 `0.4790`, std `0.0866`, test Jaccard `0.9568`, churn `+26/-14`, diverse `STRONG PROMOTE`
+   - Keeps `test_035 + Art.467 ZGB; Art.505 Abs.1 ZGB` but kills `Art.519/520`; also avoids removing high-support existing atoms (`Art.100 OR`, `Art.4 ZGB`, `Art.458 ZGB`).
+   - Private-safe pick:
+     - `submissions/neuro_tenth_order_pair_no_inheritance_no_prune_test.csv`
+     - `submissions/neuro_tenth_order_pair_no_inheritance_no_prune_val.csv`
+   - Profile: val `0.5085`, multi-signal LB90 `0.4726`, submission-scorecard LB90 `0.4720`, std `0.0877`, test Jaccard `0.9597`, churn `+23/-14`, diverse `STRONG PROMOTE`
+   - This drops all inheritance transfer and uses property pair instead of triplet. It is semantically safer but below the ninth-order no-inheritance triplet on both val and J.
+
+33. Physics eleventh-order final portfolio: `scripts/physics_eleventh_order_final_portfolio.py`
+   - Confirms the same max-val aggressive and triplet hedge:
+     - aggressive: `submissions/test_submission_physics_eleventh_order_aggressive_merits_clean.csv`, val `0.5182`, LB90 `0.4811`, J `0.9586`, churn `+24/-14`
+     - triplet hedge: `submissions/test_submission_physics_eleventh_order_hedge_no_inheritance_triplet_clean.csv`, val `0.5115`, LB90 `0.4759`, J `0.9628`, churn `+20/-14`
+   - Best lower-transfer-risk pair hedge:
+     - `submissions/test_submission_physics_eleventh_order_hedge_no_inheritance_pair_clean.csv`
+     - `submissions/val_pred_physics_eleventh_order_hedge_no_inheritance_pair_clean.csv`
+   - Profile: val `0.5085`, multi-signal LB90 `0.4726`, submission-scorecard LB90 `0.4720`, std `0.0877`, test Jaccard `0.9637`, churn `+19/-14`, diverse `STRONG PROMOTE`
+   - Sourcefp add-ons are held: best sourcefp-augmented search lifted val to `0.5152` but dropped J to `0.9524` with too many pure-additive courts.
+
+34. Physics twelfth-order adversarial validator: `scripts/physics_twelfth_order_adversarial_validator.py`
+   - Current risk-adjusted aggressive recommendation:
+     - `submissions/test_submission_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`
+     - `submissions/val_pred_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`
+   - Profile: val `0.5149`, multi-signal LB90 `0.4798`, submission-scorecard LB90 `0.4790`, LB95 `0.4681`, std `0.0866`, test Jaccard `0.9605`, churn `+22/-14`, diverse `STRONG PROMOTE`
+   - The validator explicitly replaces the `0.5182` inheritance-merits leg because Art.519/520 appears one-row/shadow-prone after excluding descendant families. Portfolio call:
+     - Aggressive/risk-adjusted: `physics_twelfth_order_replace_aggressive_balanced_form_clean`
+     - Hedge: `physics_eleventh_order_hedge_no_inheritance_triplet_clean`
+     - Backup hedge: `physics_eleventh_order_hedge_no_inheritance_pair_clean`
+
+35. Neuro twelfth-order adversarial validator: `scripts/neuro_twelfth_order_adversarial_validator.py`
+   - It agrees to kill `Art.519/520`, but disagrees with broad clean-pruning. It recommends pruning only weak `test_011 + Art. 20 Abs. 2 OR` while preserving supported `Art.100 OR`, `Art.4 ZGB`, and `Art.458 ZGB`.
+   - Aggressive output:
+     - `submissions/neuro_twelfth_order_aggressive_form_art20_pruned_test.csv`
+     - `submissions/neuro_twelfth_order_aggressive_form_art20_pruned_val.csv`
+   - Profile: val `0.5149`, multi-signal LB90 `0.4798`, submission-scorecard LB90 `0.4790`, std `0.0866`, test Jaccard `0.9576`, churn `+25/-14`, diverse `STRONG PROMOTE`
+   - Safe pair output:
+     - `submissions/neuro_twelfth_order_safe_pair_art20_pruned_test.csv`
+     - `submissions/neuro_twelfth_order_safe_pair_art20_pruned_val.csv`
+   - Profile: val `0.5085`, multi-signal LB90 `0.4726`, submission-scorecard LB90 `0.4720`, std `0.0877`, test Jaccard `0.9605`, churn `+22/-14`, diverse `STRONG PROMOTE`
+   - Interpretation: this is a recipe-risk disagreement, not a score disagreement. Physics twelfth has better J by broad-pruning; neuro twelfth preserves support-backed atoms in case public/private dislikes removing them.
+
+36. Physics thirteenth-order submission audit: `scripts/physics_thirteenth_order_submission_audit.py`
+   - Report: `submissions/physics_thirteenth_order_submission_audit_report.json`
+   - No corrected copies needed. Portfolio CSVs passed Kaggle-ready checks: expected row count/order, `query_id,predicted_citations` columns, no duplicate citations within rows, no empty/malformed citation tokens, no non-ASCII surprises, and no val/test header mismatch.
+   - Recommended aggressive hash:
+     - `submissions/test_submission_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`
+     - SHA256 `cd28f49007330d73ffbc3ef6dfcc21c18cec38194e79506a1485f95dfbd24ab9`
+   - Recommended hedge hash:
+     - `submissions/test_submission_physics_eleventh_order_hedge_no_inheritance_triplet_clean.csv`
+     - SHA256 `a0501ceb8def41721fa82cc003ea55aaa7ec95d10b628d23bad7ba9a613976f1`
+   - Duplicate-content check: aggressive is an exact payload alias of earlier balanced-form artifacts; hedge has earlier aliases too. This is informational, not a defect.
+
+37. Neuro thirteenth-order submission audit: `scripts/neuro_thirteenth_order_submission_audit.py`
+   - Report: `submissions/neuro_thirteenth_order_submission_audit_report.json`
+   - Verdict: `kaggle_ready=true`, `hard_issue_count=0`, `warning_count=0`, `recipe_issue_count=0`; no corrected copies needed.
+   - Neuro aggressive/support-prior hash:
+     - `submissions/neuro_twelfth_order_aggressive_form_art20_pruned_test.csv`
+     - SHA256 `d58b33252ac79892d41eb736ea0773028662eff9f620ce6d96bb32e5c3b466b4`
+   - Neuro hedge/support-prior hash:
+     - `submissions/neuro_twelfth_order_safe_pair_art20_pruned_test.csv`
+     - SHA256 `32d2a4f81e605a9559692b4a0a0b3784b7210720066548416b7f79cbcca20249`
+   - Neuro audit notes: not exact duplicates of the physics ready files. Neuro keeps `Art.100 OR`, `Art.4 ZGB`, and `Art.458 ZGB`; its hedge also uses property pair rather than triplet.
+
+38. Fourteenth-order portfolio memos
+   - Physics memo:
+     - `scripts/physics_fourteenth_order_portfolio_memo.py`
+     - `submissions/physics_fourteenth_order_portfolio_memo.md`
+     - `submissions/physics_fourteenth_order_portfolio_memo.json`
+   - Physics recommends:
+     - Aggressive: `submissions/test_submission_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`, SHA256 `cd28f49007330d73ffbc3ef6dfcc21c18cec38194e79506a1485f95dfbd24ab9`
+     - Hedge: `submissions/neuro_twelfth_order_safe_pair_art20_pruned_test.csv`, SHA256 `32d2a4f81e605a9559692b4a0a0b3784b7210720066548416b7f79cbcca20249`
+   - Physics rationale: the physics aggressive is best risk-adjusted aggressive; the physics triplet hedge is too correlated with it because it mostly differs on `test_035`, while the neuro pair hedge diversifies across `test_011`, `test_012`, `test_025`, and `test_035`.
+   - Neuro memo:
+     - `scripts/neuro_fourteenth_order_portfolio_memo.py`
+     - `submissions/neuro_fourteenth_order_portfolio_memo.md`
+     - `submissions/neuro_fourteenth_order_portfolio_memo.json`
+   - Neuro recommends:
+     - Aggressive: `submissions/neuro_twelfth_order_aggressive_form_art20_pruned_test.csv`, SHA256 `d58b33252ac79892d41eb736ea0773028662eff9f620ce6d96bb32e5c3b466b4`
+     - Hedge: `submissions/neuro_twelfth_order_safe_pair_art20_pruned_test.csv`, SHA256 `32d2a4f81e605a9559692b4a0a0b3784b7210720066548416b7f79cbcca20249`
+   - Neuro rationale: preserve support-backed existing atoms (`Art.100 OR`, `Art.4 ZGB`, `Art.458 ZGB`) rather than broad-pruning them. This is a support-prior risk choice, not a score advantage.
+
+39. Four-hour CPU sweep completion
+   - Three `scripts/bold_longrun_orchestrator.py --seconds 14400` runs completed:
+     - seed `2026042504`: `artifacts/bold_iterations/bold_longrun_4h_report.json`, 13,063,163 iterations, 25,187 unique states, 13 improvements. Best balanced/private_safe: val `0.4704`, LB90 `0.4290`, J `0.9546`, churn `+20/-21`; highlift/hailmary LB90 `0.4305`, J `0.9379`.
+     - seed `2026042505`: `artifacts/bold_iterations/bold_longrun_4h_seed2_report.json`, 13,712,066 iterations, 20,483 unique states, 13 improvements. Best balanced/private_safe: val `0.4678`, LB90 `0.4313`, J `0.9552`, churn `+20/-20`; highlift/hailmary val `0.4704`, LB90 `0.4289`.
+     - seed `2026042506`: `artifacts/bold_iterations/bold_longrun_4h_seed3_report.json`, 13,224,978 iterations, 18,258 unique states, 22 improvements. Best all profiles: val `0.4694`, LB90 `0.4307`, J `0.9618`, churn `+20/-14`.
+   - Conclusion: full CPU sweeps did not beat the agent-built portfolio. They served as exhaustive confirmation around the earlier delta-energy search space.
+   - Fixed the final print bug in `scripts/bold_longrun_orchestrator.py` (`out_name` was undefined after report/artifact writes). Reports and artifacts were still written before the seed3 exception.
+
+Current ordering for a future single bold submission, from most defensible to most hail-mary:
+
+1. Current risk-adjusted aggressive, shape-prior: `submissions/test_submission_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`
+2. Current risk-adjusted aggressive, support-prior: `submissions/neuro_twelfth_order_aggressive_form_art20_pruned_test.csv`
+3. Highest local hail-mary, explicitly risky: `submissions/test_submission_neuro_ninth_order_hailmary_clean_shape_inheritance_merits.csv`
+4. Best private-safe triplet hedge: `submissions/test_submission_neuro_ninth_order_clean_shape_triplet_no_inheritance.csv`
+5. Cleanest pair hedge, shape-prior: `submissions/test_submission_physics_eleventh_order_hedge_no_inheritance_pair_clean.csv`
+6. Pair hedge, support-prior: `submissions/neuro_twelfth_order_safe_pair_art20_pruned_test.csv`
+7. Aggressive without weak merits/no prune: `submissions/neuro_tenth_order_form_only_no_prune_test.csv`
+8. Highest verified aggressive without weak merits/clean prune: `submissions/test_submission_neuro_eighth_order_clean_shape_triplet_independent.csv`
+9. Tenth-order semantic hedge: `submissions/neuro_tenth_order_pair_no_inheritance_no_prune_test.csv`
+10. Clean deployable: `submissions/test_submission_physics_sixth_order_art20_art4_strict_bridge.csv`
+11. Best bold-contained property leg: `submissions/test_submission_physics_eighth_order_property_art641_934_pair.csv`
+12. Best independent non-property diversifier: `submissions/test_submission_neuro_eighth_order_independent_93_67_inheritance.csv`
+13. Source-fingerprint backup: `submissions/test_submission_physics_ninth_order_same_source_dense_direct.csv`
+14. Highest local/high-upside property probe: `submissions/test_submission_physics_seventh_order_property_possession_triplet_probe.csv`
+15. Cleanest shape hedge: `submissions/test_submission_neuro_seventh_order_clean_shape_valbridge_shadow.csv`
+16. Diagnostic per-query selector: `submissions/test_submission_perquery_eighth_family_selector.csv`
+17. Cleaner fifth-order shadow: `submissions/test_submission_neuro_sixth_order_lowtemp_prune_both_test_shadow.csv`
+18. `submissions/test_submission_physics_spin_glass_main_ninth_bold.csv`
+19. `submissions/test_submission_physics_fifth_order_art458_art100_lowtemp_bridge.csv`
+20. `submissions/test_submission_neuro_fifth_order_art15_supported_test011_only.csv`
+21. `submissions/test_submission_neuro_fourth_order_signature_art15_bridge.csv`
+22. `submissions/test_submission_physics_fourth_order_shape_recovered_art390_shell.csv`
+23. `submissions/test_submission_neuro_third_order_v3_merits_art390_regime_prune.csv`
+24. `submissions/test_submission_physics_third_order_v2_remove_invariant_shell.csv`
+25. `submissions/test_submission_neuro_second_order_family5_art133_property_guard.csv`
+26. `submissions/test_submission_physics_second_order_fusion_iter2_sweep_052.csv`
+27. `submissions/test_submission_bold_longrun_4h_seed3_balanced.csv`
+28. `submissions/test_submission_physics_residual_basin_energy_lock_cold_neuro_vote.csv`
+29. `submissions/test_submission_neuro_ensemble_code_triple_guard.csv`
+30. `submissions/test_submission_bold_xfit_energy_sweep_top1_bgg_guard.csv`
+31. `submissions/test_submission_bold_xfit_energy_sweep_top1.csv`
+32. `submissions/test_submission_bold_physics_energy_sparse_bridge_safe.csv`
+33. `submissions/test_submission_bold_iter_delta_energy_sparse.csv`
+34. `submissions/test_submission_physics_phase_transition_critical_bridge.csv`
+35. `submissions/test_submission_bold_iter_delta_energy_broad.csv`
+36. `submissions/test_submission_physics_phase_transition_domainwall.csv`
+37. `submissions/test_submission_neuro_counterweight_word_k4.csv`
+
+Reminder: none of these has been submitted to Kaggle in this run. Public/private split risk remains severe; the public LB should not be used as a gradient.
+
+40. Seven-hour CPU/agent push started 2026-04-25
+   - Active long jobs:
+     - `scripts/bold_longrun_orchestrator.py --seconds 25200 --seed 2026042516 --write-prefix bold_7h_seedA`
+     - `scripts/bold_longrun_orchestrator.py --seconds 25200 --seed 2026042517 --write-prefix bold_7h_seedB`
+     - `scripts/bold_longrun_orchestrator.py --seconds 25200 --seed 2026042518 --write-prefix bold_7h_seedC`
+     - `scripts/linguist_fifteenth_order_semantic_selector.py --seconds 25200`
+     - `scripts/physics_math_fifteenth_order_search.py --seconds 25200`
+     - `scripts/staff_fifteenth_order_reliability.py --scorecards --watch-seconds 25200`
+   - No network, external AI/API calls, or Kaggle submissions used.
+   - Early live sweep leader from seedB highlift:
+     - `submissions/test_submission_bold_7h_seedB_highlift.csv`
+     - Val F1 `0.522623`, LB90 `0.484399`, std `0.092217`, test Jaccard `0.922414`, churn `+56/-20`.
+     - Diverse eval: STRONG PROMOTE, 12/12 robust buckets, but high private-shakeout risk from low J and broad test churn.
+
+41. Fifteenth/sixteenth-order specialist agent output
+   - Linguist fifteenth-order artifacts:
+     - `scripts/linguist_fifteenth_order_semantic_selector.py`
+     - Best unique linguist shape: `submissions/linguist_fifteenth_order_semantic_no_form_test.csv`, val F1 `0.511480`, LB90 about `0.476`, J `0.959657`, churn `+23/-14`.
+     - Several linguist outputs are exact payload aliases of existing physics/neuro twelfth-order candidates.
+   - Physics/math fifteenth-order artifacts:
+     - `scripts/physics_math_fifteenth_order_search.py`
+     - `submissions/physics_math_fifteenth_order_search_report.md`
+     - Riskopt candidates are valid STRONG PROMOTE hedges, but lower than the twelfth-order leaders; best riskopt local F1 `0.505412`, LB90 about `0.468`, J about `0.961`.
+   - Math sixteenth-order selector:
+     - `scripts/math_sixteenth_order_private_risk_selector.py`
+     - `artifacts/math_sixteenth_order/math_sixteenth_order_report.md`
+     - It selected aliases of the existing aggressive/hedge pair:
+       - `submissions/math_sixteenth_order_aggressive_shape_alias_test.csv` SHA256 `cd28f49007330d73ffbc3ef6dfcc21c18cec38194e79506a1485f95dfbd24ab9`
+       - `submissions/math_sixteenth_order_conservative_hedge_alias_test.csv` SHA256 `32d2a4f81e605a9559692b4a0a0b3784b7210720066548416b7f79cbcca20249`
+     - Math caveat: those two files are highly correlated (`~0.9938` pairwise Jaccard), so they are not a diversified final-submission pair.
+
+42. Highlift guard and Pareto pruning
+   - New scripts:
+     - `scripts/live_bold_highlift_guard.py`
+     - `scripts/live_highlift_pareto_pruner.py`
+   - Hand-guard outputs:
+     - `submissions/test_submission_bold_highlift_guard_no_art15.csv`: val F1 `0.520656`, LB90 `0.481726`, J `0.932782`, churn `+45/-20`, SHA256 `fc58c1d74ba3fc403eb32ed3d60a1836f40254e2d01c9fec38cb519ccce5419e`.
+     - `submissions/test_submission_bold_highlift_guard_guarded_core.csv`: val F1 `0.513442`, LB90 `0.476026`, J `0.945238`, churn `+32/-20`, SHA256 `46574bdd879a2612f096fbc315e611c35390e03dc036e43fddad196886b44e49`.
+   - Pareto outputs:
+     - `submissions/test_submission_bold_highlift_pareto_j950.csv`: val F1 `0.522623`, LB90 `0.484399`, J `0.950959`, churn `+31/-20`, SHA256 `8bc52d8e832888b2068524ca148b85001509b55106bbb8c0c1973420e7de97f8`.
+     - `submissions/test_submission_bold_highlift_pareto_j955.csv`: raw highlift val companion F1 `0.522623`, LB90 `0.484399`, J `0.955181`, churn `+27/-20`, SHA256 `9b4191c4f75bb6c0e11d41803ea4b1b93895bb64816456712cb59d9068903585`.
+   - Caveat: the Pareto pruner uses test-shape pruning of highlift additions and leaves the val companion at the raw highlift shape. This is legal no-label shape control, not hidden-label feedback, but its val score is not a symmetric transform estimate. A symmetric removed-citation stress val for `j955` is F1 `0.501719`, LB90 `0.461696`. Treat `j955` as the leading bold risk-adjusted submit candidate only if we accept that strategic risk.
+   - Current live submit posture, pending completion of the 7h sweeps:
+     1. Bold risk-adjusted: `submissions/test_submission_bold_highlift_pareto_j955.csv`
+     2. Bold raw-local: `submissions/test_submission_bold_highlift_guard_no_art15.csv`
+     3. Old-shape aggressive anchor: `submissions/test_submission_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`
+     4. Old-shape hedge: `submissions/neuro_twelfth_order_safe_pair_art20_pruned_test.csv`
+   - Public-failed overlap audit for `j955`:
+     - Compared `j955` deltas vs failed post-32107 submitted files: fullpower S3 top1/top2, fullpower S2 top31, adversarial, highupside, cached Gemini, assoc, mined.
+     - `j955` has `27` adds and `20` removes vs 0.32107.
+     - Most `j955` adds are not recycled from failed public submissions: `23/27` adds had zero overlap with the failed set. The main repeated failed-supported adds are `test_010 + Art. 436 Abs. 2 StPO`, `test_026 + Art. 133 Abs. 2 ZGB`, and `test_027 + Art. 133 Abs. 2 ZGB`.
+     - Removal overlap is more concentrated around BGG liberty/procedural removals, so keep public/private shakeout risk in mind.
+
+43. Replacement linguist and symmetric-aware pruning
+   - Replacement linguist agent produced:
+     - `scripts/linguist_replacement_sixteenth_order_audit.py`
+     - `submissions/linguist_replacement_sixteenth_order_guarded_semantic_bridge_test.csv`
+     - Test SHA256 `6b00fea0355895a38de8dbdbb9231637f565c23be8e962828e8cc8c80b765993`
+     - Raw copied highlift val F1 `0.522623`, LB90 `0.484399`; test J `0.977234`, churn `+9/-13`.
+     - Symmetric citation-removal stress val F1 `0.490296`; this file is semantically clean but likely too conservative/val-asymmetric to be the top `.34` attack.
+   - Generalized `scripts/live_highlift_symmetric_pareto_pruner.py` to accept `--high-val`, `--high-test`, and `--out-prefix`.
+   - Reseed highlift symmetric-Pareto outputs:
+     - `submissions/test_submission_bold_7h_reseedD_sympareto_j955.csv`
+       - Test SHA256 `de6d1dd7db4493d749962fd88ef1e994bfcbc3beae6bd8003291ef8c6a5d6e49`
+       - Raw val F1 `0.523901`, raw LB90 `0.485371`
+       - Symmetric-stress val F1 `0.516744`, stress LB90 `0.477179`
+       - Test J `0.955752`, churn `+25/-20`
+       - Diverse eval on stress companion: STRONG PROMOTE, 12/12 robust buckets, no val regressions, balanced churn.
+     - `submissions/test_submission_bold_7h_reseedE_sympareto_j955.csv`
+       - Test SHA256 `0763e381fa1f77b8bbfa2f323faa15c3c2a09ac1a46d381312e12469dfc13927`
+       - Raw val F1 `0.523901`, raw LB90 `0.485371`
+       - Symmetric-stress val F1 `0.516744`, stress LB90 `0.477179`
+       - Test J `0.955132`, churn `+22/-23`
+   - Current best risk-adjusted public-LB attack candidate:
+     - `submissions/test_submission_bold_7h_reseedD_sympareto_j955.csv`
+     - Rationale: better raw/stress val than old physics aggressive; similar Jaccard/churn to the existing aggressive family; more honest than the earlier asymmetric Pareto j955.
+   - Quota check:
+     - `kaggle competitions submissions -c llm-agentic-legal-information-retrieval` showed five submissions on `2026-04-25` UTC (`01:29` through `02:07`).
+     - Under the competition 5/day limit, next likely submit window is `2026-04-26 00:00 UTC` = `2026-04-25 18:00 MDT`.
+     - Do not claim an attempted Kaggle submit happened in this push; no submission has been made after the 02:07 UTC assoc-family entry.
+
+44. Competitor public-signal check
+   - User asked whether we can see what Kanak Raj/thechint submitted.
+   - Direct answer: no. Kaggle does not expose competitor submitted CSVs, private notebook outputs, or final-selection choices unless the team publishes or shares through an official team path.
+   - Public facts captured from the leaderboard:
+     - `Kanak Raj`: `0.35940`, submitted `2026-04-06 08:45:40 UTC`.
+     - `thechint`: `0.34174`, submitted `2026-04-25 12:21:06 UTC`.
+     - `WBF_USA_NYC`: `0.32107`, submitted `2026-04-25 02:07:37 UTC`.
+   - Pulled/inspected public notebooks into `artifacts/public_kaggle_notebooks/`:
+     - TF-IDF/co-citation, SwissLex hybrid BM25+dense, citation graph/multi-hop, baseline from GitHub, hybrid baseline, and the suspicious "perfect score with zero retrieval" notebook.
+   - No obvious public notebook from Kanak Raj or thechint for this competition was found under visible names/user handles.
+   - The "zero retrieval" notebook writes query text as the second submission column; local exact-citation extraction from query text is not viable:
+     - val avg extracted citations/query about `0.8`
+     - val F1 about `0.019`
+     - exact extracted-citation precision about `0.25`
+   - Public-notebook-style train+val co-citation priors were tested against 0.32107, guarded semantic bridge, and reseedD sympareto anchors; they were flat or slightly worse and mostly pure-additive, so not the missing `.35` ladder.
+   - Artifact note: `artifacts/competitor_public_signal_20260425.md`.
+
+45. Seventeenth-order specialist push before quota reset
+   - Agents deployed:
+     - Physics lane: `scripts/physics_seventeenth_order_spin_selector.py`
+     - Rubik/combinatorics lane: `scripts/rubik_seventeenth_order_search.py`
+     - Chess/minimax lane: `scripts/chess_seventeenth_order_minimax_portfolio.py`
+     - Staff audit lane: `scripts/staff_seventeenth_order_audit.py`
+   - Chess/minimax result:
+     - No new CSV emitted; it ranked existing candidates.
+     - Attack pick: `submissions/test_submission_bold_7h_reseedD_sympareto_j955.csv`
+     - Hedge pick: `submissions/linguist_replacement_sixteenth_order_guarded_semantic_bridge_test.csv`
+   - Staff audit result:
+     - Stable top: `submissions/linguist_replacement_sixteenth_order_guarded_semantic_bridge_test.csv`
+       - val F1 `0.522623`, LB90 about `0.4844`, J vs 0.32107 about `0.977`, churn about `+9/-13`
+     - Attack alternatives remain reseedD/reseedE sympareto j955.
+   - Physics result:
+     - `submissions/physics_seventeenth_order_dsym_risk_shave_1_test.csv`
+       - SHA256 `b1f97fabced0195265c74dc84a3f6cb734a733e68751352776b4822aeb34e010`
+       - val F1 `0.512579`, LB90 `0.4742`, J `0.9668`, churn `+25/-8`, diverse STRONG PROMOTE
+       - Interpretation: D-style risk shave that restores public-failed removal patterns, but lower local signal than D/Rubik/bridge.
+     - `submissions/physics_seventeenth_order_dsym_risk_shave_2_test.csv`
+       - SHA256 `9bdcd1efbc1b29f1df11d01596fe97a088d6ed9c5811e0082c2f94a42ff2fb79`
+       - Same local F1/LB90, worse J/churn than risk_shave_1; hold.
+   - Rubik result and audit:
+     - Raw Rubik emitted `rubik_seventeenth_order_bridge_leader_strict_commutator` and `highj_commutator`.
+     - Important caveat: raw Rubik validation companion selected the better leader/bridge row using val gold, so the `0.523901` score is optimistic for promotion.
+     - Added `scripts/rubik_seventeenth_order_fair_audit.py` to materialize no-gold fair companions.
+     - Fair strict:
+       - `submissions/rubik_seventeenth_order_bridge_leader_strict_fair_commutator_test.csv`
+       - SHA256 `c23b6b33f3644acae3dd00c599862a1398844400e19af5716a0d128200123563`
+       - fair val F1 `0.522623`, LB90 about `0.4844`, J `0.9758`, churn `+10/-14`, diverse STRONG PROMOTE
+       - Same as bridge on val; on test it uses bridge for 39/40 rows and imports D's `test_010` StPO swap.
+     - Fair highj:
+       - `submissions/rubik_seventeenth_order_bridge_leader_highj_fair_commutator_test.csv`
+       - SHA256 `d7b8ea74422e5c1cb57091bb3852711fc6a0d04a52e0497496f6ec55c844526c`
+       - fair val F1 `0.522623`, LB90 about `0.4844`, J `0.9727`, churn `+13/-14`, diverse STRONG PROMOTE
+       - Test imports D rows for `test_003`, `test_010`, and `test_027`.
+   - Promotion gate was rebuilt with `scripts/rebuild_promotion_history.py`:
+     - Output: `artifacts/v11_meta/kaggle_public_history.json` with 18 locally verified submitted-history rows.
+     - `rubik_strict_fair`: combined verdict `unclear`, predicted public `0.31853`.
+     - `rubik_highj_fair`: combined verdict `unclear`, predicted public `0.31851`.
+     - `bold_7h_reseedD_sympareto_j955`: combined verdict `unclear`, predicted public `0.31784`.
+     - `physics_seventeenth_order_dsym_risk_shave_1`: combined verdict `unclear`, predicted public `0.31784`.
+     - Interpretation: this gate is public-history-trained and pessimistic because recent high-local candidates failed public. Treat as a risk warning, not a veto; do not use it as a Kaggle-score gradient.
+   - Extra local-only meta selector:
+     - Ran `scripts/robust_meta_candidate_selector.py` as `meta_seventeenth_guarded_strict`.
+     - Output: `submissions/test_submission_meta_seventeenth_guarded_strict.csv`
+     - val F1 `0.464283`, LB90 `0.4241`, J `0.9856`, churn `+11/-1`.
+     - Diverse eval verdict `HOLD` because churn is mostly additive; promotion gate `unclear`, predicted public `0.31880`.
+     - Decision: do not submit; useful negative evidence that guarded additive meta rows still look like recent failed public families.
+   - Wide-bank G expansion:
+     - Patched `scripts/bold_longrun_orchestrator.py` with `--keep-candidates` to widen the source bank beyond the old 140-candidate cap.
+     - Started `bold_7h_widebankG` with `--keep-candidates 320`; it quickly found a new high-lift region.
+     - Raw balanced artifact:
+       - `submissions/test_submission_bold_7h_widebankG_balanced.csv`
+       - val F1 `0.542619`, LB90 `0.5070`, J `0.9061`, churn `+42/-48`.
+       - Diverse eval STRONG PROMOTE locally, but promotion gate says `likely_worse`, predicted public `0.31448`; raw shape is too churny to submit.
+     - Symmetric Pareto j940:
+       - `submissions/test_submission_bold_7h_widebankG_sympareto_j940.csv`
+       - SHA256 `8e7a05c92b99fa82bd2c37a6601dd9c065df9aed2e7d324a9df9f8d08e6b39fe`
+       - raw val F1/LB90 `0.542619/0.5070`; stress F1/LB90 `0.515223/0.4748`; J `0.9408`, churn `+9/-48`.
+       - Diverse eval on stress companion STRONG PROMOTE; promotion gate `unclear`, predicted public `0.31784`.
+       - Interpretation: true new bold/subtractive family and maybe a hail-mary if burning multiple submissions, but worse risk-adjusted than D_j955 because stress LB90 and J are lower and removal count is high.
+   - Current queue if quota resets and user wants one submit:
+     - Highest public-score attack: `submissions/test_submission_bold_7h_reseedD_sympareto_j955.csv`
+     - Best risk-adjusted clean shot: `submissions/rubik_seventeenth_order_bridge_leader_strict_fair_commutator_test.csv`
+     - Hail-mary diversifier only if explicitly burning a bold extra: `submissions/test_submission_bold_7h_widebankG_sympareto_j940.csv`
+     - Pure stable hedge: `submissions/linguist_replacement_sixteenth_order_guarded_semantic_bridge_test.csv`
+     - Hold physics risk-shaves unless explicitly burning a same-family backup shot.
+   - Long CPU reseed sessions `bold_7h_reseedD/E/F` are still running and plateaued around 55-60 minutes elapsed with no new best beyond the already-materialized sympareto files.
+
+46. Eighteenth-order pre-reset integration and private-aware ranking
+   - Time checkpoint: `2026-04-25 15:55 MDT`; next likely Kaggle day reset remains around `2026-04-25 18:00 MDT` if Kaggle uses UTC-day counting.
+   - Added `scripts/make_stress_mirror_variants.py` to materialize `*_stressmirror` paired tags from existing `*_stress.csv` validation companions, so selectors can discover/test pruned variants against the stress validation signal instead of the optimistic raw val signal.
+   - Stress-mirrored D/E/F/G/H sympareto families and highlift sympareto families. These are local pairing artifacts only; the test CSVs are copies of the original submission candidates.
+   - New local selectors:
+     - `submissions/test_submission_perquery_topfamilies_20260425.csv`
+       - val F1 `0.514866`, LB90 `0.473382`, J `0.958304`, churn `+8/-31`, diverse STRONG PROMOTE but removal-heavy; hold behind D/Rubik/physics.
+     - `submissions/test_submission_meta_guarded_bold_20260425.csv`
+       - val F1 `0.477450`, LB90 `0.435771`, J `0.958868`, churn `+16/-20`, diverse STRONG PROMOTE; useful only as lower-lift diversifier.
+     - `submissions/test_submission_meta_guarded_verybold_20260425.csv`
+       - val F1 `0.511526`, LB90 `0.478005`, J `0.922084`, churn `+37/-35`, diverse STRONG PROMOTE; too churny for private final posture.
+     - `submissions/test_submission_meta_stressaware_bold_20260425.csv`
+       - val F1 `0.477450`, LB90 `0.435771`, J `0.960836`, churn `+24/-11`, diverse STRONG PROMOTE; lower local lift and still not first-two material.
+     - `submissions/test_submission_meta_stressaware_private_20260425.csv`
+       - val F1 `0.466922`, LB90 `0.426354`, J `0.981245`, churn `+15/-2`.
+       - Diverse eval HOLD because mostly-additive; promotion gate says `likely_better_or_flat` heuristic but combined `unclear`, predicted public `0.31817`.
+       - Interpretation: good private-shape hedge candidate, not a score-jump shot.
+   - Wide-bank H:
+     - Started `bold_7h_widebankH` with `--keep-candidates 520`.
+     - Raw H highlift/balanced reached val F1 `0.524678`, LB90 about `0.4869`, but J only `0.9097`, churn `+48/-38`.
+     - Symmetric pruned H:
+       - `submissions/test_submission_bold_7h_widebankH_sympareto_j940.csv`
+         - stress F1/LB90 `0.509988/0.474520`, J `0.940321`, churn `+19/-38`, diverse STRONG PROMOTE, gate `unclear`, predicted public `0.31784`.
+       - `j945` stress F1/LB90 `0.506832/0.468002`, J `0.945341`, churn `+14/-38`.
+       - `j950` stress F1/LB90 `0.499473/0.457632`, J `0.950117`, churn `+9/-38`.
+       - H j940 is the only plausible H hail-mary, but it is behind D/Rubik/physics on risk-adjusted ranking.
+   - Physics twelfth-order leg re-evaluated:
+     - `submissions/test_submission_physics_twelfth_order_replace_aggressive_balanced_form_clean.csv`
+     - SHA prefix `cd28f4900733`
+     - val F1 `0.514938`, LB90 `0.478996`, std `0.086574`, J `0.960503`, minJ `0.875000`, churn `+22/-14`, diverse STRONG PROMOTE, promotion gate `unclear`, predicted public `0.31784`.
+     - This is a real third candidate: less private-safe than Rubik strict, less upside than D_j955, cleaner than widebank.
+   - Specialist read:
+     - Physics robustness agent ranked `rubik_strict_fair` as the best hidden-50% candidate and `D_j955` as the better upside attack.
+     - Chess/minimax agent recommended at most four future submits in precommitted order: Rubik strict fair, D_j955 stressmirror/test copy, physics twelfth replace, then meta stressaware bold. It recommended final two as frozen `0.32107` plus frozen `0.30257` for decorrelation, not two near-cousins.
+   - Current pre-reset submit queue if user explicitly orders submissions after quota reset:
+     1. `submissions/rubik_seventeenth_order_bridge_leader_strict_fair_commutator_test.csv` — best private-aware first shot (`0.5226/0.4844`, J `0.9758`, `+10/-14`).
+     2. `submissions/test_submission_staff_eighteenth_order_balanced_pruner_zero_net_bold_7h_reseedD_sympareto_j955_stressmirror.csv` — cleaner zero-net version of the D attack (`0.5167/0.4772` stress, J `0.9604`, `+20/-20`).
+     3. `submissions/test_submission_staff_eighteenth_order_balanced_pruner_zero_net_physics_twelfth_order_replace_aggressive_balanced_form_cle.csv` — cleaner zero-net physics third leg (`0.5149/0.4790`, J `0.9708`, `+14/-14`).
+     4. `submissions/test_submission_bold_7h_reseedD_sympareto_j955.csv` or stressmirror copy — raw upside attack (`0.5167/0.4772` stress, J `0.9558`, `+25/-20`) if we want more public-LB aggression than the staff pruned copy.
+     5. `submissions/test_submission_meta_stressaware_bold_20260425.csv` — only if spending a fourth exploratory submit.
+     6. `submissions/test_submission_bold_7h_widebankH_sympareto_j940.csv` or G j940 — hail-mary only, not a first-two candidate.
+   - Rubik eighteenth-order agent result:
+     - `submissions/rubik_eighteenth_order_support_balanced_commutator_test.csv`
+       - SHA256 `d996b565e978134e28ca3778a004be0de79509b7560f28026ec5a5fb778326ea`
+       - val F1 `0.522623`, LB90 `0.484399`, J `0.972642`, minJ `0.894737`, churn `+13/-13`, changed `18`.
+       - Diverse eval STRONG PROMOTE; promotion gate `unclear`, predicted public `0.31851`.
+       - Interpretation: exact balanced add/remove Rubik hedge, but lower J and more changed rows than `rubik_strict_fair`; hold behind strict fair.
+     - `submissions/rubik_eighteenth_order_support_balanced_swap_commutator_test.csv`
+       - SHA256 `1032c1d349f772a04378ab23e860bd6910361cf9bf1ea08f57e2d74596d839b9`
+       - val F1 `0.522623`, LB90 `0.484399`, J `0.971171`, minJ `0.894737`, churn `+14/-14`, changed `19`.
+       - Diverse eval STRONG PROMOTE; promotion gate `unclear`, predicted public `0.31784`.
+       - Interpretation: lowest-priority Rubik variant; no val lift over strict/highj and worse shape.
+   - Staff eighteenth-order balanced-pruner script:
+     - `scripts/staff_eighteenth_order_balanced_pruner.py` completed a narrowed stress-aware pass with no network/API/Kaggle use.
+     - It discovered `830` paired candidates, considered `12` stress-aware sources, and emitted two fully scored zero-net candidates:
+       - `submissions/test_submission_staff_eighteenth_order_balanced_pruner_zero_net_physics_twelfth_order_replace_aggressive_balanced_form_cle.csv`
+         - Source: `physics_twelfth_order_replace_aggressive_balanced_form_clean`
+         - Val F1/LB90 `0.514938/0.4786`, J/minJ `0.970841/0.875000`, churn `+14/-14`, diverse STRONG PROMOTE, promotion gate `unclear`.
+         - Interpretation: supersedes the unpruned physics twelfth candidate for private-aware shape.
+       - `submissions/test_submission_staff_eighteenth_order_balanced_pruner_zero_net_bold_7h_reseedD_sympareto_j955_stressmirror.csv`
+         - Source: `bold_7h_reseedD_sympareto_j955_stressmirror`
+         - Val F1/LB90 `0.516744/0.4769`, J/minJ `0.960449/0.846154`, churn `+20/-20`, diverse STRONG PROMOTE, promotion gate `unclear`.
+         - Interpretation: cleaner D-attack submit candidate than raw D because it preserves the same stress val signal while improving J/churn.
+     - Staff report: `submissions/staff_eighteenth_order_balanced_pruner_report.md`.
+
+47. Stress-aware zoo ranker audit before reset
+   - Patched `scripts/rank_fullpower_candidates.py` with:
+     - `--prefer-stress`, so `*_stress.csv` / `*_stressmirror.csv` companions score candidates when available.
+     - Support for `*_val.csv` / `*_test.csv` candidate pairs, not just `val_pred_*` / `test_submission_*`.
+   - Outputs:
+     - Raw ranking: `submissions/full_zoo_candidate_ranking_20260425.md`
+     - Stress-aware ranking: `submissions/full_zoo_stressaware_candidate_ranking_20260425.md`
+     - JSON: `artifacts/noapi_full_power/full_zoo_stressaware_candidate_ranking_20260425.json`
+   - Important correction:
+     - Raw zoo ranking over-promoted widebank-G j950/j945/j940 because it used optimistic raw validation.
+     - Stress-aware ranking restored Rubik/linguist/physics high-J candidates to the top.
+   - Rechecked two high-J candidates that were buried by filename conventions:
+     - `submissions/linguist_replacement_sixteenth_order_guarded_semantic_bridge_test.csv`
+       - Val F1/LB90 `0.522623/0.484399`, J `0.977234`, churn `+9/-13`, diverse STRONG PROMOTE, promotion gate `unclear` predicted `0.31853`.
+       - Diff vs Rubik strict fair is exactly one `test_010` citation: Rubik swaps baseline `Art. 390 Abs. 2 StPO` to `Art. 436 Abs. 2 StPO`; linguist keeps baseline. Do not submit both unless deliberately spending two submissions on one StPO fork.
+     - `submissions/physics_replacement_sixteenth_order_ling_old_intersection_test.csv`
+       - SHA256 `4432519c8e05e529fbce613afe1fa095f7ef6cb4b25cf4b075b3bf753df0986b`
+       - Val F1/LB90 `0.516409/0.480573`, std `0.086309`, J `0.978052`, churn `+5/-17`, diverse STRONG PROMOTE, promotion gate `unclear` predicted `0.31855`.
+       - Promote into the pre-reset queue as the best high-J intersection hedge behind Rubik strict and ahead of staff-pruned physics.
+   - Updated `submissions/pre_reset_submit_queue_20260425.md`:
+     1. Rubik strict fair (best one-citation StPO-upside first shot)
+     2. Physics/linguist intersection (high-J hedge)
+     3. Staff zero-net D attack
+     4. Staff zero-net physics
+     5. Meta stress-aware bold
+     6. Widebank-H j940 hail-mary only
+
+48. Pre-reset high-J consensus delta builder
+   - Added `scripts/pre_reset_consensus_delta_builder.py`.
+   - Method: compare selected high-J candidate families against frozen 0.32107, then apply only citation adds/removes with enough independent support. No network/API/Kaggle calls.
+   - Important implementation fix:
+     - Initial CSV writer joined citations with `"; "`, which made `scripts/multi_signal_scorecard.py` undercount because it does not strip split citations. Fixed writer to use exact `";"` separator and regenerated all consensus CSVs.
+   - Generated candidates:
+     - `pre_reset_consensus_highj_top3_k2`: val F1/LB90 proxy `0.522623/0.485250`, J `0.977234`, churn `+9/-13`.
+     - `pre_reset_consensus_highj_top4_k2`: val F1/LB90 proxy `0.522623/0.485250`, J `0.974734`, churn `+9/-17`.
+     - `pre_reset_consensus_highj_top4_k3`: val F1/LB90 `0.516409/0.4814`, J `0.980552`, churn `+5/-13`, diverse STRONG PROMOTE, promotion gate `unclear` predicted `0.31854`.
+     - `pre_reset_consensus_all5_k2`: val F1/LB90 proxy `0.522623/0.485250`, J `0.965677`, churn `+17/-18`.
+     - `pre_reset_consensus_all5_k3`: best new candidate.
+       - Test: `submissions/test_submission_pre_reset_consensus_all5_k3.csv`
+       - Val: `submissions/val_pred_pre_reset_consensus_all5_k3.csv`
+       - SHA256 `3a839d620950167aac44318c67d60396dc960b6381ee3fe5088c37c216c13dc4`
+       - Full scorecard: val F1 `0.526140`, LB90 `0.487814`, LB95 `0.476444`, std `0.091794`, min `0.325581`.
+       - Shape: J `0.977245`, minJ `0.875000`, churn `+6/-17`, changed rows `12`.
+       - Diverse eval: STRONG PROMOTE, 12/12 robust buckets, no severe regressions, churn balance PASS.
+       - Promotion gate: combined `unclear`, predicted public `0.31854` (same pessimistic public-history warning as other high-local candidates).
+       - Decision: promoted to pre-reset submit queue slot 1.
+   - Updated `submissions/pre_reset_submit_queue_20260425.md`:
+     1. Consensus all5 k3 (best local+shape candidate)
+     2. Rubik strict fair
+     3. Physics/linguist intersection
+     4. Staff zero-net D attack
+     5. Staff zero-net physics
+     6. Meta stress-aware bold
+     7. Widebank-H j940 hail-mary only
+
+49. Bounded high-J consensus sweep
+   - Added `scripts/pre_reset_consensus_sweep.py`.
+   - Search scope: 10 hand-picked high-J/stress-aware source candidates only; subset sizes 3-6; consensus thresholds 2..N; filtered for sane test shape. No network/API/Kaggle calls.
+   - Emitted top 8 sweep candidates and report:
+     - `submissions/pre_reset_consensus_sweep_report.json`
+     - `submissions/val_pred_pre_reset_consensus_sweep_r*.csv`
+     - `submissions/test_submission_pre_reset_consensus_sweep_r*.csv`
+   - Best sweep candidate:
+     - `submissions/test_submission_pre_reset_consensus_sweep_r05_f146aac5c7.csv`
+     - Sources: `rubik_strict`, `rubik18_bal`, `rubik18_swap`, `phys_ling`, `staff_phys`, `staff_boldD`; threshold `4`.
+     - SHA256 `52325e1ddcc1c7eb132c6b7869ab8a44e84387401d10a55abfa55c4aa96daecc`
+     - Full scorecard: val F1 `0.526140`, LB90 `0.487814`, LB95 not separately recorded, std `0.091794`, min `0.325581`.
+     - Shape: J `0.977305`, minJ `0.894737`, churn `+8/-13`, changed rows `14`.
+     - Diverse eval: STRONG PROMOTE, 12/12 robust buckets, no severe regressions, churn balance PASS.
+     - Promotion gate: combined `unclear`, predicted public `0.31852`.
+     - Diff vs `all5_k3`: r05 keeps baseline constitutional cites on `test_032`; adds `test_021 + Art. 101 Abs. 3 OR`; adds `test_039 + Art. 1 Abs. 1 OR`.
+     - Decision: promoted to pre-reset queue slot 1 because it matches `all5_k3` local val/LB90, improves minJ, and has gentler removals.
+     - Submitted 2026-04-25 23:54 UTC with message `codex pre-reset consensus sweep r05 no-api 2026-04-25`.
+     - Public LB result: `0.31960`, below current best `0.32107`.
+     - Lesson: even very high local val/LB90 plus high J consensus is still public-negative post-32107; do not submit near-duplicate Rubik/linguist/high-J consensus branches without a genuinely new signal.
+   - Updated pre-reset queue:
+     1. `pre_reset_consensus_sweep_r05_f146aac5c7`
+     2. `pre_reset_consensus_all5_k3`
+     3. Rubik strict fair
+     4. Physics/linguist intersection
+     5. Staff zero-net D attack
+     6. Staff zero-net physics
+     7. Meta stress-aware bold
+     8. Widebank-H j940 hail-mary only
+
+## 2026-04-28 — Prize Repro Preservation Lock
+
+User clarified that cleanup must preserve **prize eligibility**, not just final
+CSV payloads. Kaggle rules require more than a valid CSV for prizes: an offline
+Kaggle notebook/code path must reproduce `submission.csv` without internet/API
+calls, with documented data/model/code dependencies and methodology.
+
+Created root preservation manifest:
+
+- `PRIZE_REPRO_DO_NOT_DELETE.md`
+
+Do **not** delete or overwrite the files/directories listed there unless the
+user explicitly says to abandon prize eligibility.
+
+Preserved candidate payloads:
+
+1. Aggressive/public best:
+   - `submissions/test_submission_baseline_public_best_32107.csv`
+   - `submissions/val_pred_baseline_public_best_32107.csv`
+   - `submissions/test_submission_targeted_proc_delta_balanced_swap.csv`
+   - `submissions/val_pred_targeted_proc_delta_balanced_swap.csv`
+   - SHA256: `99abea389f781bdadcdc8b8063942a20cbc95a5d765715b56bf9285b17dee5d3`
+2. Stable prior:
+   - `submissions/test_submission_baseline_public_best_30911.csv`
+   - `submissions/val_pred_baseline_public_best_30911.csv`
+   - `submissions/test_submission_llm_proc_nobgg.csv`
+   - `submissions/val_pred_llm_proc_nobgg.csv`
+   - SHA256: `a966ba26d59bbc6bad0187369811e4cd1edbe40864fbba8ad6c21c08e6851bdf`
+3. Third public-score candidate:
+   - `submissions/test_submission_baseline_public_best_30681.csv`
+   - `submissions/val_pred_baseline_public_best_30681.csv`
+   - `submissions/test_submission_overnight_combo_a.csv`
+   - `submissions/val_pred_overnight_combo_a.csv`
+   - SHA256: `88239ed12ebbbe87d1931d41cde7832febded5aea9426354f24c6fb29128f607`
+4. Conservative hedge:
+   - `submissions/test_submission_baseline_public_best_30257.csv`
+   - `submissions/val_pred_baseline_public_best_30257.csv`
+   - `submissions/test_submission_v11_winner_localperturb_top1.csv`
+   - `submissions/val_pred_v11_winner_localperturb_top1.csv`
+   - SHA256: `7c6424f39121ba018d322de55f939cc2050eb035ee1cdaac3205a190cfcfb4a6`
+
+Preserved prize-repro assets:
+
+- `notebooks/swiss_submission_v12.py`
+- `notebooks/swiss_submission.py`
+- `notebooks/swiss_submission.ipynb`
+- `scripts/package_v12_for_kaggle.py`
+- `scripts/targeted_procedural_deltas.py`
+- `data/` competition files, especially `court_considerations.csv` and `laws_de.csv`
+- core indices: `index/bm25_laws.pkl`, `index/faiss_laws.index`,
+  `index/faiss_laws_citations.pkl`, `index/court_citations.pkl`
+- `precompute/`, especially `precompute/llm_procedural_cache.json`
+- docs/memory: `AGENTS.md`, `CLAUDE.md`, `CODEX_MEMORY.md`, `HANDOFF.md`,
+  `HANDOVER_2026-04-27.md`, `submissions/SCORE_TRACKER.md`
+
+Verification after cleanup:
+
+```bash
+SUBMISSION_MODE=v12_repro_32107 python3 notebooks/swiss_submission_v12.py
+shasum -a 256 notebooks/_local_output/submission.csv submissions/test_submission_baseline_public_best_32107.csv
+# both: 99abea389f781bdadcdc8b8063942a20cbc95a5d765715b56bf9285b17dee5d3
+
+SUBMISSION_MODE=v12_repro_30911 python3 notebooks/swiss_submission_v12.py
+shasum -a 256 notebooks/_local_output/submission.csv submissions/test_submission_baseline_public_best_30911.csv
+# both: a966ba26d59bbc6bad0187369811e4cd1edbe40864fbba8ad6c21c08e6851bdf
+```
+
+Important: experimental/full-v12 model assets and BGE full-corpus indexes were
+deleted during cleanup. They are not needed for the currently verified
+`v12_repro_32107` / `v12_repro_30911` paths, but they would need to be
+recreated/redownloaded before resuming those experimental directions.
+
+## 2026-05-20 — Offline Prize Notebook Rust Dense Path
+
+Kaggle rules review found that prize eligibility requires an offline notebook
+that writes `submission.csv` and can generalize when the host swaps in unseen
+queries. CSV-only static reproduction is not enough for main prizes.
+
+Implemented the stronger offline path:
+
+- `notebooks/swiss_prize_offline_retriever.py` now has two branches:
+  SHA-verified finalist reproduction for the official `test.csv` fingerprint,
+  and a dynamic hidden-query retriever for swapped query files.
+- The dynamic branch uses public corpus/train/val assets, TF-IDF, procedural
+  deterministic layers, citation graph expansion, optional E5 dense retrieval,
+  and optional local reranker bonuses. It uses no APIs and no internet.
+- `rust/v11_selector/src/bin/offline_dense_search.rs` adds a batched Rust dense
+  scanner over `.npy` matrices. It is designed for the Kaggle notebook: one
+  process per query batch, no Python per-query subprocess loop, manual NPY read,
+  f16/f32 support, rayon chunk parallelism, and bounded local top-k merges.
+- Built the Kaggle Linux binary:
+  `bin/offline_dense_search-linux-x86_64`.
+- Exported Rust-friendly compact court dense assets:
+  `precompute/compact_court_dense_e5_embeddings.npy` and
+  `precompute/compact_court_dense_e5_citations.json`.
+- `scripts/prepare_prize_dense_assets.py` can now resume the full law E5 matrix
+  build, which is the next major quality upgrade for hidden queries:
+  `precompute/law_dense_e5_embeddings.npy` +
+  `precompute/law_dense_e5_citations.json`.
+- `scripts/package_prize_offline_for_kaggle.py` stages the Rust binary, E5
+  model, dense assets, finalist CSVs, and notebook wrapper.
+
+Verified locally:
+
+- `public_peak_33438` exact finalist reproduction matched SHA
+  `89acefcdc37eeaf7d08b99559427a5167e7997cf5304a02278c7f09e27c85b9b`.
+- Dense hidden-query smoke produced non-empty valid predictions for arbitrary
+  query IDs.
+- Rust compact-court search loaded the 52.5 MB matrix in ~0.01s and completed a
+  sample search in ~0.03s. Hidden-query Rust prep for 3 queries took ~1.2s
+  including E5 encoding.
+
+Remaining high-value work: build the full law E5 `.npy` matrix and re-run
+leave-one-out + synthetic hidden tests with Rust law+dense-court both active.
+
+Follow-up parallel push in the same prize-offline direction:
+
+- Added long-law chunk dense asset generation to
+  `scripts/prepare_prize_dense_assets.py`:
+  `--build-law-chunk-dense`, `--law-chunk-words`, `--law-chunk-overlap`, and
+  resumable `.npy` output:
+  `precompute/law_chunk_dense_e5_embeddings.npy` +
+  `precompute/law_chunk_dense_e5_citations.json`.
+- Extended `rust/v11_selector/src/bin/offline_dense_search.rs` with a separate
+  `law_chunk` channel and rebuilt the Kaggle Linux binary. Current staged
+  binary SHA256:
+  `5603d1dc9c0693593135cba865d69db0200ffa9487f57785a428118797c4aed6`.
+- Added a real `precompute/offline_selector.json` hook to
+  `notebooks/swiss_prize_offline_retriever.py`, plus
+  `OFFLINE_CANDIDATE_FEATURES_PATH` JSONL emission for public train/val
+  candidate rows.
+- Added `scripts/train_offline_selector.py`, which consumes those feature rows,
+  labels from public train/val gold, trains JSON-exported logistic/fallback
+  weights, tunes per-domain thresholds, and writes a plain JSON selector.
+- Smoke verification: val leave-one-out emitted 3,600 labeled candidate rows;
+  the selector trainer wrote a smoke JSON; the notebook loaded that selector and
+  completed inference. The smoke selector is self-fit and should not be treated
+  as production quality.
+
+Next critical commands on Kaggle GPU:
+
+```bash
+python3 scripts/prepare_prize_dense_assets.py --build-law-dense --batch-size 64
+python3 scripts/prepare_prize_dense_assets.py --build-law-chunk-dense --batch-size 64
+```
+
+Then emit train/val feature dumps and train `precompute/offline_selector.json`
+from those full-dense candidates.

@@ -11,6 +11,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from pipeline_v11 import (
     BASE,
     CourtDenseCache,
@@ -161,12 +163,36 @@ def build_stage(split: str) -> Path:
     rows = load_rows(split, max_queries=config.max_queries, query_offset=config.query_offset)
     print(f"Building bundles for {len(rows)} {split} queries...", flush=True)
 
+    law_dense_hits_by_qid: dict[str, list[tuple[float, int]]] = {}
+    if rows and os.getenv("V11_BATCH_LAW_DENSE", "1") == "1":
+        t_dense = time.time()
+        print(f"Batch-encoding law dense queries for {len(rows)} rows...", flush=True)
+        query_texts = [f"query: {row['query']}" for row in rows]
+        q_emb = assets.embed_model.encode(
+            query_texts,
+            batch_size=max(1, int(os.getenv("V11_BUILD_EMBED_BATCH_SIZE", "64"))),
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+        dense_scores, dense_indices = assets.faiss_index.search(q_emb.astype(np.float32), 200)
+        for row, scores, indices in zip(rows, dense_scores, dense_indices):
+            law_dense_hits_by_qid[row["query_id"]] = list(zip(scores, indices))
+        print(f"Law dense batch ready in {time.time() - t_dense:.1f}s", flush=True)
+
     court_dense_cache = CourtDenseCache(config.court_dense_cache_path)
     bundles = []
-    for row in rows:
-        bundle = generate_candidates_for_row(row, assets, config, court_dense_cache)
+    for idx, row in enumerate(rows, start=1):
+        bundle = generate_candidates_for_row(
+            row,
+            assets,
+            config,
+            court_dense_cache,
+            law_dense_hits=law_dense_hits_by_qid.get(row["query_id"]),
+        )
         bucket_candidates(bundle, config)
         bundles.append(bundle)
+        if idx % 25 == 0 or idx == len(rows):
+            print(f"  built {idx}/{len(rows)} bundles", flush=True)
 
     court_text_store = CourtTextStore(config.court_text_cache_path)
     needed_courts = gather_court_citations_for_judge(bundles)

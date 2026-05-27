@@ -1,0 +1,876 @@
+{
+  "best": {
+    "config": {
+      "bonus": {
+        "bge_penalty": 1.2,
+        "court_bonus": -0.3,
+        "explicit_bonus": 2.5,
+        "law_bonus": 0.4,
+        "name": "rank_guard",
+        "rank_penalty": 0.25,
+        "selected_bonus": 0.5,
+        "source_bonus": 0.1
+      },
+      "court_family_cap": 1,
+      "max_keep": 24,
+      "min_keep": 1,
+      "score_mode": "prob",
+      "target_add": -3,
+      "target_mult": 0.9
+    },
+    "macro_f1": 0.23146415613538118,
+    "micro_f1": 0.2545454545454545,
+    "precision": 0.2962962962962963,
+    "predicted_pairs": 189,
+    "recall": 0.22310756972111553,
+    "true_positives": 56
+  },
+  "deployment_notes": {
+    "requires_env": {
+      "OFFLINE_RECIPE_HIDDEN_FALLBACK": "selector",
+      "OFFLINE_SELECTOR_INTERSECT_INITIAL": "1"
+    },
+    "strict_val_macro_with_intersect_initial": 0.23381374135931865,
+    "strict_val_macro_without_intersect_initial": 0.23146415613538113,
+    "trained_from": "public train gold plus own finalist CSV pseudo-labels; no human test labels"
+  },
+  "elapsed_ms": 27387,
+  "eval_candidates": 20000,
+  "eval_features": "artifacts/gpt55_teacher_distill_20260521/val_live_notebook_features_norerank.jsonl",
+  "eval_queries": 10,
+  "gold_csv": "data/val.csv",
+  "model": {
+    "epochs": 6,
+    "feature_names": [
+      "base_score",
+      "log_score",
+      "sqrt_score",
+      "log_train_freq",
+      "num_reasons",
+      "statute_vote",
+      "statute_match",
+      "src_explicit",
+      "src_tfidf",
+      "src_dense_law",
+      "src_dense_law_chunk",
+      "src_dense_court",
+      "src_memory",
+      "src_statute",
+      "src_kit",
+      "src_graph",
+      "src_rerank",
+      "inv_tfidf_rank",
+      "inv_dense_law_rank",
+      "inv_dense_law_chunk_rank",
+      "inv_dense_court_rank",
+      "inv_rerank_rank",
+      "is_law",
+      "is_court",
+      "is_article",
+      "is_bge",
+      "has_e",
+      "domain_criminal",
+      "domain_detention",
+      "domain_social",
+      "domain_family",
+      "domain_inheritance",
+      "domain_obligations",
+      "selected_initial",
+      "inv_rank",
+      "neg_log_rank",
+      "source_count",
+      "bias"
+    ],
+    "l2": 5e-05,
+    "learning_rate": 0.03,
+    "standardizer": {
+      "mean": [
+        1.2353807352021597,
+        0.7491546471719887,
+        1.060965976735658,
+        0.46247354481106784,
+        6.120469862506134,
+        4.431458356282358,
+        0.36467419060875833,
+        0.016503269610150313,
+        0.7972741565607506,
+        0.4431348200963358,
+        0.2788832253477403,
+        0.18308815429755956,
+        0.09199971960464255,
+        0.7099510309536446,
+        0.09237024204127821,
+        0.10304529386434873,
+        0.0,
+        0.12807741091301666,
+        0.09408542082817643,
+        0.088299821772164,
+        0.028723735977146406,
+        0.0,
+        0.8134669884537198,
+        0.18653301154628024,
+        0.8134669884537198,
+        0.023362941747864487,
+        0.18653301154628024,
+        0.010624981223525171,
+        0.0019427392623599276,
+        0.005457695350444126,
+        0.05039105138244925,
+        0.2969186553039786,
+        0.14952082436235092,
+        0.22246367378002985,
+        0.19997677810071618,
+        -3.617082700935458,
+        2.7162499123764507,
+        0.0
+      ],
+      "scale": [
+        1.021059170822151,
+        0.29547967618465903,
+        0.33125810391824506,
+        0.7624851609082027,
+        3.828379961661984,
+        16.980426919659674,
+        0.48133868046584966,
+        0.1274005953766504,
+        0.4020299439607631,
+        0.49675582665382384,
+        0.4484499659576103,
+        0.3867387775404382,
+        0.2890255545748675,
+        0.4537847117317878,
+        0.28954788969445777,
+        0.30401802788117477,
+        1e-06,
+        0.17482709493251952,
+        0.178084730627262,
+        0.1797220522835248,
+        0.1360379741555714,
+        1e-06,
+        0.38953619491615343,
+        0.3895361949161535,
+        0.38953619491615343,
+        0.15105335051150098,
+        0.3895361949161535,
+        0.10252848871179614,
+        0.044033680592455736,
+        0.0736743436476082,
+        0.21875052759483946,
+        0.4569003911537566,
+        0.3566011040986187,
+        0.41590093487310453,
+        0.1423187949798009,
+        1.1508077272754305,
+        0.9744785069256872,
+        1.0
+      ]
+    },
+    "weights": [
+      2.7204584983833797,
+      -0.7268236089943676,
+      0.26801255200174967,
+      2.012192443557243,
+      1.9161994054045342,
+      0.2996693745689236,
+      0.3962663041027795,
+      -5.3033114278259985,
+      -8.583200917395962,
+      -9.783946499584415,
+      -9.176015414373216,
+      -3.820057552378893,
+      -5.77999378311633,
+      -8.145825146644805,
+      -8.705275539247467,
+      -6.107331599153246,
+      0.0,
+      0.6715610533111829,
+      -0.18592777401498722,
+      -0.9928312969245805,
+      -2.2539682049867027,
+      0.0,
+      1.2289786289769895,
+      -1.2289786289769895,
+      1.2289786289769895,
+      -0.634921727091503,
+      -1.2289786289769895,
+      -0.10554576903566538,
+      0.06464110931354436,
+      -0.06433651795970347,
+      -0.908731334244348,
+      -1.672185557357281,
+      -0.7133403655401253,
+      0.9102708507279118,
+      3.445211822724632,
+      -7.759937118032802,
+      21.075640240189603,
+      -8.517768398957667
+    ]
+  },
+  "top": [
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 1,
+        "max_keep": 24,
+        "min_keep": 1,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 2,
+        "max_keep": 24,
+        "min_keep": 1,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 3,
+        "max_keep": 24,
+        "min_keep": 1,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 5,
+        "max_keep": 24,
+        "min_keep": 1,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 99,
+        "max_keep": 24,
+        "min_keep": 1,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 1,
+        "max_keep": 24,
+        "min_keep": 2,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 2,
+        "max_keep": 24,
+        "min_keep": 2,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 3,
+        "max_keep": 24,
+        "min_keep": 2,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 5,
+        "max_keep": 24,
+        "min_keep": 2,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 99,
+        "max_keep": 24,
+        "min_keep": 2,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 1,
+        "max_keep": 24,
+        "min_keep": 4,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 2,
+        "max_keep": 24,
+        "min_keep": 4,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 3,
+        "max_keep": 24,
+        "min_keep": 4,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 5,
+        "max_keep": 24,
+        "min_keep": 4,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 99,
+        "max_keep": 24,
+        "min_keep": 4,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 1,
+        "max_keep": 24,
+        "min_keep": 6,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 2,
+        "max_keep": 24,
+        "min_keep": 6,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 3,
+        "max_keep": 24,
+        "min_keep": 6,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 5,
+        "max_keep": 24,
+        "min_keep": 6,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 99,
+        "max_keep": 24,
+        "min_keep": 6,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 1,
+        "max_keep": 24,
+        "min_keep": 8,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 2,
+        "max_keep": 24,
+        "min_keep": 8,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 3,
+        "max_keep": 24,
+        "min_keep": 8,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 5,
+        "max_keep": 24,
+        "min_keep": 8,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    },
+    {
+      "config": {
+        "bonus": {
+          "bge_penalty": 1.2,
+          "court_bonus": -0.3,
+          "explicit_bonus": 2.5,
+          "law_bonus": 0.4,
+          "name": "rank_guard",
+          "rank_penalty": 0.25,
+          "selected_bonus": 0.5,
+          "source_bonus": 0.1
+        },
+        "court_family_cap": 99,
+        "max_keep": 24,
+        "min_keep": 8,
+        "score_mode": "prob",
+        "target_add": -3,
+        "target_mult": 0.9
+      },
+      "macro_f1": 0.23146415613538118,
+      "micro_f1": 0.2545454545454545,
+      "precision": 0.2962962962962963,
+      "predicted_pairs": 189,
+      "recall": 0.22310756972111553,
+      "true_positives": 56
+    }
+  ],
+  "train": {
+    "capped_negatives_per_query": 80,
+    "final_weighted_logloss": 2.9082664061372676,
+    "negatives": 94320,
+    "positives": 5539,
+    "queries": 1179,
+    "raw_rows_seen": 2379539,
+    "rows_used": 99859
+  },
+  "train_features": [
+    "artifacts/gpt55_offline_selector_20260520/train_candidate_features_wide50000_graph8000_filtered2k_norerank.jsonl",
+    "artifacts/recover_may_api_20260521/test_teacher/test_features_label_public_peak_top6000.jsonl",
+    "artifacts/recover_may_api_20260521/test_teacher/test_features_label_public_peak_top6000.jsonl",
+    "artifacts/recover_may_api_20260521/test_teacher/test_features_label_public_peak_top6000.jsonl"
+  ]
+}

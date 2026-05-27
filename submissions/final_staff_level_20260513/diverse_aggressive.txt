@@ -1,0 +1,91 @@
+
+DIVERSE EVAL SCORECARD
+  Candidate val: submissions/final_staff_level_20260513/val_pred_final_aggressive_overlay_samesrc02_plus_bold7h.csv
+  Baseline val:  submissions/val_pred_baseline_public_best_32107.csv
+  Candidate test: submissions/final_staff_level_20260513/test_submission_final_aggressive_overlay_samesrc02_plus_bold7h.csv
+  Baseline test:  submissions/test_submission_baseline_public_best_32107.csv
+  Val rows:      10
+
+=== VAL: per-bucket F1 (bootstrap 1000x, 90% CI) ===
+BUCKET               N  BASELINE (±90%) CANDIDATE (±90%)     DELTA   VERDICT
+--------------------------------------------------------------------------------
+proc_civil           4   0.325±0.089     0.496±0.111     +17.1pp   BETTER*
+proc_criminal        3   0.499±0.012     0.546±0.029      +4.7pp   BETTER*
+proc_social          1   0.464±0.000     0.540±0.000      +7.6pp   better?
+--------------------------------------------------------------------------------
+dom_bgg              9   0.427±0.058     0.567±0.047     +14.1pp   BETTER*
+dom_or               4   0.325±0.089     0.547±0.127     +22.2pp   BETTER*
+dom_schkg            1   0.273±0.000     0.476±0.000     +20.3pp   better?
+dom_social_ins       1   0.464±0.000     0.540±0.000      +7.6pp   better?
+dom_stgb             3   0.412±0.093     0.485±0.088      +7.3pp   BETTER*
+dom_stpo             3   0.499±0.012     0.546±0.029      +4.7pp   BETTER*
+dom_zgb              6   0.353±0.083     0.510±0.075     +15.7pp   BETTER*
+dom_zpo              1   0.273±0.000     0.476±0.000     +20.3pp   better?
+--------------------------------------------------------------------------------
+size_large           3   0.492±0.019     0.553±0.029      +6.1pp   BETTER*
+size_medium          4   0.371±0.116     0.507±0.103     +13.6pp   BETTER*
+size_small           3   0.375±0.088     0.574±0.072     +19.9pp   BETTER*
+--------------------------------------------------------------------------------
+len_long             2   0.256±0.016     0.406±0.067     +15.0pp   better?
+len_medium           5   0.444±0.061     0.548±0.066     +10.4pp   BETTER*
+len_short            3   0.449±0.088     0.628±0.020     +17.9pp   BETTER*
+================================================================================
+OVERALL             10   0.411±0.060     0.546±0.055     +13.5pp        up
+
+=== TEST: per-bucket churn + Jaccard (no gold — shape only) ===
+BUCKET               N     ADDS  REMOVES    CHURN    JACCARD
+----------------------------------------------------------------------
+proc_civil          29        3       12       15      0.976
+proc_criminal        3        4        1        5      0.948
+proc_social          3        7        0        7      0.931
+----------------------------------------------------------------------
+dom_bgg             39       11       14       25      0.973
+dom_or              17        3        8       11      0.968
+dom_schkg            2        0        2        2      0.950
+dom_social_ins       3        7        0        7      0.931
+dom_stgb             2        0        1        1      0.985
+dom_stpo             3        4        1        5      0.948
+dom_zgb             27        3       11       14      0.975
+dom_zpo             19        2        3        5      0.989
+----------------------------------------------------------------------
+size_large           2        0        1        1      0.985
+size_medium         37       15       13       28      0.969
+size_small           1        0        0        0      1.000
+----------------------------------------------------------------------
+len_long             3        0        0        0      1.000
+len_medium          32       15       11       26      0.968
+len_short            5        0        3        3      0.973
+----------------------------------------------------------------------
+all                 40       15       14       29      0.971
+
+SUMMARY:
+  Val dominates (N>=3): 12/12 robust buckets  (* = counted)
+  Val regressions:      0/17 buckets  (0 severe >3pp)
+  Test Jaccard overall: 0.971  (min bucket: 0.931)
+
+PROMOTION ANALYSIS:
+  [PASS] Overall val F1 up          (+13.4pp: 0.544 vs 0.410)
+  [PASS] Overall val F1 strong up   (>=+2.0pp, got +13.4pp)
+  [PASS] Robust dominance wide      (>=5 N>=3 buckets, got 12/12)
+  [PASS] Robust dominance some      (>=3 N>=3 buckets, got 12/12)
+  [PASS] No severe regressions      (0 severe, 0 minor)
+  [info] Test Jaccard             (0.971 — conservative shape; min bucket 0.931)
+  [PASS] Churn balance             (15 adds / 14 removes — balanced)
+
+VERDICT: STRONG PROMOTE — wide robust dominance (12/12), strong lift (+13.4pp). Worth a Kaggle submission.
+
+=== HISTORICAL CALIBRATION (10 known-outcome candidates) ===
+NOTE: Baseline test CSV not in HISTORY table — calibration rows will show val/churn signals but cannot compute actual Kaggle delta.
+
+CANDIDATE                 Verdict    ValΔpp  Jaccard       Add/Rem     Kaggle Δ  Hit
+----------------------------------------------------------------------------------------
+llm_proc_nobgg             REJECT   -8.7pp    0.965      8/30               —    —
+combo_layer_1              REJECT   -7.1pp    0.964     14/25               —    —
+combo_a                    REJECT  -12.3pp    0.939      4/65               —    —
+treaty_inject              REJECT   -9.0pp    0.941     29/30               —    —
+combo_layer_2              REJECT   -7.2pp    0.937     38/25               —    —
+bruteforce_top1            REJECT   -9.8pp    0.772    108/129              —    —
+baseline_30257             REJECT  -12.7pp    0.783     74/145              —    —
+proc_perturb               REJECT   -8.2pp    0.833     88/79               —    —
+claude_agree               REJECT   -6.1pp    0.805    209/12               —    —
+procedural_inject          REJECT   -5.1pp    0.820    154/46               —    —

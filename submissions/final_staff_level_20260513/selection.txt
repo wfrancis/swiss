@@ -1,0 +1,25 @@
+Final submission bundle selected (2026-05-13)
+
+1) Aggressive leg
+   - test: submissions/final_staff_level_20260513/test_submission_final_aggressive_overlay_samesrc02_plus_bold7h.csv
+   - val:   submissions/final_staff_level_20260513/val_pred_final_aggressive_overlay_samesrc02_plus_bold7h.csv
+   - Local 10-query F1: 54.39
+   - LB90: 50.20
+   - Multi-signal overlap mean J: 0.9707  (min 0.931)
+   - Exact private 5-way splits (252, exact): P10 0.49739, mean 0.54387, worst 0.46126
+   - Kaggle ref: 52596718
+
+2) Hedge leg
+   - test: submissions/final_staff_level_20260513/test_submission_final_hedge_overlay_fusion01_plus_samesrc03.csv
+   - val:   submissions/final_staff_level_20260513/val_pred_final_hedge_overlay_fusion01_plus_samesrc03.csv
+   - Local 10-query F1: 54.05
+   - LB90: 50.42
+   - Multi-signal overlap mean J: 0.9450 (min 0.911)
+   - Exact private 5-way splits (252, exact): P10 0.49881, mean 0.54079, worst 0.46756
+   - Kaggle ref: 52596721
+
+Criteria:
+- Both pass strict local diverse_eval gates (no severe regressions, balanced adds/removes).
+- 2-leg strategy maximizes asymmetry and private robustness:
+  strongest private pair among shortlisted candidates is:
+  overlay_fusion01_plus_samesrc03 + overlay_samesrc_02_plus_bold7h_j955 (P10 0.51787, regret 0.00114).
